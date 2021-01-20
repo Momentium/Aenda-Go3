@@ -33,7 +33,7 @@ const Header = () => {
 
 export default Header;
 
-const StHeaderCont = styled(St.Section)`
+const StHeaderCont = styled(St.SectionBorderBox)`
   border: 0;
   display: flex;
   flex-direction: column;

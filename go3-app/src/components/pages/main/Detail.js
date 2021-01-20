@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import * as St from '../../styles/styledComp';
 
-
 const Detail = () => {
   return (
     <StDetailWrap>

@@ -50,6 +50,14 @@ export default Drawer;
 const StDrawerCont = styled.div`
   display: flex;
   flex-direction: column;
+
+  * {
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
 `;
 
 const StDrawerWrap = styled(St.Section)`
@@ -87,7 +95,7 @@ const StDrawerWrap = styled(St.Section)`
         color: #f2f0ec;
       }
       .arrow-wrap {
-        transform: rotate(-90deg);
+        transform: rotate(-450deg);
         transition: transform ease 0.1s;
       }
     `
