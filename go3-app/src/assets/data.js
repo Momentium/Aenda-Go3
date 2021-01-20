@@ -1,20 +1,21 @@
-export const mbtiData = [
-  'INTJ',
-  'INTP',
-  'ENTJ',
-  'ENTP',
-  'INFJ',
-  'INFP',
-  'ENFJ',
-  'ENFP',
-  'ISTJ',
-  'ISFJ',
-  'ESTJ',
-  'ESFJ',
-  'ISTP',
-  'ISFP',
-  'ESTP',
-  'ESFP',
+export const hashTagData = [
+  '상상만개',
+  '잘하는것과좋아하는것사이',
+  '어른이된다는것은무엇일까',
+  '엉뚱한행복',
+  '한문장으로시작하는책',
+  '나는무엇때문에흔들렸나',
+  '꿈의명함',
+  '빨간양말의춤',
+  '내자랑노래',
+  '플라스틱추적기',
+  '배운망덕춤',
+  '열아홉나의오늘',
+  '예비슮살만화',
+  '기억에남는소리',
+  '휘슬과여행하기',
+  '내마음이고요해지는순간',
+  '나의12년을정리하는방법'
 ]
 
 export const cardData = [

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const Hashtag = ({ idx, mbti, selectMBTI }) => {
+const Hashtag = ({ idx, tag, selectMBTI }) => {
   return (
     <StHashCont className={`hash-tag ${idx}`} onClick={selectMBTI}>
-      {`#${mbti}`}
+      {`#${tag}`}
     </StHashCont>
   )
 }
@@ -17,11 +17,13 @@ const StHashCont = styled.span`
   }
 
   margin: 0 1em;
+  color: #f2f0ec;
   font-size: 150%;
   font-weight: bold;
 
   &:hover {
     cursor: pointer;
-    background: green;
+    background: #f2f0ec;
+    color: #fe573d;
   }
 `;

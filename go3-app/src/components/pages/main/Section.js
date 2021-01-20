@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import {cardData, } from '../esset/data';
-import Animation from './Animation';
-import Card from './Card';
+import {cardData, } from '../../../assets/data';
+import Card from '../../Card';
+import SlideList from './SlideList';
 
 const Section = () => {
 
@@ -32,8 +32,8 @@ const Section = () => {
 
   return (
     <StSectionCont>
-      <Animation selectMBTI={selectMBTI}/>
-      {cardList}
+      <SlideList selectMBTI={selectMBTI}/>
+      {/* {cardList} */}
     </StSectionCont>
   );
 }
@@ -48,7 +48,4 @@ const StSectionCont = styled.div`
 
   width: 100%;
   margin: 0 0 20px 0;
-
-  box-sizing: border-box;
-  border: solid 3px yellow;
 `;
