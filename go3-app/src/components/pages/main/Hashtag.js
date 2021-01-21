@@ -15,7 +15,7 @@ const StHashCont = styled.span`
     margin: 0 0.7em;
   }
 
-  margin: 0 0.5em;
+  padding: 0 0.5em;
   color: #f2f0ec;
   font-size: 150%;
   font-weight: bold;

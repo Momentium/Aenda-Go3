@@ -24,4 +24,6 @@ const StSlideCont = styled.div`
   box-sizing: border-box;
 
   background: #fe573d; 
+
+  overflow: hidden;
 `;

@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { VeiwContxt } from '../../common/ContextStorage';
 import * as St from '../../styles/styledComp'
 import footerlogo from '../../../assets/logo/footerlogo.svg'
 
 const Footer = () => {
-
-  useEffect(() => {
-    console.log('Footer mounted');
-  }, []);
+  const { WW, WH } = useContext(VeiwContxt)
 
   return (
     <StFootCont>
@@ -23,6 +21,8 @@ const Footer = () => {
           <div className="text">(주)앤다 서울시 중구 정동길 12-11 카리스타워 2층</div>
           <div className="text">사업자등록번호 211-88-69418</div>
           <div className="text">개인정보보호책임자 이상진</div>
+          <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
+          { WW < WH && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
         </StInfoCont>
 
         <StLinkCont>
@@ -34,7 +34,8 @@ const Footer = () => {
         </StLinkCont>
       </StLeftCont>
 
-      <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div>
+
+      { WW >= WH && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
 
     </StFootCont>
   )
@@ -46,11 +47,18 @@ const StFootCont = styled(St.Section)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 
   width: 100%;
 
   padding-top: 10vh;
   padding-bottom: 10vh;
+  @media screen and (max-width: 768px) {
+    padding-top: 2vh;
+  padding-bottom: 2vh;
+  }
   
   box-sizing: border-box;
 
@@ -64,6 +72,7 @@ const StFootCont = styled(St.Section)`
     text-align: left;
     color: #555555;
   }
+
 `;
 
 const StLeftCont = styled.div`

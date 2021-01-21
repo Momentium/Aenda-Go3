@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, } from 'react';
 import { Collapse } from '@material-ui/core';
 import styled, { css } from 'styled-components';
 import * as St from '../../styles/styledComp';
@@ -88,6 +88,10 @@ const StDrawerWrap = styled(St.Section)`
     }
   }
 
+  .arrow-wrap {
+    transition: transform ease 0.1s;
+  }
+
   ${props => props.isOpen ? 
     css`
       background-color: #fe573d;
@@ -95,8 +99,7 @@ const StDrawerWrap = styled(St.Section)`
         color: #f2f0ec;
       }
       .arrow-wrap {
-        transform: rotate(-450deg);
-        transition: transform ease 0.1s;
+        transform: rotate(-90deg);
       }
     `
     :
@@ -107,7 +110,6 @@ const StDrawerWrap = styled(St.Section)`
       }
       .arrow-wrap {
         transform: rotate(0);
-        transition: transform ease 0.1s;
       }
     `
   };

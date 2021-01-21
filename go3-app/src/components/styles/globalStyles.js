@@ -9,12 +9,13 @@ const GlobalStyle = createGlobalStyle`
 
     font-size: 1rem;
     @media screen and (max-width: 768px) {
-      font-size: 50%;
+      font-size: 0.5rem;
     }
   }
 
   .text {
     object-fit: contain;
+    white-space: nowrap;
   }
 
   code {
