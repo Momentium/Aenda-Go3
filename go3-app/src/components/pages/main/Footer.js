@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { VeiwContxt } from '../../common/ContextStorage';
-import * as St from '../../styles/styledComp'
-import footerlogo from '../../../assets/logo/footerlogo.svg'
+import * as St from '../../styles/styledComp';
+import footerlogo from '../../../assets/logo/footerlogo.svg';
 
 const Footer = () => {
   const { WW, WH } = useContext(VeiwContxt)
@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="text">사업자등록번호 211-88-69418</div>
           <div className="text">개인정보보호책임자 이상진</div>
           <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          { WW < WH && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
+          { WW < 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
         </StInfoCont>
 
         <StLinkCont>
@@ -35,7 +35,7 @@ const Footer = () => {
       </StLeftCont>
 
 
-      { WW >= WH && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
+      { WW >= 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
 
     </StFootCont>
   )
@@ -47,9 +47,10 @@ const StFootCont = styled(St.Section)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media screen and (max-width: 768px) {
+  flex-wrap: wrap;
+  /* @media screen and (max-width: 768px) {
     flex-wrap: wrap;
-  }
+  } */
 
   width: 100%;
 
