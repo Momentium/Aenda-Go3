@@ -5,7 +5,7 @@ import * as St from '../../styles/styledComp';
 import footerlogo from '../../../assets/logo/footerlogo.svg';
 
 const Footer = () => {
-  const { WW, WH } = useContext(VeiwContxt)
+  const { WW } = useContext(VeiwContxt)
 
   return (
     <StFootCont>
