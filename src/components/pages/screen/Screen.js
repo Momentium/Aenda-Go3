@@ -27,7 +27,7 @@ const Screen = ({ WW, popState }) => {
       />
       :
       <ReactPlayer
-        url={"https://www.youtube.com/watch?v=hvh7VYctIqo&list=PLWJ_fiNEu_syjcE32i4HOKx03uA85C2AI&index=1"}
+        url={"https://www.youtube.com/embed/hvh7VYctIqo"}
         playing={delay}
         controls={true}
         width={WW - 10}
