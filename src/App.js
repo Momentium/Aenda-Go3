@@ -80,8 +80,6 @@ const StMainCont = styled.div`
     `
     :
     css`
-      /* width: 9.531em;
-      height: 2.063em; */
       width: 16vw;
       height: 8vh;
       overflow: hidden;

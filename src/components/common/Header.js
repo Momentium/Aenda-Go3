@@ -40,7 +40,7 @@ const Header = () => {
 
 export default Header;
 
-const StHeaderCont = styled.div`
+const StHeaderCont = styled.header`
   position: relative;
 
   box-sizing: border-box;
@@ -55,8 +55,8 @@ const StHeaderCont = styled.div`
   }
 `;
 
-const StTopCont = styled.div`
-  padding: 0px 6.5%;
+const StTopCont = styled.section`
+  /* padding: 0px 6.5%; */
   box-sizing: border-box; 
 
   position: absolute;
