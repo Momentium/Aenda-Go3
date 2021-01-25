@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import styled, { css } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import theme from "./components/styles/theme";
 import Main from "./components/pages/main/Main";
 import Screen from "./components/pages/screen/Screen";
-import { MainContxt, VeiwContxt } from "./components/common/ContextStorage";
-
 
 const App = () => {
-  const [WW, setWW] = useState(window.innerWidth);
-  const [WH, setWH] = useState(window.innerHeight);
+  const [SW, setSW] = useState(window.innerWidth);
+  const [SH, setSH] = useState(window.innerHeight);
 
   useEffect(() => {
     window.addEventListener("resize", handleSize);
@@ -17,16 +16,15 @@ const App = () => {
   }, []);
 
   const handleSize = () => {
-    setWW(window.innerWidth);
-    setWH(window.innerHeight);
+    setSW(window.innerWidth);
+    setSH(window.innerHeight);
   };
-  
   const closeMain = () => {
-    setTglMain({...tglMain, popState: false});
+    setTglMain({ ...tglMain, popState: false });
   };
   const openMain = () => {
-    setTglMain({...tglMain, popState: true});
-  }
+    setTglMain({ ...tglMain, popState: true });
+  };
   const [tglMain, setTglMain] = useState({
     popState: true,
     closeMain,
@@ -34,16 +32,14 @@ const App = () => {
   });
 
   return (
-    <StAppCont classNam="app" WW={WW} WH={WH}>
-      <VeiwContxt.Provider value={{WW, WH}}>
-      <MainContxt.Provider value={tglMain}>
-        <StMainCont WW={WW} WH={WH} popState={tglMain.popState}>
-          <Main/>
-        </StMainCont>
-        <Screen WW={WW} popState={tglMain.popState}/>
-      </MainContxt.Provider>
-      </VeiwContxt.Provider>
-    </StAppCont>
+    <ThemeProvider theme={{ ...theme, SW, SH, ...tglMain }}>
+        <StAppCont classNam="app">
+          {/* <StMainCont> */}
+          <Main />
+          {/* </StMainCont> */}
+          <Screen SW={SW} popState={tglMain.popState} />
+        </StAppCont>
+    </ThemeProvider>
   );
 };
 export default App;
@@ -51,51 +47,47 @@ export default App;
 const StAppCont = styled.div`
   position: relative;
 
-  width: ${props => `${props.WW}px`};
-  height: ${props => `${props.WH}px`};
-  /* width: 100vw;
-  height: 100vh; */
-
-  background-color: #fe573d;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: ${(props) => `${props.theme.SW}px`};
+  height: ${(props) => `${props.theme.SH}px`};
 `;
 
-const StMainCont = styled.div`
-  position: absolute;
-  z-index: 10;
-  left: 5px;
-  bottom: 5px;
-  top: 5px;
+// const StMainCont = styled.div`
+//   background-color: ${(props) => props.theme.colors.white};
+//   /* background-image: url('/assets/images/bg_img.png'); */
 
-  transition: all 1s ease;
+//   position: absolute;
+//   z-index: 10;
+//   left: 5px;
+//   top: 5px;
 
-  ${props => props.popState ?
-    css`
-      width: ${props => `${props.WW - 10}px`};
-      height: ${props => `${props.WH - 10}px`};
-      overflow: scroll;
-    `
-    :
-    css`
-      width: 16vw;
-      height: 8vh;
-      overflow: hidden;
+//   -ms-overflow-style: none;
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
 
-      top: ${props => `${props.WH - 10 - (0.08 * props.WH)}px`};
-      
-      @media screen and (max-width: 768px) {
-        width: 40vw;
-      }
-    `
-  }
-  
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+//   transition: all 1s ease;
 
-  background-color: #f2f0ec;
-`;
+//   ${({ theme }) => theme.popState ? 
+//     css`
+//       width: ${`${theme.SW - 10}px`};
+//       height: ${`${theme.SH - 10}px`};
+//       overflow: scroll;
+//     ` 
+//     :
+//     css`
+//       width: 16vw;
+//       height: 8vh;
+//       overflow: hidden;
+
+//       top: ${`${theme.SH - 10 - 0.08 * theme.SH}px`};
+
+//       @media screen and (max-width: 768px) {
+//         width: 40vw;
+//       }
+//     `
+//   }
+// `;

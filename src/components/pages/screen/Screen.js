@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 
-const Screen = ({ WW, popState }) => {
+const Screen = ({ SW, popState }) => {
   const [delay, setDelay] = useState(false);
   useEffect(() => {
     if(!popState){
@@ -17,21 +17,21 @@ const Screen = ({ WW, popState }) => {
   return (
     <>
     {
-      WW > 768 ?
+      SW > 768 ?
       <ReactPlayer
         url={"https://www.youtube.com/embed/hvh7VYctIqo"}
         playing={delay}
         controls={true}
-        width={WW / 1.5}
-        height={(WW * 9) / (16 * 1.5)}
+        width={SW / 1.5}
+        height={(SW * 9) / (16 * 1.5)}
       />
       :
       <ReactPlayer
         url={"https://www.youtube.com/embed/hvh7VYctIqo"}
         playing={delay}
         controls={true}
-        width={WW - 10}
-        height={(WW - 10) * 9 / 16}
+        width={SW - 10}
+        height={(SW - 10) * 9 / 16}
       />
     }
     </>

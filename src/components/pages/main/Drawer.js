@@ -60,7 +60,7 @@ const StDrawerCont = styled.div`
   }
 `;
 
-const StDrawerWrap = styled(St.Section)`
+const StDrawerWrap = styled.section`
   display: flex;
   justify-content: space-between;
 

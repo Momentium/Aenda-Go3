@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { VeiwContxt } from '../../common/ContextStorage';
+import styled, { ThemeContext } from 'styled-components';
 import * as St from '../../styles/styledComp';
 import footerlogo from '../../../assets/logo/footerlogo.svg';
 
 const Footer = () => {
-  const { WW } = useContext(VeiwContxt)
+  const { SW } = useContext(ThemeContext)
 
   return (
     <StFootCont>
@@ -22,7 +21,7 @@ const Footer = () => {
           <div className="text">사업자등록번호 211-88-69418</div>
           <div className="text">개인정보보호책임자 이상진</div>
           <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          { WW < 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
+          { SW < 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
         </StInfoCont>
 
         <StLinkCont>
@@ -35,7 +34,7 @@ const Footer = () => {
       </StLeftCont>
 
 
-      { WW >= 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
+      { SW >= 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
 
     </StFootCont>
   )
