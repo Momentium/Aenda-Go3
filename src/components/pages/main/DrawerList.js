@@ -6,17 +6,17 @@ import SlideList from './SlideList';
 const DrawerList = () => {
   return (
       <StListCont>
-        <div className="line"/>
-        <Drawer title="ABOUT 2020 상상만개는"/>
-        <div className="line"/>
-        <Drawer title="PROGRAM 프로그램 안내"/>
-        <div className="line"/>
-        <Drawer title="ARTIST 예술가"/>
-        <div className="line"/>
-        <Drawer title="EXHIBITION 작품 갤러리"/>
+        <StLine/>
+        <Drawer title="2020 상상만개는"/>
+        <StLine/>
+        <Drawer title="프로그램 안내 PROGRAM"/>
+        <StLine/>
+        <Drawer title="예술가 ARTIST"/>
+        <StLine/>
+        <Drawer title="작품 갤러리 EXHIBITION"/>
         <SlideList/>
         <Drawer title="SEND TO MESSAGE"/>
-        <div className="line"/>
+        <StLine/>
         <Footer/>
       </StListCont>
   )
@@ -35,4 +35,10 @@ const StListCont = styled.div`
       transform: translateY(200%);
     ` 
   }
+`;
+
+const StLine = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: ${({ theme }) => theme.colors.blue};
 `;

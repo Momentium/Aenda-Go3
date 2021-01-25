@@ -13,7 +13,7 @@ const Main = () => {
 export default Main;
 
 const StMainCont = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: white;
   /* background-image: url('/assets/images/bg_img.png'); */
 
   position: absolute;

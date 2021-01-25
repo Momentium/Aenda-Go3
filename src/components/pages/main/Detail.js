@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as St from '../../styles/styledComp';
 
 const Detail = () => {
   return (
@@ -12,7 +11,7 @@ const Detail = () => {
 }
 export default Detail;
 
-const StDetailWrap = styled(St.Section)`
+const StDetailWrap = styled.section`
   border: 0px;
   padding-top: 1.594em;
   padding-bottom: 1.594em;

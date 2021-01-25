@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     width: fit-content;
     object-fit: contain;
     white-space: nowrap;
-    vertical-align: middle;
+    vertical-align: baseline;
     text-align: left;
 
     font-stretch: normal;
@@ -35,23 +35,33 @@ const GlobalStyle = createGlobalStyle`
         padding: 0 16px 4px 8px;
         font-size: 60px;
         font-weight: 900;
+        transform: translateX(-8px);
         /* line-height: 1.46; */
       }
 
       &.subtitle {
-        padding-left: 8px;
+        /* padding-left: 8px; */
         font-size: 25px;
         font-weight: bold;
         line-height: 1.6;
       }
     }
-  }
 
-  /* .line {
-    width: 100%;
-    height: 1px;
-    background-color: #333333;
-  } */
+    &.drawer {
+      font-size: 25px;
+      line-height: 1;
+      font-weight: bold;
+      letter-spacing: -0.66px;
+    }
+
+    &.hash-tag {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.66px;
+    }
+  }
+  
 
   header {
 

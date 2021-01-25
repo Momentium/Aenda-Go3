@@ -9,11 +9,11 @@ const Header = () => {
 
       <StTopCont popState={popState}>
         <StLogoBtnCont className="header-logo-cont" onClick={openMain}>
-          <img className="header-logo" src='/assets/logo/logo.svg' alt="header-logo"/>
+          <img className="header-logo" src="/assets/logo/logo.svg" alt="header-logo"/>
         </StLogoBtnCont>
 
         <StYTBtnCont  onClick={closeMain}>
-          <img className="youtube-icon" src='/assets/icons/youtube.svg' alt="youtube-icon" />
+          <img className="youtube-icon" src="/assets/icons/youtube.svg" alt="youtube-icon" />
         </StYTBtnCont>
       </StTopCont>
 
@@ -41,8 +41,6 @@ export default Header;
 const StHeaderCont = styled.header`
   position: relative;
 
-  /* box-sizing: border-box; */
-  /* width: 100%; */
   height: 100%;
   @media screen and (max-width: 768px) {
     height: 50%;
@@ -56,7 +54,6 @@ const StHeaderCont = styled.header`
 const StTopCont = styled.section`
   position: absolute;
   top: 6.5%;
-  /* transsform: translateY(100%); */
   
   display: flex;
   justify-content: space-between;
@@ -66,7 +63,6 @@ const StTopCont = styled.section`
 
   ${ props => !props.popState && css`
     padding: 0 8px;
-    /* transform: translateY(0%); */
 
     top: 2vh;
     @media screen and (max-width: 768px) {
@@ -81,7 +77,6 @@ const StTopCont = styled.section`
     }
 
     .youtube-icon {
-      /* display: none; */
       width: 0em;
       transform: translateX(400%);
     }
@@ -115,7 +110,6 @@ const StYTBtnCont = styled.div`
 const StBotCont = styled.section`
   position: absolute;
   bottom: 6.5%;
-  /* transform: translateY(-65px); */
 
   transition: all 1s ease;
   ${props => props.popState ? 
@@ -134,12 +128,11 @@ const StTitleCont = styled.div`
   margin-bottom: 3.5vh;
 
   div:first-child{
-    
     background-color: ${props => props.theme.colors.blue};
-    color: ${props => props.theme.colors.white};
+    color: white;
   }
   div:last-child{
-    background-color: ${props => props.theme.colors.white};
+    background-color: white;
     color: ${props => props.theme.colors.blue};
   }
 `;

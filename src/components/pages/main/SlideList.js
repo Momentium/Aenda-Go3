@@ -19,11 +19,11 @@ const StSlideCont = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  height: 14.563em;
+  height: 233px;
   padding: 1.922em 0;
   box-sizing: border-box;
 
-  background: #fe573d; 
+  background: ${({ theme }) => theme.colors.blue}; 
 
   overflow: hidden;
 `;

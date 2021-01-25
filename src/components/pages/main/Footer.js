@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import * as St from '../../styles/styledComp';
-import footerlogo from '../../../assets/logo/footerlogo.svg';
 
 const Footer = () => {
   const { SW } = useContext(ThemeContext)
@@ -10,7 +8,7 @@ const Footer = () => {
     <StFootCont>
       <StLeftCont>
         <StImgWrap>
-          <img src={footerlogo} alt="footer-logo"/>
+          <img src="assets/logo/logo.svg" alt="footer-logo"/>
         </StImgWrap>
 
         <StInfoCont>
@@ -42,14 +40,11 @@ const Footer = () => {
 
 export default Footer;
 
-const StFootCont = styled(St.Section)`
+const StFootCont = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  /* @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-  } */
 
   width: 100%;
 
@@ -57,7 +52,7 @@ const StFootCont = styled(St.Section)`
   padding-bottom: 10vh;
   @media screen and (max-width: 768px) {
     padding-top: 2vh;
-  padding-bottom: 2vh;
+    padding-bottom: 2vh;
   }
   
   box-sizing: border-box;

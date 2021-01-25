@@ -1,9 +1,6 @@
 import React, { useState, } from 'react';
 import { Collapse } from '@material-ui/core';
 import styled, { css } from 'styled-components';
-import * as St from '../../styles/styledComp';
-import arrow from '../../../assets/icons/arrow.svg';
-import whiltearrow from '../../../assets/icons/whiltearrow.svg';
 import Detail from './Detail';
 
 const Drawer = ({title}) => {
@@ -27,13 +24,13 @@ const Drawer = ({title}) => {
         onMouseOut={handleHover} 
         onClick={handleOpen} 
       >
-        <div className="text title">{title}</div>
+        <div className="text drawer">{title}</div>
         <StArrowCont className="arrow-wrap">
           {
             hover || isOpen ?
-            <img className="white" src={whiltearrow} alt=""/>
+            <img className="white" src="assets/icons/redarrow.svg" alt=""/>
             :
-            <img className="black" src={arrow} alt=""/>
+            <img className="black" src="assets/icons/arrow.svg" alt=""/>
           }
         </StArrowCont>
       </StDrawerWrap>
@@ -61,42 +58,22 @@ const StDrawerCont = styled.div`
 `;
 
 const StDrawerWrap = styled.section`
+  
   display: flex;
   justify-content: space-between;
-
-  padding-top: 16px;
-  padding-bottom: 16px;
-
-  ${props => props.isLastOne && css`border: 0;`};
-
-  .text {
-    font-size: 1.250em;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.25;
-    letter-spacing: -0.66px;
-    text-align: left;
-    color: #333333;
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: #fe573d;
-    .text {
-      color: #f2f0ec;
-    }
-  }
-
+  
+  padding-top: 18px;
+  padding-bottom: 18px;
+  
   .arrow-wrap {
     transition: transform ease 0.1s;
   }
 
-  ${props => props.isOpen ? 
+  ${ props  => props.isOpen ? 
     css`
-      background-color: #fe573d;
+      background-color: ${({ theme }) => theme.colors.blue};
       .text {
-        color: #f2f0ec;
+        color: ${({ theme }) => theme.colors.red};
       }
       .arrow-wrap {
         transform: rotate(-90deg);
@@ -104,9 +81,16 @@ const StDrawerWrap = styled.section`
     `
     :
     css`
-      background-color: #f2f0ec;
+      background-color: white;
       .text {
-        color: #333333;
+        color: ${({ theme }) => theme.colors.black};
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: ${({ theme }) => theme.colors.blue};
+        .text {
+          color: ${({ theme }) => theme.colors.red};
+        }
       }
       .arrow-wrap {
         transform: rotate(0);

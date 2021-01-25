@@ -1,56 +1,89 @@
-import styled from 'styled-components';
+import React, { useState, useEffect, useRef } from 'react';
+import styled, { css } from 'styled-components';
 import Hashtag from './Hashtag';
+import { getTranslateX } from '../../../api/method';
 import { hashTagData } from '../../../assets/data';
 
 const Slide = ({ selectMBTI, dataIdx, dir }) => {
+  const [isHover, setIsHover] = useState(false);
 
-  const stopSlide = (e) => {
-    // const _node1 = e.currentTarget.childNodes[0];
-    // const _node2 = e.currentTarget.childNodes[1];
-    // const _node3 = e.currentTarget.childNodes[2];
+  const slideRef = useRef(null);
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
 
-    // _node1.style.webkitAnimationPlayState = 'paused';
-    // _node2.style.webkitAnimationPlayState = 'paused';
-    // _node3.style.webkitAnimationPlayState = 'paused';
+  // useEffect(() => {
+  //   setInterval(moveSlide, 1000);
+  //   return () => { 
+  //     clearInterval(moveSlide);
+  //   }
+  // }, [])
 
-    const _nodes = e.currentTarget.childNodes;
-    _nodes.forEach(el => {
-      el.style.webkitAnimationPlayState = 'paused'
-    });
+  const moveSlide = () => {
+    // const _slideRef = slideRef.current.clientWidth;
+    // console.log(_slideRef)
+    // const _tagRef = slideRef.current.childNodes;
+
+    // if(dir === 'left') {
+    //   _tagRef.forEach((el, idx) => {
+    //     const _x = getTranslateX(el);
+    //       el.style.transform = `translateX(${_x - 300}px)`;
+    //     }
+    //   )
+      
+    //   const _headTag = _tagRef[0].getBoundingClientRect();
+    //   if(_headTag.left <= -1*(_headTag.width)) {
+    //     // _tagRef.forEach((el, idx) => {
+    //     //     el.style.transform = `translateX(0px)`;
+    //     //   }
+    //     // )
+    //     slideRef.current.append(_tagRef[0]);
+    //   }
+
+    // }
+    // else {
+    //   _tagRef.forEach((el, idx) => {
+    //     const _x = getTranslateX(el);
+    //       el.style.transform = `translateX(${_x + 100}px)`;
+    //     }
+    //   )
+    // }
+    
+  }
+
+
+
+  const slowSlide = (e) => {
+    setIsHover(true);
   };
-  const runSlide = (e) => {
-    // const _node1 = e.currentTarget.childNodes[0];
-    // const _node2 = e.currentTarget.childNodes[1];
-    // const _node3 = e.currentTarget.childNodes[2];
-
-    // _node1.style.webkitAnimationPlayState = 'running';
-    // _node2.style.webkitAnimationPlayState = 'running';
-    // _node3.style.webkitAnimationPlayState = 'running';
-
-    const _nodes = e.currentTarget.childNodes;
-    _nodes.forEach(el => {
-      el.style.webkitAnimationPlayState = 'running'
-    });
+  const faseSlide = (e) => {
+    setIsHover(false);
   };
 
   const hashTagList = hashTagData[dataIdx].map((el, idx) => {
     return (
-      <Hashtag key={idx} idx={idx} tag={el} selectMBTI={selectMBTI}/>
+      <Hashtag key={idx} dataIdx={dataIdx} idx={idx} tag={el} selectMBTI={selectMBTI}/>
     )
   });
 
   return (
-    <StSlideWrap onMouseOver={stopSlide} onMouseOut={runSlide} dir={dir === "left"}>
-      <StHashTagCont className='tag-cont1'>
+    <StSlideWrap 
+      dir={dir === "left"} 
+      ref={slideRef}
+      isHover={isHover}
+      onMouseOver={slowSlide} 
+      onMouseOut={faseSlide} 
+    >
+
+      <StHashTagCont dir={dir === "left"}  className="1">
         {hashTagList}
       </StHashTagCont>
-      <StHashTagCont className='tag-cont2'>
+      <StHashTagCont dir={dir === "left"}  className="2">
         {hashTagList}
       </StHashTagCont>
-      <StHashTagCont className='tag-cont3'>
+      <StHashTagCont dir={dir === "left"}  className="3">
         {hashTagList}
       </StHashTagCont>
-      <StHashTagCont className='tag-cont4'>
+      <StHashTagCont dir={dir === "left"}  className="4">
         {hashTagList}
       </StHashTagCont>
     </StSlideWrap>
@@ -60,27 +93,30 @@ export default Slide;
 
 const StSlideWrap = styled.div`
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
+  justify-content: ${props => props.dir ? "flex-start" : "flex-end"};
+  /* justify-content: center; */
+  /* flex-wrap: nowrap; */
 
-  width: 100%;
-  background: #fe573d; 
-  
-  & > * {
-    animation : ${props => props.dir ? "slide-left" : "slide-right"} 20s infinite linear;
-  }
+  background: ${({ theme }) => theme.colors.blue}; 
 
-  @keyframes slide-left{
-    0%   {transform: translateX(0px)}
-    100% {transform: translateX(-100%)}  
-  }
-  @keyframes slide-right{
-    0%   {transform: translateX(0px)}
-    100% {transform: translateX(100%)}  
+  transition: 5s linear ;
+  transform: ${ props => props.dir ? "translateX(-20%)" : "translateX(20%)" };
+  &:hover {
+    transform: translateX(0%);
   }
 `;
 
-const StHashTagCont = styled.span`
-  /* display: flex; */
-  white-space: nowrap
+const StHashTagCont = styled.div`
+  white-space: nowrap;
+  /* transition: all 0.3s linear; */
+  animation: ${props => props.dir ? "slide-left" : "slide-right"} 20s infinite linear;
+
+  @keyframes slide-left{
+    0%   { transform: translateX(0%) }
+    100% { transform: translateX(-100%) }  
+  }
+  @keyframes slide-right{
+    0%   { transform: translateX(0%) }
+    100% { transform: translateX(100%) }  
+  }
 `;
