@@ -1,11 +1,20 @@
 import styled from 'styled-components';
+import ProgramList from './program/ProgramList';
 
-const Detail = () => {
+const Detail = ({ menu }) => {
   return (
     <StDetailWrap>
-      <div className="text detail">리스트 클릭 시 드롭다운으로 노출됩니다.</div>
-      <div className="text detail">모션은 레퍼런스 사이트 참고 부탁드립니다.</div>
-      <div className="text detail">www.reedartdepartment.com</div>
+    
+    { menu.includes('2020') &&  
+      <div className="text detail">
+        리스트 클릭 시 드롭다운으로 노출됩니다.<br/>
+        모션은 레퍼런스 사이트 참고 부탁드립니다.<br/>
+        www.reedartdepartment.com
+      </div>
+    }
+
+    { menu.includes('PROGRAM') && <ProgramList/> }
+      
     </StDetailWrap>
   )
 }

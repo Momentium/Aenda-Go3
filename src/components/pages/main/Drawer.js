@@ -76,6 +76,14 @@ const StDrawerWrap = styled.section`
     transition: transform ease 0.1s;
   }
 
+  &:hover {
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.blue};
+    .text {
+      color: ${({ theme }) => theme.colors.red};
+    }
+  }
+
   ${ props  => props.isOpen ? 
     css`
       background-color: ${({ theme }) => theme.colors.blue};
@@ -91,13 +99,6 @@ const StDrawerWrap = styled.section`
       background-color: white;
       .text {
         color: ${({ theme }) => theme.colors.black};
-      }
-      &:hover {
-        cursor: pointer;
-        background-color: ${({ theme }) => theme.colors.blue};
-        .text {
-          color: ${({ theme }) => theme.colors.red};
-        }
       }
       .arrow-wrap {
         transform: rotate(0);

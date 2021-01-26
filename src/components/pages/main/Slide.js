@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Hashtag from './Hashtag';
-import { hashTagData } from '../../../datas/data';
+import { hashTagData } from '../../../data/data';
 
 const Slide = ({ selectMBTI, dataIdx, dir }) => {
   const hashTagList = hashTagData[dataIdx].map((el, idx) => {
@@ -11,24 +11,21 @@ const Slide = ({ selectMBTI, dataIdx, dir }) => {
 
   return (
     <StSlideWrap dir={dir}>
-      <div>
+      <span>
         {hashTagList}
-      </div>
-      <div>
+      </span>
+      <span>
         {hashTagList}
-      </div>
-      <div>
+      </span>
+      <span>
         {hashTagList}
-      </div>
-      <div>
+      </span>
+      <span>
         {hashTagList}
-      </div>
-      <div>
+      </span>
+      <span>
         {hashTagList}
-      </div>
-      <div>
-        {hashTagList}
-      </div>
+      </span>
     </StSlideWrap>
   )
 }
@@ -40,30 +37,34 @@ const StSlideWrap = styled.div`
 
   background: ${({ theme }) => theme.colors.blue}; 
 
-  animation: ${ props => props.dir === "left" ? "slide-left1" : "slide-right1" } 40s infinite linear;
-  &:hover{
+  & {
+    animation: ${ props => props.dir === "left" ? "slide-left1" : "slide-right1" } 120s infinite linear;
+    &:hover{
     animation-play-state: paused;
-  }
-  @keyframes slide-left1{
-    0%   { transform: translateX(0%) }
-    100% { transform: translateX(-200%) }
-  }
-  @keyframes slide-right1{
-    0%   { transform: translateX(0%) }
-    100% { transform: translateX(200%) }  
+    }
+
+    @keyframes slide-left1{
+      0%   { transform: translateX(0%) }
+      100% { transform: translateX(-400%) }
+    }
+    @keyframes slide-right1{
+      0%   { transform: translateX(0%) }
+      100% { transform: translateX(400%) }  
+    }
   }
 
-  & > div {
+  & > span {
     white-space: nowrap;
     animation: ${ props => props.dir === "left" ? "slide-left" : "slide-right" } 60s infinite linear;
-  }
-  @keyframes slide-left{
-    0%   { transform: translateX(0%) }
-    100% { transform: translateX(-100%) }
-  }
-  @keyframes slide-right{
-    0%   { transform: translateX(0%) }
-    100% { transform: translateX(100%) }  
+    
+    @keyframes slide-left{
+      0%   { transform: translateX(0%) }
+      100% { transform: translateX(-100%) }
+    }
+    @keyframes slide-right{
+      0%   { transform: translateX(0%) }
+      100% { transform: translateX(100%) }  
+    }
   }
   
 `;

@@ -6,6 +6,5 @@ export const getTranslateX = (element) => {
   return Number(_x);
 }
 
-export const getWidth = () => {
-
+export const getNewLinedStr = (txt) => {
 }

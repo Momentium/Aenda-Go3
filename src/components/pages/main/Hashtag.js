@@ -9,10 +9,9 @@ const Hashtag = ({ dataIdx, idx, tag, selectMBTI }) => {
 }
 export default Hashtag;
 
-const StHashCont = styled.div`
-  display: inline;
-
-  padding: 2px 12px;
+const StHashCont = styled.span`
+  vertical-align: baseline;
+  padding: 2px 12px 4px 12px;
   color: white;
 
   &:hover {
