@@ -1,39 +1,52 @@
-import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import styled from 'styled-components';
 
 const Footer = () => {
-  const { SW } = useContext(ThemeContext)
 
   return (
     <StFootCont>
-      <StLeftCont>
-        <StImgWrap>
-          <img src="assets/logo/logo.svg" alt="footer-logo"/>
-        </StImgWrap>
+      <StImgWrap>
+        <img src="assets/logo/footer-logo.svg" alt="footer-logo"/>
+      </StImgWrap>
 
+
+      <StTextCont>
         <StInfoCont>
-          <div className="text">주최. 문화체육관광부</div>
-          <div className="text">주관. 한국문화예술교육진흥원</div>
-          <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          <div className="text">(주)앤다 서울시 중구 정동길 12-11 카리스타워 2층</div>
-          <div className="text">사업자등록번호 211-88-69418</div>
-          <div className="text">개인정보보호책임자 이상진</div>
-          <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          { SW < 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
+          <div className="text footer">
+            주최. 문화체육관광부<br/>
+            주관. 한국문화예술교육진흥원<br/>
+            <br/>
+            (주)앤다 서울시 중구 정동길 12-11 카리스타워 2층<br/>
+            사업자등록번호 211-88-69418<br/>
+            개인정보보호책임자 이상진<br/>
+            <br/>
+          </div>
         </StInfoCont>
 
         <StLinkCont>
-          <div className="text">go310000@naver.com</div>
-          <div className="text">02) 549-2234</div>
-          <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          <div className="text">Instagram</div>
-          <div className="text">Facebook</div>
+          <div className="text footer">
+            go310000@naver.com<br/>
+            02) 549-2234<br/>
+            <br/>
+          </div>
+          <table>
+            <tbody>
+              <tr >
+                <td><div style={{display: 'flex'}}><img src="assets/icons/instagram.svg" alt="instagram-logo"/></div></td>
+                <td><div className="text footer">Instagram</div></td>
+              </tr>
+              <tr >
+                <td><div style={{display: 'flex'}}><img src="assets/icons/facebook.svg" alt="instagram-logo"/></div></td>
+                <td><div className="text footer">Facebook</div></td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
         </StLinkCont>
-      </StLeftCont>
 
-
-      { SW >= 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
-
+        <StIncCont>
+          <div className="text footer">ⓒ 2020 AENDA Inc., All rights reserved.</div>
+        </StIncCont>
+      </StTextCont>
     </StFootCont>
   )
 }
@@ -44,7 +57,6 @@ const StFootCont = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
 
   width: 100%;
 
@@ -55,38 +67,33 @@ const StFootCont = styled.section`
     padding-bottom: 2vh;
   }
   
-  box-sizing: border-box;
-
-  .text {
-    font-size: 0.563em;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.78;
-    letter-spacing: normal;
-    text-align: left;
-    color: #555555;
-  }
-
-`;
-
-const StLeftCont = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 `;
 
 const StImgWrap = styled.div`
   display: flex;
-
+  flex: 1;
   img {
-    width: 8.094em;
+    width: 130px;
   }
 `;
 
+const StTextCont = styled.div`
+  display: flex;
+  flex: wrap;
+  flex: 3;
+  justify-content: space-around;
+`;
+
 const StInfoCont = styled.div`
-  margin: 0 4vw;
+  flex: 1;
 `;
 
 const StLinkCont = styled.div`
+  flex: 2;
+  img {
+    height: 12px;
+  }
+`;
+
+const StIncCont = styled.div`
 `;

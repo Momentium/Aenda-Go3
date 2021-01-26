@@ -60,6 +60,13 @@ const GlobalStyle = createGlobalStyle`
       line-height: 1.25;
       letter-spacing: -0.66px;
     }
+
+    &.footer {
+      font-size: 0.563em;
+      font-weight: 500;
+      /* line-height: 1.78; */
+      color: #555555;
+    }
   }
   
 

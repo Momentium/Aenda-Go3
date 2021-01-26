@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import Drawer from './Drawer';
 import Footer from './Footer';
-import SlideList from './SlideList';
 
 const DrawerList = () => {
   return (
@@ -14,7 +13,6 @@ const DrawerList = () => {
         <Drawer title="예술가 ARTIST"/>
         <StLine/>
         <Drawer title="작품 갤러리 EXHIBITION"/>
-        <SlideList/>
         <Drawer title="SEND TO MESSAGE"/>
         <StLine/>
         <Footer/>

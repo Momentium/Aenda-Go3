@@ -43,6 +43,30 @@ export const hashTagData = [
   ],
 ]
 
+export const programData = [
+  {
+    idx: 0,
+    imgUrl: "",
+    title: "선의의 옹호자"
+  },
+  {
+    idx: 1,
+    imgUrl: "",
+    title: "열정적인 중재자"
+  },
+  {
+    idx: 2,
+    imgUrl: "",
+    title: "정의의 사회운동가"
+  },
+  {
+    idx: 3,
+    imgUrl: "",
+    title: "재기발랄 활동가"
+  },
+
+]
+
 export const cardData = [
   { mbti: 'INTJ', link: 'https://www.instagram.com/p/CII2xsUHyc3/?utm_source=ig_web_copy_link' },
   { mbti: 'ISFP', link: 'https://www.instagram.com/p/CJp5HIOHSTo/?utm_source=ig_web_copy_link' },

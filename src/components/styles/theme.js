@@ -11,6 +11,7 @@ const fontSizes = {
 };
 
 const colors = {
+  weight_black: "#111111",
   black: "#333333",
   light_black: "#555555",
   blue: "#5a32de",

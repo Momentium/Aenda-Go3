@@ -2,6 +2,7 @@ import React, { useState, } from 'react';
 import { Collapse } from '@material-ui/core';
 import styled, { css } from 'styled-components';
 import Detail from './Detail';
+import SlideList from './SlideList';
 
 const Drawer = ({title}) => {
   const [hover, setHover] = useState(false);
@@ -19,7 +20,6 @@ const Drawer = ({title}) => {
 
       <StDrawerWrap 
         isOpen={isOpen} 
-        isLastOne={title === "SEND TO MESSAGE"}
         onMouseOver={handleHover} 
         onMouseOut={handleHover} 
         onClick={handleOpen} 
@@ -28,15 +28,22 @@ const Drawer = ({title}) => {
         <StArrowCont className="arrow-wrap">
           {
             hover || isOpen ?
-            <img className="white" src="assets/icons/redarrow.svg" alt=""/>
+            <img className="red" src="assets/icons/redarrow.svg" alt=""/>
             :
             <img className="black" src="assets/icons/arrow.svg" alt=""/>
           }
         </StArrowCont>
       </StDrawerWrap>
+      
+      { title === "작품 갤러리 EXHIBITION" && 
+        <>
+          <StLine isOpen={isOpen} />
+          <SlideList/> 
+        </>
+      }
 
       <Collapse in={isOpen}>
-        <Detail/>
+        <Detail menu={title}/>
       </Collapse>
 
     </StDrawerCont>
@@ -103,4 +110,10 @@ const StArrowCont = styled.div`
   img {
     width: 1.644em;
   }
+`;
+
+const StLine = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: ${ props => props.isOpen ? "white" : props.theme.colors.blue };
 `;
