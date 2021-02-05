@@ -13,6 +13,8 @@ const Screen = ({ SW, vidUrl, popState, pageState }) => {
     else {
       setDelay(false);
     }
+
+    return () => console.log('아웃', )
   }, [popState, pageState])
 
   return (
@@ -21,7 +23,6 @@ const Screen = ({ SW, vidUrl, popState, pageState }) => {
       SW > 768 ?
       <ReactPlayer
         url={vidUrl}
-        // playing={false}
         playing={delay}
         controls={true}
         width={SW / 1.5}
@@ -30,7 +31,6 @@ const Screen = ({ SW, vidUrl, popState, pageState }) => {
       :
       <ReactPlayer
         url={vidUrl}
-        // playing={false}
         playing={delay}
         controls={true}
         width={SW - 10}

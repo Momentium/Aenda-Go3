@@ -26,6 +26,18 @@ const Slide = ({ selectMBTI, dataIdx, dir }) => {
       <span>
         {hashTagList}
       </span>
+      <span>
+        {hashTagList}
+      </span>
+      <span>
+        {hashTagList}
+      </span>
+      <span>
+        {hashTagList}
+      </span>
+      <span>
+        {hashTagList}
+      </span>
     </StSlideWrap>
   )
 }

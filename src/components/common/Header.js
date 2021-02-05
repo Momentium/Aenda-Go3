@@ -5,7 +5,7 @@ const Header = () => {
   const {popState, closeMain, openMain} = useContext(ThemeContext);
 
   return (
-    <StHeaderCont>
+    <StHeaderCont popState={popState}>
 
       <StTopCont popState={popState}>
         <StLogoBtnCont className="header-logo-cont" onClick={openMain}>
@@ -49,6 +49,10 @@ const StHeaderCont = styled.header`
   & > div {
     width: 100%;
   }
+
+  ${ props => !props.popState && css`
+    background: ${props.theme.colors.red};
+  `}
 `;
 
 const StTopCont = styled.section`

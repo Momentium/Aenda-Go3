@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
   body {
+    user-select: none;
     background-color: #5a32de;
 
     margin: 0;
@@ -59,11 +60,26 @@ const GlobalStyle = createGlobalStyle`
       letter-spacing: -0.66px;
     }
 
+    &.detail {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.71;
+      color: #111111;
+
+      .colored {
+        color: #5a32de;
+      }
+    }
+
     &.footer {
       font-size: 0.563em;
       font-weight: 500;
       /* line-height: 1.78; */
       color: #555555;
+
+      &.link {
+        cursor: pointer;
+      }
     }
 
     

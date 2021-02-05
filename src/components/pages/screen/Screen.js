@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import Player from './Player';
 
@@ -25,16 +25,16 @@ const Screen = ({ SW, popState }) => {
           <img src="assets/icons/vidArrow.svg" alt="arrow-logo"/>
         </StArrowWrap>
       }
-      
+
       <StPlayerCont curPage={curPage}>
         <Player
-          vidUrl={"https://www.youtube.com/embed/hvh7VYctIqo"}
+          vidUrl={"https://www.youtube.com/embed/Kjb_AbqY41M"}
           SW={SW}
           popState={popState}
           pageState={curPage === 0}
         />
         <Player
-          vidUrl={"https://www.youtube.com/embed/hvh7VYctIqo"}
+          vidUrl={"https://www.youtube.com/embed/Lw_amG3yXXA"}
           SW={SW}
           popState={popState}
           pageState={curPage === 1}
@@ -65,6 +65,7 @@ const StArrowWrap = styled.div`
   position: absolute;
   z-index: 5;
   top: 50%;
+  
   transform: translateY(-50%);
   img {
     width: 32px;
@@ -76,14 +77,14 @@ const StArrowWrap = styled.div`
   ${
     props => props.dir === "left" ?
     css`
-      left: 20px;
+      left: 5vw;
       img {
         transform: rotate(180deg);
       }
     `
     :
     css`
-      right: 20px;
+      right: 5vw;
     `
   };
   

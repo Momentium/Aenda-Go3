@@ -13,8 +13,10 @@ const Main = () => {
 export default Main;
 
 const StMainCont = styled.div`
-  background-color: white;
-  /* background-image: url('/assets/images/bg_img.png'); */
+  background-image: url('/assets/images/bg_web_main.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   position: absolute;
   z-index: 10;

@@ -21,7 +21,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       <div className="text program kit-title">예술가의 키트</div>
       <div className="text program kit">{data.kit}</div>
 
-      <img className="mbti-icon" src={`assets/icons/mbti/${mbti} orange.svg`} alt="mbti-icon"/>
+      <img className="mbti-icon" src={`assets/icons/mbti/${mbti}_orange.svg`} alt="mbti-icon"/>
 
       <div className="text program kit-intro-title">키트 소개</div>
       <div className="text program kit-intro">{data.kit_intro}</div>

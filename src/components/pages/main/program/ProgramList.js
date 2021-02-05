@@ -42,10 +42,11 @@ const ProgramList = () => {
 export default ProgramList;
 
 const StProgramCont = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 70px;
+  justify-items: center;
 `;
 
 const StPageCont = styled.div`

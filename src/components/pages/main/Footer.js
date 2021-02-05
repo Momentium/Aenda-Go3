@@ -1,59 +1,96 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Footer = () => {
+  const openLink = (_url) => {
+    window.open(_url, "_blank");
+  };
 
   return (
     <StFootCont>
       <StImgWrap>
-        <img src="assets/logo/footer-logo.svg" alt="footer-logo"/>
+        <img src="assets/logo/footer-logo.svg" alt="footer-logo" />
       </StImgWrap>
-
 
       <StTextCont>
         <StInfoCont>
           <div className="text footer">
-            주최. 문화체육관광부<br/>
-            주관. 한국문화예술교육진흥원<br/>
-            <br/>
-            (주)앤다 서울시 중구 정동길 12-11 카리스타워 2층<br/>
-            사업자등록번호 211-88-69418<br/>
-            개인정보보호책임자 이상진<br/>
-            <br/>
+            주최. 문화체육관광부
+            <br />
+            주관. 한국문화예술교육진흥원
+            <br />
+            <br />
+            (주)앤다 서울시 중구 정동길 12-11 카리스타워 2층
+            <br />
+            사업자등록번호 211-88-69418
+            <br />
+            개인정보보호책임자 이상진
+            <br />
+            <br />
           </div>
         </StInfoCont>
 
         <StLinkCont>
           <div className="text footer">
-            go310000@naver.com<br/>
-            02) 549-2234<br/>
-            <br/>
+            go310000@naver.com
+            <br />
+            02) 549-2234
+            <br />
+            <br />
           </div>
           <table>
             <tbody>
-              <tr >
-                <td><div style={{display: 'flex'}}><img src="assets/icons/instagram.svg" alt="instagram-logo"/></div></td>
-                <td><div className="text footer">Instagram</div></td>
+              <tr>
+                <td>
+                  <div style={{ display: "flex" }}>
+                    <img
+                      src="assets/icons/instagram.svg"
+                      alt="instagram-logo"
+                    />
+                  </div>
+                </td>
+                <td>
+                  <div
+                    className="text footer link"
+                    onClick={() => openLink("https://www.instagram.com/go3.gold/")}
+                  >
+                    Instagram
+                  </div>
+                </td>
               </tr>
-              <tr >
-                <td><div style={{display: 'flex'}}><img src="assets/icons/facebook.svg" alt="instagram-logo"/></div></td>
-                <td><div className="text footer">Facebook</div></td>
+              <tr>
+                <td>
+                  <div style={{ display: "flex" }}>
+                    <img src="assets/icons/facebook.svg" alt="instagram-logo" />
+                  </div>
+                </td>
+                <td>
+                  <div
+                    className="text footer link"
+                    onClick={() => openLink("https://www.facebook.com/sangsanggo3")}
+                  >
+                    Facebook
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>
-          <br/>
+          <br />
         </StLinkCont>
 
         <StIncCont>
-          <div className="text footer">ⓒ 2020 AENDA Inc., All rights reserved.</div>
+          <div className="text footer">
+            ⓒ 2020 AENDA Inc., All rights reserved.
+          </div>
         </StIncCont>
       </StTextCont>
     </StFootCont>
-  )
-}
+  );
+};
 
 export default Footer;
 
 const StFootCont = styled.section`
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -66,7 +103,6 @@ const StFootCont = styled.section`
     padding-top: 2vh;
     padding-bottom: 2vh;
   }
-  
 `;
 
 const StImgWrap = styled.div`
@@ -95,5 +131,4 @@ const StLinkCont = styled.div`
   }
 `;
 
-const StIncCont = styled.div`
-`;
+const StIncCont = styled.div``;
