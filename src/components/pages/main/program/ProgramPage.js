@@ -16,22 +16,25 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       </StTopCont>
       
       <div className="text program title">{title}</div>
+      <div className='line' style={{marginTop: '23px', marginBottom: '40px'}}/>
+      <ReactPlayer
+        url={"https://www.youtube.com/embed/Kjb_AbqY41M"}
+        playing={false}
+        controls={true}
+        width={theme.SW / 1.5}
+        height={(theme.SW * 9) / (16 * 1.5)}
+      />
       <div className="text program subtitle">{data.intro}</div>
 
       <div className="text program kit-title">예술가의 키트</div>
+      <div className='line' style={{marginTop: '14px', marginBottom: '33.3px'}}/>
       <div className="text program kit">{data.kit}</div>
 
       <img className="mbti-icon" src={`assets/icons/mbti/${mbti}_orange.svg`} alt="mbti-icon"/>
 
       <div className="text program kit-intro-title">키트 소개</div>
       <div className="text program kit-intro">{data.kit_intro}</div>
-      <ReactPlayer
-        url={"https://www.youtube.com/embed/hvh7VYctIqo"}
-        playing={false}
-        controls={true}
-        width={theme.SW / 1.5}
-        height={(theme.SW * 9) / (16 * 1.5)}
-      />
+      
     </StPageWrap>
   )
 }
@@ -43,7 +46,8 @@ const StPageWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 54px; 
+  /* padding: 54px;  */
+  padding-top: 50px;
   padding-bottom: 120px;
   box-sizing: border-box;
 
@@ -55,17 +59,20 @@ const StPageWrap = styled.div`
   width: 100%;
   background: ${ ({ theme }) => `${theme.colors.blue}` };
 
+  .line {
+    width: 100%;
+    height: 1px;
+    background: ${ ({theme}) => `${theme.colors.red}`};
+  }
 
   .title {
-    margin-bottom: 56px;
   }
 
   .subtitle {
-    margin-bottom: 72px;
+    margin: 67px 0;
   }
 
   .kit-title {
-    margin-bottom: 48px;
   }
 
   .kit {
@@ -80,10 +87,6 @@ const StPageWrap = styled.div`
   .kit-intro-title {
     margin-bottom: 16px;
   }
-
-  .kit-intro {
-    margin-bottom: 176px;
-  }
 `;
 
 const StTopCont = styled.div`
@@ -92,6 +95,8 @@ const StTopCont = styled.div`
   align-items: flex-end;
   width: 100%;
   margin-bottom: 72px;
+  box-sizing: border-box;
+  padding: 0 54px;
 
   img {
     &.hide {

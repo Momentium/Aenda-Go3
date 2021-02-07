@@ -1,19 +1,26 @@
-import React, { useContext } from 'react';
-import styled, { css, ThemeContext } from 'styled-components';
+import React, { useContext } from "react";
+import styled, { css, ThemeContext } from "styled-components";
 
 const Header = () => {
-  const {popState, closeMain, openMain} = useContext(ThemeContext);
+  const { popState, closeMain, openMain } = useContext(ThemeContext);
 
   return (
     <StHeaderCont popState={popState}>
-
       <StTopCont popState={popState}>
         <StLogoBtnCont className="header-logo-cont" onClick={openMain}>
-          <img className="header-logo" src="/assets/logo/logo.svg" alt="header-logo"/>
+          <img
+            className="header-logo"
+            src="/assets/logo/logo.svg"
+            alt="header-logo"
+          />
         </StLogoBtnCont>
 
-        <StYTBtnCont  onClick={closeMain}>
-          <img className="youtube-icon" src="/assets/icons/youtube.svg" alt="youtube-icon" />
+        <StYTBtnCont onClick={closeMain}>
+          <img
+            className="youtube-icon"
+            src="/assets/icons/youtube.svg"
+            alt="youtube-icon"
+          />
         </StYTBtnCont>
       </StTopCont>
 
@@ -25,16 +32,17 @@ const Header = () => {
 
         <StSubTitleCont>
           <div className="text header subtitle">
-            불안하고 흔들리는 청소년기의<br/>
-            마지막 단계를 마무리하고<br/>
+            불안하고 흔들리는 청소년기의
+            <br />
+            마지막 단계를 마무리하고
+            <br />
             반짝반짝 빛나는 새로운 시기를 맞이하기 위한 마중물
           </div>
         </StSubTitleCont>
       </StBotCont>
-
     </StHeaderCont>
-  )
-}
+  );
+};
 
 export default Header;
 
@@ -42,50 +50,54 @@ const StHeaderCont = styled.header`
   position: relative;
 
   height: 100%;
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     height: 50%;
-  }
-  
+  } */
+
   & > div {
     width: 100%;
   }
 
-  ${ props => !props.popState && css`
-    background: ${props.theme.colors.red};
-  `}
+  ${(props) =>
+    !props.popState &&
+    css`
+      background: ${props.theme.colors.red};
+    `}
 `;
 
 const StTopCont = styled.section`
   position: absolute;
   top: 6.5%;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 
   transition: all 1s ease;
 
-  ${ props => !props.popState && css`
-    padding: 0 8px;
+  ${(props) =>
+    !props.popState &&
+    css`
+      padding: 0 8px;
 
-    top: 2vh;
-    @media screen and (max-width: 768px) {
-      top: 2.3vh;
-    }
+      top: 50%;
+      transform: translateY(-50%);
+      /* @media screen and (max-width: 768px) {
+        top: 2.3vh;
+      } */
 
-    .header-logo {
-      width: 100%;
-      &:hover {
-        cursor: pointer;
+      .header-logo {
+        width: 100%;
+        &:hover {
+          cursor: pointer;
+        }
       }
-    }
 
-    .youtube-icon {
-      width: 0em;
-      transform: translateX(400%);
-    }
-  `}
-
+      .youtube-icon {
+        width: 0em;
+        transform: translateX(400%);
+      }
+    `}
 `;
 
 const StLogoBtnCont = styled.div`
@@ -94,7 +106,7 @@ const StLogoBtnCont = styled.div`
 
   img {
     transition: all 1s ease;
-    width: 24.688em;
+    width: min(41vw, 395px);
   }
 `;
 
@@ -103,7 +115,7 @@ const StYTBtnCont = styled.div`
   display: flex;
 
   img {
-    width: 2.469em;
+    width: min(4.2vw, 40px);
     transition: all 1s ease;
     &:hover {
       cursor: pointer;
@@ -116,31 +128,30 @@ const StBotCont = styled.section`
   bottom: 6.5%;
 
   transition: all 1s ease;
-  ${props => props.popState ? 
-    css`
-      opacity: 1;
-    `
-    :
-    css`
-      opacity: 0;
-      transform: translateY(200%);
-    ` 
-  }
+  ${(props) =>
+    props.popState
+      ? css`
+          opacity: 1;
+        `
+      : css`
+          opacity: 0;
+          transform: translateY(200%);
+        `}
 `;
 
 const StTitleCont = styled.div`
   margin-bottom: 3.5vh;
 
-  div:first-child{
-    background-color: ${props => props.theme.colors.blue};
+  div:first-child {
+    background-color: ${(props) => props.theme.colors.blue};
     color: white;
   }
-  div:last-child{
+  div:last-child {
     background-color: white;
-    color: ${props => props.theme.colors.blue};
+    color: ${(props) => props.theme.colors.blue};
   }
 `;
 
 const StSubTitleCont = styled.div`
-  color: ${props => props.theme.colors.blue};
+  color: ${(props) => props.theme.colors.blue};
 `;

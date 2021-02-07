@@ -3,27 +3,14 @@ import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
 const Screen = ({ SW, vidUrl, popState, pageState }) => {
-  const [delay, setDelay] = useState(false);
-  useEffect(() => {
-    if(!popState && pageState){
-      setTimeout(() => {
-        setDelay(true);
-      }, 1200)
-    }
-    else {
-      setDelay(false);
-    }
-
-    return () => console.log('아웃', )
-  }, [popState, pageState])
-
+  
   return (
     <StScreenCont>
     {
       SW > 768 ?
       <ReactPlayer
         url={vidUrl}
-        playing={delay}
+        // playing={play}
         controls={true}
         width={SW / 1.5}
         height={(SW * 9) / (16 * 1.5)}
@@ -31,7 +18,7 @@ const Screen = ({ SW, vidUrl, popState, pageState }) => {
       :
       <ReactPlayer
         url={vidUrl}
-        playing={delay}
+        // playing={play}
         controls={true}
         width={SW - 10}
         height={(SW - 10) * 9 / 16}

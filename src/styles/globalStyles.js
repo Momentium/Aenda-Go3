@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
   body {
-    user-select: none;
+    /* user-select: none; */
     background-color: #5a32de;
 
     margin: 0;
@@ -14,9 +14,9 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
 
     font-size: 1rem;
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 768px) {
       font-size: 0.5rem;
-    }
+    } */
 
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
@@ -39,29 +39,30 @@ const GlobalStyle = createGlobalStyle`
       &.title {
         box-sizing: border-box;
         padding: 0 16px 4px 8px;
-        font-size: 60px;
+
+        font-size: min(6.25vw, 60px);
         font-weight: 900;
-        transform: translateX(-8px);
         /* line-height: 1.46; */
+        
+        transform: translateX(-8px);
       }
 
       &.subtitle {
-        /* padding-left: 8px; */
-        font-size: 25px;
+        font-size: min(2.6vw, 25px);
         font-weight: bold;
         line-height: 1.6;
       }
     }
 
     &.drawer {
-      font-size: 25px;
-      line-height: 1;
+      font-size: min(2.6vw, 25px);
       font-weight: bold;
+      line-height: 1;
       letter-spacing: -0.66px;
     }
 
-    &.detail {
-      font-size: 1.25rem;
+    &.intro {
+      font-size: min(2vw, 20px);
       font-weight: 500;
       line-height: 1.71;
       color: #111111;
@@ -72,9 +73,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.footer {
-      font-size: 0.563em;
+      font-size: min(0.9375vw, 12px);
+
       font-weight: 500;
-      /* line-height: 1.78; */
+      line-height: 1.78;
       color: #555555;
 
       &.link {
@@ -82,11 +84,9 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
-    
-
     &.program {
-      &.mbti {
-        font-size: 16px;
+      &.label {
+        font-size: min(1.7vw, 20px);
         font-weight: bold;
         line-height: 1.56;
         letter-spacing: -0.53px;
@@ -150,7 +150,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   span.hash-tag {
-    font-size: 20px;
+    font-size: min(2vw, 20px);
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: -0.66px;

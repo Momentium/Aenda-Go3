@@ -21,7 +21,8 @@ const StMainCont = styled.div`
   position: absolute;
   z-index: 10;
   left: 5px;
-  top: 5px;
+  /* top: 5px; */
+  bottom: 5px;
 
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
@@ -39,14 +40,14 @@ const StMainCont = styled.div`
     :
     css`
       width: 16vw;
-      height: 8vh;
+      height: 3.43vw;
       overflow: hidden;
 
-      top: ${`${theme.SH - 10 - 0.08 * theme.SH}px`};
+      /* top: ${`${theme.SH - 10 - 0.08 * theme.SH}px`}; */
 
-      @media screen and (max-width: 768px) {
+      /* @media screen and (max-width: 768px) {
         width: 40vw;
-      }
+      } */
     `
   }
 `;
