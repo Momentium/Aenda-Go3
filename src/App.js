@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import theme from "./components/styles/theme";
+import theme from "./styles/theme";
 import Main from "./components/pages/main/Main";
 import Screen from "./components/pages/screen/Screen";
 

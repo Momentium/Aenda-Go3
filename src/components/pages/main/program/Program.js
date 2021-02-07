@@ -2,11 +2,21 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Program = ({ mbti, title, openPage }) => {
+  const [img, setImg] = useState(`assets/icons/mbti/${mbti}.svg`);
+  const mouseOnImg = () => {
+    setImg(`assets/icons/mbti/${mbti}_orange.svg`)
+  }
+  const mouseOutImg = () => {
+    setImg(`assets/icons/mbti/${mbti}.svg`);
+  }
+  
   return (
-    <StProgramWrap className={`${mbti} ${title}`} mbti={mbti} onClick={openPage}>
+    <StProgramWrap className={`${mbti} ${title}`} mbti={mbti} onClick={openPage}
+      onMouseOver={mouseOnImg} onMouseOut={mouseOutImg}
+    >
       <img
         className={`${mbti}`}
-        // _url={`assets/icons/mbti/${mbti}.svg`}
+        src={img}
         alt={`${mbti}-icon`}
       />
       <div className="text program mbti">{title}</div>
@@ -27,7 +37,6 @@ const StProgramWrap = styled.div`
 
   img {
     width: 100%;
-    content: url(${props => `assets/icons/mbti/${props.mbti}.svg`});
   }
   .text {
     width: 100%;
@@ -42,9 +51,6 @@ const StProgramWrap = styled.div`
   transition: all 0.1s linear;
 
   &:hover {
-    img {
-      content: url(${props => `assets/icons/mbti/${props.mbti}_orange.svg`});
-    }
     .text {
       background: ${({ theme }) => theme.colors.red};
     }

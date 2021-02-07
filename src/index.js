@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { StylesProvider } from '@material-ui/core/styles';
-import GlobalStyle from './components/styles/globalStyles';
+import GlobalStyle from './styles/globalStyles';
 
 ReactDOM.render(
   <StylesProvider injectFirst>

@@ -49,8 +49,7 @@ const StCardCont = styled.div`
       top: 100%;
       background: black;
       opacity: 0;
-      transition: top 0.3s ease-out,
-                  opacity 0.3s ease-out;
+      transition: all 0.3s ease-out,
     }
   }
 
