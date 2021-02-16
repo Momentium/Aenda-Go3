@@ -44,6 +44,7 @@ const Message = () => {
 export default Message;
 
 const StCont = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 37px;
