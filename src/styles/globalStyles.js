@@ -1,6 +1,12 @@
 import { createGlobalStyle } from "styled-components";
+import font from "./font/TTSoopilmyungjoR020.woff";
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "TTSoopilmyungjoR";
+    src: local("TTSoopilmyungjoR"),
+    url(${font}) format("woff");
+  }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
@@ -9,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
     background-color: #5a32de;
 
     margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;;
+    font-family: 'Noto Sans KR', sans-serif;
+    
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -147,6 +154,48 @@ const GlobalStyle = createGlobalStyle`
         white-space: pre-line;
       }
     }
+
+    &.artist {
+      &.name {
+        font-size: min(1.7vw, 20px);
+        font-weight: bold;
+        line-height: 2;
+        text-align: center;
+      }
+      &.aka {
+        font-size: min(1.3vw, 12.5px);
+        font-weight: normal;
+        line-height: 2;
+        text-align: center;
+      }
+
+      &.title {
+        font-size: min(42vw, 39.5px);
+        font-weight: bold;
+        text-align: center;
+        color: #f85340;
+      }
+
+      &.ment {
+        font-size: min(15.6vw, 15px);
+        line-height: 2;
+        text-align: left;
+        color: #ffffff;
+      }
+      &.why {
+        font-size: min(26vw, 25px);
+        line-height: 1;
+        letter-spacing: -0.83px;
+        text-align: center;
+        color: #ffffff;
+      }
+      &.hist {
+        font-size: min(26vw, 25px);
+        line-height: 1.6;
+        text-align: left;
+        color: #fe573d;
+      }
+    }
   }
   
   span.hash-tag {
@@ -168,7 +217,7 @@ const GlobalStyle = createGlobalStyle`
 
   article {
 
-  }
+  } 
 
   footer {
 

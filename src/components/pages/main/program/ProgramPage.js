@@ -42,6 +42,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
 export default ProgramPage;
 
 const StPageWrap = styled.div`
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,7 +66,12 @@ const StPageWrap = styled.div`
     background: ${ ({theme}) => `${theme.colors.red}`};
   }
 
+
+  .text {
+    font-family: "TTSoopilmyungjoR";
+  }
   .title {
+    font-family: 'Noto Sans KR', sans-serif;
   }
 
   .subtitle {

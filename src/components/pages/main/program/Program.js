@@ -48,7 +48,9 @@ const StProgramWrap = styled.div`
     justify-content: center;
     align-items: center;
   }
-
+  .text {
+    transition: all 0.1s linear;
+  }
   transition: all 0.1s linear;
 
   &:hover {
