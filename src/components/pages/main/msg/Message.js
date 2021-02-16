@@ -111,8 +111,8 @@ const StInput = styled.input`
   vertical-align: center;
 
   padding: 0 15px;
-  border: 1px solid rgba(0,0,0,0);
-  background-color: rgba(0,0,0,0);
+  border: 0;
+  background: rgba(0,0,0,0);
   
   outline: none;  
   &::placeholder{
@@ -127,7 +127,7 @@ const StTopCont = styled.div`
 
   & > div {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 
     border-bottom: 1px solid #555555;
   } 
