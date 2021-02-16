@@ -1,11 +1,23 @@
 import { createGlobalStyle } from "styled-components";
-import font from "./font/TTSoopilmyungjoR020.woff";
+import font010 from "./font/TTSoopilmyungjoR010.woff";
+import font020 from "./font/TTSoopilmyungjoR020.woff";
+import font040 from "./font/TTSoopilmyungjoR040.woff";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "TTSoopilmyungjoR";
-    src: local("TTSoopilmyungjoR"),
-    url(${font}) format("woff");
+    font-family: "TTSoopilmyungjoR010";
+    src: local("TTSoopilmyungjoR010"),
+    url(${font010}) format("woff");
+  }
+  @font-face {
+    font-family: "TTSoopilmyungjoR020";
+    src: local("TTSoopilmyungjoR020"),
+    url(${font020}) format("woff");
+  }
+  @font-face {
+    font-family: "TTSoopilmyungjoR040";
+    src: local("TTSoopilmyungjoR040"),
+    url(${font040}) format("woff");
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -111,7 +123,8 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.subtitle {
-        font-size: 20px;
+        font-family: "TTSoopilmyungjoR020";
+        font-size: 25px;
         font-weight: normal;
         line-height: 1.75;
         text-align: center;
@@ -120,6 +133,7 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.kit-title {
+        font-family: "TTSoopilmyungjoR040";
         font-size: 25px;
         font-weight: 500;
         line-height: 1;
@@ -128,6 +142,7 @@ const GlobalStyle = createGlobalStyle`
         color: #fb5640;
       }
       &.kit {
+        font-family: "TTSoopilmyungjoR020";
         font-size: 15px;
         font-weight: normal;
         line-height: 2;
@@ -137,6 +152,7 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.kit-intro-title {
+        font-family: "TTSoopilmyungjoR020";
         font-size: 15px;
         font-weight: 600;
         line-height: 2.17;
@@ -145,6 +161,7 @@ const GlobalStyle = createGlobalStyle`
         text-align: center;
       }
       &.kit-intro {
+        font-family: "TTSoopilmyungjoR020";
         font-size: 15px;
         font-weight: normal;
         line-height: 2.17;
@@ -177,12 +194,14 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.ment {
+        font-family: "TTSoopilmyungjoR020";
         font-size: min(15.6vw, 15px);
         line-height: 2;
         text-align: left;
         color: #ffffff;
       }
       &.why {
+        font-family: "TTSoopilmyungjoR020";
         font-size: min(26vw, 25px);
         line-height: 1;
         letter-spacing: -0.83px;
@@ -190,11 +209,23 @@ const GlobalStyle = createGlobalStyle`
         color: #ffffff;
       }
       &.hist {
+        font-family: "TTSoopilmyungjoR020";
         font-size: min(26vw, 25px);
         line-height: 1.6;
         text-align: left;
         color: #fe573d;
       }
+    }
+
+    &.msg {
+      font-size: 12.5px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2;
+      letter-spacing: normal;
+      text-align: left;
+      color: #333333;
     }
   }
   

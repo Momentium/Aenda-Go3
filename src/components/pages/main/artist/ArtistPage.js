@@ -80,12 +80,6 @@ const StPageWrap = styled.div`
     background: ${({ theme }) => `${theme.colors.red}`};
   }
 
-  .text {
-    font-family: "TTSoopilmyungjoR";
-  }
-  .title {
-    font-family: "Noto Sans KR", sans-serif;
-  }
 `;
 
 const StTopCont = styled.div`
@@ -140,10 +134,6 @@ const StBotCont = styled.div`
     justify-content: center;
     margin: 60px 0;
   }
-
-  .img-cont {
-    
-  }
 `;
 
 const StImgCont = styled.div`
@@ -153,8 +143,10 @@ const StImgCont = styled.div`
   justify-content: space-between;
 
   .img-div {
-    width: min(31.25vw, 300px);
-    height: min(29.67vw, 280px);
+    /* width: min(31.25vw, 300px);
+    height: min(29.67vw, 280px); */
+    width: 31.25vw;
+    height: 29.67vw;
     background-image: url(${props => props.imgUrl});
     background-position: top;
     background-repeat: no-repeat;

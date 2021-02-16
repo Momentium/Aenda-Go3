@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import Intro from "./intro/Intro";
 import ProgramList from "./program/ProgramList";
 import ArtistList from './artist/ArtistList';
+import Message from './msg/Message';
 
 const Detail = ({ menu }) => {
   return (
@@ -10,6 +11,7 @@ const Detail = ({ menu }) => {
       {menu.includes("2020") && <Intro />}
       {menu.includes("PROGRAM") && <ProgramList />}
       {menu.includes("ARTIST") && <ArtistList />}
+      {menu.includes("MESSAGE") && <Message />}
     
     </StDetailWrap>
   );

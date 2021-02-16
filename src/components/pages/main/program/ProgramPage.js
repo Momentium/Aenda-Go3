@@ -32,7 +32,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
 
       <img className="mbti-icon" src={`assets/icons/mbti/${mbti}_orange.svg`} alt="mbti-icon"/>
 
-      <div className="text program kit-intro-title">키트 소개</div>
+      <div className="text program kit-intro-title">예술가의 코멘트</div>
       <div className="text program kit-intro">{data.kit_intro}</div>
       
     </StPageWrap>
@@ -89,10 +89,10 @@ const StPageWrap = styled.div`
     width: 144px;
     margin-bottom: 40px;
   }
-
+/* 
   .kit-intro-title {
     margin-bottom: 16px;
-  }
+  } */
 `;
 
 const StTopCont = styled.div`
