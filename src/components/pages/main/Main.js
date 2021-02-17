@@ -29,7 +29,7 @@ const StMainCont = styled.div`
     display: none;
   }
 
-  transition: all 1s ease;
+  transition: all 0.7s ease;
 
   ${({ theme }) => theme.popState ? 
     css`

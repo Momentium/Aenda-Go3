@@ -227,6 +227,14 @@ const GlobalStyle = createGlobalStyle`
       text-align: left;
       color: #333333;
     }
+
+    &.modal {
+      font-size: min(1.7vw, 20px);
+      font-weight: 500;
+      line-height: 1.25;
+      text-align: center;
+      color: #ffffff;
+    }
   }
   
   span.hash-tag {
