@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Program = ({ mbti, title, openPage }) => {
-  const [img, setImg] = useState(`assets/icons/mbti/${mbti}.svg`);
+const Program = ({ data, openPage }) => {
+  const [img, setImg] = useState(data.img);
   const mouseOnImg = () => {
-    setImg(`assets/icons/mbti/${mbti}_orange.svg`);
+    setImg(data.hovImg);
   };
   const mouseOutImg = () => {
-    setImg(`assets/icons/mbti/${mbti}.svg`);
+    setImg(data.img);
   };
 
   return (
     <StProgramWrap
-      className={`${mbti} ${title}`}
-      mbti={mbti}
+      className={`${data.mbti} ${data.title}`}
+      mbti={data.mbti}
       onClick={openPage}
       onMouseOver={mouseOnImg}
       onMouseOut={mouseOutImg}
     >
-      <img className={`${mbti}`} src={img} alt={`${mbti}-icon`} />
-      <div className="text program label">{title}</div>
+      <img className={`${data.mbti}`} src={img} alt={`${data.mbti}-icon`} />
+      <div className="text program label">{data.title}</div>
     </StProgramWrap>
   );
 };

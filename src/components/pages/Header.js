@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled, { css, ThemeContext } from "styled-components";
-
+import { headerData } from '../../data/data'
+ 
 const Header = () => {
   const { popState, closeMain, openMain } = useContext(ThemeContext);
 
@@ -10,7 +11,7 @@ const Header = () => {
         <StLogoBtnCont className="header-logo-cont" onClick={openMain}>
           <img
             className="header-logo"
-            src="/assets/logo/logo.svg"
+            src={headerData.logo}
             alt="header-logo"
           />
         </StLogoBtnCont>
@@ -18,7 +19,7 @@ const Header = () => {
         <StYTBtnCont onClick={closeMain}>
           <img
             className="youtube-icon"
-            src="/assets/icons/youtube.svg"
+            src={headerData.ytIcon}
             alt="youtube-icon"
           />
         </StYTBtnCont>
@@ -26,17 +27,13 @@ const Header = () => {
 
       <StBotCont popState={popState}>
         <StTitleCont>
-          <div className="text header title">반짝반짝 열아홉</div>
-          <div className="text header title">나의 취향이 닿는 세계로</div>
+          <div className="text header title blue">{headerData.blue}</div>
+          <div className="text header title white">{headerData.white}</div>
         </StTitleCont>
 
         <StSubTitleCont>
           <div className="text header subtitle">
-            불안하고 흔들리는 청소년기의
-            <br />
-            마지막 단계를 마무리하고
-            <br />
-            반짝반짝 빛나는 새로운 시기를 맞이하기 위한 마중물
+            {headerData.txt}
           </div>
         </StSubTitleCont>
       </StBotCont>
@@ -142,11 +139,11 @@ const StBotCont = styled.section`
 const StTitleCont = styled.div`
   margin-bottom: 3.5vh;
 
-  div:first-child {
+  .blue {
     background-color: ${(props) => props.theme.colors.blue};
     color: white;
   }
-  div:last-child {
+  .white {
     background-color: white;
     color: ${(props) => props.theme.colors.blue};
   }

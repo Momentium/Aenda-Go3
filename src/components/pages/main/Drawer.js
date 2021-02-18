@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Detail from './Detail';
 import SlideList from './SlideList';
 import { TagContxt } from '../../common/ContextStorage';
+import { drawerData } from '../../../data/data';
 
 const Drawer = ({title}) => {
   const [isHov, setIsHov] = useState(false);
@@ -39,15 +40,15 @@ const Drawer = ({title}) => {
         <StArrowCont className="arrow-wrap">
           {
             isHov || isOpen ?
-            <img className="red" src="assets/icons/redarrow.svg" alt=""/>
+            <img className="red" src={drawerData.arrow_red} alt="arrow-red"/>
             :
-            <img className="black" src="assets/icons/arrow.svg" alt=""/>
+            <img className="black" src={drawerData.arrow_black} alt="arrow-black"/>
           }
         </StArrowCont>
       </StDrawerWrap>
       
       <TagContxt.Provider value={{ curTag, handleCurTag }}>
-      { title === "작품 갤러리 EXHIBITION" && 
+      { title === drawerData.exhib && 
         <>
           <StLine isOpen={isOpen} isHov={isHov}/>
           <SlideList isOpen={isOpen}/> 

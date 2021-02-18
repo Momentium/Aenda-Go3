@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { footerData } from '../../../data/data'
 
 const Footer = () => {
   const openLink = (_url) => {
@@ -8,21 +9,21 @@ const Footer = () => {
   return (
     <StFootCont>
       <StImgWrap>
-        <img src="assets/logo/footer-logo.svg" alt="footer-logo" />
+        <img src={footerData.logo} alt="footer-logo" />
       </StImgWrap>
 
       <StInfoCont>
         <div className="text footer">
-          주최. 문화체육관광부
+          {footerData.host}
           <br />
-          주관. 한국문화예술교육진흥원
+          {footerData.supervise}
           <br />
           <br />
-          (주)앤다 서울시 중구 정동길 12-11 카리스타워 2층
+          {footerData.addr}
           <br />
-          사업자등록번호 211-88-69418
+          {footerData.regist}
           <br />
-          개인정보보호책임자 이상진
+          {footerData.owner}
           <br />
           <br />
         </div>
@@ -30,9 +31,9 @@ const Footer = () => {
 
       <StLinkCont>
         <div className="text footer">
-          go310000@naver.com
+          {footerData.email}
           <br />
-          02) 549-2234
+          {footerData.phone}
           <br />
           <br />
         </div>
@@ -41,34 +42,34 @@ const Footer = () => {
             <tr>
               <td>
                 <div style={{ display: "flex" }}>
-                  <img src="assets/icons/instagram.svg" alt="instagram-logo" />
+                  <img src={footerData.sns.insta.icon} alt="instagram-logo" />
                 </div>
               </td>
               <td>
                 <div
                   className="text footer link"
                   onClick={() =>
-                    openLink("https://www.instagram.com/go3.gold/")
+                    openLink(footerData.sns.insta.link)
                   }
                 >
-                  Instagram
+                  {footerData.sns.insta.label}
                 </div>
               </td>
             </tr>
             <tr>
               <td>
                 <div style={{ display: "flex" }}>
-                  <img src="assets/icons/facebook.svg" alt="instagram-logo" />
+                  <img src={footerData.sns.facebook.icon} alt="instagram-logo" />
                 </div>
               </td>
               <td>
                 <div
                   className="text footer link"
                   onClick={() =>
-                    openLink("https://www.facebook.com/sangsanggo3")
+                    openLink(footerData.sns.facebook.link)
                   }
                 >
-                  Facebook
+                  {footerData.sns.facebook.label}
                 </div>
               </td>
             </tr>

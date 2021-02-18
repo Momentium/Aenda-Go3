@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Header from '../../common/Header';
+import Header from '../Header';
 import DrawerList from './DrawerList';
 
 const Main = () => {

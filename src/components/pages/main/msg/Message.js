@@ -9,19 +9,23 @@ const Message = () => {
     const _target = e.currentTarget;
     setIsFocus(_target.className.split(" ")[2]);
   };
+  const hdlBlur = () => {
+    setIsFocus("")
+  }
 
   const [popModal, setPopModal] = useState(false);
   const [alertMode, setAlertMode] = useState(false);
 
   const sendMsg = () => {
     const _target = document.getElementsByName("input");
-    _target.forEach((el) => {
-      if (el.value === "") {
+
+    for(let i = 0; i < _target.length; i++) {
+      if (_target[i].value === "") {
         setAlertMode(true);
         setPopModal(true);
         return;
       }
-    });
+    }
     
     const _templateParams = {
       name: _target[0].value,
@@ -44,17 +48,17 @@ const Message = () => {
   return (
     <StCont isFocus={isFocus}>
       <StTopCont className="cont">
-        <div className="text msg name" onFocus={hdlFocus}>
+        <div className="text msg name" onFocus={hdlFocus} onBlur={hdlBlur}>
           <div>이&nbsp;름</div>
           <StInput type="text" name={"input"} />
         </div>
-        <div className="text msg email" onFocus={hdlFocus}>
+        <div className="text msg email" onFocus={hdlFocus} onBlur={hdlBlur}>
           <div>이메일</div>
           <StInput type="text" name={"input"} />
         </div>
       </StTopCont>
       <StMidCont className="cont">
-        <div className="text msg guide" onFocus={hdlFocus}>
+        <div className="text msg guide" onFocus={hdlFocus} onBlur={hdlBlur}>
           <div>메시지를 입력해 주세요.</div>
           <StInput type="text" name={"input"} />
         </div>
@@ -100,7 +104,7 @@ const StCont = styled.div`
 const trans = css`
   &,
   div {
-    transition: all 0.1s ease;
+    transition: all 0.1s linear;
   }
   border-bottom: 1px solid ${({ theme }) => theme.colors.blue};
   div {

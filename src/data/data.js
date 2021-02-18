@@ -1,127 +1,132 @@
-export const hashTagData = [
-  [
-    '상상만개',
-    '잘하는것과좋아하는것사이',
-    '어른이된다는것은무엇일까',
-    '엉뚱한행복',
-    '한문장으로시작하는책',
-    '나는무엇때문에흔들렸나',
-    '꿈의명함',
-    '빨간양말의춤',
-  ],
-  [
-    '내자랑노래',
-    '플라스틱추적기',
-    '배운망덕춤',
-    '열아홉나의오늘',
-    '예비슮삶만화',
-    '기억에남는소리',
-    '휘슬과여행하기',
-    '내마음이고요해지는순간',
-    '나의12년을정리하는방법',
-  ],
-  [
-    '빨간양말의춤',
-    '꿈의명함',
-    '나는무엇때문에흔들렸나',
-    '한문장으로시작하는책',
-    '엉뚱한행복',
-    '어른이된다는것은무엇일까',
-    '잘하는것과좋아하는것사이',
-    '상상만개',
-  ],
-  [
-    '나의12년을정리하는방법',
-    '내마음이고요해지는순간',
-    '휘슬과여행하기',
-    '기억에남는소리',
-    '예비슮삶만화',
-    '열아홉나의오늘',
-    '배운망덕춤',
-    '플라스틱추적기',
-    '내자랑노래',
-  ],
-]
+export const headerData = {  
+  logo: `/assets/logo/logo.svg`,
+  ytIcon: `/assets/icons/youtube.svg`,
+  blue: `반짝반짝 열아홉`,
+  white: `나의 취향이 닿는 세계로`,
+  txt: `불안하고 흔들리는 청소년기의
+  마지막 단계를 마무리하고
+  반짝반짝 빛나는 새로운 시리를 맞이하기 위한 마중물` 
+}
+
+export const drawerData = {
+  intro:`2020 상상만개는`,
+  program: `프로그램 안내 PROGRAM`,
+  artist: `예술가 ARTIST`,
+  exhib: `작품 갤러리 EXHIBITION`,
+  msg: `SEND TO MESSAGE`,
+  arrow_black: `assets/icons/arrow.svg`,
+  arrow_red: `assets/icons/redarrow.svg`
+}
+
+export const introData = {
+  txt: 
+  `입시 일정으로 미처 프로그램을 신청하지 못한
+  고3·수험생들을 위해 준비 되었습니다.
+
+  100% 온라인으로 진행되는 상상만개는성격유형검사를 통해 학생 개개인의 예술적 취향을 발견하고,
+  각 유형에 맞는 문화예술교육 프로그램을 추천받아 동시대 예술가 16명과 함께 프로그램에 참여하게 됩니다.
+  
+  `,
+  highlight:
+  `We are Golden EXPRESS
+  반짝반짝 열아홉, 나의 취향이 닿는 세계로`,
+}
 
 export const programData = [
   {
     mbti: "INFJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/INFJ.svg",
+    hovImg: "/assets/icons/mbti/INFJ_orange.svg",
     title: "선의의 옹호자",
   },
   {
     mbti: "INFP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/INFP.svg",
+    hovImg: "/assets/icons/mbti/INFP_orange.svg",
     title: "열정적인 중재자"
   },
   {
     mbti: "ENFJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ENFJ.svg",
+    hovImg: "/assets/icons/mbti/ENFJ_orange.svg",
     title: "정의의 사회운동가"
   },
   {
     mbti: "ENFP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ENFP.svg",
+    hovImg: "/assets/icons/mbti/ENFP_orange.svg",
     title: "재기발랄 활동가"
   },
   {
     mbti: "INTJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/INTJ.svg",
+    hovImg: "/assets/icons/mbti/INTJ_orange.svg",
     title: "용의주도 전략가"
   },
   {
     mbti: "INTP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/INTP.svg",
+    hovImg: "/assets/icons/mbti/INTP_orange.svg",
     title: "논리적인 사색가"
   },
   {
     mbti: "ENTJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ENTJ.svg",
+    hovImg: "/assets/icons/mbti/ENTJ_orange.svg",
     title: "대담한 통솔자"
   },
   {
     mbti: "ENTP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ENTP.svg",
+    hovImg: "/assets/icons/mbti/ENTP_orange.svg",
     title: "뜨거운 논쟁 변론가"
   },
   {
     mbti: "ISTJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ISTJ.svg",
+    hovImg: "/assets/icons/mbti/ISTJ_orange.svg",
     title: "청렴결백 논리주의자"
   },
   {
     mbti: "ISFJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ISFJ.svg",
+    hovImg: "/assets/icons/mbti/ISFJ_orange.svg",
     title: "용감한 수호자"
   },
   {
     mbti: "ESTJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ESTJ.svg",
+    hovImg: "/assets/icons/mbti/ESTJ_orange.svg",
     title: "엄격한 관리자"
   },
   {
     mbti: "ESFJ",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ESFJ.svg",
+    hovImg: "/assets/icons/mbti/ESFJ_orange.svg",
     title: "사교적인 외교관"
   },
   {
     mbti: "ISTP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ISTP.svg",
+    hovImg: "/assets/icons/mbti/ISTP_orange.svg",
     title: "만능 재주꾼"
   },
   {
     mbti: "ISFP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ISFP.svg",
+    hovImg: "/assets/icons/mbti/ISFP_orange.svg",
     title: "호기심 많은 예술가"
   },
   {
     mbti: "ESTP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ESTP.svg",
+    hovImg: "/assets/icons/mbti/ESTP_orange.svg",
     title: "모험왕 사업가"
   },
   {
     mbti: "ESFP",
-    imgUrl: "",
+    img: "/assets/icons/mbti/ESFP.svg",
+    hovImg: "/assets/icons/mbti/ESFP_orange.svg",
     title: "자유로운 연예인"
   }
 ]
@@ -531,6 +536,51 @@ export const artistData = [
       '<깨끗한 존경> 등'
     ]
   },
+]
+
+export const hashTagData = [
+  [
+    '상상만개',
+    '잘하는것과좋아하는것사이',
+    '어른이된다는것은무엇일까',
+    '엉뚱한행복',
+    '한문장으로시작하는책',
+    '나는무엇때문에흔들렸나',
+    '꿈의명함',
+    '빨간양말의춤',
+  ],
+  [
+    '내자랑노래',
+    '플라스틱추적기',
+    '배운망덕춤',
+    '열아홉나의오늘',
+    '예비슮삶만화',
+    '기억에남는소리',
+    '휘슬과여행하기',
+    '내마음이고요해지는순간',
+    '나의12년을정리하는방법',
+  ],
+  [
+    '빨간양말의춤',
+    '꿈의명함',
+    '나는무엇때문에흔들렸나',
+    '한문장으로시작하는책',
+    '엉뚱한행복',
+    '어른이된다는것은무엇일까',
+    '잘하는것과좋아하는것사이',
+    '상상만개',
+  ],
+  [
+    '나의12년을정리하는방법',
+    '내마음이고요해지는순간',
+    '휘슬과여행하기',
+    '기억에남는소리',
+    '예비슮삶만화',
+    '열아홉나의오늘',
+    '배운망덕춤',
+    '플라스틱추적기',
+    '내자랑노래',
+  ],
 ]
 
 export const galleryData = {
@@ -1618,4 +1668,28 @@ export const galleryData = {
       'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146990445_467725437741140_4224642667139741795_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=FsTRt1UJKUQAX_32O8q&tp=1&oh=6a6829243d185745e5b37274369f9db3&oe=603033AF'
     }
   ]
+}
+
+export const footerData = {
+  logo: `/assets/logo/footer-logo.svg`,
+  host: `주최. 문화체육관광부`,
+  supervise: `주관. 한국문화예술교육진흥원`,
+  addr: `주)앤다 서울시 중구 정동길 12-11 카리스타워 2층`,
+  regist: `사업자등록번호 211-88-69418`,
+  owner: `개인정보보호책임자 이상진`,
+  email: `go310000@naver.com`,
+  phone: `02) 549-2234`,
+  sns: {
+    insta: {
+      icon: `assets/icons/instagram.svg`,
+      label: `Instagram`,
+      link: `https://www.instagram.com/go3.gold/`
+    },
+    facebook: {
+      icon: `/assets/icons/facebook.svg`,
+      label: `Facebook`,
+      link: `https://www.facebook.com/sangsanggo3`
+    },
+  },
+  inc: `ⓒ 2020 AENDA Inc., All rights reserved.`
 }

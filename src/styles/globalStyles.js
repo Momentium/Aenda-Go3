@@ -53,6 +53,7 @@ const GlobalStyle = createGlobalStyle`
     font-stretch: normal;
     font-style: normal;
     letter-spacing: normal;
+    white-space: pre-line;
 
     &.header {
       &.title {
@@ -85,6 +86,7 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 500;
       line-height: 1.71;
       color: #111111;
+      /* white-space: pre-line; */
 
       .colored {
         color: #5a32de;
@@ -118,7 +120,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         line-height: 1;
         letter-spacing: -1.3px;
-        /* text-align: center; */
+        text-align: center;
         color: #f85340;
       }
 
@@ -129,7 +131,6 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.75;
         text-align: center;
         color: #ffffff;
-        white-space: pre-line;
       }
 
       &.kit-title {
@@ -148,7 +149,6 @@ const GlobalStyle = createGlobalStyle`
         line-height: 2;
         text-align: left;
         color: #ffffff;
-        white-space: pre-line;
       }
 
       &.kit-intro-title {
@@ -168,7 +168,6 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: -0.5px;
         text-align: center;
         color: #ffffff;
-        white-space: pre-line;
       }
     }
 
@@ -226,12 +225,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.msg {
-      font-size: 12.5px;
+      white-space: nowrap;
+      font-size: min(1.3vw, 12.5px);
       font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
       line-height: 2;
-      letter-spacing: normal;
       text-align: left;
       color: #333333;
     }

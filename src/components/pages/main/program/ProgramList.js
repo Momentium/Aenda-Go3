@@ -22,7 +22,7 @@ const ProgramList = () => {
   }
 
   const dataList = programData.map((el, idx) => 
-    <Program key={idx} mbti={el.mbti} title={el.title} openPage={openPage}/>
+    <Program key={idx} data={el} mbti={el.mbti} title={el.title} openPage={openPage}/>
   )
 
   return (

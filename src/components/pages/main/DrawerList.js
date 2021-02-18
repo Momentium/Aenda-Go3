@@ -1,20 +1,21 @@
 import styled, { css } from 'styled-components';
 import Drawer from './Drawer';
 import Footer from './Footer';
+import { drawerData } from '../../../data/data';
 
 const DrawerList = () => {
   return (
       <StListCont>
         <StLine/>
-        <Drawer title="2020 상상만개는"/>
+        <Drawer title={drawerData.intro}/>
         <StLine/>
-        <Drawer title="프로그램 안내 PROGRAM"/>
+        <Drawer title={drawerData.program}/>
         <StLine/>
-        <Drawer title="예술가 ARTIST"/>
+        <Drawer title={drawerData.artist}/>
         <StLine/>
-        <Drawer title="작품 갤러리 EXHIBITION"/>
+        <Drawer title={drawerData.exhib}/>
         <StLine/>
-        <Drawer title="SEND TO MESSAGE"/>
+        <Drawer title={drawerData.msg}/>
         <StLine/>
         <Footer/>
       </StListCont>
