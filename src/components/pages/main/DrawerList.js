@@ -13,6 +13,7 @@ const DrawerList = () => {
         <Drawer title="예술가 ARTIST"/>
         <StLine/>
         <Drawer title="작품 갤러리 EXHIBITION"/>
+        <StLine/>
         <Drawer title="SEND TO MESSAGE"/>
         <StLine/>
         <Footer/>

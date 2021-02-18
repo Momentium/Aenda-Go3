@@ -3,16 +3,27 @@ import { Collapse } from '@material-ui/core';
 import styled, { css } from 'styled-components';
 import Detail from './Detail';
 import SlideList from './SlideList';
+import { TagContxt } from '../../common/ContextStorage';
 
 const Drawer = ({title}) => {
-  const [hover, setHover] = useState(false);
+  const [isHov, setIsHov] = useState(false);
   const handleHover = () => {
-    setHover(!hover);
+    setIsHov(!isHov);
   }
 
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
+    if(!isOpen) setCurTag("상상만개")
     setIsOpen(!isOpen);
+  }
+  
+  const [curTag, setCurTag] = useState("상상만개");
+  const handleCurTag = (e) => {
+    const _target = e.currentTarget.textContent;
+    setCurTag(_target.substring(1));
+    if(!isOpen){
+      setIsOpen(true);
+    }
   }
 
   return (
@@ -27,7 +38,7 @@ const Drawer = ({title}) => {
         <div className="text drawer">{title}</div>
         <StArrowCont className="arrow-wrap">
           {
-            hover || isOpen ?
+            isHov || isOpen ?
             <img className="red" src="assets/icons/redarrow.svg" alt=""/>
             :
             <img className="black" src="assets/icons/arrow.svg" alt=""/>
@@ -35,16 +46,19 @@ const Drawer = ({title}) => {
         </StArrowCont>
       </StDrawerWrap>
       
+      <TagContxt.Provider value={{ curTag, handleCurTag }}>
       { title === "작품 갤러리 EXHIBITION" && 
         <>
-          <StLine isOpen={isOpen} />
-          <SlideList/> 
+          <StLine isOpen={isOpen} isHov={isHov}/>
+          <SlideList isOpen={isOpen}/> 
         </>
       }
+      </TagContxt.Provider>
 
       <Collapse in={isOpen}>
-        <Detail menu={title}/>
+        <Detail menu={title} curTag={curTag}/>
       </Collapse>
+
 
     </StDrawerCont>
   );
@@ -65,7 +79,7 @@ const StDrawerCont = styled.div`
 `;
 
 const StDrawerWrap = styled.section`
-  
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   
@@ -77,8 +91,7 @@ const StDrawerWrap = styled.section`
   }
 
   &:hover {
-    cursor: pointer;
-    background-color: ${({ theme }) => theme.colors.blue};
+    background: ${({ theme }) => theme.colors.blue};
     .text {
       color: ${({ theme }) => theme.colors.red};
     }
@@ -86,7 +99,7 @@ const StDrawerWrap = styled.section`
 
   ${ props  => props.isOpen ? 
     css`
-      background-color: ${({ theme }) => theme.colors.blue};
+      background: ${({ theme }) => theme.colors.blue};
       .text {
         color: ${({ theme }) => theme.colors.red};
       }
@@ -96,7 +109,7 @@ const StDrawerWrap = styled.section`
     `
     :
     css`
-      background-color: white;
+      background: white;
       .text {
         color: ${({ theme }) => theme.colors.black};
       }
@@ -116,5 +129,5 @@ const StArrowCont = styled.div`
 const StLine = styled.div`
   width: 100%;
   height: 1px;
-  background-color: ${ props => props.isOpen ? "white" : props.theme.colors.blue };
+  background: ${ props => (props.isHov || props.isOpen) ? "white" : props.theme.colors.blue };
 `;

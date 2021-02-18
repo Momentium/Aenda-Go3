@@ -1,48 +1,74 @@
-import React, { useState } from 'react'
-import styled, { css } from 'styled-components';
-import Modal from './Modal';
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
+import Modal from "./Modal";
+import emailjs from 'emailjs-com';
 
 const Message = () => {
   const [isFocus, setIsFocus] = useState("");
   const hdlFocus = (e) => {
     const _target = e.currentTarget;
-    setIsFocus(_target.className.split(" ")[2])
-  }
+    setIsFocus(_target.className.split(" ")[2]);
+  };
 
   const [popModal, setPopModal] = useState(false);
+  const [alertMode, setAlertMode] = useState(false);
 
-  const sendMsg = () => { 
-    const _target = document.getElementsByName('input')
-    console.log(_target[0].value)
-    console.log(_target[1].value)
-    console.log(_target[2].value)
-    setPopModal(true)
-  }
+  const sendMsg = () => {
+    const _target = document.getElementsByName("input");
+    _target.forEach((el) => {
+      if (el.value === "") {
+        setAlertMode(true);
+        setPopModal(true);
+        return;
+      }
+    });
+    
+    const _templateParams = {
+      name: _target[0].value,
+      email: _target[1].value,
+      msg: _target[2].value
+    }
+    emailjs.send('aenda-go3', 'aenda-go3', _templateParams, 'user_IvdJn5ZLH0KLCm2l1qSD5')
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      _target.forEach((el) => {
+        el.value = "";
+      });
+    }, (err) => {
+      console.log('FAILED...', err);
+    });
+    
+    setPopModal(true);
+  };
 
   return (
     <StCont isFocus={isFocus}>
       <StTopCont className="cont">
         <div className="text msg name" onFocus={hdlFocus}>
           <div>이&nbsp;름</div>
-          <StInput type="text" name={"input"}/>
+          <StInput type="text" name={"input"} />
         </div>
         <div className="text msg email" onFocus={hdlFocus}>
           <div>이메일</div>
-          <StInput type="text" name={"input"}/>
+          <StInput type="text" name={"input"} />
         </div>
       </StTopCont>
       <StMidCont className="cont">
         <div className="text msg guide" onFocus={hdlFocus}>
           <div>메시지를 입력해 주세요.</div>
-          <StInput type="text" name={"input"}/>
+          <StInput type="text" name={"input"} />
         </div>
       </StMidCont>
       <StBotCont className="cont">
         <StBtn onClick={sendMsg}>메시지 보내기</StBtn>
       </StBotCont>
-      
-      <Modal popModal={popModal} setPopModal={setPopModal}/>
 
+      <Modal
+        popModal={popModal}
+        setPopModal={setPopModal}
+        alertMode={alertMode}
+        setAlertMode={setAlertMode}
+      />
     </StCont>
   );
 };
@@ -55,23 +81,25 @@ const StCont = styled.div`
   flex-direction: column;
   padding-top: 3.9vw;
 
-  .cont, .msg {
-    width:  100%;
+  .cont,
+  .msg {
+    width: 100%;
   }
 
   .name {
-    ${ props => props.isFocus==='name' && trans }
+    ${(props) => props.isFocus === "name" && trans}
   }
   .email {
-    ${ props => props.isFocus==='email' && trans }
+    ${(props) => props.isFocus === "email" && trans}
   }
   .guide {
-    ${ props => props.isFocus==='guide' && trans }
+    ${(props) => props.isFocus === "guide" && trans}
   }
 `;
 
-const trans = css `
-  &, div {
+const trans = css`
+  &,
+  div {
     transition: all 0.1s ease;
   }
   border-bottom: 1px solid ${({ theme }) => theme.colors.blue};
@@ -79,7 +107,7 @@ const trans = css `
     color: ${({ theme }) => theme.colors.blue};
     font-weight: bold;
   }
-`
+`;
 
 const StInput = styled.input`
   display: inline-block;
@@ -92,12 +120,12 @@ const StInput = styled.input`
 
   padding: 0 15px;
   border: 0;
-  background: rgba(0,0,0,0);
-  
-  outline: none;  
-  &::placeholder{
-    color:#D8D8D8;
-  }  
+  background: rgba(0, 0, 0, 0);
+
+  outline: none;
+  &::placeholder {
+    color: #d8d8d8;
+  }
 `;
 
 const StTopCont = styled.div`
@@ -110,10 +138,10 @@ const StTopCont = styled.div`
     align-items: baseline;
 
     border-bottom: 1px solid #555555;
-  } 
-  & > div:first-child{
+  }
+  & > div:first-child {
     margin-right: 48px;
-  } 
+  }
 `;
 const StMidCont = styled.div`
   & > div {
@@ -139,7 +167,7 @@ const StBtn = styled.div`
   width: min(260vw, 250px);
   height: min(4.2vw, 40px);
 
-  background: ${({theme}) => theme.colors.red};
-  color: ${({theme}) => theme.colors.blue};
+  background: ${({ theme }) => theme.colors.red};
+  color: ${({ theme }) => theme.colors.blue};
   font-weight: bold;
 `;

@@ -1,14 +1,25 @@
 import styled, { css } from 'styled-components';
 
-const Modal = ({ popModal, setPopModal }) => {
+const Modal = ({ popModal, setPopModal, alertMode, setAlertMode }) => {
+
+  const closeModal = () => {
+    setPopModal(false)
+    setAlertMode(false)
+  }
+
   return (
       <StCont popModal={popModal}>
         <div className="rel-cont">
-          <img src="/assets/icons/close-white.svg" alt="close-icon" onClick={(e) => {setPopModal(false)}}/>
+          <img src="/assets/icons/close-white.svg" alt="close-icon" onClick={closeModal}/>
         </div>
 
         <div className="text modal">
-          <div>메시지 전송이 완료되었습니다</div>
+          {
+            alertMode ? 
+            <div>이름 / 이메일 / 메시지 필수 입력 사항입니다</div>
+            :
+            <div>메시지 전송이 완료되었습니다</div>
+          }
           <img src="/assets/icons/check.svg" alt="check-icon"/>
         </div>
 

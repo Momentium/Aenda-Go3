@@ -217,6 +217,14 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
+    &.gallery {
+      font-size: min(1.3vw, 12.5px);
+      font-weight: 500;
+      line-height: 2;
+      text-align: center;
+      color: #fe573d;
+    }
+
     &.msg {
       font-size: 12.5px;
       font-weight: 500;

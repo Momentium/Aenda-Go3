@@ -1,12 +1,24 @@
-import styled from 'styled-components';
+import React, { useContext } from "react";
+import styled, { css } from "styled-components";
+import { TagContxt } from "../../common/ContextStorage";
 
-const Hashtag = ({ dataIdx, idx, tag, selectMBTI }) => {
+const Hashtag = ({ dataIdx, setPauseIdx, isPaused, idx, tag }) => {
+  const { curTag, handleCurTag } = useContext(TagContxt);
+  const handleClick = (e) => {
+    setPauseIdx(dataIdx);
+    handleCurTag(e);
+  };
+
   return (
-    <StHashCont className={`text hash-tag ${idx}`} onClick={selectMBTI}>
+    <StHashCont
+      className={`text hash-tag ${idx}`}
+      isFocus={isPaused && curTag === tag}
+      onClick={handleClick}
+    >
       {`#${tag}`}
     </StHashCont>
-  )
-}
+  );
+};
 export default Hashtag;
 
 const StHashCont = styled.span`
@@ -14,10 +26,20 @@ const StHashCont = styled.span`
   padding: 2px 12px 4px 12px;
   color: white;
 
-  &:hover {
+  ${ props => 
+  props.isFocus ? 
+  css`
     cursor: pointer;
     background: ${({ theme }) => theme.colors.red};
     color: ${({ theme }) => theme.colors.blue};
+  `
+  :
+  css`
+    &:hover {
+      cursor: pointer;
+      background: ${({ theme }) => theme.colors.red};
+      color: ${({ theme }) => theme.colors.blue};
+    }
+  `
   }
-  
 `;

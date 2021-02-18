@@ -5,6 +5,3 @@ export const getTranslateX = (element) => {
   const _x = _matrixValues[4]
   return Number(_x);
 }
-
-export const getNewLinedStr = (txt) => {
-}
