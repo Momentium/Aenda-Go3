@@ -1,9 +1,11 @@
 import { createGlobalStyle } from "styled-components";
+import reset from 'styled-reset';
 import font010 from "./font/TTSoopilmyungjoR010.woff";
 import font020 from "./font/TTSoopilmyungjoR020.woff";
 import font040 from "./font/TTSoopilmyungjoR040.woff";
 
 const GlobalStyle = createGlobalStyle`
+  ${reset}
   @font-face {
     font-family: "TTSoopilmyungjoR010";
     src: local("TTSoopilmyungjoR010"),
