@@ -166,7 +166,8 @@ const StTitleCont = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    margin-bottom: ${({theme}) => theme.SH * 0.2}px;
+    /* margin-bottom: 23vh; */
+    margin-bottom: ${({theme}) => theme.SH * 0.23}px;
     .blue {
       width: 100%;
     }
