@@ -34,7 +34,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       />
       <StImgCont>
         {curPage !== 0 && (
-          <Zoom in={true} timeout={450}>
+          <Zoom in={true} timeout={400}>
             <StArrowWrap dir={"left"} onClick={toLeftPage}>
               <img src="assets/icons/vidArrow.svg" alt="arrow-logo" />
             </StArrowWrap>
@@ -48,7 +48,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
         </div>
         <div></div>
         {curPage !== 2 && (
-          <Zoom in={true} timeout={450}>
+          <Zoom in={true} timeout={400}>
             <StArrowWrap dir={"right"} onClick={toRightPage}>
               <img src="assets/icons/vidArrow.svg" alt="arrow-logo" />
             </StArrowWrap>
