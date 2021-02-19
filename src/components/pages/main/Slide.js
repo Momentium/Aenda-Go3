@@ -19,7 +19,7 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
         el.style.webkitAnimationPlayState = "running";
       });
     }
-  }, [pauseIdx]);
+  }, [pauseIdx, dataIdx]);
   const slowSlide = () => {
     if (dataIdx === pauseIdx) return;
     const _div = aniRef.current;
@@ -66,6 +66,10 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
 export default Slide;
 
 const StSlideWrap = styled.div`
+  @media screen and (max-width: 480px) {
+    margin: 8px 0;
+  }
+
   display: flex;
   justify-content: ${(props) =>
     props.dir === "left" ? "flex-start" : "flex-end"};

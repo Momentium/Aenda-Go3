@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
-const Screen = ({ SW, vidUrl, popState, pageState }) => {
-  
+const Screen = ({ SW, vidUrl }) => {
   return (
     <StScreenCont>
     {
-      SW > 768 ?
+      SW > 480 ?
       <ReactPlayer
         url={vidUrl}
         // playing={play}
@@ -20,8 +18,8 @@ const Screen = ({ SW, vidUrl, popState, pageState }) => {
         url={vidUrl}
         // playing={play}
         controls={true}
-        width={SW - 10}
-        height={(SW - 10) * 9 / 16}
+        width={SW - 26}
+        height={(SW - 26) * 9 / 16}
       />
     }
     </StScreenCont>
@@ -37,4 +35,10 @@ const StScreenCont = styled.div`
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+
+  @media screen and (max-width: 480px){
+    & > * {
+      transform: translateY(-5vw);
+    }
+  }
 `;

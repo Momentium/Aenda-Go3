@@ -99,9 +99,11 @@ const StFootCont = styled.section`
 
   padding-top: 10vh;
   padding-bottom: 10vh;
-  @media screen and (max-width: 768px) {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 `;
 
@@ -109,6 +111,13 @@ const StImgWrap = styled.div`
   display: flex;
   img {
     width: min(13.5vw, 200px);
+  }
+
+  @media screen and (max-width: 480px) {
+    img {
+      width: min(54vw, 260px);
+    }
+    margin-bottom: 36px;
   }
 `;
 
@@ -125,6 +134,9 @@ const StLinkCont = styled.div`
   }
   img {
     height: min(1.1vw, 14px);
+    @media screen and (max-width: 480px) {
+      height: min(3.875vw, 18.6px);
+    }
     margin-right: 4px;
   }
 `;

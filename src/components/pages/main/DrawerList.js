@@ -39,6 +39,9 @@ const StListCont = styled.div`
 
 const StLine = styled.div`
   width: 100%;
-  height: 1px;
+  height: 2px;
+  /* @media screen and (max-width: 480px) {
+    height: 2px;
+  } */
   background-color: ${({ theme }) => theme.colors.blue};
 `;

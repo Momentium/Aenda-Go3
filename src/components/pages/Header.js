@@ -28,12 +28,26 @@ const Header = () => {
       <StBotCont popState={popState}>
         <StTitleCont>
           <div className="text header title blue">{headerData.blue}</div>
-          <div className="text header title white">{headerData.white}</div>
+          {
+            window.innerWidth > 480 ?
+            <div className="text header title white">{headerData.white}</div>
+            :
+            <>
+              <div className="text header title white mobile">{headerData.white_mobile[0]}</div>
+              <div className="text header title white">{headerData.white_mobile[1]}</div>
+            </>
+          }
+          
         </StTitleCont>
 
         <StSubTitleCont>
           <div className="text header subtitle">
-            {headerData.txt}
+            {
+              window.innerWidth > 480 ?
+              headerData.txt
+              :
+              headerData.txt_mobile
+            }
           </div>
         </StSubTitleCont>
       </StBotCont>
@@ -47,9 +61,6 @@ const StHeaderCont = styled.header`
   position: relative;
 
   height: 100%;
-  /* @media screen and (max-width: 768px) {
-    height: 50%;
-  } */
 
   & > div {
     width: 100%;
@@ -79,9 +90,6 @@ const StTopCont = styled.section`
 
       top: 50%;
       transform: translateY(-50%);
-      /* @media screen and (max-width: 768px) {
-        top: 2.3vh;
-      } */
 
       .header-logo {
         width: 100%;
@@ -104,6 +112,10 @@ const StLogoBtnCont = styled.div`
   img {
     transition: all 1s ease;
     width: min(41vw, 395px);
+    @media screen and (max-width: 480px) {
+      width: 69vw;
+      /* width: min(69vw, 166px); */
+    }
   }
 `;
 
@@ -113,6 +125,10 @@ const StYTBtnCont = styled.div`
 
   img {
     width: min(4.2vw, 40px);
+    @media screen and (max-width: 480px) {
+      width: 6.875vw;
+    }
+
     transition: all 1s ease;
     &:hover {
       cursor: pointer;
@@ -125,6 +141,7 @@ const StBotCont = styled.section`
   bottom: 6.5%;
 
   transition: all 1s ease;
+  
   ${(props) =>
     props.popState
       ? css`
@@ -146,6 +163,16 @@ const StTitleCont = styled.div`
   .white {
     background-color: white;
     color: ${(props) => props.theme.colors.blue};
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 23vh;
+    .blue {
+      width: 100%;
+    }
+    .white.mobile {
+      width: 100%;      
+    }
   }
 `;
 

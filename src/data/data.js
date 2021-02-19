@@ -3,9 +3,14 @@ export const headerData = {
   ytIcon: `/assets/icons/youtube.svg`,
   blue: `반짝반짝 열아홉`,
   white: `나의 취향이 닿는 세계로`,
+  white_mobile: [`나의 취향이 닿는`, `세계로`],
   txt: `불안하고 흔들리는 청소년기의
   마지막 단계를 마무리하고
-  반짝반짝 빛나는 새로운 시리를 맞이하기 위한 마중물` 
+  반짝반짝 빛나는 새로운 시기를 맞이하기 위한 마중물`,
+  txt_mobile: `불안하고 흔들리는 청소년기의
+  마지막 단계를 마무리하고
+  반짝반짝 빛나는 
+  새로운 시기를 맞이하기 위한 마중물`,
 }
 
 export const drawerData = {
@@ -15,7 +20,9 @@ export const drawerData = {
   exhib: `작품 갤러리 EXHIBITION`,
   msg: `SEND TO MESSAGE`,
   arrow_black: `assets/icons/arrow.svg`,
-  arrow_red: `assets/icons/redarrow.svg`
+  arrow_red: `assets/icons/arrow_red.svg`,
+  arrow_mobile_black: `assets/icons/arrow_mobile.svg`,
+  arrow_mobile_red: `assets/icons/arrow_mobile_red.svg`,
 }
 
 export const introData = {
@@ -23,7 +30,14 @@ export const introData = {
   `입시 일정으로 미처 프로그램을 신청하지 못한
   고3·수험생들을 위해 준비 되었습니다.
 
-  100% 온라인으로 진행되는 상상만개는성격유형검사를 통해 학생 개개인의 예술적 취향을 발견하고,
+  100% 온라인으로 진행되는 상상만개는 성격유형검사를 통해 학생 개개인의 예술적 취향을 발견하고,
+  각 유형에 맞는 문화예술교육 프로그램을 추천받아 동시대 예술가 16명과 함께 프로그램에 참여하게 됩니다.
+  
+  `,
+  txt_mobile: 
+  `입시 일정으로 미처 프로그램을 신청하지 못한 고3·수험생들을 위해 준비 되었습니다.
+
+  100% 온라인으로 진행되는 상상만개는 성격유형검사를 통해 학생 개개인의 예술적 취향을 발견하고,
   각 유형에 맞는 문화예술교육 프로그램을 추천받아 동시대 예술가 16명과 함께 프로그램에 참여하게 됩니다.
   
   `,

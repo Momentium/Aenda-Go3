@@ -21,7 +21,6 @@ const StMainCont = styled.div`
   position: absolute;
   z-index: 10;
   left: 5px;
-  /* top: 5px; */
   bottom: 5px;
 
   -ms-overflow-style: none;
@@ -41,13 +40,13 @@ const StMainCont = styled.div`
     css`
       width: 16vw;
       height: 3.43vw;
+      @media screen and (max-width: 480px){
+        width: 53.41666vw;
+        height: 11.45833vw;
+        left: 13px;
+        bottom: 13px;
+      }
       overflow: hidden;
-
-      /* top: ${`${theme.SH - 10 - 0.08 * theme.SH}px`}; */
-
-      /* @media screen and (max-width: 768px) {
-        width: 40vw;
-      } */
     `
   }
 `;

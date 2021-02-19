@@ -59,18 +59,30 @@ const GlobalStyle = createGlobalStyle`
       &.title {
         box-sizing: border-box;
         padding: 0 16px 4px 8px;
-
-        font-size: min(6.25vw, 60px);
         font-weight: 900;
-        /* line-height: 1.46; */
+        transition: all 1s ease;
         
-        transform: translateX(-8px);
+        @media screen and (min-width: 481px) {
+          font-size: min(6.25vw, 60px);
+          transform: translateX(-8px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(11.5vw, 56px);
+          white-space: nowrap;
+        }
       }
 
       &.subtitle {
-        font-size: min(2.6vw, 25px);
+        @media screen and (min-width: 481px) {
+          font-size: min(2.6vw, 25px);
+          line-height: 1.6;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(5.8vw, 28px);
+          line-height: 1.55;
+        }
         font-weight: bold;
-        line-height: 1.6;
+        
       }
     }
 
@@ -79,14 +91,29 @@ const GlobalStyle = createGlobalStyle`
       font-weight: bold;
       line-height: 1;
       letter-spacing: -0.66px;
+
+      @media screen and (min-width: 481px) {
+        font-size: min(2.6vw, 25px);
+      }
+      @media screen and (max-width: 480px) {
+        font-size: min(6.25vw, 30px);
+      }
     }
 
     &.intro {
-      font-size: min(2vw, 20px);
       font-weight: 500;
-      line-height: 1.71;
-      color: #111111;
-      /* white-space: pre-line; */
+      @media screen and (min-width: 481px) {
+        font-size: min(2vw, 20px);
+        line-height: 1.71;
+        color: #111111;
+      }
+      @media screen and (max-width: 480px) {
+        word-break: keep-all;
+        font-size: min(5vw, 24px);
+        line-height: 1.8;
+        letter-spacing: -0.41px;
+        color: #333333;
+      }
 
       .colored {
         color: #5a32de;
@@ -94,8 +121,13 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.footer {
-      font-size: min(0.9375vw, 12px);
-
+      @media screen and (min-width: 481px) {
+        font-size: min(0.9375vw, 12px);
+      }
+      @media screen and (max-width: 480px) {
+        font-size: min(3.75vw, 18px);
+      }
+      
       font-weight: 500;
       line-height: 1.78;
       color: #555555;
@@ -243,29 +275,30 @@ const GlobalStyle = createGlobalStyle`
   }
   
   span.hash-tag {
-    font-size: min(2vw, 20px);
+    @media screen and (min-width: 481px) {
+      font-size: min(2vw, 20px);
+      line-height: 1.25;
+      letter-spacing: -0.66px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: min(5.208vw, 25px);
+      line-height: 1.67;
+      letter-spacing: -0.5px;
+    }
     font-weight: 500;
-    line-height: 1.25;
-    letter-spacing: -0.66px;
-  }
-
-  header {
-
   }
 
   section {
-    padding: 0 6.5%;
+    @media screen and (min-width: 481px) {
+      padding: 0 6.5%;
+    }
+    @media screen and (max-width: 480px) {
+      padding: 0 5vw;
+    }
     box-sizing: border-box;
     width: 100%;
   }
 
-  article {
-
-  } 
-
-  footer {
-
-  }
   
 `;
 
