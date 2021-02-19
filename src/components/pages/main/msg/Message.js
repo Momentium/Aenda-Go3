@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import Modal from "./Modal";
 import emailjs from 'emailjs-com';
@@ -18,7 +18,7 @@ const Message = () => {
 
   const sendMsg = () => {
     const _target = document.getElementsByName("input");
-
+    console.log(_target[2].value)
     for(let i = 0; i < _target.length; i++) {
       if (_target[i].value === "") {
         setAlertMode(true);
@@ -32,6 +32,7 @@ const Message = () => {
       email: _target[1].value,
       msg: _target[2].value
     }
+    
     emailjs.send('aenda-go3', 'aenda-go3', _templateParams, 'user_IvdJn5ZLH0KLCm2l1qSD5')
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
@@ -60,7 +61,12 @@ const Message = () => {
       <StMidCont className="cont">
         <div className="text msg guide" onFocus={hdlFocus} onBlur={hdlBlur}>
           <div>메시지를 입력해 주세요.</div>
-          <StInput type="text" name={"input"} />
+          {
+            window.innerWidth > 480 ?
+            <StInput type="text" name={"input"} />
+            :
+            <StTxtArea type="text" name={"input"} />
+          }
         </div>
       </StMidCont>
       <StBotCont className="cont">
@@ -84,6 +90,13 @@ const StCont = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 3.9vw;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 8.3333vw;
+    .guide {
+      height: 50vw;
+    }
+  }
 
   .cont,
   .msg {
@@ -119,6 +132,33 @@ const StInput = styled.input`
   line-height: 36px;
 
   font-size: 12.5px;
+  @media screen and (max-width: 480px) {
+    font-size: 22px;
+  }
+
+  box-sizing: border-box;
+
+  padding: 0 15px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+
+  outline: none;
+  &::placeholder {
+    color: #d8d8d8;
+  }
+`;
+
+const StTxtArea = styled.textarea`
+  margin-top: 16px;
+  display: inline-block;
+  width: 100%;
+  height: 35vw; 
+  overflow: scroll;
+
+  font-size: 12.5px;
+  @media screen and (max-width: 480px) {
+    font-size: 22px;
+  }
 
   box-sizing: border-box;
 
@@ -146,6 +186,14 @@ const StTopCont = styled.div`
   & > div:first-child {
     margin-right: 48px;
   }
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    margin-bottom: 0;
+    .name, .email {
+      margin-bottom: 8.3333vw;
+    }
+  }
 `;
 const StMidCont = styled.div`
   & > div {
@@ -161,17 +209,29 @@ const StBotCont = styled.div`
 `;
 
 const StBtn = styled.div`
-  cursor: pointer;
+  user-select: none;
+  @media screen and (mix-width: 481px) {
+    cursor: pointer;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* margin: 30px 0; */
   margin: 3.5vw 0;
   width: min(260vw, 250px);
   height: min(4.2vw, 40px);
 
+  @media screen and (max-width: 480px) {
+    margin: 8.3333vw 0;
+    width: 100%;
+    height: min(10.625vw, 51px);
+  }
+
   background: ${({ theme }) => theme.colors.red};
   color: ${({ theme }) => theme.colors.blue};
   font-weight: bold;
+  font-size: 12.5px;
+  @media screen and (max-width: 480px) {
+    font-size: 22px;
+  }
 `;

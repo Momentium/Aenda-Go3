@@ -17,7 +17,9 @@ const Artist = ({ _idx, data, openPage }) => {
 export default Artist;
 
 const StArtistWrap = styled.div`
-  cursor: pointer;
+  @media screen and (min-width: 481px) {
+    cursor: pointer;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -3,10 +3,11 @@ import { galleryData } from "../../../../data/data";
 import GalleryCard from "./GalleryCard";
 
 const GalleryList = ({ curTag }) => {
+  const _len = galleryData[curTag].length;
   const _cards =
     window.innerWidth > 480
       ? galleryData[curTag]
-      : galleryData[curTag].slice(0, galleryData[curTag].length - 1);
+      : galleryData[curTag].slice(0, _len - (_len % 2));
   return (
     <StGalleryCont cards={_cards.length}>
       {_cards.map((el, idx) => (

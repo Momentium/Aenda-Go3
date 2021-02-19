@@ -112,7 +112,9 @@ const StTopCont = styled.div`
       height: 32px;
     }
     &.close {
-      cursor: pointer;
+      @media screen and (min-width: 481px) {
+        cursor: pointer;
+      }
       width: 16px; 
     }
   }

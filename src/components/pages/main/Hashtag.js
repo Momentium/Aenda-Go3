@@ -29,14 +29,18 @@ const StHashCont = styled.span`
   ${ props => 
   props.isFocus ? 
   css`
-    cursor: pointer;
+    @media screen and (min-width: 481px) {
+      cursor: pointer;
+    }
     background: ${({ theme }) => theme.colors.red};
     color: ${({ theme }) => theme.colors.blue};
   `
   :
   css`
     &:hover {
-      cursor: pointer;
+      @media screen and (min-width: 481px) {
+        cursor: pointer;
+      }
       background: ${({ theme }) => theme.colors.red};
       color: ${({ theme }) => theme.colors.blue};
     }

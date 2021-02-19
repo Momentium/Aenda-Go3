@@ -2,7 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import font010 from "./font/TTSoopilmyungjoR010.woff";
 import font020 from "./font/TTSoopilmyungjoR020.woff";
 import font040 from "./font/TTSoopilmyungjoR040.woff";
-
+const calcVW = (_px, _w) => {
+  return `${_px/_w}vw`;
+}
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "TTSoopilmyungjoR010";
@@ -133,7 +135,9 @@ const GlobalStyle = createGlobalStyle`
       color: #555555;
 
       &.link {
-        cursor: pointer;
+        @media screen and (min-width: 481px) {
+          cursor: pointer;
+        }
       }
     }
 
@@ -269,6 +273,9 @@ const GlobalStyle = createGlobalStyle`
       &.ment {
         font-family: "TTSoopilmyungjoR020";
         font-size: min(15.6vw, 15px);
+        @media screen and (max-width: 480px) {
+          font-size: min(5.201vw, 25px);
+        }
         line-height: 2;
         text-align: left;
         color: #ffffff;
@@ -278,6 +285,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: min(26vw, 25px);
         line-height: 1;
         letter-spacing: -0.83px;
+        @media screen and (max-width: 480px) {
+          line-height: 1.86;
+          letter-spacing: -0.58px;
+        }
         text-align: center;
         color: #ffffff;
       }
@@ -287,6 +298,10 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.6;
         text-align: left;
         color: #fe573d;
+        @media screen and (max-width: 480px) {
+          font-size: min(5.83333vw, 28px);
+          line-height: 1.71;
+        }
       }
     }
 
@@ -301,6 +316,9 @@ const GlobalStyle = createGlobalStyle`
     &.msg {
       white-space: nowrap;
       font-size: min(1.3vw, 12.5px);
+      @media screen and (max-width: 480px) {
+        font-size: min(5.2083vw, 25px);
+      }
       font-weight: 500;
       line-height: 2;
       text-align: left;
@@ -309,6 +327,10 @@ const GlobalStyle = createGlobalStyle`
 
     &.modal {
       font-size: min(1.7vw, 20px);
+      @media screen and (max-width: 480px) {
+        font-size: min(8.33333vw, 40px);
+        white-space: nowrap;
+      }
       font-weight: 500;
       line-height: 1.25;
       text-align: center;

@@ -86,7 +86,9 @@ const StDrawerCont = styled.div`
 `;
 
 const StDrawerWrap = styled.section`
-  cursor: pointer;
+  @media screen and (min-width: 481px) {
+    cursor: pointer;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;

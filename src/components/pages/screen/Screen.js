@@ -75,7 +75,9 @@ const StArrowWrap = styled.div`
   }
   
   img {
-    cursor: pointer;
+    @media screen and (min-width: 481px) {
+      cursor: pointer;
+    }
     width: min(6.25vw, 32px);
   }
 

@@ -26,7 +26,9 @@ const Program = ({ data, openPage }) => {
 export default Program;
 
 const StProgramWrap = styled.div`
-  cursor: pointer;
+  @media screen and (min-width: 481px) {
+    cursor: pointer;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-between;

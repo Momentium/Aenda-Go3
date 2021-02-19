@@ -93,7 +93,7 @@ const StTopCont = styled.section`
 
       .header-logo {
         width: 100%;
-        &:hover {
+        @media screen and (min-width: 481px) {
           cursor: pointer;
         }
       }
@@ -130,7 +130,7 @@ const StYTBtnCont = styled.div`
     }
 
     transition: all 1s ease;
-    &:hover {
+    @media screen and (min-width: 481px) {
       cursor: pointer;
     }
   }

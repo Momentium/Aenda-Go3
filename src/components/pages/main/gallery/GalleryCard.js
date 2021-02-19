@@ -20,6 +20,11 @@ export default GalleryCard;
 const StCardWrap = styled.div`
   width: 16.5vw;
   height: 16.5vw;
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 0;
+    padding-bottom:100%
+  }
   background-image: url(${(props) => props.backImg});
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +34,10 @@ const StCardWrap = styled.div`
 `;
 
 const StHoverWrap = styled.div`
-  cursor: pointer;
+  @media screen and (min-width: 481px) {
+    cursor: pointer;
+  }
+
   position: absolute;
   top: 0;
   left: 0;
