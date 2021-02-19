@@ -37,7 +37,7 @@ const ArtistPage = ({ _idx, closePage }) => {
       <StBotCont>
         <div className="text artist ment">{data.ment}</div>
         <div className="text artist why">
-          열아홉, 나는 무엇 때문에 흔들렸나?
+          {data.question}
         </div>
         <StImgCont imgUrl={data.img}>
           <div className="img-div"></div>
