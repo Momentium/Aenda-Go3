@@ -45,10 +45,6 @@ export default App;
 const StAppCont = styled.div`
   position: relative;
 
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
   width: ${(props) => `${props.theme.SW}px`};
   height: ${(props) => `${props.theme.SH}px`};
 `;

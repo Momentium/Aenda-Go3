@@ -150,6 +150,11 @@ export const mbtiData = {
     intro : `조용하게 사색을 즐기며
     그 속에서 샘솟는 영감을 표현하기 좋아하는 친구들을 위한
     질문과 미션, 그리고 기록을 위한 예술 키트`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `예술가의 질문
     열아홉, 나는 무엇 때문에 흔들렸나?
     
@@ -167,6 +172,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1/jpg`,
+      `/assets/images/program/INFJ2/jpg`,
+      `/assets/images/program/INFJ3/jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 

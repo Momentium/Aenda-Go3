@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import Player from './Player';
-import {Zoom} from '@material-ui/core';
+import { Zoom } from '@material-ui/core';
 
 const Screen = ({ SW, popState }) => {
   const [curPage, setCurPage] = useState(0);

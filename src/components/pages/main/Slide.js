@@ -9,14 +9,26 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     if (dataIdx === pauseIdx) {
       const _div = aniRef.current;
       _div.style.webkitAnimationPlayState = "paused";
+      _div.style.oAnimationPlayState = "paused";
+      _div.style.mozAnimationPlayState = "paused";
+      _div.style.animationPlayState = "paused";
       _div.childNodes.forEach((el) => {
         el.style.webkitAnimationPlayState = "paused";
+        el.style.oAnimationPlayState = "paused";
+        el.style.mozAnimationPlayState = "paused";
+        el.style.animationPlayState = "paused";
       });
     } else {
       const _div = aniRef.current;
       _div.style.webkitAnimationPlayState = "running";
+      _div.style.oAnimationPlayState = "running";
+      _div.style.mozAnimationPlayState = "running";
+      _div.style.animationPlayState = "running";
       _div.childNodes.forEach((el) => {
         el.style.webkitAnimationPlayState = "running";
+        el.style.oAnimationPlayState = "running";
+        el.style.mozAnimationPlayState = "running";
+        el.style.animationPlayState = "running";
       });
     }
   }, [pauseIdx, dataIdx]);
@@ -24,11 +36,18 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     if (dataIdx === pauseIdx) return;
     const _div = aniRef.current;
     _div.style.webkitAnimationPlayState = "paused";
+    _div.style.oAnimationPlayState = "paused";
+    _div.style.mozAnimationPlayState = "paused";
+    _div.style.animationPlayState = "paused";
+    
   };
   const runSlide = () => {
     if (dataIdx === pauseIdx) return;
     const _div = aniRef.current;
     _div.style.webkitAnimationPlayState = "running";
+    _div.style.oAnimationPlayState = "running";
+    _div.style.mozAnimationPlayState = "running";
+    _div.style.animationPlayState = "running";
   };
 
   const hashTagList = hashTagData[dataIdx].map((el, idx) => {
