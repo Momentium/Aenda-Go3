@@ -125,5 +125,5 @@ const StTopCont = styled.div`
 
 const StImgCont = styled.div`
   position: relative;
-  width: 100%;
+  width: 51.5625vw;
 `;

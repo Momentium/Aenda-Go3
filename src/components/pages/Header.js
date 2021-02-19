@@ -76,6 +76,9 @@ const StHeaderCont = styled.div`
 const StTopCont = styled.section`
   position: absolute;
   top: 6.5%;
+  @media screen and (max-width: 480px){
+    top: 11.458333vw;
+  }
 
   display: flex;
   justify-content: space-between;
@@ -139,6 +142,9 @@ const StYTBtnCont = styled.div`
 const StBotCont = styled.section`
   position: absolute;
   bottom: 6.5%;
+  @media screen and (max-width: 480px){
+    bottom: 11.458333vw;
+  }
 
   transition: all 1s ease;
   
