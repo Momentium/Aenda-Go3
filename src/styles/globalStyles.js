@@ -273,24 +273,26 @@ const GlobalStyle = createGlobalStyle`
       &.ment {
         font-family: "TTSoopilmyungjoR020";
         font-size: min(15.6vw, 15px);
-        @media screen and (max-width: 480px) {
-          font-size: min(5.201vw, 25px);
-        }
         line-height: 2;
         text-align: left;
         color: #ffffff;
+        @media screen and (max-width: 480px) {
+          font-size: min(5.83333vw, 28px);
+          line-height: 10vw;
+        }
       }
       &.why {
         font-family: "TTSoopilmyungjoR020";
-        font-size: min(26vw, 25px);
+        font-size: min(2.6041666vw, 25px);
         line-height: 1;
         letter-spacing: -0.83px;
+        text-align: center;
+        color: #ffffff;
         @media screen and (max-width: 480px) {
+          font-size: min(7.29166vw, 35px);
           line-height: 1.86;
           letter-spacing: -0.58px;
         }
-        text-align: center;
-        color: #ffffff;
       }
       &.hist {
         font-family: "TTSoopilmyungjoR020";

@@ -146,7 +146,7 @@ const StBotCont = styled.div`
 
   width: ${({ theme }) => theme.SW / 1.5}px;
   @media screen and (max-width: 480px) {
-    width: ${({ theme }) => theme.SW - 26}px;
+    width: ${({ theme }) => theme.SW - 50}px;
   }
   margin-top: 50px;
 
@@ -159,9 +159,9 @@ const StBotCont = styled.div`
   .why {
     width: 100%;
     margin: 60px 0;
-    @media screen and (max-width: 480px) {
-      width: 56.6666vw;
-    }
+    /* @media screen and (max-width: 480px) {
+      
+    } */
   }
 `;
 
@@ -177,10 +177,12 @@ const StImgCont = styled.div`
   .img-div {
     /* width: min(31.25vw, 300px);
     height: min(29.67vw, 280px); */
-    width: 31.25vw;
+    /* width: 31.25vw; */
+    width: 100%;
     height: 29.67vw;
+    margin-right: 3.80208vw;
     @media screen and (max-width: 480px) {
-      width: ${({ theme }) => theme.SW - 50}px;
+      width: 100%;
       height: ${({ theme }) => theme.SW - 50}px;
       margin-bottom: 40px;
     }
@@ -191,10 +193,11 @@ const StImgCont = styled.div`
   }
 
   .hist-cont {
-    width: 31.25vw;
-    height: 29.67vw;
+    width: 100%;
+    /* width: 31.25vw; */
+    /* height: 29.67vw; */
     @media screen and (max-width: 480px) {
-      width: ${({ theme }) => theme.SW - 50}px;
+      width: 100%;
     }
   }
   
