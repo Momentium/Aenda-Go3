@@ -16,6 +16,16 @@ const ProgramPage = ({ mbti, title, closePage }) => {
 
   return (
     <StPageWrap>
+      {window.innerWidth <= 480 && (
+        <StMTopCont>
+          <img
+            className="close"
+            src="assets/icons/close.svg"
+            alt="close-icon"
+            onClick={closePage}
+          />
+        </StMTopCont>
+      )}
       <StTopCont>
         <img className="hide" src="assets/icons/close.svg" alt="hidden-icon" />
         <img className="logo" src="assets/logo/red-logo.svg" alt="red-logo" />
@@ -28,10 +38,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       </StTopCont>
 
       <div className="text program title">{title}</div>
-      <div
-        className="line"
-        style={{ marginTop: "23px", marginBottom: "40px" }}
-      />
+      <div className="line" />
       <StImgCont>
         {curPage !== 0 && (
           <Zoom in={true} timeout={400}>
@@ -55,14 +62,19 @@ const ProgramPage = ({ mbti, title, closePage }) => {
           </Zoom>
         )}
       </StImgCont>
-      <div className="text program subtitle">{data.intro}</div>
+
+      <div className="text program subtitle">
+        {window.innerWidth > 480 ? data.intro : data.intro_m}
+      </div>
 
       <div className="text program kit-title">예술가의 키트</div>
       <div
         className="line"
         style={{ marginTop: "14px", marginBottom: "33.3px" }}
       />
-      <div className="text program kit">{data.kit}</div>
+      <div className="text program kit">
+        {window.innerWidth > 480 ? data.kit : data.kit_m}
+      </div>
 
       <img
         className="mbti-icon"
@@ -71,7 +83,9 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       />
 
       <div className="text program kit-intro-title">예술가의 코멘트</div>
-      <div className="text program kit-intro">{data.kit_intro}</div>
+      <div className="text program kit-intro">
+        {window.innerWidth > 480 ? data.kit_intro : data.kit_intro_m}
+      </div>
     </StPageWrap>
   );
 };
@@ -85,6 +99,9 @@ const StPageWrap = styled.div`
   align-items: center;
   padding-top: 50px;
   padding-bottom: 120px;
+  @media screen and (max-width: 480px) {
+    padding: 30px 0 90px 0;
+  }
   box-sizing: border-box;
 
   -ms-overflow-style: none;
@@ -99,6 +116,12 @@ const StPageWrap = styled.div`
     width: 100%;
     height: 1px;
     background: ${({ theme }) => `${theme.colors.red}`};
+    margin-top: 23px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 480px) {
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
   }
 
   .text {
@@ -122,11 +145,22 @@ const StPageWrap = styled.div`
   .mbti-icon {
     width: 60px;
     margin-bottom: 40px;
+    @media screen and (max-width: 480px) {
+      width: 20%;
+    }
   }
-  /* 
-  .kit-intro-title {
-    margin-bottom: 16px;
-  } */
+`;
+
+const StMTopCont = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 56px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  img {
+    width: 6.25vw;
+  }
 `;
 
 const StTopCont = styled.div`
@@ -153,12 +187,27 @@ const StTopCont = styled.div`
       width: 16px;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+    img {
+      &.logo {
+        width: 71.25vw;
+        height: auto;
+      }
+      &.close,
+      &.hide {
+        display: none;
+      }
+    }
+  }
 `;
 
 const StImgCont = styled.div`
   position: relative;
   width: 100%;
   height: 29.0104vw;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -168,8 +217,14 @@ const StImgCont = styled.div`
     width: 51.5625vw;
     height: 100%;
     overflow: hidden;
-
     display: flex;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: ${({ theme }) => ((theme.SW - 26) * 9) / 16}px;
+    .prog_img {
+      width: ${({ theme }) => theme.SW - 26}px;
+    }
   }
 `;
 
@@ -181,18 +236,23 @@ const StImgWrap = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+
   transition: transform 0.5s ease;
-  transform: ${ props => `translateX(${-1 * props.curPage * props.theme.SW * 0.515625}px)` };
+  transform: ${(props) =>
+    `translateX(${-1 * props.curPage * props.theme.SW * 0.515625}px)`};
+  @media screen and (max-width: 480px) {
+    transform: ${(props) =>
+      `translateX(${-1 * props.curPage * (props.theme.SW - 26)}px)`};
+  }
 `;
 
 const StArrowWrap = styled.div`
   position: absolute;
   z-index: 5;
   top: 50%;
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     top: 56px;
-  }
+  } */
 
   img {
     @media screen and (min-width: 481px) {
@@ -206,7 +266,7 @@ const StArrowWrap = styled.div`
       ? css`
           left: 5vw;
           @media screen and (max-width: 480px) {
-            left: 13px;
+            left: 26px;
           }
           img {
             transform: translateY(-50%) rotate(180deg);
@@ -215,7 +275,7 @@ const StArrowWrap = styled.div`
       : css`
           right: 5vw;
           @media screen and (max-width: 480px) {
-            right: 13px;
+            right: 26px;
           }
           img {
             transform: translateY(-50%);

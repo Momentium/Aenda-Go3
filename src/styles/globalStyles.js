@@ -2,9 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import font010 from "./font/TTSoopilmyungjoR010.woff";
 import font020 from "./font/TTSoopilmyungjoR020.woff";
 import font040 from "./font/TTSoopilmyungjoR040.woff";
-const calcVW = (_px, _w) => {
-  return `${_px/_w}vw`;
-}
+
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "TTSoopilmyungjoR010";
@@ -162,7 +160,7 @@ const GlobalStyle = createGlobalStyle`
           font-size: min(4.11458vw, 39.5px);
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: min(10.416666vw, 50px);
         }
         font-weight: bold;
         line-height: 1;
@@ -174,12 +172,14 @@ const GlobalStyle = createGlobalStyle`
         font-family: "TTSoopilmyungjoR020";
         @media screen and (min-width: 481px) {
           font-size: min(2.60416vw, 25px);
+          line-height: 1.75;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: min(5.833333vw, 28px);
+          line-height: 1.71;
+          letter-spacing: -0.46px;
         }
         font-weight: normal;
-        line-height: 1.75;
         color: #ffffff;
       }
 
@@ -189,7 +189,7 @@ const GlobalStyle = createGlobalStyle`
           font-size: min(2.60416vw, 25px);
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: min(16.6666vw, 40px);
         }
         font-weight: 500;
         line-height: 1;
