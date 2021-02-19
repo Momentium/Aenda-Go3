@@ -138,6 +138,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.program {
+      text-align: center;
+
       &.label {
         @media screen and (min-width: 481px) {
           font-size: min(1.7vw, 20px);
@@ -148,49 +150,69 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         line-height: 1.56;
         letter-spacing: -0.53px;
-        text-align: center;
         color: #ffffff;
       }
 
       &.title {
-        font-size: 39.5px;
+        @media screen and (min-width: 481px) {
+          font-size: min(4.11458vw, 39.5px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: bold;
         line-height: 1;
         letter-spacing: -1.3px;
-        text-align: center;
         color: #f85340;
       }
 
       &.subtitle {
         font-family: "TTSoopilmyungjoR020";
-        font-size: 25px;
+        @media screen and (min-width: 481px) {
+          font-size: min(2.60416vw, 25px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: normal;
         line-height: 1.75;
-        text-align: center;
         color: #ffffff;
       }
 
       &.kit-title {
         font-family: "TTSoopilmyungjoR040";
-        font-size: 25px;
+        @media screen and (min-width: 481px) {
+          font-size: min(2.60416vw, 25px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: 500;
         line-height: 1;
         letter-spacing: -0.83px;
-        text-align: left;
         color: #fb5640;
       }
       &.kit {
         font-family: "TTSoopilmyungjoR020";
-        font-size: 15px;
+        @media screen and (min-width: 481px) {
+          font-size: min(1.5625vw, 15px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: normal;
         line-height: 2;
-        text-align: left;
         color: #ffffff;
       }
 
       &.kit-intro-title {
         font-family: "TTSoopilmyungjoR020";
-        font-size: 15px;
+        @media screen and (min-width: 481px) {
+          font-size: min(1.5625vw, 15px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: 600;
         line-height: 2.17;
         letter-spacing: -0.5px;
@@ -199,7 +221,12 @@ const GlobalStyle = createGlobalStyle`
       }
       &.kit-intro {
         font-family: "TTSoopilmyungjoR020";
-        font-size: 15px;
+        @media screen and (min-width: 481px) {
+          font-size: min(1.5625vw, 15px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: normal;
         line-height: 2.17;
         letter-spacing: -0.5px;

@@ -47,7 +47,6 @@ const StPageWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 54px;  */
   padding-top: 50px;
   padding-bottom: 120px;
   box-sizing: border-box;
@@ -86,7 +85,7 @@ const StPageWrap = styled.div`
   }
 
   .mbti-icon {
-    width: 144px;
+    width: 60px;
     margin-bottom: 40px;
   }
 /* 
@@ -110,14 +109,11 @@ const StTopCont = styled.div`
       visibility: hidden;
     }
     &.logo {
-      /* width: ${ ({ theme }) => `${theme.SW * 0.2}`};  */
       height: 32px;
     }
     &.close {
+      cursor: pointer;
       width: 16px; 
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
 `;

@@ -36,8 +36,7 @@ const StArtistWrap = styled.div`
     height: 18vw;
     @media screen and (max-width: 480px) {
       width: 100%;
-      /* height: ; */
-      /* padding-bottom: 100%; */
+      height: 40vw;
     }
     background-image: url(${props => props.imgUrl});
     background-position: top;

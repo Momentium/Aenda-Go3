@@ -147,16 +147,21 @@ export const programData = [
 
 export const mbtiData = {
   INFJ: {
-    intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
-    호기심 많은 예술가 유형에 대한 소개입니다
-    호기심 많은 예술가 유형`,
-    kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
-    omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
-    a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
-    the economy ís you.`,
-    kit_intro: `키트에 대한 간략한 내용이 들어갑니다
-    키트에 대한 간략한 내용이 들어갑니다
-    키트에 대한 간략한 내용이 들어갑니다`,
+    intro : `조용하게 사색을 즐기며
+    그 속에서 샘솟는 영감을 표현하기 좋아하는 친구들을 위한
+    질문과 미션, 그리고 기록을 위한 예술 키트`,
+    kit: `예술가의 질문
+    열아홉, 나는 무엇 때문에 흔들렸나?
+    
+    MISSION
+    열아홉 살의 내가 겪은 크고 작은 변화를 돌아볼까요?
+    질문에 대한 답을 생각해보고 하나의 글을 완성해 SNS를 통해 공유합니다
+    
+    예술가 키트
+    열아홉 살 나를 기록하는 블링블링 펜
+    마음을 위로하는 <심신단련> 책`,
+    kit_intro: `처음 만난 누군가와 글을 통해 서로를 알아가고
+    서로의 다른 경험과 따듯한 마음을 공감할 수 있는 시간을 가질 수 있었습니다`,
   },
   INFP: {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
@@ -346,13 +351,11 @@ export const artistData = [
     name: "아이키",
     aka: "안무가",
     img: '/assets/images/artist/아이키.jpg',
-    ment: `흔들림이라는게 되게 좋은거기도 하잖아요. 어른이 된 다음에도, 계속 흔들리면서 자라니까요. 그래서 나를 흔드는 경험을 되게 소중히 글쓰기의 재료로 모셔왔으면 좋겠다는 생각을 했어요. 
-    글을 쓰는 과정에서 자연스럽게, 약간 마음이 가벼워지는 부분이 있을 거라는 생각에 질문을 했어요.`,
+    ment: `자고 일어나면 하루만에 20살이 되어 있듯이 바로 내가 어른이 될 수 없고 바로 성인이 될 수 없다고 생각을 해요. 지금 아이들이 너무 책임감과 무게감을 겪지 않았으면 좋겠어요. 친구들이 조금 편안하게 천천히 어른이 되면 좋겠어요.`,
     hist: [
-      '일간 <이슬아> 발행인',
-      '헤엄출판사 대표',
-      '저서 <일간 이슬아 수필집>', 
-      '<깨끗한 존경> 등'
+      '미국 NBC 월드 오브 댄스',
+      '시즌 3 베스트4',
+      `MBC 놀면 뭐하니 ‘환불원정대’ Don't touch me 안무`, 
     ]
   },
   {

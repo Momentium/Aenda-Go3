@@ -41,7 +41,6 @@ const StProgramWrap = styled.div`
     height: 100%;
   }
 
-
   img {
     height: 11.25vw;
     @media screen and (max-width: 480px) {
