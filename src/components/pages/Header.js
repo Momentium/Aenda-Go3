@@ -57,7 +57,7 @@ const Header = () => {
 
 export default Header;
 
-const StHeaderCont = styled.header`
+const StHeaderCont = styled.div`
   position: relative;
 
   height: 100%;
