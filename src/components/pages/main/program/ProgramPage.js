@@ -17,13 +17,16 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       
       <div className="text program title">{title}</div>
       <div className='line' style={{marginTop: '23px', marginBottom: '40px'}}/>
-      <ReactPlayer
+      <StImgCont>
+
+      </StImgCont>
+      {/* <ReactPlayer
         url={"https://www.youtube.com/embed/Kjb_AbqY41M"}
         playing={false}
         controls={true}
         width={theme.SW / 1.5}
         height={(theme.SW * 9) / (16 * 1.5)}
-      />
+      /> */}
       <div className="text program subtitle">{data.intro}</div>
 
       <div className="text program kit-title">예술가의 키트</div>
@@ -118,4 +121,9 @@ const StTopCont = styled.div`
       width: 16px; 
     }
   }
+`;
+
+const StImgCont = styled.div`
+  position: relative;
+  width: 100%;
 `;
