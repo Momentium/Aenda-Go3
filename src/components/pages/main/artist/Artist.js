@@ -25,12 +25,20 @@ const StArtistWrap = styled.div`
 
   max-width: 300px;
   width: 15.6vw;
-  /* height: 17vw; */
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+  }
 
   .img-div {
     transition: all 0.1s linear;
     width: 18vw;
     height: 18vw;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      /* height: ; */
+      /* padding-bottom: 100%; */
+    }
     background-image: url(${props => props.imgUrl});
     background-position: top;
     background-repeat: no-repeat;

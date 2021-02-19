@@ -40,13 +40,19 @@ export default ArtistList;
 
 const StProgramCont = styled.div`
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   row-gap: 7.3vw;
   column-gap: 7.3vw;
-  justify-items: center;
-
   padding: 7.3vw 0;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    row-gap: 45px;
+    padding: 45px 0;
+  }
 `;
 
 const StPageCont = styled.div`

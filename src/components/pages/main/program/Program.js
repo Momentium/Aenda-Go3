@@ -33,15 +33,28 @@ const StProgramWrap = styled.div`
   align-items: center;
 
   max-width: 300px;
+  
   width: 15.6vw;
   height: 17vw;
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+  }
+
 
   img {
     height: 11.25vw;
+    @media screen and (max-width: 480px) {
+      height: 30vw;
+      margin-bottom: 30px;
+    }
   }
   .label {
     width: 100%;
     height: 3.6vw;
+    @media screen and (max-width: 480px) {
+      height: 40px;
+    }
     background: ${({ theme }) => theme.colors.blue};
 
     display: flex;

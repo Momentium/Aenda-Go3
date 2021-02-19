@@ -139,7 +139,12 @@ const GlobalStyle = createGlobalStyle`
 
     &.program {
       &.label {
-        font-size: min(1.7vw, 20px);
+        @media screen and (min-width: 481px) {
+          font-size: min(1.7vw, 20px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: bold;
         line-height: 1.56;
         letter-spacing: -0.53px;
@@ -205,13 +210,23 @@ const GlobalStyle = createGlobalStyle`
 
     &.artist {
       &.name {
-        font-size: min(1.7vw, 20px);
+        @media screen and (min-width: 481px) {
+          font-size: min(1.7vw, 20px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(4.5vw, 22px);
+        }
         font-weight: bold;
         line-height: 2;
         text-align: center;
       }
       &.aka {
-        font-size: min(1.3vw, 12.5px);
+        @media screen and (min-width: 481px) {
+          font-size: min(1.3vw, 12.5px);
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(3.3vw, 16px);
+        }
         font-weight: normal;
         line-height: 2;
         text-align: center;
