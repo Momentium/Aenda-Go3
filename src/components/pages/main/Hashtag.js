@@ -2,17 +2,17 @@ import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 import { TagContxt } from "../../common/ContextStorage";
 
-const Hashtag = ({ dataIdx, setPauseIdx, isPaused, idx, tag }) => {
+const Hashtag = ({ dataIdx, setPauseIdx, pauseIdx, idx, tag }) => {
   const { curTag, handleCurTag } = useContext(TagContxt);
   const handleClick = (e) => {
     setPauseIdx(dataIdx);
-    handleCurTag(e);
+    handleCurTag(e.currentTarget.textContent);
   };
 
   return (
     <StHashCont
       className={`text hash-tag ${idx}`}
-      isFocus={isPaused && curTag === tag}
+      isFocus={pauseIdx === dataIdx && curTag === tag}
       onClick={handleClick}
     >
       {`#${tag}`}

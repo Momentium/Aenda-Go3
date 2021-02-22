@@ -19,8 +19,8 @@ const Drawer = ({ title }) => {
   };
 
   const [curTag, setCurTag] = useState("상상만개");
-  const handleCurTag = (e) => {
-    const _target = e.currentTarget.textContent;
+  const handleCurTag = (_target) => {
+    // const _target = e.currentTarget.textContent;
     setCurTag(_target.substring(1));
     if (!isOpen) {
       setIsOpen(true);

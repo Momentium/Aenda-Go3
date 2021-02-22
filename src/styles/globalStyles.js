@@ -311,6 +311,9 @@ const GlobalStyle = createGlobalStyle`
 
     &.gallery {
       font-size: min(1.3vw, 12.5px);
+      @media screen and (max-width: 480px) {
+        font-size: min(3.125vw, 15px);
+      }
       font-weight: 500;
       line-height: 2;
       text-align: center;

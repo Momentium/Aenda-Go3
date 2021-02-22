@@ -8,40 +8,37 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   useEffect(() => {
     if (dataIdx === pauseIdx) {
       const _div = aniRef.current;
-      _div.style.webkitAnimationPlayState = "paused";
-      _div.style.mozAnimationPlayState = "paused";
       _div.style.animationPlayState = "paused";
+      _div.style.webkitAnimationPlayState = "paused";
       _div.childNodes.forEach((el) => {
-        el.style.webkitAnimationPlayState = "paused";
-        el.style.mozAnimationPlayState = "paused";
         el.style.animationPlayState = "paused";
+        el.style.webkitAnimationPlayState = "paused";
       });
     } else {
       const _div = aniRef.current;
-      _div.style.webkitAnimationPlayState = "running";
-      _div.style.mozAnimationPlayState = "running";
       _div.style.animationPlayState = "running";
+      _div.style.webkitAnimationPlayState = "running";
       _div.childNodes.forEach((el) => {
-        el.style.webkitAnimationPlayState = "running";
-        el.style.mozAnimationPlayState = "running";
         el.style.animationPlayState = "running";
+        el.style.webkitAnimationPlayState = "running";
       });
     }
   }, [pauseIdx, dataIdx]);
   const slowSlide = () => {
     if (dataIdx === pauseIdx) return;
-    const _div = aniRef.current;
-    _div.style.webkitAnimationPlayState = "paused";
-    _div.style.mozAnimationPlayState = "paused";
-    _div.style.animationPlayState = "paused";
-    
+    if (window.innerWidth > 480){
+      const _div = aniRef.current;
+      _div.style.animationPlayState = "paused";
+      _div.style.webkitAnimationPlayState = "paused";
+    }
   };
   const runSlide = () => {
     if (dataIdx === pauseIdx) return;
-    const _div = aniRef.current;
-    _div.style.webkitAnimationPlayState = "running";
-    _div.style.mozAnimationPlayState = "running";
-    _div.style.animationPlayState = "running";
+    if(window.innerWidth > 480) {
+      const _div = aniRef.current;
+      _div.style.animationPlayState = "running";
+      _div.style.webkitAnimationPlayState = "running";
+    }
   };
 
   const hashTagList = hashTagData[dataIdx].map((el, idx) => {
@@ -50,7 +47,7 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
         key={idx}
         dataIdx={dataIdx}
         setPauseIdx={setPauseIdx}
-        isPaused={dataIdx === pauseIdx}
+        pauseIdx={pauseIdx}
         idx={idx}
         tag={el}
       />
