@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,  useEffect } from "react";
 import styled, { css } from "styled-components";
 import Modal from "./Modal";
 import emailjs from 'emailjs-com';
@@ -45,6 +45,14 @@ const Message = () => {
     
     setPopModal(true);
   };
+
+  useEffect(() => {
+    const _target = document.getElementsByName("input");
+    console.log(_target[2].value)
+    for(let i = 0; i < _target.length; i++) {
+      _target[i].value = "";
+    }
+  }, [])
 
   return (
     <StCont isFocus={isFocus}>
@@ -127,7 +135,6 @@ const trans = css`
 `;
 
 const StInput = styled.input`
-  -webkit-user-select: text; /* Chrome, Opera, Safari */
   display: inline-block;
   width: 100%;
   line-height: 36px;
@@ -150,7 +157,12 @@ const StInput = styled.input`
 `;
 
 const StTxtArea = styled.textarea`
-  -webkit-user-select: text; /* Chrome, Opera, Safari */
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+  }
+  
   margin-top: 16px;
   display: inline-block;
   width: 100%;

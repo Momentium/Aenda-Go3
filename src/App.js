@@ -43,6 +43,12 @@ const App = () => {
 export default App;
 
 const StAppCont = styled.div`
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  
   position: relative;
 
   width: ${(props) => `${props.theme.SW}px`};

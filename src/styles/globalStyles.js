@@ -25,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
   body {
-    /* user-select: none; */
     background-color: #5a32de;
 
     margin: 0;
@@ -38,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
 
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
+      -webkit-appearance: none;
       display: none;
     }
   }
