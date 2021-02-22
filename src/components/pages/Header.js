@@ -75,7 +75,7 @@ const StHeaderCont = styled.div`
 
 const StTopCont = styled.section`
   position: absolute;
-  z-index: 500;
+  z-index: 20;
   top: 6.5%;
   /* @media screen and (max-width: 480px){
     top: 11.458333vw;
@@ -141,7 +141,7 @@ const StYTBtnCont = styled.div`
 
 const StBotCont = styled.section`
   position: absolute;
-  z-index: 500;
+  z-index: 20;
   bottom: 6.5%;
   /* @media screen and (max-width: 480px){
     bottom: 11.458333vw;

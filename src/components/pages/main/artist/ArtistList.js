@@ -57,7 +57,7 @@ const StProgramCont = styled.div`
 
 const StPageCont = styled.div`
   position: fixed;
-  z-index: 200;
+  z-index: 300;
   top: 0;
   left: 0;
 
