@@ -210,6 +210,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -222,6 +227,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -234,6 +244,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -246,6 +261,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -258,6 +278,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -270,6 +295,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -282,6 +312,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -294,6 +329,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -306,6 +346,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -318,6 +363,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -330,6 +380,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -342,6 +397,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -354,6 +414,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 
@@ -366,6 +431,11 @@ export const mbtiData = {
     intro : `호기심 많은 예술가 유형에 대한 소개가 들어갑니다
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
+    progImg: [
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
+    ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
     a as it were): “Reprogram yourself”. The economy is not something that happens to you, 

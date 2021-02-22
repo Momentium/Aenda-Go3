@@ -9,24 +9,20 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     if (dataIdx === pauseIdx) {
       const _div = aniRef.current;
       _div.style.webkitAnimationPlayState = "paused";
-      _div.style.oAnimationPlayState = "paused";
       _div.style.mozAnimationPlayState = "paused";
       _div.style.animationPlayState = "paused";
       _div.childNodes.forEach((el) => {
         el.style.webkitAnimationPlayState = "paused";
-        el.style.oAnimationPlayState = "paused";
         el.style.mozAnimationPlayState = "paused";
         el.style.animationPlayState = "paused";
       });
     } else {
       const _div = aniRef.current;
       _div.style.webkitAnimationPlayState = "running";
-      _div.style.oAnimationPlayState = "running";
       _div.style.mozAnimationPlayState = "running";
       _div.style.animationPlayState = "running";
       _div.childNodes.forEach((el) => {
         el.style.webkitAnimationPlayState = "running";
-        el.style.oAnimationPlayState = "running";
         el.style.mozAnimationPlayState = "running";
         el.style.animationPlayState = "running";
       });
@@ -36,7 +32,6 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     if (dataIdx === pauseIdx) return;
     const _div = aniRef.current;
     _div.style.webkitAnimationPlayState = "paused";
-    _div.style.oAnimationPlayState = "paused";
     _div.style.mozAnimationPlayState = "paused";
     _div.style.animationPlayState = "paused";
     
@@ -45,7 +40,6 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     if (dataIdx === pauseIdx) return;
     const _div = aniRef.current;
     _div.style.webkitAnimationPlayState = "running";
-    _div.style.oAnimationPlayState = "running";
     _div.style.mozAnimationPlayState = "running";
     _div.style.animationPlayState = "running";
   };
@@ -98,9 +92,6 @@ const StSlideWrap = styled.div`
   animation: ${(props) =>
       props.dir === "left" ? "slide-left1" : "slide-right1"}
     120s infinite linear;
-  /* &:hover{
-    animation-play-state: paused;
-  } */
 
   @keyframes slide-left1 {
     0% {
@@ -110,12 +101,29 @@ const StSlideWrap = styled.div`
       transform: translateX(-400%);
     }
   }
+  @-webkit-keyframes slide-left1 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-400%);
+    }
+  }
+
   @keyframes slide-right1 {
     0% {
       transform: translateX(0%);
     }
     100% {
       transform: translateX(400%);
+    }
+  }
+  @-webkit-keyframes slide-right1 {
+    0% {
+      -webkit-transform: translateX(0%);
+    }
+    100% {
+      -webkit-transform: translateX(400%);
     }
   }
 
@@ -133,12 +141,28 @@ const StSlideWrap = styled.div`
         transform: translateX(-100%);
       }
     }
+    @-webkit-keyframes slide-left {
+      0% {
+        -webkit-transform: translateX(0%);
+      }
+      100% {
+        -webkit-transform: translateX(-100%);
+      }
+    }
     @keyframes slide-right {
       0% {
         transform: translateX(0%);
       }
       100% {
         transform: translateX(100%);
+      }
+    }
+    @-webkit-keyframes slide-right {
+      0% {
+        -webkit-transform: translateX(0%);
+      }
+      100% {
+        -webkit-transform: translateX(100%);
       }
     }
   }

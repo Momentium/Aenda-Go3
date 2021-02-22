@@ -97,6 +97,7 @@ const StTopCont = styled.section`
 
       .header-logo {
         width: 100%;
+        height: 100%;
         @media screen and (min-width: 481px) {
           cursor: pointer;
         }
@@ -111,7 +112,6 @@ const StTopCont = styled.section`
 
 const StLogoBtnCont = styled.div`
   left: 0px;
-  display: flex;
 
   img {
     transition: all 1s ease;
@@ -125,7 +125,6 @@ const StLogoBtnCont = styled.div`
 
 const StYTBtnCont = styled.div`
   right: 0px;
-  display: flex;
 
   img {
     width: min(4.2vw, 40px);
