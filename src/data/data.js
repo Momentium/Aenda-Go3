@@ -721,7 +721,7 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLA6XgShtWg/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147393333_3943465552359852_1191588561199177146_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=rudNoYy4e-wAX_yBHUQ&tp=1&oh=89b3519c000e99caed6fd17a0234d125&oe=60302DB6'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147393333_3943465552359852_1191588561199177146_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=5Hk2BnMjmR8AX_eMC3u&tp=1&oh=53a29d427282ceb46e8c70be486fd379&oe=603573B6'
 		},
 		{	
 			'instaID': 'im_mangae_1',
@@ -741,7 +741,7 @@ export const galleryData = {
 		{	
 			'instaID': 'syeon_.e',
 			'instaLink': 'https://www.instagram.com/p/CJ36iLXpdWE/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c0.236.607.607a/136473105_162373071970932_555990915646496724_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=l27nPZDwKRkAX8z7B3E&tp=1&oh=00a79b889d2cf2e4b56e26893ad2c594&oe=6030B32A'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136473105_162373071970932_555990915646496724_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=DI4MuaQBEsQAX9wHobs&tp=1&oh=16823cbd5b1a407cc502b345c79716a0&oe=6035B098'
 		},
 		{	
 			'instaID': '2ee_dayun',
@@ -751,7 +751,7 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBVoT9ph1p/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c0.18.480.480a/145716837_723482375036509_414975235981110698_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=mN0u9g5qoBEAX_L8ec5&tp=1&oh=11211d1f0b07ede14f3a826bc412d6b8&oe=60309C41'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/145716837_723482375036509_414975235981110698_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=uj7BKaCnowkAX_bip4V&tp=1&oh=d0858d20f22f476edc433f16c6c7a7bb&oe=603590C8'
 		},
 		{	
 			'instaID': 'kbk.art.xx',
@@ -761,12 +761,12 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLawABKFQmL/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/150570268_906512250103256_4185622035320435548_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=J03GA1x_WScAX9nHWlQ&tp=1&oh=d0e6aceab4a223b987524aac654396e2&oe=6030BBA5'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/150570268_906512250103256_4185622035320435548_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=jkZkFr_QWQMAX9e-FXP&tp=1&oh=b04dec5f84862dc9ee8acd7311ea7f9a&oe=603558E5'
 		},
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBVgYxJecg/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147276499_132011832042412_221202397496678324_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=Hibo2sq_-l4AX_YUs5F&tp=1&oh=3e9d5ba0cadb125213ebecb6d14feef2&oe=60308689'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147276499_132011832042412_221202397496678324_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=MZl31ezVs34AX__oFRr&tp=1&oh=36a5c584176ad1caf1a63df31efe235f&oe=6035CC89'
 		},
 		{	
 			'instaID': '20som_20',
@@ -781,7 +781,7 @@ export const galleryData = {
 		{	
 			'instaID': 'wlgn_76616',
 			'instaLink': 'https://www.instagram.com/p/CJyQ2a1nDrp/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c0.60.480.480a/137011529_3686295628116887_6851331500011086864_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=lOJbgJFIJmwAX_8aVYc&tp=1&oh=f16a00b63d8daad81e3e7299f884d8dd&oe=60306D9C'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/137011529_3686295628116887_6851331500011086864_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=zYZETdMmi-8AX_hnPyN&tp=1&oh=e6b3e53728181befa1767b2f9ec572e9&oe=6035E256'
 		},
 	],
   '나는무엇때문에흔들렸나': [
@@ -910,7 +910,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBCW2-JO9q/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147394851_198587735300398_6697606525840301_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=5YUJFjf4Es0AX_w6a9r&tp=1&oh=68bfc40a1f9399d60041c055bcfbc5e3&oe=60302628'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147394851_198587735300398_6697606525840301_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=xYD4lpqtOjMAX_dCdGJ&tp=1&oh=9c58df434eb8de15c42dddba1c4354f3&oe=60356C28'
     },
     {
       'instaID': 'im_mangae_1',
@@ -977,7 +977,7 @@ export const galleryData = {
     {
       'instaID': 'wlgn_76616',
       'instaLink': 'https://www.instagram.com/p/CJyQ2a1nDrp/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c0.60.480.480a/137011529_3686295628116887_6851331500011086864_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=lOJbgJFIJmwAX_8aVYc&tp=1&oh=f16a00b63d8daad81e3e7299f884d8dd&oe=60306D9C'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/137011529_3686295628116887_6851331500011086864_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=zYZETdMmi-8AX_hnPyN&tp=1&oh=e6b3e53728181befa1767b2f9ec572e9&oe=6035E256'
     },
     {
       'instaID': '_hyyeejiin',
@@ -1019,7 +1019,7 @@ export const galleryData = {
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA6XgShtWg/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147393333_3943465552359852_1191588561199177146_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=rudNoYy4e-wAX_yBHUQ&tp=1&oh=89b3519c000e99caed6fd17a0234d125&oe=60302DB6'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147393333_3943465552359852_1191588561199177146_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=5Hk2BnMjmR8AX_eMC3u&tp=1&oh=53a29d427282ceb46e8c70be486fd379&oe=603573B6'
     },
     {	
       'instaID': 'im_mangae_1',
@@ -1111,7 +1111,7 @@ export const galleryData = {
     {	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLawABKFQmL/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/150570268_906512250103256_4185622035320435548_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=J03GA1x_WScAX9nHWlQ&tp=1&oh=d0e6aceab4a223b987524aac654396e2&oe=6030BBA5'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/150570268_906512250103256_4185622035320435548_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=jkZkFr_QWQMAX9e-FXP&tp=1&oh=b04dec5f84862dc9ee8acd7311ea7f9a&oe=603558E5'
 		},
     {
       'instaID': 'im_mangae_1',
@@ -1384,7 +1384,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQGbpJLa3/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c0.60.480.480a/147233242_461005825076654_986514627800996508_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=cothYiSwwAIAX_kM7UK&tp=1&oh=e10417e7c52ff68355bd90bd189ebc9a&oe=6030CAA3'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147233242_461005825076654_986514627800996508_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=L4i_JvvcOI0AX-iIwO8&tp=1&oh=73dd62807944ddc0152df7662a30693a&oe=603549CE'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1458,7 +1458,7 @@ export const galleryData = {
     {
       'instaID': 'seohyeon0911',
       'instaLink': 'https://www.instagram.com/p/CJs0Ae1BWA_/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/135582592_912658159471990_1230863173758844939_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=O_ko_m9yD4kAX9WfJMS&tp=1&oh=c8be6148e9b6b7604afb4fc016e1602a&oe=60305D6D'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/135582592_912658159471990_1230863173758844939_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=wRR3B5w1wjsAX-tX5ui&tp=1&oh=7040cdffdb1d0ef7ed8ca12701e7866c&oe=6035BDD7'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1493,7 +1493,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTbp0l55O/?igshid=1v3rbrqii4hv7/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c92.0.295.295a/146841172_232537101922449_5496481241659106579_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=qy-Szy32uaUAX-JUjXd&tp=1&oh=cca5cf7d1d1fcf722ff4b2c3c724610c&oe=60302FC8'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146841172_232537101922449_5496481241659106579_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=da481UlW5Q0AX-RiFsr&tp=1&oh=ae9195ff4f32d09db7336e6d972febba&oe=60356A7C'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1659,7 +1659,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBeFKOl0km/?igshid=lw22zrd3my3n/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c158.0.404.404a/146686530_485729562418298_2317686787159140710_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=8FWvAEDRezIAX-xztPN&tp=1&oh=761e5457ca2682b1e5644998eeecf5a3&oe=603038DA'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146686530_485729562418298_2317686787159140710_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=X-Gf7UxH6HQAX8jVYt2&tp=1&oh=d048e7ad9b486292d010cae448e7f064&oe=603570C1'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1768,7 +1768,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVgYxJecg/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147276499_132011832042412_221202397496678324_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=Hibo2sq_-l4AX_YUs5F&tp=1&oh=3e9d5ba0cadb125213ebecb6d14feef2&oe=60308689'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147276499_132011832042412_221202397496678324_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=MZl31ezVs34AX__oFRr&tp=1&oh=36a5c584176ad1caf1a63df31efe235f&oe=6035CC89'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1783,7 +1783,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVoT9ph1p/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c0.18.480.480a/145716837_723482375036509_414975235981110698_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=mN0u9g5qoBEAX_L8ec5&tp=1&oh=11211d1f0b07ede14f3a826bc412d6b8&oe=60309C41'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/145716837_723482375036509_414975235981110698_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=uj7BKaCnowkAX_bip4V&tp=1&oh=d0858d20f22f476edc433f16c6c7a7bb&oe=603590C8'
     },
     {
       'instaID': 'im_mangae_1',
