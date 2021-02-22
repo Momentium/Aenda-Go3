@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled, { css } from "styled-components";
-import { TagContxt } from "../../common/ContextStorage";
+import { TagContxt } from "../../../common/ContextStorage";
 
 const Hashtag = ({ dataIdx, setPauseIdx, pauseIdx, idx, tag }) => {
   const { curTag, handleCurTag } = useContext(TagContxt);

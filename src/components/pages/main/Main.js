@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import Header from '../Header';
-import DrawerList from './DrawerList';
+import DrawerList from './tab/DrawerList';
 
 const Main = () => {
   return (

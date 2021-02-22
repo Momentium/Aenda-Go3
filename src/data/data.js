@@ -194,9 +194,9 @@ export const mbtiData = {
     호기심 많은 예술가 유형에 대한 소개입니다
     호기심 많은 예술가 유형`,
     progImg: [
-      `/assets/images/program/INFJ1/jpg`,
-      `/assets/images/program/INFJ2/jpg`,
-      `/assets/images/program/INFJ3/jpg`,
+      `/assets/images/program/INFJ1.jpg`,
+      `/assets/images/program/INFJ2.jpg`,
+      `/assets/images/program/INFJ3.jpg`,
     ],
     kit: `Having been inspired, awed, intrigued, shocked, confused… by all the contributions to Econ
     omia, it feels as if the entire journey ahead of us can be summarized in one slogan (an axiom
@@ -813,7 +813,7 @@ export const galleryData = {
     {
       'instaID': 'sc_y24',
       'instaLink': 'https://www.instagram.com/p/CJd-e4nJTwN/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/134291594_408752560391117_7424358553827419672_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=hf2Xu18dQqcAX_gFPqq&tp=1&oh=4a4f8072477b32d85621a95ea4e569a2&oe=6030C04E'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/134291594_408752560391117_7424358553827419672_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=npRycZO-76wAX9LueQO&tp=1&oh=d3628e86981a5808d9bbdbaf1121fd9f&oe=60355D8E'
     },
     {
       'instaID': 'im_mangae_1',
@@ -962,7 +962,7 @@ export const galleryData = {
     {
       'instaID': 'i_m_bean11',
       'instaLink': 'https://www.instagram.com/p/CJ1IInkH2Eu/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/136400419_2561306127500804_2105271742021754693_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=MTvFRZFsatoAX_ZwqKS&tp=1&oh=ca8ef334e89c3ee88a035877042d9861&oe=60309086'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/136400419_2561306127500804_2105271742021754693_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=dB3CjMCeUbcAX9lbnGB&tp=1&oh=ed3ed28ddac0bf1436622102f98fc8ae&oe=6035D686'
     },
     {
       'instaID': 'im_mangae_1',
@@ -972,7 +972,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBFtzkJT-Q/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147061469_1137032556756106_251467132636317172_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=up3PhMa_iQsAX-RbYy7&tp=1&oh=127fb179eacf88316468874ad2dd6df0&oe=60309F2C'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147061469_1137032556756106_251467132636317172_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=ybjIhk2Gv10AX8M_jul&tp=1&oh=07655746d2739a3a1c6d4ed54742b72e&oe=60353C6C'
     },
     {
       'instaID': 'wlgn_76616',
@@ -982,7 +982,7 @@ export const galleryData = {
     {
       'instaID': '_hyyeejiin',
       'instaLink': 'https://www.instagram.com/tv/CJ3Zf5vJyuR/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136970169_424248598992290_9173063197726161357_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=w_K6sCM8Ob0AX8y83bJ&tp=1&oh=383fe64ffda3862ec1b9fa626e8ef0e7&oe=6030AD01'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136970169_424248598992290_9173063197726161357_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=sOJWwHbulkMAX8b_0UD&tp=1&oh=56964d0d6557df4ea34cd7f84b36a9ef&oe=60354A41'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1024,22 +1024,22 @@ export const galleryData = {
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA7JuYhQsy/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147061471_238270427983017_863505460744428694_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=tFsaWllJuPkAX8q1MHk&tp=1&oh=388f2e84e3097940caf9df002f42a7f3&oe=603061B4'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147061471_238270427983017_863505460744428694_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=hgJpuSy6rQQAX-01YcY&tp=1&oh=8d2142e56f90b0dc3cba496dcccb7644&oe=6035A7B4'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA7UwsB0Tu/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147210154_195253412346666_6640610064651052641_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=sKlzOollOrUAX8JVe9U&tp=1&oh=02ade110a3591ea7f7b47a3c458eb9ab&oe=60309010'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147210154_195253412346666_6640610064651052641_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=3-oqjEdMheAAX92WoPg&tp=1&oh=b9971f53b9575d8c5cd2f5eab36ebda1&oe=6035D610'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA7dWQBLob/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146805483_537279557171079_491272472875943197_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=iLndzO_dmlMAX_GTyB3&tp=1&oh=1f800b7dd7fa02936797c3f68b888548&oe=60304404'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146805483_537279557171079_491272472875943197_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=4nvDZyQXXjAAX9hvpJn&tp=1&oh=b2e5633b1d578150df43b49e1f2d8492&oe=60358A04'
     },
     {	
       'instaID': 'happy_sun_20',
       'instaLink': 'https://www.instagram.com/p/CJ1L7s9gJzq/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/136661480_2846008222349088_2831380376314252992_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=EdNlHFs-grUAX_enHX1&tp=1&oh=57402d24773eb79977714ea143315bc1&oe=6030874D'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136661480_2846008222349088_2831380376314252992_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=QaOG0bxnfMMAX__Pqwy&tp=1&oh=82e06eb7ce40b6cfc6395121797214fb&oe=60354716'
     },
     {	
       'instaID': 'im_mangae_1',
@@ -1649,12 +1649,12 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYY1kJ4Br/?igshid=11c395evq3u91/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147478110_3440400046082017_2871051398034789077_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=NLMMrU0UQH4AX_IJcLh&tp=1&oh=f7499aa8ff5ea4068cd8c7e520c59ad7&oe=60303212'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147478110_3440400046082017_2871051398034789077_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=3vDGSp22ENYAX9aZw0-&tp=1&oh=4831a0c707fa4d5e7e234fb1bbb0ee79&oe=60357812'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBZ2B5pM9g/?igshid=1ui1pyxmhkg9a/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c140.0.360.360a/146727664_1355783821422832_1706039449650395723_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=mPdRlWjKshUAX9aFfON&tp=1&oh=e4e48a1872e42ce9ce1512bfcb415242&oe=60305D2C'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c140.0.360.360a/146727664_1355783821422832_1706039449650395723_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=N5R37LaAxuEAX8q7Yjv&tp=1&oh=bc47c3f858b65a2b6e870ea8377c1583&oe=6035A32C'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1689,7 +1689,7 @@ export const galleryData = {
     {
       'instaID': 'syeon_.e',
       'instaLink': 'https://www.instagram.com/p/CJ36iLXpdWE/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136473105_162373071970932_555990915646496724_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=l27nPZDwKRkAX8z7B3E&tp=1&oh=563f34c5b16e1ebd0774464a9a790aa2&oe=60306A98'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/c0.236.607.607a/136473105_162373071970932_555990915646496724_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=DI4MuaQBEsQAX9wHobs&tp=1&oh=09bf4c4f4f802c037fba0825f896c777&oe=6035506A'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1788,7 +1788,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVrVdJO1v/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146990445_467725437741140_4224642667139741795_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=FsTRt1UJKUQAX_32O8q&tp=1&oh=6a6829243d185745e5b37274369f9db3&oe=603033AF'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146990445_467725437741140_4224642667139741795_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=jWTZsC-bpikAX-G-KpL&tp=1&oh=facbacaab139d46bb6f9ed9401c52be3&oe=603579AF'
     }
   ]
 }

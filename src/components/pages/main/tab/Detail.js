@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
-import Intro from "./intro/Intro";
-import ProgramList from "./program/ProgramList";
-import ArtistList from './artist/ArtistList';
-import GalleryList from './gallery/GalleryList';
-import Message from './msg/Message';
+import Intro from "../intro/Intro";
+import ProgramList from "../program/ProgramList";
+import ArtistList from '../artist/ArtistList';
+import GalleryList from '../gallery/GalleryList';
+import Message from '../msg/Message';
 
 
 const Detail = ({ menu, curTag }) => {

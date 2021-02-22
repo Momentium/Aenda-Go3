@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Collapse } from "@material-ui/core";
 import styled, { css } from "styled-components";
 import Detail from "./Detail";
-import SlideList from "./SlideList";
-import { TagContxt } from "../../common/ContextStorage";
-import { drawerData } from "../../../data/data";
+import SlideList from "../slide/SlideList";
+import { TagContxt } from "../../../common/ContextStorage";
+import { drawerData } from "../../../../data/data";
 
 const Drawer = ({ title }) => {
   const [isHov, setIsHov] = useState(false);

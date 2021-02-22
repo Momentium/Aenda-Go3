@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Hashtag from "./Hashtag";
-import { hashTagData } from "../../../data/data";
+import { hashTagData } from "../../../../data/data";
 
 const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   const aniRef = useRef();

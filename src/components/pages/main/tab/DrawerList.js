@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import Drawer from './Drawer';
-import Footer from './Footer';
-import { drawerData } from '../../../data/data';
+import Footer from '../Footer';
+import { drawerData } from '../../../../data/data';
 
 const DrawerList = () => {
   return (
