@@ -75,7 +75,9 @@ export default Drawer;
 const StDrawerCont = styled.div`
   display: flex;
   flex-direction: column;
+`;
 
+const StDrawerWrap = styled.section`
   * {
     -ms-user-select: none;
     -moz-user-select: -moz-none;
@@ -83,9 +85,7 @@ const StDrawerCont = styled.div`
     -webkit-user-select: none;
     user-select: none;
   }
-`;
 
-const StDrawerWrap = styled.section`
   @media screen and (min-width: 481px) {
     cursor: pointer;
   }

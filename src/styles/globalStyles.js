@@ -35,9 +35,6 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
 
     font-size: 1rem;
-    /* @media screen and (max-width: 768px) {
-      font-size: 0.5rem;
-    } */
 
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
@@ -369,8 +366,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
   }
-
-  
 `;
 
 export default GlobalStyle;

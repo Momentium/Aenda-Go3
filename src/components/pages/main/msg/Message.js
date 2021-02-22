@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import Modal from "./Modal";
 import emailjs from 'emailjs-com';
@@ -127,6 +127,7 @@ const trans = css`
 `;
 
 const StInput = styled.input`
+  -webkit-user-select: text; /* Chrome, Opera, Safari */
   display: inline-block;
   width: 100%;
   line-height: 36px;
@@ -149,6 +150,7 @@ const StInput = styled.input`
 `;
 
 const StTxtArea = styled.textarea`
+  -webkit-user-select: text; /* Chrome, Opera, Safari */
   margin-top: 16px;
   display: inline-block;
   width: 100%;
