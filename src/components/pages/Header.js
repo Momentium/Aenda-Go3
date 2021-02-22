@@ -77,19 +77,17 @@ const StTopCont = styled.section`
   position: absolute;
   z-index: 20;
   top: 6.5%;
-  /* @media screen and (max-width: 480px){
-    top: 11.458333vw;
-  } */
 
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 
-  transition: all 1s ease;
+  transition: all 0.7s ease;
 
   ${(props) =>
     !props.popState &&
     css`
+      transition: all 0.7s ease;
       padding: 0 8px;
 
       top: 50%;
@@ -114,11 +112,10 @@ const StLogoBtnCont = styled.div`
   left: 0px;
 
   img {
-    transition: all 1s ease;
+    transition: all 0.7s ease;
     width: min(41vw, 395px);
     @media screen and (max-width: 480px) {
       width: 69vw;
-      /* width: min(69vw, 166px); */
     }
   }
 `;
@@ -143,9 +140,6 @@ const StBotCont = styled.section`
   position: absolute;
   z-index: 20;
   bottom: 6.5%;
-  /* @media screen and (max-width: 480px){
-    bottom: 11.458333vw;
-  } */
 
   transition: all 1s ease;
   
@@ -173,7 +167,6 @@ const StTitleCont = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    /* margin-bottom: 23vh; */
     margin-bottom: ${({theme}) => theme.SH * 0.23}px;
     .blue {
       width: 100%;

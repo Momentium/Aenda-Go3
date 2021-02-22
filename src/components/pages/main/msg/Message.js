@@ -46,24 +46,16 @@ const Message = () => {
     setPopModal(true);
   };
 
-  useEffect(() => {
-    const _target = document.getElementsByName("input");
-    console.log(_target[2].value)
-    for(let i = 0; i < _target.length; i++) {
-      _target[i].value = "";
-    }
-  }, [])
-
   return (
     <StCont isFocus={isFocus}>
       <StTopCont className="cont">
         <div className="text msg name" onFocus={hdlFocus} onBlur={hdlBlur}>
           <div>이&nbsp;름</div>
-          <StInput type="text" name={"input"} />
+          <StInput type="text" name={"input"} autoComplete="off" />
         </div>
         <div className="text msg email" onFocus={hdlFocus} onBlur={hdlBlur}>
           <div>이메일</div>
-          <StInput type="text" name={"input"} />
+          <StInput type="text" name={"input"} autoComplete="off" />
         </div>
       </StTopCont>
       <StMidCont className="cont">
@@ -71,9 +63,9 @@ const Message = () => {
           <div>메시지를 입력해 주세요.</div>
           {
             window.innerWidth > 480 ?
-            <StInput type="text" name={"input"} />
+            <StInput type="text" name={"input"} autoComplete="off" />
             :
-            <StTxtArea type="text" name={"input"} />
+            <StTxtArea type="text" name={"input"} autoComplete="off" />
           }
         </div>
       </StMidCont>
@@ -135,7 +127,7 @@ const trans = css`
 `;
 
 const StInput = styled.input`
-  display: inline-block;
+  /* display: inline-block; */
   width: 100%;
   line-height: 36px;
 
@@ -164,11 +156,10 @@ const StTxtArea = styled.textarea`
   }
   
   margin-top: 16px;
-  display: inline-block;
+  /* display: inline-block; */
   width: 100%;
   height: 35vw; 
   overflow: scroll;
-
   font-size: 12.5px;
   @media screen and (max-width: 480px) {
     font-size: 22px;
@@ -193,7 +184,9 @@ const StTopCont = styled.div`
 
   & > div {
     display: flex;
-    align-items: baseline;
+    @media screen and (min-width: 481px) {
+      align-items: baseline;
+    }
 
     border-bottom: 1px solid #555555;
   }

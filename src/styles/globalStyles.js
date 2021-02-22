@@ -366,6 +366,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
   }
+
+  input, textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
 `;
 
 export default GlobalStyle;

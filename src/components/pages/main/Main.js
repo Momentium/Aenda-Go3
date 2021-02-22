@@ -22,7 +22,12 @@ const StMainCont = styled.div`
   z-index: 10;
   left: 5px;
   bottom: 5px;
-
+  
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
