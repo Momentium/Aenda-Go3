@@ -13,7 +13,7 @@ const Main = () => {
 export default Main;
 
 const StMainCont = styled.div`
-  background-image: url('/assets/images/bg_web_main.png');
+  background-image: url('/assets/images/background/bg_web_main.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

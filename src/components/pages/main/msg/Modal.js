@@ -41,9 +41,11 @@ const StCont = styled.div`
   background: ${({theme}) => theme.colors.blue};
   transition: all 100ms ease;
 
+  
   ${
     props => props.popModal ? 
     css`
+      overflow: hidden;
       width: min(57.3vw, 550px);
       height: min(21vw, 200px);
       @media screen and (max-width: 480px) {
@@ -55,7 +57,6 @@ const StCont = styled.div`
     css`
       width: 0;
       height: 0;
-      /* visibility: hidden; */
       * {
         display: none;
       }

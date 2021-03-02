@@ -217,7 +217,7 @@ const StBotCont = styled.div`
 
 const StBtn = styled.div`
   user-select: none;
-  @media screen and (mix-width: 481px) {
+  @media screen and (min-width: 481px) {
     cursor: pointer;
   }
   display: flex;
