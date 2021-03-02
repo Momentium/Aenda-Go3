@@ -33,10 +33,10 @@ const App = () => {
 
   return (
     <ThemeProvider theme={{ ...theme, SW, SH, ...tglMain }}>
-        <StAppCont classNam="app">
-          <Main />
-          <Screen SW={SW} popState={tglMain.popState} />
-        </StAppCont>
+      <StAppCont classNam="app">
+        <Main />
+        <Screen SW={SW} popState={tglMain.popState} />
+      </StAppCont>
     </ThemeProvider>
   );
 };
@@ -44,6 +44,7 @@ export default App;
 
 const StAppCont = styled.div`
   position: relative;
+  user-select: none;
 
   width: ${(props) => `${props.theme.SW}px`};
   height: ${(props) => `${props.theme.SH}px`};
