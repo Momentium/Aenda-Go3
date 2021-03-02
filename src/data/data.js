@@ -2038,7 +2038,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTbp0l55O/?igshid=1v3rbrqii4hv7/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146841172_232537101922449_5496481241659106579_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=da481UlW5Q0AX-RiFsr&tp=1&oh=ae9195ff4f32d09db7336e6d972febba&oe=60356A7C'
+      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146786609_129908058923015_3089338937785988207_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=Cj85dVRaFe4AX-juAl8&oh=38ce8c12a68080e68aa4847f0222d4d3&oe=6066D658'
     },
     {
       'instaID': 'im_mangae_1',
