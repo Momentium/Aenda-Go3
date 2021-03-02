@@ -5,27 +5,27 @@ import reportWebVitals from "./reportWebVitals";
 import { StylesProvider } from "@material-ui/core/styles";
 import GlobalStyle from "./styles/globalStyles";
 
-document.documentElement.addEventListener(
-  "touchstart",
-  function (event) {
-    if (event.touches.length > 1) {
-      event.preventDefault();
-    }
-  },
-  false
-);
-let lastTouchEnd = 0;
-document.documentElement.addEventListener(
-  "touchend",
-  function (event) {
-    let now = new Date().getTime();
-    if (now - lastTouchEnd <= 300) {
-      event.preventDefault();
-    }
-    lastTouchEnd = now;
-  },
-  false
-);
+// document.documentElement.addEventListener(
+//   "touchstart",
+//   function (event) {
+//     if (event.touches.length > 1) {
+//       event.preventDefault();
+//     }
+//   },
+//   false
+// );
+// let lastTouchEnd = 0;
+// document.documentElement.addEventListener(
+//   "touchend",
+//   function (event) {
+//     let now = new Date().getTime();
+//     if (now - lastTouchEnd <= 300) {
+//       event.preventDefault();
+//     }
+//     lastTouchEnd = now;
+//   },
+//   false
+// );
 
 ReactDOM.render(
   <StylesProvider injectFirst>

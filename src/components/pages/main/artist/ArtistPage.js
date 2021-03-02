@@ -128,7 +128,7 @@ const StTitleCont = styled.div`
   @media screen and (max-width: 480px) {
     align-items: flex-start;
     div.title {
-      width: 65%;
+      /* width: 65%; */
       transform: translateY(-8px);
     }
   }
