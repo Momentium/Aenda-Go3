@@ -14,5 +14,5 @@ export default Intro;
 
 const StCont = styled.div`
   width: 100%;
-  padding: 5vw 0;
+  padding: 44px 0;
 `;

@@ -20,8 +20,9 @@ const ArtistPage = ({ _idx, closePage }) => {
 
       <StTitleCont>
         <img src="assets/icons/left-wing.svg" alt="left-wing" />
-        <div className="text artist title">
-          {data.aka}. {data.name}
+        <div className="text artist title">        
+          {_idx !== '12' && `${data.aka}.`}
+          {` ${data.name}`}
         </div>
         <img src="assets/icons/right-wing.svg" alt="right-wing" />
       </StTitleCont>
@@ -29,7 +30,7 @@ const ArtistPage = ({ _idx, closePage }) => {
       {
         window.innerWidth > 480 ?
         <ReactPlayer
-          url={"https://www.youtube.com/embed/Kjb_AbqY41M"}
+          url={`${data.vid}`}
           playing={false}
           controls={true}
           width={theme.SW / 1.5}
@@ -37,11 +38,11 @@ const ArtistPage = ({ _idx, closePage }) => {
         />
         :
         <ReactPlayer
-          url={"https://www.youtube.com/embed/Kjb_AbqY41M"}
+          url={`${data.vid}`}
           playing={false}
           controls={true}
-          width={theme.SW - 50}
-          height={(theme.SW - 50) * 9 / 16}
+          width={theme.SW}
+          height={theme.SW * 9 / 16}
         />
       }
 
@@ -124,10 +125,18 @@ const StTopCont = styled.div`
 const StTitleCont = styled.div`
   display: flex;
   align-items: center;
+  @media screen and (max-width: 480px) {
+    align-items: flex-start;
+    div.title {
+      width: 65%;
+      transform: translateY(-8px);
+    }
+  }
   justify-content: space-between;
   width: 100%;
-
   margin-bottom: 60px;
+
+  
 
   img {
     width: min(8.3vw, 80px);
@@ -152,8 +161,6 @@ const StBotCont = styled.div`
 
   .ment {
     width: 100%;
-    /* word-break: keep-all; */
-    /* white-space: pre-line; */
   }
 
   .why {
@@ -175,9 +182,6 @@ const StImgCont = styled.div`
   }
 
   .img-div {
-    /* width: min(31.25vw, 300px);
-    height: min(29.67vw, 280px); */
-    /* width: 31.25vw; */
     width: 100%;
     height: 29.67vw;
     margin-right: 3.80208vw;
@@ -194,11 +198,6 @@ const StImgCont = styled.div`
 
   .hist-cont {
     width: 100%;
-    /* width: 31.25vw; */
-    /* height: 29.67vw; */
-    @media screen and (max-width: 480px) {
-      width: 100%;
-    }
   }
   
 `;

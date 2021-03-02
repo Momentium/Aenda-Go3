@@ -9,7 +9,7 @@ const Artist = ({ _idx, data, openPage }) => {
       imgUrl={data.img}
     >
       <div className={`${data.name} img-div`}></div>
-      <div className="text artist name">{data.name}</div>
+      <div className="text artist name">{data.name.replace(/ /gi, '')}</div>
       <div className="text artist aka">{data.aka}</div>
     </StArtistWrap>
   );

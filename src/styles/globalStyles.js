@@ -1,35 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 import reset from 'styled-reset';
-import font010 from "./font/TTSoopilmyungjoR010.woff";
-import font020 from "./font/TTSoopilmyungjoR020.woff";
-import font040 from "./font/TTSoopilmyungjoR040.woff";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  @font-face {
-    font-family: "TTSoopilmyungjoR010";
-    src: local("TTSoopilmyungjoR010"),
-    url(${font010}) format("woff");
-  }
-  @font-face {
-    font-family: "TTSoopilmyungjoR020";
-    src: local("TTSoopilmyungjoR020"),
-    url(${font020}) format("woff");
-  }
-  @font-face {
-    font-family: "TTSoopilmyungjoR040";
-    src: local("TTSoopilmyungjoR040"),
-    url(${font040}) format("woff");
-  }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
   body {
-    background-color: #5a32de;
-
-    margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
-    
+    background-color: #5a32de;
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -45,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
   div.text {
     width: fit-content;
     object-fit: contain;
-    white-space: nowrap;
     vertical-align: baseline;
     text-align: left;
 
@@ -57,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     &.header {
       &.title {
         box-sizing: border-box;
-        padding: 0 16px 4px 8px;
+        padding: 8px 16px 12px 8px;
         font-weight: 900;
         transition: all 1s ease;
         
@@ -72,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.subtitle {
+        font-weight: bold;
         @media screen and (min-width: 481px) {
           font-size: min(2.6vw, 25px);
           line-height: 1.6;
@@ -80,7 +60,6 @@ const GlobalStyle = createGlobalStyle`
           font-size: min(5.8vw, 28px);
           line-height: 1.55;
         }
-        font-weight: bold;
         
       }
     }
@@ -120,16 +99,15 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.footer {
+      font-weight: 500;
+      line-height: 1.78;
+      color: #555555;
       @media screen and (min-width: 481px) {
         font-size: min(0.9375vw, 12px);
       }
       @media screen and (max-width: 480px) {
         font-size: min(3.75vw, 18px);
       }
-      
-      font-weight: 500;
-      line-height: 1.78;
-      color: #555555;
 
       &.link {
         @media screen and (min-width: 481px) {
@@ -203,12 +181,13 @@ const GlobalStyle = createGlobalStyle`
         @media screen and (max-width: 480px) {
           font-size: min(4.5vw, 22px);
         }
+        white-space: pre;
         font-weight: normal;
         line-height: 2;
         color: #ffffff;
       }
 
-      &.kit-intro-title {
+      &.ment-title {
         font-family: "TTSoopilmyungjoR020";
         @media screen and (min-width: 481px) {
           font-size: min(1.5625vw, 15px);
@@ -222,7 +201,7 @@ const GlobalStyle = createGlobalStyle`
         color: #fb5640;
         text-align: center;
       }
-      &.kit-intro {
+      &.ment {
         font-family: "TTSoopilmyungjoR020";
         @media screen and (min-width: 481px) {
           font-size: min(1.5625vw, 15px);
@@ -240,26 +219,26 @@ const GlobalStyle = createGlobalStyle`
 
     &.artist {
       &.name {
+        font-weight: bold;
+        line-height: 2;
+        text-align: center;
         @media screen and (min-width: 481px) {
           font-size: min(1.7vw, 20px);
         }
         @media screen and (max-width: 480px) {
           font-size: min(4.5vw, 22px);
         }
-        font-weight: bold;
-        line-height: 2;
-        text-align: center;
       }
       &.aka {
+        font-weight: normal;
+        line-height: 2;
+        text-align: center;
         @media screen and (min-width: 481px) {
           font-size: min(1.3vw, 12.5px);
         }
         @media screen and (max-width: 480px) {
           font-size: min(3.3vw, 16px);
         }
-        font-weight: normal;
-        line-height: 2;
-        text-align: center;
       }
 
       &.title {
@@ -271,19 +250,19 @@ const GlobalStyle = createGlobalStyle`
 
       &.ment {
         font-family: "TTSoopilmyungjoR020";
-        font-size: min(15.6vw, 15px);
+        font-size: min(1.875vw, 18px);
         line-height: 2;
         text-align: left;
         color: #ffffff;
         @media screen and (max-width: 480px) {
-          font-size: min(5.83333vw, 28px);
+          font-size: min(5.83333vw, 26px);
           line-height: 10vw;
         }
       }
       &.why {
         font-family: "TTSoopilmyungjoR020";
-        font-size: min(2.6041666vw, 25px);
-        line-height: 1;
+        font-size: min(2.9166vw, 28px);
+        line-height: 1.6;
         letter-spacing: -0.83px;
         text-align: center;
         color: #ffffff;
@@ -307,38 +286,38 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.gallery {
-      font-size: min(1.3vw, 12.5px);
-      @media screen and (max-width: 480px) {
-        font-size: min(3.125vw, 15px);
-      }
       font-weight: 500;
       line-height: 2;
       text-align: center;
       color: #fe573d;
+      font-size: min(1.3vw, 12.5px);
+      @media screen and (max-width: 480px) {
+        font-size: min(3.125vw, 15px);
+      }
     }
 
     &.msg {
       white-space: nowrap;
-      font-size: min(1.3vw, 12.5px);
-      @media screen and (max-width: 480px) {
-        font-size: min(5.2083vw, 25px);
-      }
       font-weight: 500;
       line-height: 2;
       text-align: left;
       color: #333333;
+      font-size: min(1.3vw, 12.5px);
+      @media screen and (max-width: 480px) {
+        font-size: min(5.2083vw, 25px);
+      }
     }
 
     &.modal {
+      font-weight: 500;
+      line-height: 1.25;
+      text-align: center;
+      color: #ffffff;
       font-size: min(1.7vw, 20px);
       @media screen and (max-width: 480px) {
         font-size: min(8.33333vw, 40px);
         white-space: nowrap;
       }
-      font-weight: 500;
-      line-height: 1.25;
-      text-align: center;
-      color: #ffffff;
     }
   }
   

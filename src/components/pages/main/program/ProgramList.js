@@ -33,7 +33,7 @@ const ProgramList = () => {
 
       <Slide in={popSlide} direction="right">
         <StPageCont>
-          <ProgramPage mbti={curMBTI} title={curTitle} closePage={closePage}/>
+          <ProgramPage mbti={curMBTI} title={curTitle} popSlide={popSlide} closePage={closePage}/>
         </StPageCont>
       </Slide>
     </>

@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { mbtiData } from "../../../../data/data";
 import { Zoom } from "@material-ui/core";
 
-const ProgramPage = ({ mbti, title, closePage }) => {
+const ProgramPage = ({ mbti, title, popSlide,closePage }) => {
   const data = mbtiData[`${mbti}`];
 
   const [curPage, setCurPage] = useState(0);
+  
+  useEffect(() => {
+    if(!popSlide) {
+      setCurPage(0);
+    }
+  }, [popSlide]);
+
   const toLeftPage = () => {
     setCurPage(curPage - 1);
   };
@@ -19,7 +26,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       {window.innerWidth <= 480 && (
         <StMTopCont>
           <img
-            className="close"
+            className="close" 
             src="assets/icons/close.svg"
             alt="close-icon"
             onClick={closePage}
@@ -38,7 +45,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
       </StTopCont>
 
       <div className="text program title">{title}</div>
-      <div className="line" />
+      <div className="line top" />
       <StImgCont>
         {curPage !== 0 && (
           <Zoom in={true} timeout={400}>
@@ -54,7 +61,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
           ))}
         </div>
         <div></div>
-        {curPage !== 2 && (
+        {curPage !== data.progImg.length - 1 && (
           <Zoom in={true} timeout={400}>
             <StArrowWrap dir={"right"} onClick={toRightPage}>
               <img src="assets/icons/vidArrow.svg" alt="arrow-logo" />
@@ -63,15 +70,12 @@ const ProgramPage = ({ mbti, title, closePage }) => {
         )}
       </StImgCont>
 
-      <div className="text program subtitle">
+      <div className="text program subtitle" >
         {window.innerWidth > 480 ? data.intro : data.intro_m}
       </div>
 
       <div className="text program kit-title">예술가의 키트</div>
-      <div
-        className="line"
-        style={{ marginTop: "14px", marginBottom: "33.3px" }}
-      />
+      <div className="line" />
       <div className="text program kit">
         {window.innerWidth > 480 ? data.kit : data.kit_m}
       </div>
@@ -82,9 +86,9 @@ const ProgramPage = ({ mbti, title, closePage }) => {
         alt="mbti-icon"
       />
 
-      <div className="text program kit-intro-title">예술가의 코멘트</div>
-      <div className="text program kit-intro">
-        {window.innerWidth > 480 ? data.kit_intro : data.kit_intro_m}
+      <div className="text program ment-title">예술가의 코멘트</div>
+      <div className="text program ment">
+        {window.innerWidth > 480 ? data.ment : data.ment_m}
       </div>
     </StPageWrap>
   );
@@ -118,24 +122,18 @@ const StPageWrap = styled.div`
     background: ${({ theme }) => `${theme.colors.red}`};
     margin-top: 23px;
     margin-bottom: 40px;
-    @media screen and (max-width: 480px) {
-      margin-top: 48px;
-      margin-bottom: 48px;
-    }
   }
 
-  .text {
-    font-family: "TTSoopilmyungjoR";
-  }
-  .title {
-    font-family: "Noto Sans KR", sans-serif;
+  .line.top {
+    @media screen and (max-width: 480px) {
+      background: ${({ theme }) => `${theme.colors.blue}`};
+      margin-top: 0px;
+      margin-bottom: 65px;
+    }
   }
 
   .subtitle {
     margin: 67px 0;
-  }
-
-  .kit-title {
   }
 
   .kit {
@@ -221,9 +219,9 @@ const StImgCont = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    height: ${({ theme }) => ((theme.SW - 26) * 9) / 16}px;
+    height: ${({ theme }) => theme.SW * 9 / 16}px;
     .prog_img {
-      width: ${({ theme }) => theme.SW - 26}px;
+      width: ${({ theme }) => theme.SW}px;
     }
   }
 `;
@@ -242,7 +240,7 @@ const StImgWrap = styled.div`
     `translateX(${-1 * props.curPage * props.theme.SW * 0.515625}px)`};
   @media screen and (max-width: 480px) {
     transform: ${(props) =>
-      `translateX(${-1 * props.curPage * (props.theme.SW - 26)}px)`};
+      `translateX(${-1 * props.curPage * props.theme.SW}px)`};
   }
 `;
 
@@ -250,9 +248,6 @@ const StArrowWrap = styled.div`
   position: absolute;
   z-index: 5;
   top: 50%;
-  /* @media screen and (max-width: 480px) {
-    top: 56px;
-  } */
 
   img {
     @media screen and (min-width: 481px) {
