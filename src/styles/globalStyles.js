@@ -6,7 +6,13 @@ const GlobalStyle = createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
+  /* * {
+    touch-action: pan-y;
+  } */
   body {
+    /* &, * {
+      touch-action: pan-y;
+    } */
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #5a32de;
     margin: 0;

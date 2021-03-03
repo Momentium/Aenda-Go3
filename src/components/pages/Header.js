@@ -37,7 +37,6 @@ const Header = () => {
               <div className="text header title white">{headerData.white_mobile[1]}</div>
             </>
           }
-          
         </StTitleCont>
 
         <StSubTitleCont>
@@ -168,6 +167,7 @@ const StTitleCont = styled.div`
 
   @media screen and (max-width: 480px) {
     margin-bottom: ${({theme}) => theme.SH * 0.23}px;
+    /* margin-bottom: 20vh; */
     .blue {
       width: 100%;
     }
