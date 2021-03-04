@@ -1266,7 +1266,7 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLA6XgShtWg/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147393333_3943465552359852_1191588561199177146_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=5X2wwYR9LzUAX8paQZB&oh=f737fca149c95013c499e9eb39e0ddcc&oe=603FFFB6'
+      'imgUrl': '/assets/images/gallery/배운망덕춤01.jpg'
 		},
 		{	
 			'instaID': 'im_mangae_1',
@@ -1286,7 +1286,7 @@ export const galleryData = {
 		{	
 			'instaID': 'syeon_.e',
 			'instaLink': 'https://www.instagram.com/p/CJ36iLXpdWE/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136473105_162373071970932_555990915646496724_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=BI8ZCFMJV4QAX_6ckOG&oh=6517fa2c5b29a3d0096265cbdb7d8638&oe=60403C98'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법11.jpg'
 		},
 		{	
 			'instaID': '2ee_dayun',
@@ -1296,7 +1296,7 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBVoT9ph1p/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/145716837_723482375036509_414975235981110698_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=3l1ZlhOm4KIAX88k3yQ&oh=2f11ad7f004f8d923e0279678b36813f&oe=60401CC8'
+      'imgUrl': '/assets/images/gallery/빨간양말의춤04.jpg'
 		},
 		{	
 			'instaID': 'kbk.art.xx',
@@ -1306,12 +1306,12 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLawABKFQmL/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/150570268_906512250103256_4185622035320435548_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=-p62qybNUYYAX__aJ8-&oh=0a9e48555cf2097e874371c9fffc9929&oe=60408DA5'
+      'imgUrl': '/assets/images/gallery/잘하는것과좋아하는것사이09.jpg'
 		},
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBVgYxJecg/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147276499_132011832042412_221202397496678324_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=UjotyPJ2RpIAX_ChCdT&oh=490a0c430af6a6cc4f486d93db6286b3&oe=60405889'
+      'imgUrl': '/assets/images/gallery/빨간양말의춤01.jpg'
 		},
 		{	
 			'instaID': '20som_20',
@@ -1326,7 +1326,7 @@ export const galleryData = {
 		{	
 			'instaID': 'wlgn_76616',
 			'instaLink': 'https://www.instagram.com/p/CJyQ2a1nDrp/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/137011529_3686295628116887_6851331500011086864_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=RDnW4JW-jhQAX8FZuHO&oh=f137f83ed188e8b6ad47d620c040c966&oe=60406E56'
+      'imgUrl': '/assets/images/gallery/플라스틱추적기08.jpg'
 		},
 	],
   '나는무엇때문에흔들렸나': [
@@ -1358,7 +1358,7 @@ export const galleryData = {
     {
       'instaID': 'sc_y24',
       'instaLink': 'https://www.instagram.com/p/CJd-e4nJTwN/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/134291594_408752560391117_7424358553827419672_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=-NhYICq8xE8AX8VSXEK&oh=230026603a607569ef13241aea0826e3&oe=60406FF8'
+      'imgUrl': '/assets/images/gallery/나는무엇때문에흔들렸나06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1455,7 +1455,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBCW2-JO9q/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147394851_198587735300398_6697606525840301_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=xYD4lpqtOjMAX_dCdGJ&tp=1&oh=9c58df434eb8de15c42dddba1c4354f3&oe=60356C28'
+      'imgUrl': '/assets/images/gallery/내자랑노래10.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1507,7 +1507,7 @@ export const galleryData = {
     {
       'instaID': 'i_m_bean11',
       'instaLink': 'https://www.instagram.com/p/CJ1IInkH2Eu/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136400419_2561306127500804_2105271742021754693_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=bheAgo9O4U4AX-P_OVM&oh=6d4f647b546cbe0b3595491ab8c1ca4a&oe=60401CDD'
+      'imgUrl': '/assets/images/gallery/플라스틱추적기05.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1517,17 +1517,17 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBFtzkJT-Q/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147061469_1137032556756106_251467132636317172_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=OU-eAIxMXqoAX847C6U&oh=3753113f830cb9873160eaf0f3cd335d&oe=6040712C'
+      'imgUrl': '/assets/images/gallery/플라스틱추적기07.jpg'
     },
     {
       'instaID': 'wlgn_76616',
       'instaLink': 'https://www.instagram.com/p/CJyQ2a1nDrp/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/137011529_3686295628116887_6851331500011086864_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=RDnW4JW-jhQAX8FZuHO&oh=f137f83ed188e8b6ad47d620c040c966&oe=60406E56'
+      'imgUrl': '/assets/images/gallery/플라스틱추적기08.jpg'
     },
     {
       'instaID': '_hyyeejiin',
       'instaLink': 'https://www.instagram.com/tv/CJ3Zf5vJyuR/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136970169_424248598992290_9173063197726161357_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=dZbHCAwbbwwAX_diPId&oh=d8dc2f3e8493a81ccad6741d55fef590&oe=60407F01'
+      'imgUrl': '/assets/images/gallery/플라스틱추적기09.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1564,27 +1564,27 @@ export const galleryData = {
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA6XgShtWg/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147393333_3943465552359852_1191588561199177146_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=5X2wwYR9LzUAX8paQZB&oh=f737fca149c95013c499e9eb39e0ddcc&oe=603FFFB6'
+      'imgUrl': '/assets/images/gallery/배운망덕춤01.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA7JuYhQsy/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147061471_238270427983017_863505460744428694_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=2a2BeJcupOYAX-AEDiG&oh=f2ce91aea09a2192777de63743807fc6&oe=604033B4'
+      'imgUrl': '/assets/images/gallery/배운망덕춤02.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA7UwsB0Tu/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147210154_195253412346666_6640610064651052641_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=OM_vdIfEUNUAX8xh0Kg&oh=c5482b06339c96f6e00cf5f56f4bb58d&oe=60406210'
+      'imgUrl': '/assets/images/gallery/배운망덕춤03.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLA7dWQBLob/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146805483_537279557171079_491272472875943197_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=-lQ3ItTNJR0AX84YhJD&oh=a449a7317ace1d80f0613e51726a8529&oe=60401604'
+      'imgUrl': '/assets/images/gallery/배운망덕춤04.jpg'
     },
     {	
       'instaID': 'happy_sun_20',
       'instaLink': 'https://www.instagram.com/p/CJ1L7s9gJzq/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136661480_2846008222349088_2831380376314252992_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=genq3pDWa9gAX_OgMlr&oh=777ef68a8e2184d62c21da5846f72070&oe=60407BD6'
+      'imgUrl': '/assets/images/gallery/배운망덕춤05.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
@@ -2204,7 +2204,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBeFKOl0km/?igshid=lw22zrd3my3n/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146686530_485729562418298_2317686787159140710_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=X-Gf7UxH6HQAX8jVYt2&tp=1&oh=d048e7ad9b486292d010cae448e7f064&oe=603570C1'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법05.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -2313,7 +2313,7 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVgYxJecg/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147276499_132011832042412_221202397496678324_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=UjotyPJ2RpIAX_ChCdT&oh=490a0c430af6a6cc4f486d93db6286b3&oe=60405889'
+      'imgUrl': '/assets/images/gallery/빨간양말의춤01.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -2328,12 +2328,12 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVoT9ph1p/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/145716837_723482375036509_414975235981110698_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=3l1ZlhOm4KIAX88k3yQ&oh=2f11ad7f004f8d923e0279678b36813f&oe=60401CC8'
+      'imgUrl': '/assets/images/gallery/빨간양말의춤04.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVrVdJO1v/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146990445_467725437741140_4224642667139741795_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=Ab23jpwMWSEAX8q7G5E&oh=ba92825a017c3dff2ea7bd8dd97ac245&oe=604005AF'
+      'imgUrl': '/assets/images/gallery/빨간양말의춤05.jpg'
     }
   ]
 }
