@@ -27,24 +27,23 @@ const ArtistPage = ({ _idx, closePage }) => {
         <img src="assets/icons/right-wing.svg" alt="right-wing" />
       </StTitleCont>
 
-      {
-        window.innerWidth > 480 ?
+      <StPlayerWrap>
         <ReactPlayer
-          url={`${data.vid}`}
-          playing={false}
+          url={theme.popSlide && `${data.vid}`}
+          playing={theme.popSlide}
           controls={true}
-          width={theme.SW / 1.5}
-          height={(theme.SW * 9) / (16 * 1.5)}
+          width={'100%'}
+          height={'100%'}
+          playsinline={true}
+          config={{
+            vimeo: {
+              playerOptions: {
+                quality: '1080p'
+              }
+            }
+          }}
         />
-        :
-        <ReactPlayer
-          url={`${data.vid}`}
-          playing={false}
-          controls={true}
-          width={theme.SW}
-          height={theme.SW * 9 / 16}
-        />
-      }
+      </StPlayerWrap>
 
       <StBotCont>
         <div className="text artist ment">{data.ment}</div>
@@ -143,6 +142,16 @@ const StTitleCont = styled.div`
     @media screen and (max-width: 480px) {
       width: min(10.41666vw, 50px);
     }
+  }
+`;
+
+const StPlayerWrap = styled.div`
+  background-color: black;
+  width: ${({theme}) => theme.SW / 1.5}px;
+  height: ${({theme}) => (theme.SW * 9) / (16 * 1.5)}px;
+  @media screen and (max-width: 480px) {
+    width: ${({theme}) => theme.SW}px;
+    height: ${({theme}) => theme.SW * 9 / 16}px;
   }
 `;
 

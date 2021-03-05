@@ -1,14 +1,14 @@
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
-const Screen = ({ SW, vidUrl }) => {
+const Screen = ({ SW, vidUrl, popState, pageState }) => {
   return (
     <StScreenCont>
     {
       SW > 480 ?
       <ReactPlayer
         url={vidUrl}
-        // playing={play}
+        playing={!popState && pageState}
         controls={true}
         width={SW / 1.5}
         height={(SW * 9) / (16 * 1.5)}
@@ -16,7 +16,7 @@ const Screen = ({ SW, vidUrl }) => {
       :
       <ReactPlayer
         url={vidUrl}
-        // playing={play}
+        playing={!popState && pageState}
         controls={true}
         width={SW - 26}
         height={(SW - 26) * 9 / 16}

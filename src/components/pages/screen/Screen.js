@@ -11,7 +11,7 @@ const Screen = ({ SW, popState }) => {
   const toRightPage = () => {
     setCurPage(curPage + 1);
   }
-
+  
   return (
     <StScreenCont>
       {
@@ -35,14 +35,14 @@ const Screen = ({ SW, popState }) => {
         <Player
           vidUrl={"https://www.youtube.com/embed/Kjb_AbqY41M"}
           SW={SW}
-          // popState={popState}
-          // pageState={curPage === 0}
+          popState={popState}
+          pageState={curPage === 0}
         />
         <Player
           vidUrl={"https://www.youtube.com/embed/Lw_amG3yXXA"}
           SW={SW}
-          // popState={popState}
-          // pageState={curPage === 1}
+          popState={popState}
+          pageState={curPage === 1}
         />
       </StPlayerCont>
       
@@ -54,7 +54,7 @@ export default Screen;
 const StScreenCont = styled.div`
   overflow: hidden;
   position: relative;
-
+  
   width: ${({ theme }) => `${theme.SW}px`};
   height: ${({ theme }) => `${theme.SH}px`};
 `;

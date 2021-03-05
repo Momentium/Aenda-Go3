@@ -58,7 +58,6 @@ export default Header;
 
 const StHeaderCont = styled.div`
   position: relative;
-
   height: 100%;
 
   & > div {
@@ -86,7 +85,7 @@ const StTopCont = styled.section`
   ${(props) =>
     !props.popState &&
     css`
-      transition: all 0.7s ease;
+      transition: all 0.5s ease;
       padding: 0 8px;
 
       top: 50%;

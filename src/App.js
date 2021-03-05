@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
 import Main from "./components/pages/main/Main";
 import Screen from "./components/pages/screen/Screen";
+import SlidePage from './components/common/SlidePage';
 
 const App = () => {
   const [SW, setSW] = useState(window.innerWidth);
@@ -52,12 +53,15 @@ const App = () => {
     closeMain,
     openMain,
   });
+  const [popSlide, setPopSlide] = useState(false);
+  const [slidePage, setSlidePage] = useState();
 
   return (
-    <ThemeProvider theme={{ ...theme, SW, SH, ...tglMain }}>
+    <ThemeProvider theme={{ ...theme, SW, SH, ...tglMain, popSlide, setPopSlide, setSlidePage}}>
       <StAppCont classNam="app">
         <Main />
         <Screen SW={SW} popState={tglMain.popState} />
+        <SlidePage popSlide={popSlide} slidePage={slidePage}/>
       </StAppCont>
     </ThemeProvider>
   );

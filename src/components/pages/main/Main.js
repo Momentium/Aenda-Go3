@@ -13,6 +13,7 @@ const Main = () => {
 export default Main;
 
 const StMainCont = styled.div`
+  background-color: white;
   background-image: url('/assets/images/background/bg_web_main.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -20,6 +21,7 @@ const StMainCont = styled.div`
 
   position: absolute;
   z-index: 10;
+  
   left: 5px;
   bottom: 5px;
   

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { mbtiData } from "../../../../data/data";
-import { Zoom } from "@material-ui/core";
+import { Zoom, } from "@material-ui/core";
 
-const ProgramPage = ({ mbti, title, popSlide,closePage }) => {
+const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
   const data = mbtiData[`${mbti}`];
-
   const [curPage, setCurPage] = useState(0);
+  const _closePage = () => {
+    setCurPage(0);
+    closePage();
+  }  
   
   useEffect(() => {
-    if(!popSlide) {
+    if(popSlide === "") {
       setCurPage(0);
     }
   }, [popSlide]);
@@ -20,7 +23,6 @@ const ProgramPage = ({ mbti, title, popSlide,closePage }) => {
   const toRightPage = () => {
     setCurPage(curPage + 1);
   };
-
   return (
     <StPageWrap>
       {window.innerWidth <= 480 && (
@@ -29,7 +31,7 @@ const ProgramPage = ({ mbti, title, popSlide,closePage }) => {
             className="close" 
             src="assets/icons/close.svg"
             alt="close-icon"
-            onClick={closePage}
+            onClick={_closePage}
           />
         </StMTopCont>
       )}
