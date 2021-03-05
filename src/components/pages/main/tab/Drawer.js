@@ -20,7 +20,11 @@ const Drawer = ({ title }) => {
 
   const [curTag, setCurTag] = useState("상상만개");
   const handleCurTag = (_target) => {
-    // const _target = e.currentTarget.textContent;
+    if(_target === 'reset') {
+      setIsOpen(false);
+      return;
+    }
+
     setCurTag(_target.substring(1));
     if (!isOpen) {
       setIsOpen(true);
@@ -55,7 +59,7 @@ const Drawer = ({ title }) => {
         </StArrowCont>
       </StDrawerWrap>
 
-      <TagContxt.Provider value={{ curTag, handleCurTag }}>
+      <TagContxt.Provider value={{ curTag, handleCurTag, isOpen, handleOpen }}>
         {title === drawerData.exhib && (
           <>
             <StLine isOpen={isOpen} isHov={isHov} />
