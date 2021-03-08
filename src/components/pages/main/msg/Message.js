@@ -58,6 +58,7 @@ const Message = () => {
           <StInput type="text" name={"input"} autoComplete="off" />
         </div>
       </StTopCont>
+
       <StMidCont className="cont">
         <div className="text msg guide" onFocus={hdlFocus} onBlur={hdlBlur}>
           <div>메시지를 입력해 주세요.</div>
@@ -69,6 +70,7 @@ const Message = () => {
           }
         </div>
       </StMidCont>
+
       <StBotCont className="cont">
         <StBtn onClick={sendMsg}>메시지 보내기</StBtn>
       </StBotCont>
@@ -87,8 +89,7 @@ export default Message;
 
 const StCont = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
+  ${({theme}) => theme.flex('', '', 'column')};
   padding-top: 3.9vw;
 
   @media screen and (max-width: 480px) {
@@ -127,18 +128,11 @@ const trans = css`
 `;
 
 const StInput = styled.input`
-  /* display: inline-block; */
+  display: inline-block;
   width: 100%;
-  line-height: 36px;
+  height: ${({theme}) => theme.calcVW(50)};
 
-  font-size: 12.5px;
-  @media screen and (max-width: 480px) {
-    font-size: 22px;
-  }
-
-  box-sizing: border-box;
-
-  padding: 0 15px;
+  padding: 0 ${({theme}) => theme.calcVW(15)};
   border: 0;
   background: rgba(0, 0, 0, 0);
 
@@ -211,34 +205,27 @@ const StMidCont = styled.div`
   }
 `;
 const StBotCont = styled.div`
-  display: flex;
-  justify-content: center;
+  ${({theme}) => theme.flex('center')};
 `;
 
 const StBtn = styled.div`
-  user-select: none;
+  ${({theme}) => theme.selectNone};
+  ${({theme}) => theme.flex('center', 'center')};
+  background: ${({ theme }) => theme.colors.red};
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.blue};
+
   @media screen and (min-width: 481px) {
     cursor: pointer;
+    margin: ${({theme}) => theme.calcVW(62)} 0;
+    width: ${({theme}) => theme.calcVW(500)};
+    height: ${({theme}) => theme.calcVW(80)};
+    font-size: ${({theme}) => theme.calcVW(35)};
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 3.5vw 0;
-  width: min(260vw, 250px);
-  height: min(4.2vw, 40px);
-
   @media screen and (max-width: 480px) {
     margin: 8.3333vw 0;
     width: 100%;
     height: min(10.625vw, 51px);
-  }
-
-  background: ${({ theme }) => theme.colors.red};
-  color: ${({ theme }) => theme.colors.blue};
-  font-weight: bold;
-  font-size: 12.5px;
-  @media screen and (max-width: 480px) {
     font-size: 22px;
   }
 `;

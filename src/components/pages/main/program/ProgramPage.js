@@ -103,7 +103,7 @@ const StPageWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: ${({theme}) => theme.calcVW(101)};
   padding-bottom: 120px;
   @media screen and (max-width: 480px) {
     padding: 30px 0 90px 0;
@@ -174,7 +174,7 @@ const StTopCont = styled.div`
 
   img {
     &.hide {
-      width: 16px;
+      width: ${({theme}) => theme.calcVW(30)};
       visibility: hidden;
     }
     &.logo {
@@ -184,7 +184,7 @@ const StTopCont = styled.div`
       @media screen and (min-width: 481px) {
         cursor: pointer;
       }
-      width: 16px;
+      width: ${({theme}) => theme.calcVW(30)};
     }
   }
 

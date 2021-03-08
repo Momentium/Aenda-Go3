@@ -30,10 +30,13 @@ const StProgramCont = styled.div`
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  row-gap: 7.3vw;
+  /* grid-template-rows: repeat(4, 1fr); */
+  row-gap: ${({theme}) => theme.calcVW(130)};
+  column-gap: ${({theme}) => theme.calcVW(130)};
+  padding: ${({theme}) => theme.calcVW(130)} 0;
+  /* row-gap: 7.3vw;
   column-gap: 7.3vw;
-  padding: 7.3vw 0;
+  padding: 7.3vw 0; */
   
   @media screen and (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);

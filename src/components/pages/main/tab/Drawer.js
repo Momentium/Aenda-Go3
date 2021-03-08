@@ -87,23 +87,12 @@ const StDrawerCont = styled.div`
 `;
 
 const StDrawerWrap = styled.section`
-  * {
-    -ms-user-select: none;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
+  ${({theme}) => theme.selectNone};
   ${({theme}) => theme.flex('space-between', 'center')}
 
   ${ props => props.title ? 
     css`
       border-top: solid 1px ${props.theme.colors.blue};
-      border-bottom: solid 2px ${props.theme.colors.blue};
     `
     :
     css`

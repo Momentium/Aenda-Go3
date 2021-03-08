@@ -90,6 +90,7 @@ export default Footer;
 const StFootCont = styled.section`
   background: white;
   ${({theme}) => theme.flex('space-between', 'flex-start', '')}
+  border-top: solid 2px ${({theme}) => theme.colors.blue};
 
   width: 100%;
 
@@ -135,5 +136,5 @@ const StLinkCont = styled.div`
   }
 `;
 
-const StIncCont = styled.div`
-`;
+// const StIncCont = styled.div`
+// `;

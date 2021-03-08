@@ -33,7 +33,7 @@ const Modal = ({ popModal, setPopModal, alertMode, setAlertMode }) => {
 export default Modal;
 
 const StCont = styled.div`
-  user-select: none;
+  ${({theme}) => theme.selectNone};
   position: absolute;
   @media screen and (max-width: 480px) {
     position: fixed;
@@ -46,8 +46,8 @@ const StCont = styled.div`
     props => props.popModal ? 
     css`
       overflow: hidden;
-      width: min(57.3vw, 550px);
-      height: min(21vw, 200px);
+      width: ${({theme}) => theme.calcVW(1100)};
+      height: ${({theme}) => theme.calcVW(400)};
       @media screen and (max-width: 480px) {
         width: 100%;
         height: 100%; 
@@ -76,13 +76,13 @@ const StCont = styled.div`
     position: relative;
     width: 100%;
     img {
+      position: absolute;
       @media screen and (min-width: 481px) {
         cursor: pointer;
+        width: ${({theme}) => theme.calcVW(25)};
+        top: ${({theme}) => theme.calcVW(48)};
+        right: ${({theme}) => theme.calcVW(48)};
       }
-      position: absolute;
-      width: min(1.3vw, 12.5px);
-      top: 24px;
-      right: 24px;
       @media screen and (max-width: 480px) {
         width: min(5.208333vw, 25px);
         top: 40px;
@@ -93,15 +93,15 @@ const StCont = styled.div`
 
   .text {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    img {
+      width: ${({theme}) => theme.calcVW(40)};
+      margin: ${({theme}) => theme.calcVW(4)} 0 0 ${({theme}) => theme.calcVW(14)};
+    }
+
     @media screen and (max-width: 480px) {
       flex-direction: column;
-      align-items: center;
-    }
-    img {
-      width: min(1.8vw, 21px);
-      margin-left: 8px;
-      @media screen and (max-width: 480px) {
+      .img {
         width: min(8.3333vw, 40px);
         margin-left: 0px;
         margin-top: 24px;

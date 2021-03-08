@@ -135,8 +135,6 @@ const StTitleCont = styled.div`
   width: 100%;
   margin-bottom: 60px;
 
-  
-
   img {
     width: min(8.3vw, 80px);
     @media screen and (max-width: 480px) {

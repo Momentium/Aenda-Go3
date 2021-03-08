@@ -1656,7 +1656,7 @@ export const galleryData = {
     {	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLawABKFQmL/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/150570268_906512250103256_4185622035320435548_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=-p62qybNUYYAX__aJ8-&oh=0a9e48555cf2097e874371c9fffc9929&oe=60408DA5'
+      'imgUrl': '/assets/images/gallery/잘하는것과좋아하는것사이09.jpg'
 		},
     {
       'instaID': 'im_mangae_1',

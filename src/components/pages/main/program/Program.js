@@ -27,17 +27,17 @@ const StProgramWrap = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  max-width: 300px;
-  
-  width: 15.6vw;
-  height: 17vw;
+  width: ${({theme}) => theme.calcVW(300)};
+  /* max-width: 300px; */
+  /* height: 17vw; */
   @media screen and (max-width: 480px) {
     width: 100%;
     height: 100%;
   }
 
   img {
-    height: 11.25vw;
+    height: 100%;
+    /* height: 11.25vw; */
     @media screen and (max-width: 480px) {
       height: 30vw;
       margin-bottom: 30px;
@@ -62,6 +62,7 @@ const StProgramWrap = styled.div`
   transition: all 0.1s linear;
 
   &:hover {
+    transform: translateY(${({theme}) => theme.calcVW(-37)});
     .text {
       background: ${({ theme }) => theme.colors.red};
     }
@@ -71,18 +72,19 @@ const StProgramWrap = styled.div`
     .orange {
      opacity: 1;
     }
-    transform: translateY(-1.8vw);
   }
 `;
 
 const StImgCont = styled.div`
   display: flex;
   position: relative;
-  height: 11.25vw;
+  height: ${({theme}) => theme.calcVW(215)};
+  margin-bottom: ${({theme}) => theme.calcVW(70)};
   @media screen and (max-width: 480px) {
     height: 30vw;
     margin-bottom: 30px;
   }
+
   img {
     position: absolute;
     transform: translateX(-50%);

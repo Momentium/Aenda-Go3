@@ -117,7 +117,7 @@ const GlobalStyle = createGlobalStyle`
 
       &.label {
         @media screen and (min-width: 481px) {
-          font-size: min(1.7vw, 20px);
+          font-size: ${theme.calcVW(32)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(4.5vw, 22px);
@@ -216,10 +216,10 @@ const GlobalStyle = createGlobalStyle`
     &.artist {
       &.name {
         font-weight: bold;
-        line-height: 2;
+        line-height: 1.25;
         text-align: center;
         @media screen and (min-width: 481px) {
-          font-size: min(1.7vw, 20px);
+          font-size: ${theme.calcVW(40)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(4.5vw, 22px);
@@ -230,7 +230,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 2;
         text-align: center;
         @media screen and (min-width: 481px) {
-          font-size: min(1.3vw, 12.5px);
+          font-size: ${theme.calcVW(25)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(3.3vw, 16px);
@@ -286,7 +286,7 @@ const GlobalStyle = createGlobalStyle`
       line-height: 2;
       text-align: center;
       color: #fe573d;
-      font-size: min(1.3vw, 12.5px);
+      font-size: ${theme.calcVW(25)};
       @media screen and (max-width: 480px) {
         font-size: min(3.125vw, 15px);
       }
@@ -298,9 +298,14 @@ const GlobalStyle = createGlobalStyle`
       line-height: 2;
       text-align: left;
       color: #333333;
-      font-size: min(1.3vw, 12.5px);
+      font-size: ${theme.calcVW(25)};
       @media screen and (max-width: 480px) {
         font-size: min(5.2083vw, 25px);
+      }
+
+      &.guide {
+        align-items: stretch;
+        flex-direction: column;
       }
     }
 
@@ -309,7 +314,7 @@ const GlobalStyle = createGlobalStyle`
       line-height: 1.25;
       text-align: center;
       color: #ffffff;
-      font-size: min(1.7vw, 20px);
+      font-size: ${theme.calcVW(40)};
       @media screen and (max-width: 480px) {
         font-size: min(8.33333vw, 40px);
         white-space: nowrap;
@@ -350,10 +355,9 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  
-
   input, textarea {
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: ${theme.calcVW(25)};
   }
 `;
 

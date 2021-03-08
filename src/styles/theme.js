@@ -13,6 +13,16 @@ css`
   flex-direction: ${_dir};
 `;
 
+const selectNone = css`
+  * {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+`;
+
 const fontSizes = {
   small: calcRem(14),
   base: calcRem(16),
@@ -84,6 +94,7 @@ const theme = {
   calcRem,
   calcVW,
   flex,
+  selectNone,
 };
 
 export default theme;
