@@ -7,26 +7,14 @@ const Header = () => {
 
   return (
     <StHeaderCont popState={popState}>
-      <StTopCont popState={popState}>
-        <StLogoBtnCont className="header-logo-cont" onClick={openMain}>
+        <StLogoBtnCont className="visible-cont" onClick={openMain}>
           <img
-            className="header-logo"
             src={headerData.logo}
             alt="header-logo"
           />
         </StLogoBtnCont>
 
-        <StYTBtnCont onClick={closeMain}>
-          <img
-            className="youtube-icon"
-            src={headerData.ytIcon}
-            alt="youtube-icon"
-          />
-        </StYTBtnCont>
-      </StTopCont>
-
-      <StBotCont popState={popState}>
-        <StTitleCont>
+        <StTitleCont className="invisible-cont">
           <div className="text header title blue">{headerData.blue}</div>
           {
             window.innerWidth > 480 ?
@@ -39,7 +27,16 @@ const Header = () => {
           }
         </StTitleCont>
 
-        <StSubTitleCont>
+        <StYTBtnCont className="invisible-cont">
+          <img
+            className="youtube-icon"
+            src={headerData.ytIcon}
+            alt="youtube-icon"
+            onClick={closeMain}
+          />
+        </StYTBtnCont>
+
+        <StSubTitleCont className="invisible-cont">
           <div className="text header subtitle">
             {
               window.innerWidth > 480 ?
@@ -49,7 +46,6 @@ const Header = () => {
             }
           </div>
         </StSubTitleCont>
-      </StBotCont>
     </StHeaderCont>
   );
 };
@@ -58,60 +54,51 @@ export default Header;
 
 const StHeaderCont = styled.div`
   position: relative;
-  height: 100%;
+  padding: ${({theme}) => theme.calcVW(87.34)} ${({theme}) => theme.calcVW(100)};
 
-  & > div {
-    width: 100%;
+  ${({theme}) => theme.flex('space-between', '', 'column')};
+
+  height: 100%;
+  transition: all 0.7s ease;
+
+  .visible-cont {
+    transition: all 0.7s ease;
+    img {
+      transition: all 0.7s ease;
+    }
+  }
+
+  .invisible-cont {
+    overflow: hidden;
+    opacity: 1;
+    transition: all 1s ease;
   }
 
   ${(props) =>
     !props.popState &&
     css`
       background: ${props.theme.colors.red};
-    `}
-`;
-
-const StTopCont = styled.section`
-  position: absolute;
-  z-index: 20;
-  top: 6.5%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  transition: all 0.7s ease;
-
-  ${(props) =>
-    !props.popState &&
-    css`
-      transition: all 0.5s ease;
-      padding: 0 8px;
-
-      top: 50%;
-      transform: translateY(-50%);
-
-      .header-logo {
-        width: 100%;
-        height: 100%;
-        @media screen and (min-width: 481px) {
-          cursor: pointer;
+      padding: ${props.theme.calcVW(15)} ${props.theme.calcVW(14)};
+      .visible-cont {
+        transition: all 0.5s ease;
+        img {
+          width: ${props.theme.calcVW(275)};
+          height: ${props.theme.calcVW(38.55)};
+          @media screen and (min-width: 481px) {
+            cursor: pointer;
+          }
         }
       }
-
-      .youtube-icon {
-        width: 0em;
-        transform: translateX(400%);
+      .invisible-cont {
+        opacity: 0;
+        transform: translateY(${props.theme.SH}px);
       }
     `}
 `;
 
 const StLogoBtnCont = styled.div`
-  left: 0px;
-
   img {
-    transition: all 0.7s ease;
-    width: min(41vw, 395px);
+    width: ${({theme}) => theme.calcVW(851)};
     @media screen and (max-width: 480px) {
       width: 69vw;
     }
@@ -119,54 +106,31 @@ const StLogoBtnCont = styled.div`
 `;
 
 const StYTBtnCont = styled.div`
-  right: 0px;
-
   img {
-    width: min(4.2vw, 40px);
-    @media screen and (max-width: 480px) {
-      width: 6.875vw;
-    }
-
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
     @media screen and (min-width: 481px) {
       cursor: pointer;
+    }
+
+    width: ${({theme}) => theme.calcVW(161.05)};
+    @media screen and (max-width: 480px) {
+      width: 6.875vw;
     }
   }
 `;
 
-const StBotCont = styled.section`
-  position: absolute;
-  z-index: 20;
-  bottom: 6.5%;
-
-  transition: all 1s ease;
-  
-  ${(props) =>
-    props.popState
-      ? css`
-          opacity: 1;
-        `
-      : css`
-          opacity: 0;
-          transform: translateY(200%);
-        `}
-`;
-
 const StTitleCont = styled.div`
-  margin-bottom: 3.5vh;
-
   .blue {
-    background-color: ${(props) => props.theme.colors.blue};
+    width: ${({theme}) => theme.calcVW(851)};
+    background-color: ${({theme}) => theme.colors.blue};
     color: white;
   }
   .white {
     background-color: white;
-    color: ${(props) => props.theme.colors.blue};
+    color: ${({theme}) => theme.colors.blue};
   }
 
   @media screen and (max-width: 480px) {
-    margin-bottom: ${({theme}) => theme.SH * 0.23}px;
-    /* margin-bottom: 20vh; */
     .blue {
       width: 100%;
     }
@@ -177,5 +141,5 @@ const StTitleCont = styled.div`
 `;
 
 const StSubTitleCont = styled.div`
-  color: ${(props) => props.theme.colors.blue};
+  color: ${({theme}) => theme.colors.blue};
 `;

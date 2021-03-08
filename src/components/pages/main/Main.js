@@ -13,18 +13,6 @@ const Main = () => {
 export default Main;
 
 const StMainCont = styled.div`
-  background-color: white;
-  background-image: url('/assets/images/background/bg_web_main.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  position: absolute;
-  z-index: 10;
-  
-  left: 5px;
-  bottom: 5px;
-  
   -ms-user-select: none;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -35,25 +23,40 @@ const StMainCont = styled.div`
     display: none;
   }
 
+  background-color: white;
+  background-image: url('/assets/images/background/bg_web_main.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  z-index: 10;
+  
+  left: 10px;
+  bottom: 10px;
+
   transition: all 0.7s ease;
 
   ${({ theme }) => theme.popState ? 
     css`
-      width: ${`${theme.SW - 10}px`};
-      height: ${`${theme.SH - 10}px`};
       overflow: scroll;
+      width: ${theme.SW - 20}px;
+      height: ${theme.SH - 20}px;
     ` 
     :
     css`
-      width: 16vw;
-      height: 3.43vw;
+      @media screen and (min-width: 481px) {
+        overflow: hidden;
+        width: ${theme.calcVW(305)};
+        height: ${theme.calcVW(66)};
+      }
+
       @media screen and (max-width: 480px){
         width: 53.41666vw;
         height: 11.45833vw;
         left: 13px;
         bottom: 13px;
       }
-      overflow: hidden;
     `
   }
 `;

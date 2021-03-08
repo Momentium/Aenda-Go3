@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import theme from './theme';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
@@ -12,8 +13,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     font-size: 1rem;
+    * {
+      box-sizing: border-box;
+    }
 
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
@@ -23,9 +26,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   div.text {
+    display: flex;
+    align-items: center;
     width: fit-content;
+    vertical-align: center;
     object-fit: contain;
-    vertical-align: baseline;
     text-align: left;
 
     font-stretch: normal;
@@ -35,14 +40,13 @@ const GlobalStyle = createGlobalStyle`
 
     &.header {
       &.title {
-        box-sizing: border-box;
-        padding: 8px 16px 12px 8px;
+        padding: 0 ${theme.calcVW(36)} ${theme.calcVW(12)} ${theme.calcVW(8)};
         font-weight: 900;
         transition: all 1s ease;
-        
+        height: ${theme.calcVW(160)};
         @media screen and (min-width: 481px) {
-          font-size: min(6.25vw, 60px);
-          transform: translateX(-8px);
+          font-size: ${theme.calcVW(120)};
+          /* transform: translateX(-8px); */
         }
         @media screen and (max-width: 480px) {
           font-size: min(11.5vw, 56px);
@@ -53,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
       &.subtitle {
         font-weight: bold;
         @media screen and (min-width: 481px) {
-          font-size: min(2.6vw, 25px);
+          font-size: ${theme.calcVW(50)};
           line-height: 1.6;
         }
         @media screen and (max-width: 480px) {
@@ -337,7 +341,7 @@ const GlobalStyle = createGlobalStyle`
 
   section {
     @media screen and (min-width: 481px) {
-      padding: 0 6.5%;
+      padding: 0 6.77083333%;
     }
     @media screen and (max-width: 480px) {
       padding: 0 5vw;

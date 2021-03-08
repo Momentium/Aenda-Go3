@@ -1,4 +1,16 @@
+import { css } from 'styled-components';
+
+// ${({theme}) => theme.calcVW()}
 const calcRem = (size) => `${size / 16}rem`;
+const calcVW = (size) => `${size / 1920 * 100}vw`;
+
+const flex = (_jc='flex-start', _ai='stretch', _dir='row') => 
+css`
+  display: flex;
+  justify-content: ${_jc};
+  align-items: ${_ai};
+  flex-direction: ${_dir};
+`;
 
 const fontSizes = {
   small: calcRem(14),
@@ -68,12 +80,9 @@ const colors = {
 const theme = {
   fontSizes,
   colors,
-  // deviceSizes,
-  // device,
-  // paddings,
-  // margins,
-  // interval,
-  // verticalInterval,
+  calcRem,
+  calcVW,
+  flex,
 };
 
 export default theme;
