@@ -59,7 +59,7 @@ const App = () => {
   return (
     <ThemeProvider theme={{ ...theme, SW, SH, ...tglMain, popSlide, setPopSlide, setSlidePage}}>
       <StAppCont classNam="app">
-        <Main />
+        <Main popState={tglMain.popState}/>
         <Screen SW={SW} popState={tglMain.popState} />
         <SlidePage popSlide={popSlide} slidePage={slidePage}/>
       </StAppCont>

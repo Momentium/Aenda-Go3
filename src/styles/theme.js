@@ -4,7 +4,8 @@ import { css } from 'styled-components';
 const calcRem = (size) => `${size / 16}rem`;
 const calcVW = (size) => `${size / 1920 * 100}vw`;
 
-const flex = (_jc='flex-start', _ai='stretch', _dir='row') => 
+// ${({theme}) => theme.flex('', '', '')}
+const flex = (_jc='normal', _ai='stretch', _dir='row') => 
 css`
   display: flex;
   justify-content: ${_jc};

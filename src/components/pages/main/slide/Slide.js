@@ -76,6 +76,10 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
 export default Slide;
 
 const StSlideWrap = styled.div`
+
+  @media screen and (min-width: 481px) {
+    margin: ${({ theme }) => theme.calcVW(18)} 0;
+  }
   @media screen and (max-width: 480px) {
     margin: 8px 0;
   }

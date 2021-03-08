@@ -20,19 +20,9 @@ const SlideList = ({ isOpen }) => {
 export default SlideList;
 
 const StSlideCont = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
+  ${({theme}) => theme.flex('space-between', '', 'column')}
   width: 100%;
-  @media screen and (min-width: 481px){
-    height: 233px; 
-  }
-  
-  padding: 1.922em 0;
-  box-sizing: border-box;
-
+  padding: ${({ theme }) => theme.calcVW(60)} 0;
   background: ${({ theme }) => theme.colors.blue};
-
   overflow: hidden;
 `;

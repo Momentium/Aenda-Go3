@@ -33,13 +33,19 @@ const Drawer = ({ title }) => {
 
   return (
     <StDrawerCont>
+
+      {title === drawerData.msg && <StLine isOpen={isOpen} isHov={isHov} />}
+
       <StDrawerWrap
         isOpen={isOpen}
         onMouseOver={handleHover}
         onMouseOut={handleHover}
         onClick={handleOpen}
+        title={title === drawerData.msg}
       >
+
         <div className="text drawer">{title}</div>
+
         <StArrowCont className="arrow-wrap">
           {
             window.innerWidth > 480 ?
@@ -55,8 +61,8 @@ const Drawer = ({ title }) => {
               <img className="black" src={drawerData.arrow_mobile_black} alt="arrow-black" />
             )
           }
-          
         </StArrowCont>
+
       </StDrawerWrap>
 
       <TagContxt.Provider value={{ curTag, handleCurTag, isOpen, handleOpen }}>
@@ -77,8 +83,7 @@ const Drawer = ({ title }) => {
 export default Drawer;
 
 const StDrawerCont = styled.div`
-  display: flex;
-  flex-direction: column;
+  /* ${({theme}) => theme.flex('', '', 'column')}; */
 `;
 
 const StDrawerWrap = styled.section`
@@ -90,15 +95,29 @@ const StDrawerWrap = styled.section`
     user-select: none;
   }
 
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  ${({theme}) => theme.flex('space-between', 'center')}
+
+  ${ props => props.title ? 
+    css`
+      border-top: solid 1px ${props.theme.colors.blue};
+      border-bottom: solid 2px ${props.theme.colors.blue};
+    `
+    :
+    css`
+      border-top: solid 2px ${props.theme.colors.blue};
+    `
+  }
+
   @media screen and (min-width: 481px) {
     cursor: pointer;
+    height: ${({theme}) => theme.calcVW(120)};
+    /* padding-top: 18px;
+    padding-bottom: 18px; */
   }
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  padding-top: 18px;
-  padding-bottom: 18px;
   @media screen and (max-width: 480px) {
     padding-top: 36px;
     padding-bottom: 36px;
@@ -141,7 +160,9 @@ const StDrawerWrap = styled.section`
 
 const StArrowCont = styled.div`
   img {
-    width: 1.644em;
+    @media screen and (min-width: 481px) {
+      width: ${({theme}) => theme.calcVW(52.67)};
+    }
     @media screen and (max-width: 480px) {
       width: min(8.3333vw, 40px);
     }

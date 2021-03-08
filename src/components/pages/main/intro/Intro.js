@@ -4,8 +4,8 @@ import { introData } from "../../../../data/data";
 const Intro = () => {
   const _txt = window.innerWidth > 480 ? introData.txt : introData.txt_mobile;
   return (
-    <StCont className="text intro">
-      {_txt}
+    <StCont>
+      <div className="text intro">{_txt}</div>
       <div className="text intro colored">{introData.highlight}</div>
     </StCont>
   );
@@ -13,6 +13,7 @@ const Intro = () => {
 export default Intro;
 
 const StCont = styled.div`
-  width: 100%;
-  padding: 44px 0;
+  ${({theme}) => theme.flex('', 'flex-start', 'column')};
+  padding-top: ${({theme}) => theme.calcVW(97)};
+  padding-bottom: ${({theme}) => theme.calcVW(85)};
 `;

@@ -6,17 +6,17 @@ import { drawerData } from '../../../../data/data';
 const DrawerList = () => {
   return (
       <StListCont>
-        <StLine/>
+        {/* <StLine/> */}
         <Drawer title={drawerData.intro}/>
-        <StLine/>
+        {/* <StLine/> */}
         <Drawer title={drawerData.program}/>
-        <StLine/>
+        {/* <StLine/> */}
         <Drawer title={drawerData.artist}/>
-        <StLine/>
+        {/* <StLine/> */}
         <Drawer title={drawerData.exhib}/>
-        <StLine/>
+        {/* <StLine/> */}
         <Drawer title={drawerData.msg}/>
-        <StLine/>
+        {/* <StLine/> */}
         <Footer/>
       </StListCont>
   )
@@ -24,7 +24,7 @@ const DrawerList = () => {
 export default DrawerList;
 
 const StListCont = styled.div`
-  transition: all 1s ease;
+  /* transition: all 1s ease;
   ${props => props.theme.popState ? 
     css`
       opacity: 1;
@@ -34,14 +34,11 @@ const StListCont = styled.div`
       opacity: 0;
       transform: translateY(200%);
     ` 
-  }
+  } */
 `;
 
-const StLine = styled.div`
-  width: 100%;
-  height: 2px;
-  /* @media screen and (max-width: 480px) {
-    height: 2px;
-  } */
-  background-color: ${({ theme }) => theme.colors.blue};
-`;
+// const StLine = styled.div`
+//   width: 100%;
+//   height: 2px;
+//   background-color: ${({ theme }) => theme.colors.blue};
+// `;

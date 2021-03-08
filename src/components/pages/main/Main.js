@@ -2,11 +2,11 @@ import styled, { css } from 'styled-components';
 import Header from '../Header';
 import DrawerList from './tab/DrawerList';
 
-const Main = () => {
+const Main = ({popState}) => {
   return (
     <StMainCont>
       <Header/>
-      <DrawerList/>
+      {popState && <DrawerList/>}
     </StMainCont>
   )
 }

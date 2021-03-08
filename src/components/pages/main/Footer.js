@@ -8,9 +8,7 @@ const Footer = () => {
 
   return (
     <StFootCont>
-      <StImgWrap>
-        <img src={footerData.logo} alt="footer-logo" />
-      </StImgWrap>
+      <StImg src={footerData.logo} alt="footer-logo" />
 
       <StInfoCont>
         <div className="text footer">
@@ -24,8 +22,8 @@ const Footer = () => {
           {footerData.regist}
           <br />
           {footerData.owner}
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
         </div>
       </StInfoCont>
 
@@ -75,14 +73,14 @@ const Footer = () => {
             </tr>
           </tbody>
         </table>
-        <br />
+        {/* <br /> */}
       </StLinkCont>
 
-      <StIncCont>
+      {/* <StIncCont> */}
         <div className="text footer">
           ⓒ 2020 AENDA Inc., All rights reserved.
         </div>
-      </StIncCont>
+      {/* </StIncCont> */}
     </StFootCont>
   );
 };
@@ -91,14 +89,16 @@ export default Footer;
 
 const StFootCont = styled.section`
   background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  ${({theme}) => theme.flex('space-between', 'flex-start', '')}
 
   width: 100%;
 
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: ${({theme}) => theme.calcVW(75)};
+  padding-bottom: ${({theme}) => theme.calcVW(75)};
+
+  & > div {
+    margin-top: ${({theme}) => theme.calcVW(5)};
+  }
 
   @media screen and (max-width: 480px) {
     flex-direction: column;
@@ -107,16 +107,10 @@ const StFootCont = styled.section`
   }
 `;
 
-const StImgWrap = styled.div`
-  display: flex;
-  img {
-    width: min(13.5vw, 200px);
-  }
-
+const StImg = styled.img`
+  width: ${({theme}) => theme.calcVW(260)};
   @media screen and (max-width: 480px) {
-    img {
-      width: min(54vw, 260px);
-    }
+    width: min(54vw, 260px);
     margin-bottom: 36px;
   }
 `;
@@ -133,11 +127,11 @@ const StLinkCont = styled.div`
     border-collapse: collapse;
   }
   img {
-    height: min(1.1vw, 14px);
+    height: ${({theme}) => theme.calcVW(18)};
     @media screen and (max-width: 480px) {
       height: min(3.875vw, 18.6px);
     }
-    margin-right: 4px;
+    margin-right: ${({theme}) => theme.calcVW(8)};
   }
 `;
 
