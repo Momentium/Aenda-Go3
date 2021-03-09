@@ -26,14 +26,14 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   section {
+    box-sizing: border-box;
+    width: 100%;
     @media screen and (min-width: 481px) {
       padding: 0 ${theme.calcVW(120)};
     }
     @media screen and (max-width: 480px) {
-      padding: 0 5vw;
+      padding: 0 ${theme.calcVW_M(21)};
     }
-    box-sizing: border-box;
-    width: 100%;
   }
 
   div.text {
@@ -52,16 +52,18 @@ const GlobalStyle = createGlobalStyle`
 
     &.header {
       &.title {
-        padding: 0 ${theme.calcVW(36)} ${theme.calcVW(12)} ${theme.calcVW(8)};
         font-weight: 900;
         transition: all 1s ease;
-        height: ${theme.calcVW(160)};
         @media screen and (min-width: 481px) {
+          height: ${theme.calcVW(160)};
           font-size: ${theme.calcVW(120)};
+          padding: 0 ${theme.calcVW(36)} ${theme.calcVW(12)} ${theme.calcVW(8)};
           /* transform: translateX(-8px); */
         }
         @media screen and (max-width: 480px) {
-          font-size: min(11.5vw, 56px);
+          height: ${theme.calcVW_M(87)};
+          font-size: ${theme.calcVW_M(59)};
+          padding: 0 ${theme.calcVW_M(14)} ${theme.calcVW_M(10)} ${theme.calcVW_M(8)};
           white-space: nowrap;
         }
       }
@@ -73,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
           line-height: 1.6;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(5.8vw, 28px);
+          font-size: ${theme.calcVW_M(28)};
           line-height: 1.55;
         }
         
@@ -82,14 +84,15 @@ const GlobalStyle = createGlobalStyle`
 
     &.drawer {
       font-weight: bold;
-      line-height: 1;
-      letter-spacing: -0.83px;
-
       @media screen and (min-width: 481px) {
         font-size: ${theme.calcVW(50)};
+        line-height: 1;
+        letter-spacing: -0.83px;
       }
       @media screen and (max-width: 480px) {
-        font-size: min(6.25vw, 30px);
+        font-size: ${theme.calcVW_M(30)};
+        line-height: 1.67;
+        letter-spacing: -0.5px;
       }
     }
 
@@ -341,7 +344,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: ${theme.calcVW(18)};
       }
       @media screen and (max-width: 480px) {
-        font-size: min(3.75vw, 18px);
+        font-size: ${theme.calcVW_M(18)};
       }
 
       &.link {
@@ -360,7 +363,7 @@ const GlobalStyle = createGlobalStyle`
       letter-spacing: -0.66px;
     }
     @media screen and (max-width: 480px) {
-      font-size: min(5.208vw, 25px);
+      font-size: ${theme.calcVW_M(30)};
       line-height: 1.67;
       letter-spacing: -0.5px;
     }
@@ -368,7 +371,12 @@ const GlobalStyle = createGlobalStyle`
 
   input, textarea {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: ${theme.calcVW(25)};
+    @media screen and (min-width: 481px) {
+      font-size: ${theme.calcVW(25)};
+    }
+    @media screen and (max-width: 480px) {
+      font-size: ${theme.calcVW_M(25)};
+    }
   }
 `;
 

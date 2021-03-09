@@ -3,6 +3,7 @@ import { css } from 'styled-components';
 // ${({theme}) => theme.calcVW()}
 const calcRem = (size) => `${size / 16}rem`;
 const calcVW = (size) => `${size / 1920 * 100}vw`;
+const calcVW_M = (size) => `${size / 480 * 100}vw`;
 
 // ${({theme}) => theme.flex('', '', '')}
 const flex = (_jc='normal', _ai='stretch', _dir='row') => 
@@ -105,6 +106,7 @@ const theme = {
   colors,
   calcRem,
   calcVW,
+  calcVW_M,
   flex,
   backImg,
   selectNone,

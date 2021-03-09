@@ -27,16 +27,28 @@ const StMainCont = styled.div`
   position: absolute;
   z-index: 10;
   
-  left: 10px;
-  bottom: 10px;
+  @media screen and (min-width: 481px){
+    left: 10px;
+    bottom: 10px;
+  }
+  @media screen and (max-width: 480px){
+    left: 5px;
+    bottom: 5px;
+  }
 
   transition: all 0.7s ease;
 
   ${({ theme }) => theme.popState ? 
     css`
       overflow: scroll;
-      width: ${theme.SW - 20}px;
-      height: ${theme.SH - 20}px;
+      @media screen and (min-width: 481px){
+        width: ${theme.SW - 20}px;
+        height: ${theme.SH - 20}px;
+      }
+      @media screen and (max-width: 480px){
+        width: ${theme.SW - 10}px;
+        height: ${theme.SH - 10}px;
+      }   
     ` 
     :
     css`
@@ -47,10 +59,10 @@ const StMainCont = styled.div`
       }
 
       @media screen and (max-width: 480px){
-        width: 53.41666vw;
-        height: 11.45833vw;
-        left: 13px;
-        bottom: 13px;
+        width: ${theme.calcVW_M(256.32)};
+        height: ${theme.calcVW_M(55)};
+        left: 25px;
+        bottom: 25px;
       }
     `
   }

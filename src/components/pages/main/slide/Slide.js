@@ -81,7 +81,7 @@ const StSlideWrap = styled.div`
     margin: ${({ theme }) => theme.calcVW(18)} 0;
   }
   @media screen and (max-width: 480px) {
-    margin: 8px 0;
+    margin: ${({ theme }) => theme.calcVW_M(8)} 0;
   }
 
   display: flex;

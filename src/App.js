@@ -41,6 +41,7 @@ const App = () => {
   const handleSize = () => {
     setSW(window.innerWidth);
     setSH(window.innerHeight);
+    // window.innerWidth > 480 && setSH(window.innerHeight);
   };
   const closeMain = () => {
     setTglMain({ ...tglMain, popState: false });
@@ -71,6 +72,6 @@ export default App;
 const StAppCont = styled.div`
   position: relative;
 
-  width: ${(props) => `${props.theme.SW}px`};
-  height: ${(props) => `${props.theme.SH}px`};
+  width: ${({theme}) => theme.SW}px;
+  height: ${({theme}) => theme.SH}px;
 `;

@@ -10,22 +10,20 @@ const Footer = () => {
     <StFootCont>
       <StImg src={footerData.logo} alt="footer-logo" />
 
-      <StInfoCont>
-        <div className="text footer">
-          {footerData.host}
-          <br />
-          {footerData.supervise}
-          <br />
-          <br />
-          {footerData.addr}
-          <br />
-          {footerData.regist}
-          <br />
-          {footerData.owner}
-          {/* <br />
-          <br /> */}
-        </div>
-      </StInfoCont>
+      <div className="text footer">
+        {footerData.host}
+        <br />
+        {footerData.supervise}
+        <br />
+        <br />
+        {footerData.addr}
+        <br />
+        {footerData.regist}
+        <br />
+        {footerData.owner}
+      </div>
+
+      {window.innerWidth <= 480 && <><br/><br/></>}
 
       <StLinkCont>
         <div className="text footer">
@@ -75,12 +73,12 @@ const Footer = () => {
         </table>
         {/* <br /> */}
       </StLinkCont>
+      
+      {window.innerWidth <= 480 && <><br/><br/><br/><br/></>}
 
-      {/* <StIncCont> */}
-        <div className="text footer">
-          ⓒ 2020 AENDA Inc., All rights reserved.
-        </div>
-      {/* </StIncCont> */}
+      <div className="text footer">
+        ⓒ 2020 AENDA Inc., All rights reserved.
+      </div>
     </StFootCont>
   );
 };
@@ -103,20 +101,19 @@ const StFootCont = styled.section`
 
   @media screen and (max-width: 480px) {
     flex-direction: column;
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: ${({theme}) => theme.calcVW_M(50)};
+    padding-bottom: ${({theme}) => theme.calcVW_M(50)};
   }
 `;
 
 const StImg = styled.img`
-  width: ${({theme}) => theme.calcVW(260)};
   @media screen and (max-width: 480px) {
-    width: min(54vw, 260px);
-    margin-bottom: 36px;
+    width: ${({theme}) => theme.calcVW(260)};
   }
-`;
-
-const StInfoCont = styled.div`
+  @media screen and (max-width: 480px) {
+    width: ${({theme}) => theme.calcVW_M(260)};
+    margin-bottom: ${({theme}) => theme.calcVW_M(40.16)};
+  }
 `;
 
 const StLinkCont = styled.div`
@@ -128,13 +125,13 @@ const StLinkCont = styled.div`
     border-collapse: collapse;
   }
   img {
-    height: ${({theme}) => theme.calcVW(18)};
-    @media screen and (max-width: 480px) {
-      height: min(3.875vw, 18.6px);
+    @media screen and (min-width: 481px) {
+      height: ${({theme}) => theme.calcVW(18)};
+      margin-right: ${({theme}) => theme.calcVW(10)};
     }
-    margin-right: ${({theme}) => theme.calcVW(8)};
+    @media screen and (max-width: 480px) {
+      height: ${({theme}) => theme.calcVW_M(18.64)};
+      margin-right: ${({theme}) => theme.calcVW_M(10)};
+    }
   }
 `;
-
-// const StIncCont = styled.div`
-// `;

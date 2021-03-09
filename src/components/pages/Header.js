@@ -54,7 +54,12 @@ export default Header;
 
 const StHeaderCont = styled.div`
   position: relative;
-  padding: ${({theme}) => theme.calcVW(87.34)} ${({theme}) => theme.calcVW(100)};
+  @media screen and (min-width: 481px){
+    padding: ${({theme}) => theme.calcVW(87.34)} ${({theme}) => theme.calcVW(100)};
+  }
+  @media screen and (max-width: 480px){
+    padding:${({theme}) => theme.calcVW_M(49)} ${({theme}) => theme.calcVW_M(17)};
+  }
 
   ${({theme}) => theme.flex('space-between', '', 'column')};
 
@@ -78,14 +83,23 @@ const StHeaderCont = styled.div`
     !props.popState &&
     css`
       background: ${props.theme.colors.red};
-      padding: ${props.theme.calcVW(15)} ${props.theme.calcVW(14)};
+      @media screen and (min-width: 481px) {
+        padding: ${props.theme.calcVW(15)} ${props.theme.calcVW(14)};  
+      }
+      @media screen and (max-width: 480px) {
+        padding: ${props.theme.calcVW_M(11.89)} ${props.theme.calcVW_M(12.15)};
+      }
       .visible-cont {
         transition: all 0.5s ease;
         img {
-          width: ${props.theme.calcVW(275)};
-          height: ${props.theme.calcVW(38.55)};
           @media screen and (min-width: 481px) {
             cursor: pointer;
+            width: ${props.theme.calcVW(275)};
+            height: ${props.theme.calcVW(38.55)};
+          }
+          @media screen and (max-width: 480px) {
+            width: ${props.theme.calcVW_M(232.03)};
+            height: ${props.theme.calcVW_M(31.22)};
           }
         }
       }
@@ -98,9 +112,11 @@ const StHeaderCont = styled.div`
 
 const StLogoBtnCont = styled.div`
   img {
-    width: ${({theme}) => theme.calcVW(851)};
+    @media screen and (max-width: 481px) {
+      width: ${({theme}) => theme.calcVW(851)};
+    }
     @media screen and (max-width: 480px) {
-      width: 69vw;
+      width: 100%;
     }
   }
 `;
@@ -110,11 +126,10 @@ const StYTBtnCont = styled.div`
     /* transition: all 1s ease; */
     @media screen and (min-width: 481px) {
       cursor: pointer;
+      width: ${({theme}) => theme.calcVW(161.05)};
     }
-
-    width: ${({theme}) => theme.calcVW(161.05)};
     @media screen and (max-width: 480px) {
-      width: 6.875vw;
+      width: ${({theme}) => theme.calcVW_M(106)};
     }
   }
 `;

@@ -4,6 +4,7 @@ import Player from './Player';
 import { Zoom } from '@material-ui/core';
 
 const Screen = ({ SW, popState }) => {
+  const imgUrl = SW > 480 ? `vidArrow.svg` : `vidArrow_m.svg`;
   const [curPage, setCurPage] = useState(0);
   const toLeftPage = () => {
     setCurPage(curPage - 1);
@@ -16,17 +17,17 @@ const Screen = ({ SW, popState }) => {
     <StScreenCont>
       {
         curPage !== 0 && 
-        <Zoom in={true} timeout={450}>
+        <Zoom in={true} timeout={250}>
           <StArrowWrap dir={"left"} onClick={toLeftPage}>
-            <img src="assets/icons/vidArrow.svg" alt="arrow-logo"/>
+            <img src={`assets/icons/${imgUrl}`} alt="arrow-logo"/>
           </StArrowWrap>
         </Zoom>
       }
       {
         curPage !== 1 &&
-        <Zoom in={true} timeout={450}>
+        <Zoom in={true} timeout={250}>
           <StArrowWrap dir={"right"} onClick={toRightPage}>
-            <img src="assets/icons/vidArrow.svg" alt="arrow-logo"/>
+            <img src={`assets/icons/${imgUrl}`} alt="arrow-logo"/>
           </StArrowWrap>
         </Zoom>
       }
@@ -55,21 +56,25 @@ const StScreenCont = styled.div`
   overflow: hidden;
   position: relative;
   
-  width: ${({ theme }) => `${theme.SW}px`};
-  height: ${({ theme }) => `${theme.SH}px`};
+  width: 100%;
+  height: 100%;
+  /* width: ${({ theme }) => `${theme.SW}px`};
+  height: ${({ theme }) => `${theme.SH}px`}; */
 `;
 
 const StPlayerCont = styled.div`
   display: flex;
   justify-content: flex-start;
   transition: transform 0.5s ease;
-  transform: ${ props => `translateX(${-1 * props.curPage * props.theme.SW}px)` };
+  transform: translateX(${ props => -1 * props.curPage * props.theme.SW}px);
 `;
 
 const StArrowWrap = styled.div`
   position: absolute;
   z-index: 5;
-  top: 50%;
+  @media screen and (mix-width: 481px){
+    top: 50%;
+  }
   @media screen and (max-width: 480px){
     top: 56px;
   }
@@ -77,8 +82,11 @@ const StArrowWrap = styled.div`
   img {
     @media screen and (min-width: 481px) {
       cursor: pointer;
+      width: ${({theme}) => theme.calcVW(66)};
     }
-    width: min(6.25vw, 32px);
+    @media screen and (max-width: 480px) {
+      width: ${({theme}) => theme.calcVW_M(30)};
+    }
   }
 
   ${
@@ -86,7 +94,7 @@ const StArrowWrap = styled.div`
     css`
       left: 5vw;
       @media screen and (max-width: 480px){
-        left: 13px;
+        left: 25px;
       }
       img {
         transform: translateY(-50%) rotate(180deg);  
@@ -96,7 +104,7 @@ const StArrowWrap = styled.div`
     css`
       right: 5vw;
       @media screen and (max-width: 480px){
-        right: 13px;
+        right: 25px;
       }
       img {
         transform: translateY(-50%);  

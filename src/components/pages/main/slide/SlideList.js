@@ -22,7 +22,12 @@ export default SlideList;
 const StSlideCont = styled.div`
   ${({theme}) => theme.flex('space-between', '', 'column')}
   width: 100%;
-  padding: ${({ theme }) => theme.calcVW(60)} 0;
+  @media screen and (min-width: 481px) {
+    padding: ${({ theme }) => theme.calcVW(60)} 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding: ${({ theme }) => theme.calcVW_M(35)} 0;
+  }
   background: ${({ theme }) => theme.colors.blue};
   overflow: hidden;
 `;

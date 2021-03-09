@@ -83,7 +83,6 @@ const Drawer = ({ title }) => {
 export default Drawer;
 
 const StDrawerCont = styled.div`
-  /* ${({theme}) => theme.flex('', '', 'column')}; */
 `;
 
 const StDrawerWrap = styled.section`
@@ -102,13 +101,9 @@ const StDrawerWrap = styled.section`
   @media screen and (min-width: 481px) {
     cursor: pointer;
     height: ${({theme}) => theme.calcVW(120)};
-    /* padding-top: 18px;
-    padding-bottom: 18px; */
   }
-
   @media screen and (max-width: 480px) {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    height: ${({theme}) => theme.calcVW_M(120)};
   }
 
   .arrow-wrap {
@@ -152,7 +147,7 @@ const StArrowCont = styled.div`
       width: ${({theme}) => theme.calcVW(52.67)};
     }
     @media screen and (max-width: 480px) {
-      width: min(8.3333vw, 40px);
+      width: ${({theme}) => theme.calcVW_M(52.67)};
     }
   }
 `;
@@ -160,6 +155,13 @@ const StArrowCont = styled.div`
 const StLine = styled.div`
   width: 100%;
   height: 1px;
-  background: ${(props) =>
-    props.isHov || props.isOpen ? "white" : props.theme.colors.blue};
+  @media screen and (min-width: 481px) {
+    background: ${(props) =>
+    props.isOpen || props.isHov  ? "white" : props.theme.colors.blue};
+  }
+  @media screen and (max-width: 480px) {
+    background: ${(props) =>
+    props.isOpen  ? "white" : props.theme.colors.blue};
+  }
+  
 `;

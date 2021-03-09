@@ -1,7 +1,7 @@
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
-const Screen = ({ SW, vidUrl, popState, pageState }) => {
+const Player = ({ SW, vidUrl, popState, pageState }) => {
   return (
     <StScreenCont>
     {
@@ -18,23 +18,21 @@ const Screen = ({ SW, vidUrl, popState, pageState }) => {
         url={vidUrl}
         playing={!popState && pageState}
         controls={true}
-        width={SW - 26}
-        height={(SW - 26) * 9 / 16}
+        width={SW - 50}
+        height={(SW - 50) * 9 / 16}
       />
     }
     </StScreenCont>
   )
 }
-export default Screen;
+export default Player;
 
 const StScreenCont = styled.div`
-  width: ${({ theme }) => `${theme.SW}px`};
-  height: ${({ theme }) => `${theme.SH}px`};
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${({theme}) => theme.flex('center', 'center')}
   flex-shrink: 0;
+
+  width: ${({ theme }) => theme.SW}px;
+  height: ${({ theme }) => theme.SH}px;
 
   @media screen and (max-width: 480px){
     & > * {

@@ -22,39 +22,33 @@ const StProgramWrap = styled.div`
   @media screen and (min-width: 481px) {
     cursor: pointer;
   }
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  ${({theme}) => theme.flex('space-between', 'center', 'column')};
 
   width: ${({theme}) => theme.calcVW(300)};
   /* max-width: 300px; */
   /* height: 17vw; */
   @media screen and (max-width: 480px) {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
   }
 
   img {
     height: 100%;
-    /* height: 11.25vw; */
-    @media screen and (max-width: 480px) {
+    /* @media screen and (max-width: 480px) {
       height: 30vw;
       margin-bottom: 30px;
-    }
+    } */
   }
   
   .label {
+    ${({theme}) => theme.flex('center', 'center')};
+    background: ${({ theme }) => theme.colors.blue};
+
     width: 100%;
     height: 3.6vw;
     @media screen and (max-width: 480px) {
-      height: 40px;
+      height: ${({theme}) => theme.calcVW_M(45.72)};
     }
-    background: ${({ theme }) => theme.colors.blue};
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .text {
     transition: all 0.1s linear;
@@ -78,11 +72,14 @@ const StProgramWrap = styled.div`
 const StImgCont = styled.div`
   display: flex;
   position: relative;
-  height: ${({theme}) => theme.calcVW(215)};
-  margin-bottom: ${({theme}) => theme.calcVW(70)};
+  
+  @media screen and (min-width: 481px) {
+    height: ${({theme}) => theme.calcVW(215)};
+    margin-bottom: ${({theme}) => theme.calcVW(70)};
+  }
   @media screen and (max-width: 480px) {
-    height: 30vw;
-    margin-bottom: 30px;
+    height: ${({theme}) => theme.calcVW_M(140)};
+    margin-bottom: ${({theme}) => theme.calcVW_M(47)};
   }
 
   img {
