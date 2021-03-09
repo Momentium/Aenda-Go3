@@ -33,7 +33,6 @@ const Modal = ({ popModal, setPopModal, alertMode, setAlertMode }) => {
 export default Modal;
 
 const StCont = styled.div`
-  ${({theme}) => theme.selectNone};
   position: absolute;
   @media screen and (max-width: 480px) {
     position: fixed;

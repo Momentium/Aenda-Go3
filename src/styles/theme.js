@@ -13,13 +13,25 @@ css`
   flex-direction: ${_dir};
 `;
 
+const backImg = (_img='', _pos='center', _size='cover') => 
+css`
+  background-image: url(${_img});
+  background-position: ${_pos};
+  background-size: ${_size};
+  background-repeat: no-repeat;
+`;
+
 const selectNone = css`
-  * {
+  &, * {
     -ms-user-select: none;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
   }
 `;
 
@@ -94,6 +106,7 @@ const theme = {
   calcRem,
   calcVW,
   flex,
+  backImg,
   selectNone,
 };
 

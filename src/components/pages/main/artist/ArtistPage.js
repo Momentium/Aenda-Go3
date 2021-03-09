@@ -54,14 +54,31 @@ const ArtistPage = ({ _idx, closePage }) => {
           <div className="text artist why">{data.why_m}</div>
         }
 
-        <StImgCont imgUrl={data.img}>
-          <div className="img-div"></div>
+        <StImgCont dataIdx={_idx} imgUrl={data.img}>
+          <div className="img-div"/>
           <div className="hist-cont">
-            {data.hist.map((el, idx) => (
-              <div key={idx} className="text artist hist">
-                {el}
-              </div>
-            ))}
+            {data.hist.map((el, idx) => {
+              const _foo = el.split('-');
+              if(_idx === '7' && _foo.length > 1) {
+                return (
+                  <>
+                    <div key={idx} className="text artist hist">
+                      {_foo[0]}
+                    </div>
+                    <div className="text artist sub">
+                      {`- ${_foo[1]}`}
+                    </div>
+                  </>
+                );  
+              }
+              else {
+                return (
+                  <div key={idx} className="text artist hist">
+                    {el}
+                  </div>
+                )
+              }
+            })}
           </div>
         </StImgCont>
       </StBotCont>
@@ -73,47 +90,41 @@ export default ArtistPage;
 
 const StPageWrap = styled.div`
   word-break: keep-all;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 120px;
+  background: ${({ theme }) => `${theme.colors.blue}`};
+  ${({theme}) => theme.flex('center', 'center', 'column')};
+  width: 100%;
+
+  @media screen and (min-width: 481px) {
+    padding-top: ${({theme}) => theme.calcVW(121.5)};
+    padding-bottom: ${({theme}) => theme.calcVW(214)};
+  }
   @media screen and (max-width: 480px) {
     padding-top: 30px;
     padding-bottom: 90px;
   }
-  box-sizing: border-box;
 
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
   }
 
-  width: 100%;
-  background: ${({ theme }) => `${theme.colors.blue}`};
-
-  .line {
+  /* .line {
     width: 100%;
     height: 1px;
     background: ${({ theme }) => `${theme.colors.red}`};
-  }
+  } */
 
 `;
 
 const StTopCont = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  ${({theme}) => theme.flex('flex-end', 'flex-end')};
   width: 100%;
-  margin-bottom: 45px;
-  box-sizing: border-box;
-  padding: 0 30px;
+  padding: 0 ${({theme}) => theme.calcVW(106)};
 
   .close {
     @media screen and (min-width: 481px) {
-      width: 16px;
       cursor: pointer;
+      width: ${({theme}) => theme.calcVW(30)};
     }
     @media screen and (max-width: 480px) {
       width: 6.25vw;
@@ -122,21 +133,23 @@ const StTopCont = styled.div`
 `;
 
 const StTitleCont = styled.div`
-  display: flex;
-  align-items: center;
+  ${({theme}) => theme.flex('space-between', 'center')};
+  width: 100%;
+  margin-top: ${({theme}) => theme.calcVW(91.64)};
+  margin-bottom: ${({theme}) => theme.calcVW(141.67)};
+
   @media screen and (max-width: 480px) {
     align-items: flex-start;
     div.title {
-      /* width: 65%; */
       transform: translateY(-8px);
     }
   }
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 60px;
 
   img {
-    width: min(8.3vw, 80px);
+    @media screen and (min-width: 481px) {
+      width: ${({theme}) => theme.calcVW(158)};
+      height: ${({theme}) => theme.calcVW(67)};
+    }
     @media screen and (max-width: 480px) {
       width: min(10.41666vw, 50px);
     }
@@ -145,8 +158,10 @@ const StTitleCont = styled.div`
 
 const StPlayerWrap = styled.div`
   background-color: black;
-  width: ${({theme}) => theme.SW / 1.5}px;
-  height: ${({theme}) => (theme.SW * 9) / (16 * 1.5)}px;
+  @media screen and (min-width: 481px) {
+    width: ${({theme}) => theme.SW / 1.5}px;
+    height: ${({theme}) => (theme.SW * 9) / (16 * 1.5)}px;
+  }
   @media screen and (max-width: 480px) {
     width: ${({theme}) => theme.SW}px;
     height: ${({theme}) => theme.SW * 9 / 16}px;
@@ -154,34 +169,26 @@ const StPlayerWrap = styled.div`
 `;
 
 const StBotCont = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-
-  width: ${({ theme }) => theme.SW / 1.5}px;
+  ${({theme}) => theme.flex('center', 'center', 'column')};
+  @media screen and (min-width: 481px) {
+    width: ${({ theme }) => theme.SW / 1.5}px;
+  }
   @media screen and (max-width: 480px) {
     width: ${({ theme }) => theme.SW - 50}px;
   }
-  margin-top: 50px;
+  margin-top: ${({theme}) => theme.calcVW(100)};
 
   .ment {
     width: 100%;
   }
-
   .why {
-    width: 100%;
-    margin: 60px 0;
-    /* @media screen and (max-width: 480px) {
-      
-    } */
+    margin-top: ${({theme}) => theme.calcVW(90)};
+    margin-bottom: ${({theme}) => theme.calcVW(116)};
   }
 `;
 
 const StImgCont = styled.div`
-  width: 100%;
-
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
   @media screen and (max-width: 480px) {
@@ -189,22 +196,29 @@ const StImgCont = styled.div`
   }
 
   .img-div {
-    width: 100%;
-    height: 29.67vw;
-    margin-right: 3.80208vw;
+    ${props => {
+      switch(props.dataIdx) {
+        case '5':
+        case '6':
+          return props.theme.backImg(props.imgUrl, 'center')
+        default:
+          return props.theme.backImg(props.imgUrl, 'top')
+      }  
+    }};
+    
+    @media screen and (min-width: 481px) {
+      width: ${({theme}) => theme.calcVW(603)};
+      height: ${props => props.dataIdx === '15' ? 
+        props.theme.calcVW(700)
+        :
+        props.theme.calcVW(560)
+      };
+      margin-right: ${({theme}) => theme.calcVW(73)};
+    }
     @media screen and (max-width: 480px) {
       width: 100%;
       height: ${({ theme }) => theme.SW - 50}px;
       margin-bottom: 40px;
     }
-    background-image: url(${props => props.imgUrl});
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
-
-  .hist-cont {
-    width: 100%;
-  }
-  
 `;

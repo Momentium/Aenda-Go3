@@ -70,7 +70,6 @@ export default App;
 
 const StAppCont = styled.div`
   position: relative;
-  user-select: none;
 
   width: ${(props) => `${props.theme.SW}px`};
   height: ${(props) => `${props.theme.SH}px`};

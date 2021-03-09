@@ -13,11 +13,6 @@ const Main = ({popState}) => {
 export default Main;
 
 const StMainCont = styled.div`
-  -ms-user-select: none;
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;

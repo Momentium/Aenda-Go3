@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
   body {
+    ${theme.selectNone};
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #5a32de;
     margin: 0;
@@ -130,13 +131,14 @@ const GlobalStyle = createGlobalStyle`
 
       &.title {
         @media screen and (min-width: 481px) {
-          font-size: min(4.11458vw, 39.5px);
+          font-size: ${theme.calcVW(79)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(10.416666vw, 50px);
         }
         font-weight: bold;
         line-height: 1;
+        height: ${theme.calcVW(117)};
         letter-spacing: -1.3px;
         color: #f85340;
       }
@@ -144,27 +146,25 @@ const GlobalStyle = createGlobalStyle`
       &.subtitle {
         font-family: "TTSoopilmyungjoR020";
         @media screen and (min-width: 481px) {
-          font-size: min(2.60416vw, 25px);
-          line-height: 1.75;
+          font-size: ${theme.calcVW(50)};
+          line-height: 1.6;
         }
         @media screen and (max-width: 480px) {
           font-size: min(5.833333vw, 28px);
           line-height: 1.71;
           letter-spacing: -0.46px;
         }
-        font-weight: normal;
         color: #ffffff;
       }
 
       &.kit-title {
         font-family: "TTSoopilmyungjoR040";
         @media screen and (min-width: 481px) {
-          font-size: min(2.60416vw, 25px);
+          font-size: ${theme.calcVW(50)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(16.6666vw, 40px);
         }
-        font-weight: 500;
         line-height: 1;
         letter-spacing: -0.83px;
         color: #fb5640;
@@ -172,13 +172,12 @@ const GlobalStyle = createGlobalStyle`
       &.kit {
         font-family: "TTSoopilmyungjoR020";
         @media screen and (min-width: 481px) {
-          font-size: min(1.5625vw, 15px);
+          font-size: ${theme.calcVW(30)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(4.5vw, 22px);
         }
         white-space: pre;
-        font-weight: normal;
         line-height: 2;
         color: #ffffff;
       }
@@ -186,29 +185,23 @@ const GlobalStyle = createGlobalStyle`
       &.ment-title {
         font-family: "TTSoopilmyungjoR020";
         @media screen and (min-width: 481px) {
-          font-size: min(1.5625vw, 15px);
+          font-size: ${theme.calcVW(30)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(4.5vw, 22px);
         }
-        font-weight: 600;
-        line-height: 2.17;
-        letter-spacing: -0.5px;
+        line-height: 2;
         color: #fb5640;
-        text-align: center;
       }
       &.ment {
         font-family: "TTSoopilmyungjoR020";
         @media screen and (min-width: 481px) {
-          font-size: min(1.5625vw, 15px);
+          font-size: ${theme.calcVW(30)};
         }
         @media screen and (max-width: 480px) {
           font-size: min(4.5vw, 22px);
         }
-        font-weight: normal;
-        line-height: 2.17;
-        letter-spacing: -0.5px;
-        text-align: center;
+        line-height: 2;
         color: #ffffff;
       }
     }
@@ -238,18 +231,19 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.title {
-        font-size: min(42vw, 39.5px);
+        font-size: ${theme.calcVW(79)};
+        line-height: 1;
+        letter-spacing: -1.3px;
         font-weight: bold;
-        text-align: center;
         color: #f85340;
       }
-
       &.ment {
         font-family: "TTSoopilmyungjoR020";
-        font-size: min(1.875vw, 18px);
-        line-height: 2;
-        text-align: left;
         color: #ffffff;
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(30)};
+          line-height: 2;
+        }
         @media screen and (max-width: 480px) {
           font-size: min(5.83333vw, 26px);
           line-height: 10vw;
@@ -257,11 +251,13 @@ const GlobalStyle = createGlobalStyle`
       }
       &.why {
         font-family: "TTSoopilmyungjoR020";
-        font-size: min(2.9166vw, 28px);
-        line-height: 1.6;
-        letter-spacing: -0.83px;
-        text-align: center;
         color: #ffffff;
+        text-align: center;
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(50)};
+          line-height: 1.6;
+          letter-spacing: -0.83px;
+        }
         @media screen and (max-width: 480px) {
           font-size: min(7.29166vw, 35px);
           line-height: 1.86;
@@ -270,10 +266,25 @@ const GlobalStyle = createGlobalStyle`
       }
       &.hist {
         font-family: "TTSoopilmyungjoR020";
-        font-size: min(26vw, 25px);
-        line-height: 1.6;
-        text-align: left;
         color: #fe573d;
+        white-space: pre;
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(50)};
+          line-height: 1.6;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: min(5.83333vw, 28px);
+          line-height: 1.71;
+        }
+      }
+      &.sub {
+        font-family: "TTSoopilmyungjoR020";
+        color: #fe573d;
+        white-space: pre;
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(40)};
+          line-height: 1.6;
+        }
         @media screen and (max-width: 480px) {
           font-size: min(5.83333vw, 28px);
           line-height: 1.71;

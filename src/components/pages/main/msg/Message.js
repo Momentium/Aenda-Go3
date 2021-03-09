@@ -209,7 +209,6 @@ const StBotCont = styled.div`
 `;
 
 const StBtn = styled.div`
-  ${({theme}) => theme.selectNone};
   ${({theme}) => theme.flex('center', 'center')};
   background: ${({ theme }) => theme.colors.red};
   font-weight: bold;

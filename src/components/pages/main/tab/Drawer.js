@@ -87,7 +87,6 @@ const StDrawerCont = styled.div`
 `;
 
 const StDrawerWrap = styled.section`
-  ${({theme}) => theme.selectNone};
   ${({theme}) => theme.flex('space-between', 'center')}
 
   ${ props => props.title ? 
