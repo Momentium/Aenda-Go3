@@ -135,79 +135,89 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.title {
+        font-weight: bold;
+        color: #f85340;
+        
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(79)};
+          height: ${theme.calcVW(117)};
+          line-height: 1;
+          letter-spacing: -1.3px;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(10.416666vw, 50px);
+          font-size: ${theme.calcVW_M(50)};
+          line-height: 1.26;
+          letter-spacing: -0.83px;
         }
-        font-weight: bold;
-        line-height: 1;
-        height: ${theme.calcVW(117)};
-        letter-spacing: -1.3px;
-        color: #f85340;
       }
 
       &.subtitle {
         font-family: "TTSoopilmyungjoR020";
+        color: #ffffff;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(50)};
           line-height: 1.6;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(5.833333vw, 28px);
+          font-size: ${theme.calcVW_M(28)};
           line-height: 1.71;
           letter-spacing: -0.46px;
         }
-        color: #ffffff;
       }
 
       &.kit-title {
         font-family: "TTSoopilmyungjoR040";
+        color: #fb5640;
+        line-height: 1;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(50)};
+          letter-spacing: -0.83px;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(16.6666vw, 40px);
+          font-size: ${theme.calcVW_M(40)};
+          letter-spacing: -0.66px;
         }
-        line-height: 1;
-        letter-spacing: -0.83px;
-        color: #fb5640;
       }
+      
       &.kit {
+        white-space: pre;
         font-family: "TTSoopilmyungjoR020";
+        color: #ffffff;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(30)};
+          line-height: 2;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: ${theme.calcVW_M(24)};
+          line-height: 1.88;
         }
-        white-space: pre;
-        line-height: 2;
-        color: #ffffff;
       }
 
       &.ment-title {
         font-family: "TTSoopilmyungjoR020";
+        color: #fb5640;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(30)};
+          line-height: 2;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: ${theme.calcVW_M(25)};
+          line-height: 1.92;
         }
-        line-height: 2;
-        color: #fb5640;
       }
       &.ment {
         font-family: "TTSoopilmyungjoR020";
+        color: #ffffff;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(30)};
+          line-height: 2;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: ${theme.calcVW_M(25)};
+          line-height: 1.92;
+          letter-spacing: -0.41px;
         }
-        line-height: 2;
-        color: #ffffff;
+        
       }
     }
 
@@ -238,11 +248,24 @@ const GlobalStyle = createGlobalStyle`
       }
 
       &.title {
-        font-size: ${theme.calcVW(79)};
-        line-height: 1;
-        letter-spacing: -1.3px;
         font-weight: bold;
         color: #f85340;
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(79)};
+          line-height: 1;
+          letter-spacing: -1.3px;
+          /* height: ${theme.calcVW(117)}; */
+          padding-bottom: ${theme.calcVW(4)};
+
+        }
+        @media screen and (max-width: 480px) {
+          font-size: ${theme.calcVW_M(50)};
+          line-height: 1.26;
+          letter-spacing: -0.83px;
+          /* height: ${theme.calcVW_M(74)}; */
+          padding-bottom: ${theme.calcVW_M(4)};
+
+        }
       }
       &.ment {
         font-family: "TTSoopilmyungjoR020";
@@ -252,8 +275,8 @@ const GlobalStyle = createGlobalStyle`
           line-height: 2;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(5.83333vw, 26px);
-          line-height: 10vw;
+          font-size: ${theme.calcVW_M(28)};
+          line-height: 1.71;
         }
       }
       &.why {
@@ -266,7 +289,7 @@ const GlobalStyle = createGlobalStyle`
           letter-spacing: -0.83px;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(7.29166vw, 35px);
+          font-size: ${theme.calcVW_M(35)};
           line-height: 1.86;
           letter-spacing: -0.58px;
         }
@@ -280,7 +303,7 @@ const GlobalStyle = createGlobalStyle`
           line-height: 1.6;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(5.83333vw, 28px);
+          font-size: ${theme.calcVW_M(28)};
           line-height: 1.71;
         }
       }
@@ -293,8 +316,8 @@ const GlobalStyle = createGlobalStyle`
           line-height: 1.6;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(5.83333vw, 28px);
-          line-height: 1.71;
+          font-size: ${theme.calcVW_M(20)};
+          line-height: 1.9;
         }
       }
     }

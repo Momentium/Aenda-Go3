@@ -4,6 +4,7 @@ import { mbtiData } from "../../../../data/data";
 import { Zoom, } from "@material-ui/core";
 
 const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
+  const arrowImgUrl = window.innerWidth > 480 ? `vidArrow.svg` : `vidArrow_m.svg`;
   const data = mbtiData[`${mbti}`];
   const [curImg, setCurImg] = useState(0);
   const _closePage = () => {
@@ -22,7 +23,7 @@ const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
       {window.innerWidth <= 480 && (
         <StMTopCont>
           <img
-            className="close" 
+            className="close"
             src="assets/icons/close.svg"
             alt="close-icon"
             onClick={_closePage}
@@ -41,14 +42,14 @@ const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
       </StTopCont>
 
       <div className="text program title">{title}</div>
-
+      
       <div className="line top" />
 
       <StImgCont>
         {curImg !== 0 && (
           <Zoom in={true} timeout={400}>
             <StArrowWrap dir={"left"} onClick={toLeftPage}>
-              <img src="assets/icons/vidArrow.svg" alt="arrow-logo" />
+              <img src={`assets/icons/${arrowImgUrl}`} alt="arrow-logo" />
             </StArrowWrap>
           </Zoom>
         )}
@@ -62,7 +63,7 @@ const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
         {curImg !== data.progImg.length - 1 && (
           <Zoom in={true} timeout={400}>
             <StArrowWrap dir={"right"} onClick={toRightPage}>
-              <img src="assets/icons/vidArrow.svg" alt="arrow-logo" />
+              <img src={`assets/icons/${arrowImgUrl}`} alt="arrow-logo" />
             </StArrowWrap>
           </Zoom>
         )}
@@ -103,15 +104,11 @@ const StPageWrap = styled.div`
   width: 100%;
   @media screen and (min-width: 481px) {
     padding-top: ${({theme}) => theme.calcVW(101)};
-    padding-bottom: 120px;
+    padding-bottom: ${({theme}) => theme.calcVW(172)};
   }
   @media screen and (max-width: 480px) {
-    padding: 30px 0 90px 0;
-  }
-
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
+    padding-top: ${({theme}) => theme.calcVW_M(35)};
+    padding-bottom: ${({theme}) => theme.calcVW_M(98.29)};
   }
 
   .line {
@@ -124,9 +121,8 @@ const StPageWrap = styled.div`
         margin-bottom: ${({theme}) => theme.calcVW(78.5)};
       }
       @media screen and (max-width: 480px) {
-        background: ${({ theme }) => `${theme.colors.blue}`};
-        margin-top: 0px;
-        margin-bottom: 65px;
+        height: 0;
+        margin-bottom: ${({theme}) => theme.calcVW_M(41)};
       }
     }
     &.bot {
@@ -134,12 +130,22 @@ const StPageWrap = styled.div`
         margin-top: ${({theme}) => theme.calcVW(30.5)};
         margin-bottom: ${({theme}) => theme.calcVW(66.5)};
       }
+      @media screen and (max-width: 480px) {
+        margin-top: ${({theme}) => theme.calcVW_M(25.42)};
+        margin-bottom: ${({theme}) => theme.calcVW_M(40.52)};
+      }
     }
   }
 
   .subtitle {
-    margin-top: ${({theme}) => theme.calcVW(101)};
-    margin-bottom: ${({theme}) => theme.calcVW(113)};
+    @media screen and (min-width: 481px) {
+      margin-top: ${({theme}) => theme.calcVW(101)};
+      margin-bottom: ${({theme}) => theme.calcVW(113)};
+    }
+    @media screen and (max-width: 480px) {
+      margin-top: ${({theme}) => theme.calcVW_M(80)};
+      margin-bottom: ${({theme}) => theme.calcVW_M(73)};
+    }
   }
 
   .mbti-icon {
@@ -149,7 +155,9 @@ const StPageWrap = styled.div`
       margin-bottom: ${({theme}) => theme.calcVW(90)};
     }
     @media screen and (max-width: 480px) {
-      width: 20%;
+      width: ${({theme}) => theme.calcVW_M(96)};
+      margin-top: ${({theme}) => theme.calcVW_M(60)};
+      margin-bottom: ${({theme}) => theme.calcVW_M(60)};
     }
   }
 `;
@@ -158,11 +166,10 @@ const StMTopCont = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-bottom: 56px;
-  box-sizing: border-box;
-  padding: 0 30px;
+  margin-bottom: ${({theme}) => theme.calcVW_M(68.5)};
+  padding: 0 ${({theme}) => theme.calcVW_M(32)};
   img {
-    width: 6.25vw;
+    width: ${({theme}) => theme.calcVW_M(30)};
   }
 `;
 
@@ -170,9 +177,9 @@ const StTopCont = styled.div`
   ${({theme}) => theme.flex('space-between', 'flex-end')}
   width: 100%;
   padding: 0 ${({theme}) => theme.calcVW(106)};
-  margin-bottom: ${({theme}) => theme.calcVW(64)};
 
   @media screen and (min-width: 481px) {
+    margin-bottom: ${({theme}) => theme.calcVW(64)};
     img {
       &.hide {
         width: ${({theme}) => theme.calcVW(30)};
@@ -192,9 +199,10 @@ const StTopCont = styled.div`
 
   @media screen and (max-width: 480px) {
     justify-content: center;
+    margin-bottom: ${({theme}) => theme.calcVW_M(67.11)};
     img {
       &.logo {
-        width: 71.25vw;
+        width: ${({theme}) => theme.calcVW_M(343.33)};
         height: auto;
       }
       &.close,
@@ -223,9 +231,10 @@ const StImgCont = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    height: ${({ theme }) => theme.SW * 9 / 16}px;
+    height: ${({ theme }) => theme.calcVW_M(270)};
     .prog_img {
-      width: ${({ theme }) => theme.SW}px;
+      width: 100%;
+      height: 100%;
     }
   }
 `;
@@ -234,11 +243,12 @@ const StImg = styled.img`
   width: 100%;
   height: 100%;
 
-  transition: transform 0.5s ease;
   @media screen and (min-width: 481px) {
+    transition: transform 0.5s ease;
     transform: translateX(${(props) => props.theme.calcVW(-1 * props.curImg * 990)});
   }
   @media screen and (max-width: 480px) {
+    transition: transform 0.3s ease;
     transform: translateX(${(props) => -1 * props.curImg * props.theme.SW}px);
   }
 `;
@@ -251,8 +261,11 @@ const StArrowWrap = styled.div`
   img {
     @media screen and (min-width: 481px) {
       cursor: pointer;
+      width: ${({theme}) => theme.calcVW(66)};
     }
-    width: ${({theme}) => theme.calcVW(66)};
+    @media screen and (max-width: 480px) {
+      width: ${({theme}) => theme.calcVW_M(20)};
+    }
   }
 
   ${(props) =>
@@ -265,7 +278,7 @@ const StArrowWrap = styled.div`
             left: ${({theme}) => theme.calcVW(90.5)};
           }
           @media screen and (max-width: 480px) {
-            left: 26px;
+            left: ${({theme}) => theme.calcVW_M(32)};
           }
         `
       : css`
@@ -276,7 +289,7 @@ const StArrowWrap = styled.div`
             right: ${({theme}) => theme.calcVW(90.5)};
           }
           @media screen and (max-width: 480px) {
-            right: 26px;
+            right: ${({theme}) => theme.calcVW_M(32)};
           }
         `};
 `;
