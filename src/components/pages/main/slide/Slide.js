@@ -8,22 +8,16 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   useEffect(() => {
     if (dataIdx === pauseIdx) {
       const _div = contRef.current;
-      if (window.innerWidth > 480) {
-        const _div = contRef.current;
-        _div.style.animationPlayState = "paused";
-        _div.style.webkitAnimationPlayState = "paused";
-      }
+      _div.style.animationPlayState = "paused";
+      _div.style.webkitAnimationPlayState = "paused";
       _div.childNodes.forEach((el) => {
         el.style.animationPlayState = "paused";
         el.style.webkitAnimationPlayState = "paused";
       });
     } else {
       const _div = contRef.current;
-      if (window.innerWidth > 480) {
-        const _div = contRef.current;
-        _div.style.animationPlayState = "paused";
-        _div.style.webkitAnimationPlayState = "paused";
-      }
+      _div.style.animationPlayState = "running";
+      _div.style.webkitAnimationPlayState = "running";
       _div.childNodes.forEach((el) => {
         el.style.animationPlayState = "running";
         el.style.webkitAnimationPlayState = "running";
