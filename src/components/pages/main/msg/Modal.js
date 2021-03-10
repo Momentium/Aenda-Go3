@@ -66,10 +66,7 @@ const StCont = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  ${({theme}) => theme.flex('space-between', 'center', 'column')};
 
   .rel-cont {
     position: relative;
@@ -83,9 +80,9 @@ const StCont = styled.div`
         right: ${({theme}) => theme.calcVW(48)};
       }
       @media screen and (max-width: 480px) {
-        width: min(5.208333vw, 25px);
-        top: 40px;
-        right: 40px;
+        width: ${({theme}) => theme.calcVW_M(25)};
+        top: ${({theme}) => theme.calcVW_M(48)};
+        right: ${({theme}) => theme.calcVW_M(48)};
       }
     }
   }
@@ -93,17 +90,17 @@ const StCont = styled.div`
   .text {
     display: flex;
     align-items: center;
-    img {
-      width: ${({theme}) => theme.calcVW(40)};
-      margin: ${({theme}) => theme.calcVW(4)} 0 0 ${({theme}) => theme.calcVW(14)};
+    @media screen and (min-width: 481px) {
+      img {
+        width: ${({theme}) => theme.calcVW(40)};
+        margin: ${({theme}) => theme.calcVW(4)} 0 0 ${({theme}) => theme.calcVW(14)};
+      }
     }
-
     @media screen and (max-width: 480px) {
       flex-direction: column;
-      .img {
-        width: min(8.3333vw, 40px);
-        margin-left: 0px;
-        margin-top: 24px;
+      img {
+        width: ${({theme}) => theme.calcVW_M(40)};
+        margin-top: ${({theme}) => theme.calcVW_M(24)};
       }
     }
   }

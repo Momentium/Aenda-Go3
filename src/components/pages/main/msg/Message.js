@@ -18,7 +18,6 @@ const Message = () => {
 
   const sendMsg = () => {
     const _target = document.getElementsByName("input");
-    console.log(_target[2].value)
     for(let i = 0; i < _target.length; i++) {
       if (_target[i].value === "") {
         setAlertMode(true);
@@ -130,16 +129,20 @@ const trans = css`
 const StInput = styled.input`
   display: inline-block;
   width: 100%;
-  height: ${({theme}) => theme.calcVW(50)};
-
-  padding: 0 ${({theme}) => theme.calcVW(15)};
   border: 0;
   background: rgba(0, 0, 0, 0);
-
-  outline: none;
+  /* outline: none;
   &::placeholder {
     color: #d8d8d8;
-  }
+  } */
+  /* height: ${({theme}) => theme.calcVW(50)}; */
+
+  @media screen and (min-width: 481px) {
+    padding: 0 ${({theme}) => theme.calcVW(15)};
+  } 
+  @media screen and (max-width: 480px) {
+    padding: 0 ${({theme}) => theme.calcVW_M(15)};
+  } 
 `;
 
 const StTxtArea = styled.textarea`
@@ -148,51 +151,41 @@ const StTxtArea = styled.textarea`
     -webkit-appearance: none;
     display: none;
   }
-  
-  margin-top: 16px;
-  /* display: inline-block; */
-  width: 100%;
-  height: 35vw; 
-  overflow: scroll;
-  font-size: 12.5px;
-  @media screen and (max-width: 480px) {
-    font-size: 22px;
-  }
-
-  box-sizing: border-box;
-
-  padding: 0 15px;
-  border: 0;
-  background: rgba(0, 0, 0, 0);
-
-  outline: none;
+  /* outline: none;
   &::placeholder {
     color: #d8d8d8;
-  }
+  } */
+
+  overflow: scroll;
+
+  width: 100%;
+  height: ${({theme}) => theme.calcVW_M(255)}; 
+  padding: 0 ${({theme}) => theme.calcVW_M(15)};
+  margin-top: ${({theme}) => theme.calcVW_M(16)};
 `;
 
 const StTopCont = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
-
-  & > div {
-    display: flex;
-    @media screen and (min-width: 481px) {
-      align-items: baseline;
-    }
-
-    border-bottom: 1px solid #555555;
+  @media screen and (min-width: 481px) {
+    margin-bottom: ${({theme}) => theme.calcVW(25)};
   }
-  & > div:first-child {
-    margin-right: 48px;
-  }
-
   @media screen and (max-width: 480px) {
     flex-direction: column;
     margin-bottom: 0;
     .name, .email {
-      margin-bottom: 8.3333vw;
+      margin-bottom: ${({theme}) => theme.calcVW_M(40)};
+    }
+  }
+
+  & > div {
+    display: flex;
+    border-bottom: 1px solid #555555;
+    @media screen and (min-width: 481px) {
+      align-items: baseline;
+      &:first-child {
+        margin-right: ${({theme}) => theme.calcVW(48)};
+      }
     }
   }
 `;
@@ -222,9 +215,9 @@ const StBtn = styled.div`
     font-size: ${({theme}) => theme.calcVW(35)};
   }
   @media screen and (max-width: 480px) {
-    margin: 8.3333vw 0;
+    margin: ${({theme}) => theme.calcVW_M(52.5)} 0;
     width: 100%;
-    height: min(10.625vw, 51px);
-    font-size: 22px;
+    height: ${({theme}) => theme.calcVW_M(51)};
+    font-size: ${({theme}) => theme.calcVW_M(22)};
   }
 `;

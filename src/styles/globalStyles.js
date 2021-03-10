@@ -120,16 +120,18 @@ const GlobalStyle = createGlobalStyle`
       text-align: center;
 
       &.label {
+        color: #ffffff;
+        font-weight: bold;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(32)};
+          line-height: 1.56;
+          letter-spacing: -0.53px;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: ${theme.calcVW_M(22)};
+          line-height: 1.41;
+          letter-spacing: ${theme.calcVW_M(-0.73)};
         }
-        font-weight: bold;
-        line-height: 1.56;
-        letter-spacing: -0.53px;
-        color: #ffffff;
       }
 
       &.title {
@@ -211,25 +213,27 @@ const GlobalStyle = createGlobalStyle`
 
     &.artist {
       &.name {
-        font-weight: bold;
-        line-height: 1.25;
         text-align: center;
+        font-weight: bold;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(40)};
+          line-height: 1.25;
         }
         @media screen and (max-width: 480px) {
-          font-size: min(4.5vw, 22px);
+          font-size: ${theme.calcVW_M(22)};
+          line-height: 1.14;
         }
       }
       &.aka {
-        font-weight: normal;
-        line-height: 2;
         text-align: center;
+        font-weight: normal;
         @media screen and (min-width: 481px) {
+          line-height: 2;
           font-size: ${theme.calcVW(25)};
         }
         @media screen and (max-width: 480px) {
-          font-size: min(3.3vw, 16px);
+          line-height: 1.5;
+          font-size: ${theme.calcVW_M(16)};
         }
       }
 
@@ -297,12 +301,15 @@ const GlobalStyle = createGlobalStyle`
 
     &.gallery {
       font-weight: 500;
-      line-height: 2;
       text-align: center;
       color: #fe573d;
-      font-size: ${theme.calcVW(25)};
+      @media screen and (min-width: 481px) {
+        line-height: 2;
+        font-size: ${theme.calcVW(25)};
+      }
       @media screen and (max-width: 480px) {
-        font-size: min(3.125vw, 15px);
+        line-height: 1.5;
+        font-size: ${theme.calcVW_M(15)};
       }
     }
 
@@ -312,9 +319,11 @@ const GlobalStyle = createGlobalStyle`
       line-height: 2;
       text-align: left;
       color: #333333;
-      font-size: ${theme.calcVW(25)};
+      @media screen and (min-width: 481px) {
+        font-size: ${theme.calcVW(25)};
+      }
       @media screen and (max-width: 480px) {
-        font-size: min(5.2083vw, 25px);
+        font-size: ${theme.calcVW_M(25)};
       }
 
       &.guide {
@@ -328,9 +337,11 @@ const GlobalStyle = createGlobalStyle`
       line-height: 1.25;
       text-align: center;
       color: #ffffff;
-      font-size: ${theme.calcVW(40)};
+      @media screen and (min-width: 481px) {
+        font-size: ${theme.calcVW(40)};
+      }
       @media screen and (max-width: 480px) {
-        font-size: min(8.33333vw, 40px);
+        font-size: ${theme.calcVW_M(40)};
         white-space: nowrap;
       }
     }
@@ -370,12 +381,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input, textarea {
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    &::placeholder {
+      color: #d8d8d8;
+    }
     font-family: 'Noto Sans KR', sans-serif;
     @media screen and (min-width: 481px) {
       font-size: ${theme.calcVW(25)};
+      height: ${theme.calcVW(50)};
     }
     @media screen and (max-width: 480px) {
       font-size: ${theme.calcVW_M(25)};
+      height: ${theme.calcVW_M(50)};
     }
   }
 `;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { mbtiData } from "../../../../data/data";
 import { Zoom, } from "@material-ui/core";
@@ -11,10 +11,6 @@ const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
     closePage();
   }  
   
-  // useEffect(() => {
-  //   setCurImg(0);
-  // }, [popSlide]);
-
   const toLeftPage = () => {
     setCurImg(curImg - 1);
   };

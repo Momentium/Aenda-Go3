@@ -10,49 +10,56 @@ const Artist = ({ _idx, data, openPage }) => {
     >
       <div className={`${data.name} img-div`}></div>
       <div className="text artist name">{data.name.replace(/ /gi, '')}</div>
-      <div className="text artist aka">{data.aka}</div>
+      <div className="text artist aka">
+        {
+          _idx === 2 ?
+          data.aka.split(' ')[1]
+          :
+          data.aka
+        }
+      </div>
     </StArtistWrap>
   );
 };
 export default Artist;
 
 const StArtistWrap = styled.div`
+  ${({theme}) => theme.flex('space-between', 'center', 'column')};
+
   @media screen and (min-width: 481px) {
     cursor: pointer;
+    width: ${({theme}) => theme.calcVW(320)};
   }
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  /* max-width: 300px; */
-  /* width: 15.6vw; */
-  width: ${({theme}) => theme.calcVW(320)};
   @media screen and (max-width: 480px) {
     width: 100%;
-    height: 100%;
   }
 
   .img-div {
     transition: all 0.1s linear;
-    width: ${({theme}) => theme.calcVW(320)};
-    height: ${({theme}) => theme.calcVW(320)};
+
     border: solid 5px white;
     border-radius: 50%;
 
-    @media screen and (max-width: 480px) {
-      width: 100%;
-      height: 40vw;
+    ${(props) => props.theme.backImg(props.imgUrl, 'top')}
+    @media screen and (min-width: 481px) {
+      width: ${({theme}) => theme.calcVW(320)};
+      height: ${({theme}) => theme.calcVW(320)};
+      margin-bottom: ${({theme}) => theme.calcVW(30)};
     }
-
-    background-image: url(${props => props.imgUrl});
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: ${({theme}) => theme.calcVW(30)};
+    @media screen and (max-width: 480px) {
+      width: ${({theme}) => theme.calcVW_M(190.67)};
+      height: ${({theme}) => theme.calcVW_M(190.67)};
+      margin-bottom: ${({theme}) => theme.calcVW_M(15)};
+    }
   }
+
   .name {
-    margin-bottom: ${({theme}) => theme.calcVW(4)};
+    @media screen and (min-width: 481px) {
+      margin-bottom: ${({theme}) => theme.calcVW(4)};
+    }
+    @media screen and (max-width: 480px) {
+      margin-bottom: ${({theme}) => theme.calcVW_M(7)};
+    }
   }
   
   transition: all 0.1s linear;

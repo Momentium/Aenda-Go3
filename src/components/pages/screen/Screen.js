@@ -72,7 +72,7 @@ const StPlayerCont = styled.div`
 const StArrowWrap = styled.div`
   position: absolute;
   z-index: 5;
-  @media screen and (mix-width: 481px){
+  @media screen and (min-width: 481px){
     top: 50%;
   }
   @media screen and (max-width: 480px){
@@ -92,7 +92,9 @@ const StArrowWrap = styled.div`
   ${
     props => props.dir === "left" ?
     css`
-      left: 5vw;
+      @media screen and (min-width: 481px){
+        left: ${({theme}) => theme.calcVW(90.5)};
+      }
       @media screen and (max-width: 480px){
         left: 25px;
       }
@@ -102,7 +104,9 @@ const StArrowWrap = styled.div`
     `
     :
     css`
-      right: 5vw;
+      @media screen and (min-width: 481px){
+        right: ${({theme}) => theme.calcVW(90.5)};
+      }
       @media screen and (max-width: 480px){
         right: 25px;
       }
