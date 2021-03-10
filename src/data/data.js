@@ -13,11 +13,11 @@ export const headerData = {
 }
 
 export const drawerData = {
-  intro:`2020 상상만개는`,
-  program: `프로그램 안내 PROGRAM`,
-  artist: `예술가 ARTIST`,
-  exhib: `작품 갤러리 EXHIBITION`,
-  msg: `SEND TO MESSAGE`,
+  intro: '2020 상상만개는',
+  program: '프로그램 안내 PROGRAM',
+  artist: '예술가 ARTIST',
+  exhib: '작품 갤러리 EXHIBITION',
+  msg: 'SEND TO MESSAGE',
   arrow_black: `assets/icons/arrow.svg`,
   arrow_red: `assets/icons/arrow_red.svg`,
   arrow_mobile_black: `assets/icons/arrow_mobile.svg`,

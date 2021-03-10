@@ -41,7 +41,7 @@ const Drawer = ({ title }) => {
         onMouseOver={handleHover}
         onMouseOut={handleHover}
         onClick={handleOpen}
-        title={title === drawerData.msg}
+        title={title === drawerData.msg ? 'true' : 'false'}
       >
 
         <div className="text drawer">{title}</div>

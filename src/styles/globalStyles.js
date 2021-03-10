@@ -404,6 +404,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input, textarea {
+    &, &:before, &:after {
+      -webkit-user-select: initial;
+      -khtml-user-select: initial;
+      -moz-user-select: initial;
+      -ms-user-select: initial;
+      user-select: initial;
+    }
+
     border: 0;
     background: rgba(0, 0, 0, 0);
     outline: none;
@@ -418,14 +426,6 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (max-width: 480px) {
       font-size: ${theme.calcVW_M(25)};
       height: ${theme.calcVW_M(50)};
-    }
-
-    &, &:before, &:after {
-      -webkit-user-select: initial;
-      -khtml-user-select: initial;
-      -moz-user-select: initial;
-      -ms-user-select: initial;
-      user-select: initial;
     }
   }
 `;
