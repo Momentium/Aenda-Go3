@@ -1,3 +1,2 @@
 import React from 'react';
-export const MainContxt = React.createContext({});
-export const VeiwContxt = React.createContext({});
+export const TagContxt = React.createContext({});

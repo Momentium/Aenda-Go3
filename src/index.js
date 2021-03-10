@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { StylesProvider } from '@material-ui/core/styles';
-import GlobalStyle from './components/styles/globalStyles';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { StylesProvider } from "@material-ui/core/styles";
+import GlobalStyle from "./styles/globalStyles";
 
 ReactDOM.render(
   <StylesProvider injectFirst>
     <React.StrictMode>
-      <GlobalStyle/>
+      <GlobalStyle />
       <App />
     </React.StrictMode>
   </StylesProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,37 +1,69 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { MainContxt } from '../../common/ContextStorage';
-import Header from '../../common/Header';
-import Drawer from './Drawer';
-import Footer from './Footer';
-import SlideList from './SlideList';
+import styled, { css } from 'styled-components';
+import Header from '../Header';
+import DrawerList from './tab/DrawerList';
 
-const Main = () => {
-  const { popState } = useContext(MainContxt);
-
+const Main = ({popState}) => {
   return (
-    <StMainWrap className="main-wrap">
+    <StMainCont>
       <Header/>
-      {
-        popState && 
-        <>
-          <Drawer title="ABOUT 2020 상상만개는"/>
-          <Drawer title="PROGRAM 프로그램 안내"/>
-          <Drawer title="ARTIST 예술가"/>
-          <Drawer title="EXHIBITION 작품 갤러리"/>
-          <SlideList/>
-          <Drawer title="SEND TO MESSAGE"/>
-          <Footer/>
-        </>
-      }
-    </StMainWrap>
+      {popState && <DrawerList/>}
+    </StMainCont>
   )
 }
 export default Main;
 
-const StMainWrap = styled.div`
-  width: 100%;
-  height: 100%;
+const StMainCont = styled.div`
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-  box-sizing: border-box;
+  background-color: white;
+  background-image: url('/assets/images/background/bg_web_main.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  z-index: 10;
+  
+  @media screen and (min-width: 481px){
+    left: 10px;
+    bottom: 10px;
+  }
+  @media screen and (max-width: 480px){
+    left: 5px;
+    bottom: 5px;
+  }
+
+  transition: all 0.7s ease;
+
+  ${({ theme }) => theme.popState ? 
+    css`
+      overflow: scroll;
+      @media screen and (min-width: 481px){
+        width: ${theme.SW - 20}px;
+        height: ${theme.SH - 20}px;
+      }
+      @media screen and (max-width: 480px){
+        width: ${theme.SW - 10}px;
+        height: ${theme.SH - 10}px;
+      }   
+    ` 
+    :
+    css`
+      @media screen and (min-width: 481px) {
+        overflow: hidden;
+        width: ${theme.calcVW(305)};
+        height: ${theme.calcVW(66)};
+      }
+
+      @media screen and (max-width: 480px){
+        width: ${theme.calcVW_M(256.32)};
+        height: ${theme.calcVW_M(55)};
+        left: 25px;
+        bottom: 25px;
+      }
+    `
+  }
 `;

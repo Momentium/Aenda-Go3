@@ -1,98 +1,137 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { VeiwContxt } from '../../common/ContextStorage';
-import * as St from '../../styles/styledComp';
-import footerlogo from '../../../assets/logo/footerlogo.svg';
+import styled from "styled-components";
+import { footerData } from '../../../data/data'
 
 const Footer = () => {
-  const { WW } = useContext(VeiwContxt)
+  const openLink = (_url) => {
+    window.open(_url, "_blank");
+  };
 
   return (
     <StFootCont>
-      <StLeftCont>
-        <StImgWrap>
-          <img src={footerlogo} alt="footer-logo"/>
-        </StImgWrap>
+      <StImg src={footerData.logo} alt="footer-logo" />
 
-        <StInfoCont>
-          <div className="text">주최. 문화체육관광부</div>
-          <div className="text">주관. 한국문화예술교육진흥원</div>
-          <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          <div className="text">(주)앤다 서울시 중구 정동길 12-11 카리스타워 2층</div>
-          <div className="text">사업자등록번호 211-88-69418</div>
-          <div className="text">개인정보보호책임자 이상진</div>
-          <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          { WW < 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
-        </StInfoCont>
+      <div className="text footer">
+        {footerData.host}
+        <br />
+        {footerData.supervise}
+        <br />
+        <br />
+        {footerData.addr}
+        <br />
+        {footerData.regist}
+        <br />
+        {footerData.owner}
+      </div>
 
-        <StLinkCont>
-          <div className="text">go310000@naver.com</div>
-          <div className="text">02) 549-2234</div>
-          <div className="text" style={{ visibility: 'hidden' }}>hidden</div>
-          <div className="text">Instagram</div>
-          <div className="text">Facebook</div>
-        </StLinkCont>
-      </StLeftCont>
+      {window.innerWidth <= 480 && <><br/><br/></>}
 
+      <StLinkCont>
+        <div className="text footer">
+          {footerData.email}
+          <br />
+          {footerData.phone}
+          <br />
+          <br />
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <div style={{ display: "flex" }}>
+                  <img src={footerData.sns.insta.icon} alt="instagram-logo" />
+                </div>
+              </td>
+              <td>
+                <div
+                  className="text footer link"
+                  onClick={() =>
+                    openLink(footerData.sns.insta.link)
+                  }
+                >
+                  {footerData.sns.insta.label}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style={{ display: "flex" }}>
+                  <img src={footerData.sns.facebook.icon} alt="instagram-logo" />
+                </div>
+              </td>
+              <td>
+                <div
+                  className="text footer link"
+                  onClick={() =>
+                    openLink(footerData.sns.facebook.link)
+                  }
+                >
+                  {footerData.sns.facebook.label}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        {/* <br /> */}
+      </StLinkCont>
+      
+      {window.innerWidth <= 480 && <><br/><br/><br/><br/></>}
 
-      { WW >= 830 && <div className="text">ⓒ 2020 AENDA Inc., All rights reserved.</div> }
-
+      <div className="text footer">
+        ⓒ 2020 AENDA Inc., All rights reserved.
+      </div>
     </StFootCont>
-  )
-}
+  );
+};
 
 export default Footer;
 
-const StFootCont = styled(St.Section)`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  /* @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-  } */
+const StFootCont = styled.section`
+  background: white;
+  ${({theme}) => theme.flex('space-between', 'flex-start', '')}
+  border-top: solid 2px ${({theme}) => theme.colors.blue};
 
   width: 100%;
 
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  @media screen and (max-width: 768px) {
-    padding-top: 2vh;
-  padding-bottom: 2vh;
-  }
-  
-  box-sizing: border-box;
+  padding-top: ${({theme}) => theme.calcVW(75)};
+  padding-bottom: ${({theme}) => theme.calcVW(75)};
 
-  .text {
-    font-size: 0.563em;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.78;
-    letter-spacing: normal;
-    text-align: left;
-    color: #555555;
+  & > div {
+    margin-top: ${({theme}) => theme.calcVW(5)};
   }
 
-`;
-
-const StLeftCont = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-`;
-
-const StImgWrap = styled.div`
-  display: flex;
-
-  img {
-    width: 8.094em;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    padding-top: ${({theme}) => theme.calcVW_M(50)};
+    padding-bottom: ${({theme}) => theme.calcVW_M(50)};
   }
 `;
 
-const StInfoCont = styled.div`
-  margin: 0 4vw;
+const StImg = styled.img`
+  @media screen and (max-width: 480px) {
+    width: ${({theme}) => theme.calcVW(260)};
+  }
+  @media screen and (max-width: 480px) {
+    width: ${({theme}) => theme.calcVW_M(260)};
+    margin-bottom: ${({theme}) => theme.calcVW_M(40.16)};
+  }
 `;
 
 const StLinkCont = styled.div`
+  @media screen and (min-width: 960px){
+    margin-right: 12vw;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  img {
+    @media screen and (min-width: 481px) {
+      height: ${({theme}) => theme.calcVW(18)};
+      margin-right: ${({theme}) => theme.calcVW(10)};
+    }
+    @media screen and (max-width: 480px) {
+      height: ${({theme}) => theme.calcVW_M(18.64)};
+      margin-right: ${({theme}) => theme.calcVW_M(10)};
+    }
+  }
 `;
