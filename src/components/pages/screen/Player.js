@@ -18,8 +18,8 @@ const Player = ({ SW, vidUrl, popState, pageState }) => {
         url={vidUrl}
         playing={!popState && pageState}
         controls={true}
-        width={SW - 50}
-        height={(SW - 50) * 9 / 16}
+        width={SW}
+        height={SW * 9 / 16}
       />
     }
     </StScreenCont>

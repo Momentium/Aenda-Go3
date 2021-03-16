@@ -23,7 +23,8 @@ const StMainCont = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  
+  box-sizing: content-box;
   position: absolute;
   z-index: 10;
   
@@ -44,6 +45,7 @@ const StMainCont = styled.div`
       @media screen and (min-width: 481px){
         width: ${theme.SW - 20}px;
         height: ${theme.SH - 20}px;
+        
       }
       @media screen and (max-width: 480px){
         width: ${theme.SW - 10}px;
@@ -52,8 +54,8 @@ const StMainCont = styled.div`
     ` 
     :
     css`
+      overflow: hidden;
       @media screen and (min-width: 481px) {
-        overflow: hidden;
         width: ${theme.calcVW(305)};
         height: ${theme.calcVW(66)};
       }

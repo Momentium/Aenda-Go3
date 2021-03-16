@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   div.text {
+    transition: all 0.1s linear;
     display: flex;
     align-items: center;
 
@@ -51,6 +52,20 @@ const GlobalStyle = createGlobalStyle`
     white-space: pre-line;
 
     &.header {
+      &.intro {
+        font-weight: 900;
+        text-align: center;
+        color: ${theme.colors.blue};
+        white-space: nowrap;
+
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(38.6)};
+        }
+        @media screen and (max-width: 480px) {
+          font-size: ${theme.calcVW_M(20.2)};
+        }
+      }
+
       &.title {
         font-weight: 900;
         transition: all 1s ease;
@@ -168,14 +183,15 @@ const GlobalStyle = createGlobalStyle`
       &.kit-title {
         font-family: "TTSoopilmyungjoR040";
         color: #fb5640;
-        line-height: 1;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(50)};
+          line-height: 1;
           letter-spacing: -0.83px;
         }
         @media screen and (max-width: 480px) {
-          font-size: ${theme.calcVW_M(40)};
-          letter-spacing: -0.66px;
+          font-size: ${theme.calcVW_M(28)};
+          line-height: 1.43;
+          letter-spacing: -0.46px;
         }
       }
       
@@ -384,6 +400,16 @@ const GlobalStyle = createGlobalStyle`
       &.link {
         @media screen and (min-width: 481px) {
           cursor: pointer;
+        }
+      }
+      &.aenda {
+        color: #999999;
+        line-height: 2;
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(16)};
+        }
+        @media screen and (max-width: 480px) {
+          font-size: ${theme.calcVW_M(16)};
         }
       }
     }

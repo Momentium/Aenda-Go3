@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import React, { useState, } from "react";
+import styled, { css, } from "styled-components";
 import { mbtiData } from "../../../../data/data";
 import { Zoom, } from "@material-ui/core";
 
-const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
+const ProgramPage = ({ mbti, title, closePage }) => {
   const arrowImgUrl = window.innerWidth > 480 ? `vidArrow.svg` : `vidArrow_m.svg`;
   const data = mbtiData[`${mbti}`];
   const [curImg, setCurImg] = useState(0);
@@ -56,7 +56,7 @@ const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
         <div></div>
         <div className="prog_img">
           {data.progImg.map((el, idx) => (
-            <StImg key={idx} src={el} alt={el} curImg={curImg}/>
+              <StImg key={idx} src={el} alt={el} curImg={curImg}/>
           ))}
         </div>
         <div></div>
@@ -73,7 +73,7 @@ const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
         {window.innerWidth > 480 ? data.intro : data.intro_m}
       </div>
 
-      <div className="text program kit-title">예술가의 키트</div>
+      <div className="text program kit-title">{`'${data.artist[0]}. ${data.artist[1]}'`}의 키트</div>
 
       <div className="line bot" />
 
@@ -98,10 +98,12 @@ const ProgramPage = ({ mbti, title, popSlide, closePage }) => {
 export default ProgramPage;
 
 const StPageWrap = styled.div`
-  ${({theme}) => theme.flex('center', 'center', 'column')}
+  ${({theme}) => theme.flex('', 'center', 'column')}
   background: ${({ theme }) => `${theme.colors.blue}`};
 
   width: 100%;
+  min-height: 100%;
+
   @media screen and (min-width: 481px) {
     padding-top: ${({theme}) => theme.calcVW(101)};
     padding-bottom: ${({theme}) => theme.calcVW(172)};
@@ -221,12 +223,14 @@ const StImgCont = styled.div`
   .prog_img {
     overflow: hidden;
     white-space: nowrap;
+    background: black;
   }
 
   @media screen and (min-width: 481px) {
     height: ${({theme}) => theme.calcVW(557)};
     .prog_img {
       width: ${({theme}) => theme.calcVW(990)};
+      height: 100%;
     }
   }
 
