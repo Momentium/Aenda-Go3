@@ -1,23 +1,7 @@
-import React, { useEffect, useContext } from 'react';
-import styled, { ThemeContext } from "styled-components";
-import { footerData } from '../../../data/data'
+import styled from "styled-components";
+import { footerData } from '../../../data/data';
 
 const Footer = () => {
-  const { SW } = useContext(ThemeContext);
-  useEffect(() => {
-    const _host = document.querySelector('.host-cont');
-    const _logo = document.querySelector('.logo-cont');
-    _logo.style.width = `${_host.clientWidth}px`;
-
-    if (window.innerWidth <= 480) return;
-
-    const _link = document.querySelector('.link-cont');
-    _host.style.height = `${_link.clientHeight}px`;
-    const _inc = document.querySelector('.inc-cont');
-    _inc.style.height = `${_link.clientHeight}px`;
-
-  }, [SW]);
-
   const openLink = (_url) => {
     window.open(_url, "_blank");
   };
@@ -85,13 +69,17 @@ const Footer = () => {
           </tbody>
         </table>
       </StLinkCont>
+
+      <div></div>
       
       <StIncCont className="inc-cont">
-        <div className="text footer">
-          {footerData.inc}
-        </div>
-        <div className="text footer aenda">
-          {footerData.aenda}
+        <div className="text-cont">
+          <div className="text footer">
+            {footerData.inc}
+          </div>
+          <div className="text footer aenda">
+            {footerData.aenda}
+          </div>
         </div>
         <br/> 
         <img src="/assets/logo/open-logo.png" alt=""/>
@@ -105,26 +93,27 @@ export default Footer;
 const StFootCont = styled.section`
   background: white;
   ${({theme}) => theme.flex('space-between', 'flex-start', '')}
-  border-top: solid 2px ${({theme}) => theme.colors.blue};
 
   width: 100%;
+  border-top: solid 2px ${({theme}) => theme.colors.blue};
 
-  & > div {
-    margin-top: ${({theme}) => theme.calcVW(5)};
-  }
   @media screen and (min-width: 481px) {
+    & > div {
+      height: ${({theme}) => theme.calcVW(128)};
+    }
     padding-top: ${({theme}) => theme.calcVW(75)};
     padding-bottom: ${({theme}) => theme.calcVW(75)};
   }
   @media screen and (max-width: 480px) {
     flex-direction: column;
     padding-top: ${({theme}) => theme.calcVW_M(50)};
-    padding-bottom: ${({theme}) => theme.calcVW_M(50)};
+    padding-bottom: ${({theme}) => theme.calcVW_M(71)};
   }
 `;
 
 const StImg = styled.img`
   @media screen and (min-width: 481px) {
+    transform: translateY(${({theme}) => theme.calcVW(-10)});
     width: ${({theme}) => theme.calcVW(280)};
   }
   @media screen and (max-width: 480px) {
@@ -135,13 +124,14 @@ const StImg = styled.img`
 
 const StHostCont = styled.div`
   .logo-cont {
-    ${({theme}) => theme.flex('space-between', 'center')};
+    ${({theme}) => theme.flex('flex-start', 'center')};
   }
 
   @media screen and (min-width: 481px) {
     ${({theme}) => theme.flex('space-between', 'flex-start', 'column')};
     .mcst-logo {
       width: ${({theme}) => theme.calcVW(165)};
+      margin-right: ${({theme}) => theme.calcVW(25.2)};
     }
     .arte-logo {
       width: ${({theme}) => theme.calcVW(170)};
@@ -149,9 +139,10 @@ const StHostCont = styled.div`
   }
   @media screen and (max-width: 480px) {
     margin-bottom: ${({theme}) => theme.calcVW_M(50)};
-    ${({theme}) => theme.flex('', 'flex-start', 'column')};
+    ${({theme}) => theme.flex('space-between', 'flex-start', 'column')};
     .mcst-logo {
       width: ${({theme}) => theme.calcVW_M(165)};
+      margin-right: ${({theme}) => theme.calcVW_M(25.2)};
     }
     .arte-logo {
       width: ${({theme}) => theme.calcVW_M(170)};
@@ -160,16 +151,15 @@ const StHostCont = styled.div`
 `;
 
 const StLinkCont = styled.div`
-  @media screen and (min-width: 960px){
-    margin-right: 12vw;
-  }
-  @media screen and (max-width: 480px) {
-    margin-bottom: ${({theme}) => theme.calcVW_M(50)};
-  }
-
   table {
     border-collapse: collapse;
   }
+  ${({theme}) => theme.flex('space-between', 'flex-start', 'column')};
+  
+  @media screen and (max-width: 480px) {
+    margin-bottom: ${({theme}) => theme.calcVW_M(50)};
+  }
+  
   img {
     @media screen and (min-width: 481px) {
       height: ${({theme}) => theme.calcVW(18)};
@@ -183,14 +173,23 @@ const StLinkCont = styled.div`
 `;
 
 const StIncCont = styled.div`
+  ${({theme}) => theme.flex('space-between', '', 'column')};
+  .text-cont {
+    ${({theme}) => theme.flex('', '', 'column')};
+  }
+
   @media screen and (min-width: 481px) {
-    ${({theme}) => theme.flex('space-between', 'flex-end', 'column')};
+    &, .text-cont {
+      align-items: flex-end;
+    }
     img {
       width: ${({theme}) => theme.calcVW(107)};
     }
   }
   @media screen and (max-width: 480px) {
-    ${({theme}) => theme.flex('space-between', 'flex-start', 'column')};
+    &, .text-cont {
+      align-items: flex-start;
+    }
     img {
       width: ${({theme}) => theme.calcVW_M(107)};
     }

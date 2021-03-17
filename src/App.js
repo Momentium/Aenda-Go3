@@ -31,7 +31,9 @@ const App = () => {
       },
       false
     );
-    
+
+    setSW(window.innerWidth);
+    setSH(window.innerHeight);
     window.addEventListener("resize", handleSize);
     return () => {
       window.removeEventListener("resize", handleSize);
@@ -41,7 +43,8 @@ const App = () => {
   const handleSize = () => {
     setSW(window.innerWidth);
     setSH(window.innerHeight);
-  };
+   };
+   
   const closeMain = () => {
     setTglMain({ ...tglMain, popState: false });
   };

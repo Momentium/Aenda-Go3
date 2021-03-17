@@ -1,7 +1,7 @@
 export const headerData = {  
   logo: `/assets/logo/logo.svg`,
   ytIcon: `/assets/icons/youtube.svg`,
-  subtitle: `2020 고3 · 수험생 문화예술교육 지원사업, 상상만개`,
+  subtitle: `2020 고3·수험생 문화예술교육 지원사업, 상상만개`,
   blue: `반짝반짝 열아홉`,
   white: `나의 취향이 닿는 세계로`,
   white_mobile: [`나의 취향이 닿는`, `세계로`],

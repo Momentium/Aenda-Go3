@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styled, { css } from "styled-components";
 import { TagContxt } from "../../../common/ContextStorage";
 
@@ -15,10 +15,20 @@ const Hashtag = ({ dataIdx, setPauseIdx, pauseIdx, idx, tag }) => {
     }
   };
 
+  const [clickTab, setClickTab] = useState(false);
+  useEffect(() => {
+    if(isOpen && pauseIdx === -1 && dataIdx === 2 && tag === '상상만개') {
+      setClickTab(true);
+    }
+    else {
+      setClickTab(false);
+    }
+  }, [isOpen, pauseIdx, tag])
+
   return (
     <StHashCont
       className={`text hash-tag ${idx}`}
-      isFocus={pauseIdx === dataIdx && curTag === tag}
+      isFocus={(pauseIdx === dataIdx && curTag === tag) || clickTab}
       onClick={handleClick}
     >
       {`#${tag}`}
@@ -28,8 +38,9 @@ const Hashtag = ({ dataIdx, setPauseIdx, pauseIdx, idx, tag }) => {
 export default Hashtag;
 
 const StHashCont = styled.span`
+  cursor: pointer;
   @media screen and (min-width: 481px) {
-    cursor: pointer;
+    /* cursor: pointer; */
     &:hover {
       background: ${({ theme }) => theme.colors.red};
       color: ${({ theme }) => theme.colors.blue};

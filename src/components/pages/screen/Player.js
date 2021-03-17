@@ -12,6 +12,14 @@ const Player = ({ SW, vidUrl, popState, pageState }) => {
         controls={true}
         width={SW / 1.5}
         height={(SW * 9) / (16 * 1.5)}
+        playsinline={true}
+        config={{
+          vimeo: {
+            playerOptions: {
+              quality: '1080p'
+            }
+          }
+        }}
       />
       :
       <ReactPlayer
@@ -20,6 +28,14 @@ const Player = ({ SW, vidUrl, popState, pageState }) => {
         controls={true}
         width={SW}
         height={SW * 9 / 16}
+        playsinline={true}
+        config={{
+          vimeo: {
+            playerOptions: {
+              quality: '1080p'
+            }
+          }
+        }}
       />
     }
     </StScreenCont>

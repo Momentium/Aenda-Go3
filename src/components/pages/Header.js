@@ -56,10 +56,12 @@ export default Header;
 const StHeaderCont = styled.div`
   position: relative;
   @media screen and (min-width: 481px){
-    padding: ${({theme}) => theme.calcVW(87.34)} ${({theme}) => theme.calcVW(100)};
+    padding: ${({theme}) => theme.calcVW(80)} ${({theme}) => theme.calcVW(100)};
+    padding-bottom: ${({theme}) => theme.calcVW(56)};
   }
   @media screen and (max-width: 480px){
-    padding:${({theme}) => theme.calcVW_M(49)} ${({theme}) => theme.calcVW_M(17)};
+    padding: ${({theme}) => theme.calcVW_M(49)} ${({theme}) => theme.calcVW_M(17)};
+    padding-bottom: ${({theme}) => theme.calcVW_M(32)};
   }
 
   ${({theme}) => theme.flex('space-between', '', 'column')};
@@ -112,11 +114,15 @@ const StHeaderCont = styled.div`
 `;
 
 const StLogoBtnCont = styled.div`
+  @media screen and (max-width: 480px) {
+
+  }
+
   img {
     display: block;
     
     @media screen and (min-width: 481px) {
-      width: ${({theme}) => theme.calcVW(851)};
+      width: ${({theme}) => theme.calcVW(809.6)};
       margin-bottom: ${({theme}) => theme.calcVW(8)};
     }
     @media screen and (max-width: 480px) {
@@ -130,7 +136,7 @@ const StYTBtnCont = styled.div`
   img {
     @media screen and (min-width: 481px) {
       cursor: pointer;
-      width: ${({theme}) => theme.calcVW(161.05)};
+      width: ${({theme}) => theme.calcVW(122)};
     }
     @media screen and (max-width: 480px) {
       width: ${({theme}) => theme.calcVW_M(106)};
@@ -140,7 +146,7 @@ const StYTBtnCont = styled.div`
 
 const StTitleCont = styled.div`
   .blue {
-    width: ${({theme}) => theme.calcVW(851)};
+    width: ${({theme}) => theme.calcVW(809.6)};
     background-color: ${({theme}) => theme.colors.blue};
     color: white;
   }

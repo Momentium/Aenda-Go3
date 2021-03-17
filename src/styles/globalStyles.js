@@ -59,10 +59,10 @@ const GlobalStyle = createGlobalStyle`
         white-space: nowrap;
 
         @media screen and (min-width: 481px) {
-          font-size: ${theme.calcVW(38.6)};
+          font-size: ${theme.calcVW(37.8)};
         }
         @media screen and (max-width: 480px) {
-          font-size: ${theme.calcVW_M(20.2)};
+          font-size: ${theme.calcVW_M(20.9)};
         }
       }
 
@@ -71,9 +71,8 @@ const GlobalStyle = createGlobalStyle`
         transition: all 1s ease;
         @media screen and (min-width: 481px) {
           height: ${theme.calcVW(160)};
-          font-size: ${theme.calcVW(120)};
+          font-size: ${theme.calcVW(113)};
           padding: 0 ${theme.calcVW(36)} ${theme.calcVW(12)} ${theme.calcVW(8)};
-          /* transform: translateX(-8px); */
         }
         @media screen and (max-width: 480px) {
           height: ${theme.calcVW_M(87)};
@@ -87,7 +86,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(50)};
-          line-height: 1.6;
+          line-height: 1.3;
         }
         @media screen and (max-width: 480px) {
           font-size: ${theme.calcVW_M(28)};

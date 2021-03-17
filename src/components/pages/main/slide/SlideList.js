@@ -12,7 +12,7 @@ const SlideList = ({ isOpen }) => {
     <StSlideCont>
       <Slide dir="left" dataIdx={0} pauseIdx={pauseIdx} setPauseIdx={setPauseIdx} />
       <Slide dir="right" dataIdx={1} pauseIdx={pauseIdx} setPauseIdx={setPauseIdx} />
-      <Slide dir="left" dataIdx={2} pauseIdx={pauseIdx} setPauseIdx={setPauseIdx} />
+      <Slide dir="left" dataIdx={2} pauseIdx={pauseIdx} setPauseIdx={setPauseIdx}/>
       <Slide dir="right" dataIdx={3} pauseIdx={pauseIdx} setPauseIdx={setPauseIdx} />
     </StSlideCont>
   );
