@@ -1,10 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Hashtag from "./Hashtag";
 import { hashTagData } from "../../../../data/data";
 
 const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   const contRef = useRef(undefined);
+  useEffect(() => {
+    requestAnimationFrame();
+  }, []);
   useEffect(() => {
     if (dataIdx === pauseIdx) {
       const _div = contRef.current;
@@ -25,7 +28,11 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     }
   }, [pauseIdx, dataIdx]);
 
+  const [sec, setSec] = useState(10);
+
+
   const slowSlide = () => {
+    setSec(20);
     if (dataIdx === pauseIdx) return;
     if (window.innerWidth > 480) {
       const _div = contRef.current;
@@ -34,6 +41,7 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     }
   };
   const runSlide = () => {
+    setSec(10);
     if (dataIdx === pauseIdx) return;
     if (window.innerWidth > 480) {
       const _div = contRef.current;
@@ -62,22 +70,7 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
       onMouseOver={slowSlide}
       onMouseOut={runSlide}
     >
-      <StHTCont dir={dir}>
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
-      </StHTCont>
-      <StHTCont dir={dir}>
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
-      </StHTCont>
-      <StHTCont dir={dir}>
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
+      <StHTCont dir={dir} sec={sec}>
         {hashTagList}
       </StHTCont>
     </StSlideCont>
@@ -94,9 +87,9 @@ const StSlideCont = styled.div`
 
   @media screen and (min-width: 481px) {
     margin: ${({ theme }) => theme.calcVW(18)} 0;
-    animation: ${(props) =>
+    /* animation: ${(props) =>
         props.dir === "left" ? "slide-all-left" : "slide-all-right"}
-      600s infinite linear;
+      600s infinite linear; */
   }
   @media screen and (max-width: 480px) {
     margin: ${({ theme }) => theme.calcVW_M(8)} 0;
@@ -124,14 +117,14 @@ const StSlideCont = styled.div`
 const StHTCont = styled.span`
   white-space: nowrap;
   animation: ${(props) => (props.dir === "left" ? "slide-left" : "slide-right")}
-    60s infinite linear;
+    10s infinite linear;
 
   @keyframes slide-left {
     0% {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
   @keyframes slide-right {
@@ -139,7 +132,7 @@ const StHTCont = styled.span`
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(50%);
+      transform: translateX(100%);
     }
   }
 `;
