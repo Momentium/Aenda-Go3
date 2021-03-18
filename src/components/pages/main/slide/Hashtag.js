@@ -23,7 +23,7 @@ const Hashtag = ({ dataIdx, setPauseIdx, pauseIdx, idx, tag }) => {
     else {
       setClickTab(false);
     }
-  }, [isOpen, pauseIdx, tag])
+  }, [isOpen, pauseIdx, dataIdx, tag])
 
   return (
     <StHashCont
@@ -38,6 +38,18 @@ const Hashtag = ({ dataIdx, setPauseIdx, pauseIdx, idx, tag }) => {
 export default Hashtag;
 
 const StHashCont = styled.span`
+  font-weight: 500;
+  @media screen and (min-width: 481px) {
+    font-size: ${({theme}) => theme.calcVW(40)};
+    line-height: 1.25;
+    letter-spacing: -0.66px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: ${({theme}) => theme.calcVW_M(30)};
+    line-height: 1.67;
+    letter-spacing: -0.5px;
+  }
+
   cursor: pointer;
   @media screen and (min-width: 481px) {
     /* cursor: pointer; */
@@ -49,7 +61,7 @@ const StHashCont = styled.span`
   vertical-align: baseline;
   padding: 2px 12px 4px 12px;
   color: white;
-
+  background: ${({ theme }) => theme.colors.blue};
   transition: all 0.1s linear;
   ${ props => 
   props.isFocus && 

@@ -413,20 +413,6 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
-  
-  span.hash-tag {
-    font-weight: 500;
-    @media screen and (min-width: 481px) {
-      font-size: ${theme.calcVW(40)};
-      line-height: 1.25;
-      letter-spacing: -0.66px;
-    }
-    @media screen and (max-width: 480px) {
-      font-size: ${theme.calcVW_M(30)};
-      line-height: 1.67;
-      letter-spacing: -0.5px;
-    }
-  }
 
   input, textarea {
     &, &:before, &:after {

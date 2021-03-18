@@ -1,53 +1,82 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Hashtag from "./Hashtag";
 import { hashTagData } from "../../../../data/data";
 
 const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   const contRef = useRef(undefined);
+
   useEffect(() => {
-    requestAnimationFrame();
-  }, []);
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+    const _div = contRef.current;
+    let raf;
+
+    const _1st = _div.childNodes[0];
+    const _2nd = _div.childNodes[1];
+    _1st.style[dir] = `0px`;
+    _1st.style.zIndex = '1';
+    _2nd.style[dir] = `${_2nd.clientWidth}px`;
+    _2nd.style.zIndex = '1';
+
+    const run = () => {
+      let _1stX = Number(_1st.style[dir].replace('px', ''));
+      let _2ndX = Number(_2nd.style[dir].replace('px', ''));
+
+      let _state = sessionStorage.getItem(`${dataIdx} state`);
+      let _px;
+      switch(_state) {
+        case 'run':
+          window.innerWidth > 480 ? _px = 3 : _px = 1 ;
+          
+          break;
+        case 'slow':
+          _px = 1;
+          break;
+        case 'stop':
+          _px = 0;
+          break;
+        default: break;
+      }
+  
+      if(_1stX < -1 * _1st.clientWidth) {
+        _1st.style[dir] = `${_1st.clientWidth}px`;
+      }
+      else {
+        _1st.style[dir] = `${_1stX - _px}px`;
+      }
+      if(_2ndX < -1 * _2nd.clientWidth) {
+        _2nd.style[dir] = `${_2nd.clientWidth}px`;
+      }
+      else {
+        _2nd.style[dir] = `${_2ndX - _px}px`;
+      }
+      raf = requestAnimationFrame(run);
+    }
+    raf = requestAnimationFrame(run);
+    return () => {
+      cancelAnimationFrame(raf)
+    }; 
+  }, [dir, dataIdx]);
+
+
   useEffect(() => {
     if (dataIdx === pauseIdx) {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "paused";
-      _div.style.webkitAnimationPlayState = "paused";
-      _div.childNodes.forEach((el) => {
-        el.style.animationPlayState = "paused";
-        el.style.webkitAnimationPlayState = "paused";
-      });
+      sessionStorage.setItem(`${dataIdx} state`, 'stop')
     } else {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "running";
-      _div.style.webkitAnimationPlayState = "running";
-      _div.childNodes.forEach((el) => {
-        el.style.animationPlayState = "running";
-        el.style.webkitAnimationPlayState = "running";
-      });
+      sessionStorage.setItem(`${dataIdx} state`, 'run')
     }
   }, [pauseIdx, dataIdx]);
 
-  const [sec, setSec] = useState(10);
-
-
   const slowSlide = () => {
-    setSec(20);
     if (dataIdx === pauseIdx) return;
-    if (window.innerWidth > 480) {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "paused";
-      _div.style.webkitAnimationPlayState = "paused";
-    }
+    sessionStorage.setItem(`${dataIdx} state`, 'slow')
   };
   const runSlide = () => {
-    setSec(10);
     if (dataIdx === pauseIdx) return;
-    if (window.innerWidth > 480) {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "running";
-      _div.style.webkitAnimationPlayState = "running";
-    }
+    sessionStorage.setItem(`${dataIdx} state`, 'run')
   };
 
   const hashTagList = hashTagData[dataIdx].map((el, idx) => {
@@ -70,7 +99,10 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
       onMouseOver={slowSlide}
       onMouseOut={runSlide}
     >
-      <StHTCont dir={dir} sec={sec}>
+      <StHTCont dir={dir}>
+        {hashTagList}
+      </StHTCont>
+      <StHTCont dir={dir}>
         {hashTagList}
       </StHTCont>
     </StSlideCont>
@@ -79,19 +111,18 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
 export default Slide;
 
 const StSlideCont = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
-  justify-content: ${(props) =>
-    props.dir === "left" ? "flex-start" : "flex-end"};
+  justify-content: ${(props) => props.dir === "left" ? "flex-start" : "flex-end"};
   background: ${({ theme }) => theme.colors.blue};
 
   @media screen and (min-width: 481px) {
+    height: ${({ theme }) => theme.calcVW(50)};
     margin: ${({ theme }) => theme.calcVW(18)} 0;
-    /* animation: ${(props) =>
-        props.dir === "left" ? "slide-all-left" : "slide-all-right"}
-      600s infinite linear; */
   }
   @media screen and (max-width: 480px) {
+    height: ${({ theme }) => theme.calcVW_M(50)};
     margin: ${({ theme }) => theme.calcVW_M(8)} 0;
   }
 
@@ -115,9 +146,8 @@ const StSlideCont = styled.div`
 `;
 
 const StHTCont = styled.span`
+  position: absolute;
   white-space: nowrap;
-  animation: ${(props) => (props.dir === "left" ? "slide-left" : "slide-right")}
-    10s infinite linear;
 
   @keyframes slide-left {
     0% {
