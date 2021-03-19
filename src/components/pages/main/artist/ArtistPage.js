@@ -16,11 +16,9 @@ const ArtistPage = ({ _idx, closePage }) => {
       case '7':
       case '8':
       case '9':
+      case '12':
       case '15':
         _return = [`${data.aka}.`, `${data.name}`];
-        break;
-      case '12':
-        _return = [`${data.name}`]
         break;
       default:
         _return = [`${data.aka}. ${data.name}`]
@@ -43,19 +41,19 @@ const ArtistPage = ({ _idx, closePage }) => {
       <StTitleCont>
         <img src="/assets/icons/left-wing.svg" alt="left-wing" />
         <div className="text artist title">
-          {renderName()[0]}
+          {window.innerWidth > 480 ? `${data.aka}. ${data.name}` : renderName()[0]}
         </div>
         <img src="/assets/icons/right-wing.svg" alt="right-wing" />
       </StTitleCont>
 
       {
-        renderName().length > 1 && 
+        window.innerWidth <= 480 && renderName().length > 1 && 
         <div className="text artist title">{renderName()[1]}</div>
       }
 
       <StPlayerWrap>
         <ReactPlayer
-          url={theme.popSlide && `${data.vid}`}
+          url={theme.popSlide ? `${data.vid}` : "none"}
           playing={theme.popSlide}
           controls={true}
           width={'100%'}
@@ -130,12 +128,14 @@ export default ArtistPage;
 
 const StPageWrap = styled.div`
   word-break: keep-all;
+  ${({theme}) => theme.flex('', 'center', 'column')};
   background: ${({ theme }) => `${theme.colors.blue}`};
-  ${({theme}) => theme.flex('center', 'center', 'column')};
+
   width: 100%;
+  min-height: 100%;
 
   @media screen and (min-width: 481px) {
-    padding-top: ${({theme}) => theme.calcVW(121.5)};
+    padding-top: ${({theme}) => theme.calcVW(60.75)};
     padding-bottom: ${({theme}) => theme.calcVW(214)};
   }
   @media screen and (max-width: 480px) {
@@ -226,8 +226,8 @@ const StBotCont = styled.div`
       margin-bottom: ${({theme}) => theme.calcVW(116)};
     }
     @media screen and (max-width: 480px) {
-      margin-top: ${({theme}) => theme.calcVW_M(78)};
-      margin-bottom: ${({theme}) => theme.calcVW_M(102)};
+      margin-top: ${({theme}) => theme.calcVW_M(100)};
+      margin-bottom: ${({theme}) => theme.calcVW_M(80)};
     }
   }
 `;
@@ -236,6 +236,7 @@ const StImgCont = styled.div`
   align-self: flex-start;
   display: flex;
   justify-content: space-between;
+  
   @media screen and (max-width: 480px) {
     width: 100%;
     flex-direction: column;
@@ -262,7 +263,8 @@ const StImgCont = styled.div`
       margin-right: ${({theme}) => theme.calcVW(73)};
     }
     @media screen and (max-width: 480px) {
-      width: 100%;
+      align-self: center;
+      width: ${({theme}) => theme.SW}px;
       height: ${props => props.dataIdx === '15' ? 
         props.theme.calcVW_M(500)
         :

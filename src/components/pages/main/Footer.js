@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { footerData } from '../../../data/data'
+import { footerData } from '../../../data/data';
 
 const Footer = () => {
   const openLink = (_url) => {
@@ -10,27 +10,24 @@ const Footer = () => {
     <StFootCont>
       <StImg src={footerData.logo} alt="footer-logo" />
 
-      <div className="text footer">
-        {footerData.host}
+      <StHostCont className="host-cont">
+        <div className="text footer">
+          {footerData.addr[0]}
+          <br />
+          {footerData.addr[1]}
+        </div>
         <br />
-        {footerData.supervise}
-        <br />
-        <br />
-        {footerData.addr}
-        <br />
-        {footerData.regist}
-        <br />
-        {footerData.owner}
-      </div>
+        <div className="logo-cont">
+          <img className="mcst-logo" src="/assets/logo/mcst-logo.png" alt=""/>
+          <img className="arte-logo" src="/assets/logo/arte-logo.png" alt=""/>
+        </div>
+      </StHostCont>
 
-      {window.innerWidth <= 480 && <><br/><br/></>}
-
-      <StLinkCont>
+      <StLinkCont className="link-cont">
         <div className="text footer">
           {footerData.email}
           <br />
           {footerData.phone}
-          <br />
           <br />
         </div>
         <table>
@@ -71,14 +68,22 @@ const Footer = () => {
             </tr>
           </tbody>
         </table>
-        {/* <br /> */}
       </StLinkCont>
-      
-      {window.innerWidth <= 480 && <><br/><br/><br/><br/></>}
 
-      <div className="text footer">
-        ⓒ 2020 AENDA Inc., All rights reserved.
-      </div>
+      <div></div>
+      
+      <StIncCont className="inc-cont">
+        <div className="text-cont">
+          <div className="text footer">
+            {footerData.inc}
+          </div>
+          <div className="text footer aenda">
+            {footerData.aenda}
+          </div>
+        </div>
+        <br/> 
+        <img src="/assets/logo/open-logo.png" alt=""/>
+      </StIncCont>
     </StFootCont>
   );
 };
@@ -88,42 +93,73 @@ export default Footer;
 const StFootCont = styled.section`
   background: white;
   ${({theme}) => theme.flex('space-between', 'flex-start', '')}
-  border-top: solid 2px ${({theme}) => theme.colors.blue};
 
   width: 100%;
+  border-top: solid 2px ${({theme}) => theme.colors.blue};
 
-  padding-top: ${({theme}) => theme.calcVW(75)};
-  padding-bottom: ${({theme}) => theme.calcVW(75)};
-
-  & > div {
-    margin-top: ${({theme}) => theme.calcVW(5)};
+  @media screen and (min-width: 481px) {
+    & > div {
+      height: ${({theme}) => theme.calcVW(128)};
+    }
+    padding-top: ${({theme}) => theme.calcVW(75)};
+    padding-bottom: ${({theme}) => theme.calcVW(75)};
   }
-
   @media screen and (max-width: 480px) {
     flex-direction: column;
     padding-top: ${({theme}) => theme.calcVW_M(50)};
-    padding-bottom: ${({theme}) => theme.calcVW_M(50)};
+    padding-bottom: ${({theme}) => theme.calcVW_M(71)};
   }
 `;
 
 const StImg = styled.img`
-  @media screen and (max-width: 480px) {
-    width: ${({theme}) => theme.calcVW(260)};
+  @media screen and (min-width: 481px) {
+    transform: translateY(${({theme}) => theme.calcVW(-10)});
+    width: ${({theme}) => theme.calcVW(280)};
   }
   @media screen and (max-width: 480px) {
     width: ${({theme}) => theme.calcVW_M(260)};
-    margin-bottom: ${({theme}) => theme.calcVW_M(40.16)};
+    margin-bottom: ${({theme}) => theme.calcVW_M(50)};
+  }
+`;
+
+const StHostCont = styled.div`
+  .logo-cont {
+    ${({theme}) => theme.flex('flex-start', 'center')};
+  }
+
+  @media screen and (min-width: 481px) {
+    ${({theme}) => theme.flex('space-between', 'flex-start', 'column')};
+    .mcst-logo {
+      width: ${({theme}) => theme.calcVW(165)};
+      margin-right: ${({theme}) => theme.calcVW(25.2)};
+    }
+    .arte-logo {
+      width: ${({theme}) => theme.calcVW(170)};
+    }
+  }
+  @media screen and (max-width: 480px) {
+    margin-bottom: ${({theme}) => theme.calcVW_M(50)};
+    ${({theme}) => theme.flex('space-between', 'flex-start', 'column')};
+    .mcst-logo {
+      width: ${({theme}) => theme.calcVW_M(165)};
+      margin-right: ${({theme}) => theme.calcVW_M(25.2)};
+    }
+    .arte-logo {
+      width: ${({theme}) => theme.calcVW_M(170)};
+    }
   }
 `;
 
 const StLinkCont = styled.div`
-  @media screen and (min-width: 960px){
-    margin-right: 12vw;
-  }
-
   table {
     border-collapse: collapse;
   }
+  ${({theme}) => theme.flex('space-between', 'flex-start', 'column')};
+  
+  @media screen and (max-width: 480px) {
+    margin-bottom: ${({theme}) => theme.calcVW_M(50)};
+  }
+  
   img {
     @media screen and (min-width: 481px) {
       height: ${({theme}) => theme.calcVW(18)};
@@ -134,4 +170,29 @@ const StLinkCont = styled.div`
       margin-right: ${({theme}) => theme.calcVW_M(10)};
     }
   }
+`;
+
+const StIncCont = styled.div`
+  ${({theme}) => theme.flex('space-between', '', 'column')};
+  .text-cont {
+    ${({theme}) => theme.flex('', '', 'column')};
+  }
+
+  @media screen and (min-width: 481px) {
+    &, .text-cont {
+      align-items: flex-end;
+    }
+    img {
+      width: ${({theme}) => theme.calcVW(107)};
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &, .text-cont {
+      align-items: flex-start;
+    }
+    img {
+      width: ${({theme}) => theme.calcVW_M(107)};
+    }
+  }
+  
 `;

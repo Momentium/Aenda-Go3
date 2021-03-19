@@ -4,39 +4,41 @@ import { headerData } from '../../data/data'
  
 const Header = () => {
   const { popState, closeMain, openMain } = useContext(ThemeContext);
-
   return (
     <StHeaderCont popState={popState}>
-        <StLogoBtnCont className="visible-cont" onClick={openMain}>
-          <img
-            src={headerData.logo}
-            alt="header-logo"
-          />
-        </StLogoBtnCont>
+      <StLogoBtnCont className="visible-cont" onClick={openMain}>
+        <img
+          src={headerData.logo}
+          alt="header-logo"
+        />
+        <div className="invisible-cont text header intro">
+          {headerData.subtitle}
+        </div>
+      </StLogoBtnCont>
 
-        <StTitleCont className="invisible-cont">
-          <div className="text header title blue">{headerData.blue}</div>
-          {
-            window.innerWidth > 480 ?
-            <div className="text header title white">{headerData.white}</div>
-            :
-            <>
-              <div className="text header title white mobile">{headerData.white_mobile[0]}</div>
-              <div className="text header title white">{headerData.white_mobile[1]}</div>
-            </>
-          }
-        </StTitleCont>
+      <StTitleCont className="invisible-cont">
+        <div className="text header title blue">{headerData.blue}</div>
+        {
+          window.innerWidth > 480 ?
+          <div className="text header title white">{headerData.white}</div>
+          :
+          <>
+            <div className="text header title white mobile">{headerData.white_mobile[0]}</div>
+            <div className="text header title white">{headerData.white_mobile[1]}</div>
+          </>
+        }
+      </StTitleCont>
 
-        <StYTBtnCont className="invisible-cont">
-          <img
-            className="youtube-icon"
-            src={headerData.ytIcon}
-            alt="youtube-icon"
-            onClick={closeMain}
-          />
-        </StYTBtnCont>
+      <StYTBtnCont className="invisible-cont">
+        <img
+          className="youtube-icon"
+          src={headerData.ytIcon}
+          alt="youtube-icon"
+          onClick={closeMain}
+        />
+      </StYTBtnCont>
 
-        <StSubTitleCont className="invisible-cont">
+      <StSubTitleCont className="invisible-cont">
           <div className="text header subtitle">
             {
               window.innerWidth > 480 ?
@@ -49,21 +51,26 @@ const Header = () => {
     </StHeaderCont>
   );
 };
-
 export default Header;
 
 const StHeaderCont = styled.div`
   position: relative;
+  height: 100%;
   @media screen and (min-width: 481px){
-    padding: ${({theme}) => theme.calcVW(87.34)} ${({theme}) => theme.calcVW(100)};
+    ${props => props.popState && css`
+      min-height: ${props.theme.SW * 0.5}px;
+    `}
+    padding: ${({theme}) => theme.calcVW(80)} ${({theme}) => theme.calcVW(100)};
+    padding-bottom: ${({theme}) => theme.calcVW(56)};
   }
   @media screen and (max-width: 480px){
-    padding:${({theme}) => theme.calcVW_M(49)} ${({theme}) => theme.calcVW_M(17)};
+    padding: ${({theme}) => theme.calcVW_M(49)} ${({theme}) => theme.calcVW_M(17)};
+    padding-bottom: ${({theme}) => theme.calcVW_M(32)};
   }
 
   ${({theme}) => theme.flex('space-between', '', 'column')};
 
-  height: 100%;
+
   transition: all 0.7s ease;
 
   .visible-cont {
@@ -112,21 +119,24 @@ const StHeaderCont = styled.div`
 
 const StLogoBtnCont = styled.div`
   img {
-    @media screen and (max-width: 481px) {
-      width: ${({theme}) => theme.calcVW(851)};
+    display: block;
+    
+    @media screen and (min-width: 481px) {
+      width: ${({theme}) => theme.calcVW(809.6)};
+      margin-bottom: ${({theme}) => theme.calcVW(8)};
     }
     @media screen and (max-width: 480px) {
       width: 100%;
+      margin-bottom: ${({theme}) => theme.calcVW_M(8)};
     }
   }
 `;
 
 const StYTBtnCont = styled.div`
   img {
-    /* transition: all 1s ease; */
     @media screen and (min-width: 481px) {
       cursor: pointer;
-      width: ${({theme}) => theme.calcVW(161.05)};
+      width: ${({theme}) => theme.calcVW(122)};
     }
     @media screen and (max-width: 480px) {
       width: ${({theme}) => theme.calcVW_M(106)};
@@ -136,7 +146,7 @@ const StYTBtnCont = styled.div`
 
 const StTitleCont = styled.div`
   .blue {
-    width: ${({theme}) => theme.calcVW(851)};
+    width: ${({theme}) => theme.calcVW(809.6)};
     background-color: ${({theme}) => theme.colors.blue};
     color: white;
   }

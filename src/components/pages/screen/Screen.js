@@ -14,7 +14,7 @@ const Screen = ({ SW, popState }) => {
   }
   
   return (
-    <StScreenCont>
+    <StScreenCont popState={popState}>
       {
         curPage !== 0 && 
         <Zoom in={true} timeout={250}>
@@ -34,13 +34,13 @@ const Screen = ({ SW, popState }) => {
 
       <StPlayerCont curPage={curPage}>
         <Player
-          vidUrl={"https://www.youtube.com/embed/Kjb_AbqY41M"}
+          vidUrl={"https://vimeo.com/522681673"}
           SW={SW}
           popState={popState}
           pageState={curPage === 0}
         />
         <Player
-          vidUrl={"https://www.youtube.com/embed/Lw_amG3yXXA"}
+          vidUrl={"https://vimeo.com/522681673"}
           SW={SW}
           popState={popState}
           pageState={curPage === 1}
@@ -55,11 +55,14 @@ export default Screen;
 const StScreenCont = styled.div`
   overflow: hidden;
   position: relative;
-  
+ 
   width: 100%;
   height: 100%;
   /* width: ${({ theme }) => `${theme.SW}px`};
   height: ${({ theme }) => `${theme.SH}px`}; */
+
+  transition: opacity 0.3s linear;
+  opacity: ${props => props.popState ? 0 : 1 };
 `;
 
 const StPlayerCont = styled.div`

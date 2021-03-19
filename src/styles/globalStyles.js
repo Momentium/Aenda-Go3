@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   div.text {
+    transition: all 0.1s linear;
     display: flex;
     align-items: center;
 
@@ -51,14 +52,27 @@ const GlobalStyle = createGlobalStyle`
     white-space: pre-line;
 
     &.header {
+      &.intro {
+        font-weight: 900;
+        text-align: center;
+        color: ${theme.colors.blue};
+        white-space: nowrap;
+
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(37.8)};
+        }
+        @media screen and (max-width: 480px) {
+          font-size: ${theme.calcVW_M(20.9)};
+        }
+      }
+
       &.title {
         font-weight: 900;
         transition: all 1s ease;
         @media screen and (min-width: 481px) {
           height: ${theme.calcVW(160)};
-          font-size: ${theme.calcVW(120)};
+          font-size: ${theme.calcVW(113)};
           padding: 0 ${theme.calcVW(36)} ${theme.calcVW(12)} ${theme.calcVW(8)};
-          /* transform: translateX(-8px); */
         }
         @media screen and (max-width: 480px) {
           height: ${theme.calcVW_M(87)};
@@ -72,7 +86,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(50)};
-          line-height: 1.6;
+          line-height: 1.3;
         }
         @media screen and (max-width: 480px) {
           font-size: ${theme.calcVW_M(28)};
@@ -168,14 +182,15 @@ const GlobalStyle = createGlobalStyle`
       &.kit-title {
         font-family: "TTSoopilmyungjoR040";
         color: #fb5640;
-        line-height: 1;
         @media screen and (min-width: 481px) {
           font-size: ${theme.calcVW(50)};
+          line-height: 1;
           letter-spacing: -0.83px;
         }
         @media screen and (max-width: 480px) {
-          font-size: ${theme.calcVW_M(40)};
-          letter-spacing: -0.66px;
+          font-size: ${theme.calcVW_M(28)};
+          line-height: 1.43;
+          letter-spacing: -0.46px;
         }
       }
       
@@ -386,20 +401,16 @@ const GlobalStyle = createGlobalStyle`
           cursor: pointer;
         }
       }
-    }
-  }
-  
-  span.hash-tag {
-    font-weight: 500;
-    @media screen and (min-width: 481px) {
-      font-size: ${theme.calcVW(40)};
-      line-height: 1.25;
-      letter-spacing: -0.66px;
-    }
-    @media screen and (max-width: 480px) {
-      font-size: ${theme.calcVW_M(30)};
-      line-height: 1.67;
-      letter-spacing: -0.5px;
+      &.aenda {
+        color: #999999;
+        line-height: 2;
+        @media screen and (min-width: 481px) {
+          font-size: ${theme.calcVW(16)};
+        }
+        @media screen and (max-width: 480px) {
+          font-size: ${theme.calcVW_M(16)};
+        }
+      }
     }
   }
 

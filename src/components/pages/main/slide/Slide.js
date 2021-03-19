@@ -5,43 +5,7 @@ import { hashTagData } from "../../../../data/data";
 
 const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   const contRef = useRef(undefined);
-  useEffect(() => {
-    if (dataIdx === pauseIdx) {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "paused";
-      _div.style.webkitAnimationPlayState = "paused";
-      _div.childNodes.forEach((el) => {
-        el.style.animationPlayState = "paused";
-        el.style.webkitAnimationPlayState = "paused";
-      });
-    } else {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "running";
-      _div.style.webkitAnimationPlayState = "running";
-      _div.childNodes.forEach((el) => {
-        el.style.animationPlayState = "running";
-        el.style.webkitAnimationPlayState = "running";
-      });
-    }
-  }, [pauseIdx, dataIdx]);
-
-  const slowSlide = () => {
-    if (dataIdx === pauseIdx) return;
-    if (window.innerWidth > 480) {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "paused";
-      _div.style.webkitAnimationPlayState = "paused";
-    }
-  };
-  const runSlide = () => {
-    if (dataIdx === pauseIdx) return;
-    if (window.innerWidth > 480) {
-      const _div = contRef.current;
-      _div.style.animationPlayState = "running";
-      _div.style.webkitAnimationPlayState = "running";
-    }
-  };
-
+  const stateRef = useRef('run');
   const hashTagList = hashTagData[dataIdx].map((el, idx) => {
     return (
       <Hashtag
@@ -54,6 +18,95 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
       />
     );
   });
+  
+  useEffect(() => {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+    const _div = contRef.current;
+
+    let raf;
+    const _1st = _div.childNodes[0];
+    const _2nd = _div.childNodes[1];
+    
+    const run = () => {
+      if(!window.getComputedStyle(_1st).transform) return;
+
+      let _px = 1;
+      if(stateRef.current === 'run') {
+        if(window.innerWidth > 480) {
+          _px = 3;
+        }
+        else {
+          _px = 1;
+        }
+      }
+      else if(stateRef.current === 'slow') {
+        _px = 1;
+      }
+      else if(stateRef.current === 'stop') {
+        _px = 0;
+      }
+
+      let _1stX = window.getComputedStyle(_1st).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
+      let _2ndX = window.getComputedStyle(_2nd).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
+
+      const _1stXX = Number(_1stX);
+      const _2ndXX = Number(_2ndX);
+      if(dir === 'left') {
+        if(_1stXX <= -1 * _1st.offsetWidth) {
+          _1st.style.transform = `translateX(${-1 * _px}px)`;
+          _2nd.style.transform = `translateX(${-1 * _px}px)`;
+        }
+        else {
+          _1st.style.transform = `translateX(${_1stXX - _px}px)`;
+          _2nd.style.transform = `translateX(${_2ndXX - _px}px)`;
+        }
+      }
+      else {
+        if(_1stXX >= _1st.offsetWidth) {
+          _2nd.style.transform = `translateX(${_px}px)`;
+          _1st.style.transform = `translateX(${_px}px)`;
+        }
+        else {
+          _2nd.style.transform = `translateX(${_2ndXX + _px}px)`;
+          _1st.style.transform = `translateX(${_1stXX + _px}px)`;
+        }
+      }
+      raf = requestAnimationFrame(run);
+    }
+    setTimeout(() => { 
+      run();
+    }, 1000);
+
+    return () => {
+      cancelAnimationFrame(raf);
+    };
+  }, [dir]);
+
+  useEffect(() => {
+    if (dataIdx === pauseIdx) {
+      stateRef.current = 'stop';
+    } else {
+      stateRef.current = 'run';  
+    }
+  }, [pauseIdx, dataIdx]);
+
+  const slowSlide = () => {
+    if (dataIdx === pauseIdx) return;
+    if (window.innerWidth <= 480) {
+      stateRef.current = 'run';
+    }
+    else {
+      stateRef.current = 'slow';
+    }
+  };
+  const runSlide = () => {
+    if (dataIdx === pauseIdx) return;
+    stateRef.current = 'run';
+  };
+  
 
   return (
     <StSlideCont
@@ -64,20 +117,8 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     >
       <StHTCont dir={dir}>
         {hashTagList}
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
       </StHTCont>
       <StHTCont dir={dir}>
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
-      </StHTCont>
-      <StHTCont dir={dir}>
-        {hashTagList}
-        {hashTagList}
-        {hashTagList}
         {hashTagList}
       </StHTCont>
     </StSlideCont>
@@ -86,60 +127,25 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
 export default Slide;
 
 const StSlideCont = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
-  justify-content: ${(props) =>
-    props.dir === "left" ? "flex-start" : "flex-end"};
+  justify-content: ${(props) => props.dir === "left" ? "flex-start" : "flex-end"};
   background: ${({ theme }) => theme.colors.blue};
 
   @media screen and (min-width: 481px) {
+    /* height: ${({ theme }) => theme.calcVW(50)}; */
     margin: ${({ theme }) => theme.calcVW(18)} 0;
-    animation: ${(props) =>
-        props.dir === "left" ? "slide-all-left" : "slide-all-right"}
-      600s infinite linear;
   }
   @media screen and (max-width: 480px) {
+    /* height: ${({ theme }) => theme.calcVW_M(50)}; */
     margin: ${({ theme }) => theme.calcVW_M(8)} 0;
   }
 
-  @keyframes slide-all-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-3000%);
-    }
-  }
-
-  @keyframes slide-all-right {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(3000%);
-    }
-  }
 `;
 
 const StHTCont = styled.span`
+  /* position: absolute; */
   white-space: nowrap;
-  animation: ${(props) => (props.dir === "left" ? "slide-left" : "slide-right")}
-    60s infinite linear;
-
-  @keyframes slide-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  @keyframes slide-right {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(50%);
-    }
-  }
+  transform: translateX(0px);
 `;
