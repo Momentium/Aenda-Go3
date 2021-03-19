@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useRef } from "react";
-import styled, { ThemeContext } from "styled-components";
+import React, { useEffect, useRef } from "react";
+import styled from "styled-components";
 import Hashtag from "./Hashtag";
 import { hashTagData } from "../../../../data/data";
 
@@ -24,24 +24,22 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     const run = () => {
       let _px;
       if(stateRef.current === 'run') {
-          if(window.innerWidth > 480) {
-            _px = 3;
-          }
-          else {
-            _px = 1;
-          }
+        if(window.innerWidth > 480) {
+          _px = 3;
         }
-        else if(stateRef.current === 'slow') {
+        else {
           _px = 1;
         }
-        else if(stateRef.current === 'stop') {
-          _px = 0;
-        }
+      }
+      else if(stateRef.current === 'slow') {
+        _px = 1;
+      }
+      else if(stateRef.current === 'stop') {
+        _px = 0;
+      }
 
       let _1stX = window.getComputedStyle(_1st).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
       let _2ndX = window.getComputedStyle(_2nd).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
-
-      console.log(window.getComputedStyle(_1st).transform)
 
       const _1stXX = Number(_1stX);
       const _2ndXX = Number(_2ndX);
