@@ -55,7 +55,9 @@ export default Header;
 
 const StHeaderCont = styled.div`
   position: relative;
+  height: 100%;
   @media screen and (min-width: 481px){
+    min-height: ${({theme}) => theme.SW * 0.5}px;
     padding: ${({theme}) => theme.calcVW(80)} ${({theme}) => theme.calcVW(100)};
     padding-bottom: ${({theme}) => theme.calcVW(56)};
   }
@@ -66,7 +68,7 @@ const StHeaderCont = styled.div`
 
   ${({theme}) => theme.flex('space-between', '', 'column')};
 
-  height: 100%;
+
   transition: all 0.7s ease;
 
   .visible-cont {
@@ -114,10 +116,6 @@ const StHeaderCont = styled.div`
 `;
 
 const StLogoBtnCont = styled.div`
-  @media screen and (max-width: 480px) {
-
-  }
-
   img {
     display: block;
     

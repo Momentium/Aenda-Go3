@@ -3,10 +3,21 @@ import styled from "styled-components";
 import Hashtag from "./Hashtag";
 import { hashTagData } from "../../../../data/data";
 
-
 const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   const contRef = useRef(undefined);
   const stateRef = useRef('run');
+  const hashTagList = hashTagData[dataIdx].map((el, idx) => {
+    return (
+      <Hashtag
+        key={idx}
+        dataIdx={dataIdx}
+        setPauseIdx={setPauseIdx}
+        pauseIdx={pauseIdx}
+        idx={idx}
+        tag={el}
+      />
+    );
+  });
   
   useEffect(() => {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
@@ -18,11 +29,9 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     let raf;
     const _1st = _div.childNodes[0];
     const _2nd = _div.childNodes[1];
-    // _1st.style[dir] = `${0}px`;
-    // _2nd.style[dir] = `${_1st.offsetWidth}px`;
 
     const run = () => {
-      let _px;
+      let _px = 1;
       if(stateRef.current === 'run') {
         if(window.innerWidth > 480) {
           _px = 3;
@@ -78,33 +87,23 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     if (dataIdx === pauseIdx) {
       stateRef.current = 'stop';
     } else {
-      stateRef.current = 'run';
+      stateRef.current = 'run';  
     }
   }, [pauseIdx, dataIdx]);
 
   const slowSlide = () => {
     if (dataIdx === pauseIdx) return;
-    if (window.innerWidth <= 480) return;
-    stateRef.current = 'slow';
+    if (window.innerWidth <= 480) {
+      stateRef.current = 'run';
+    }
+    else {
+      stateRef.current = 'slow';
+    }
   };
   const runSlide = () => {
     if (dataIdx === pauseIdx) return;
-    if (window.innerWidth <= 480) return;
     stateRef.current = 'run';
   };
-
-  const hashTagList = hashTagData[dataIdx].map((el, idx) => {
-    return (
-      <Hashtag
-        key={idx}
-        dataIdx={dataIdx}
-        setPauseIdx={setPauseIdx}
-        pauseIdx={pauseIdx}
-        idx={idx}
-        tag={el}
-      />
-    );
-  });
 
   return (
     <StSlideCont
@@ -132,11 +131,11 @@ const StSlideCont = styled.div`
   background: ${({ theme }) => theme.colors.blue};
 
   @media screen and (min-width: 481px) {
-    height: ${({ theme }) => theme.calcVW(50)};
+    /* height: ${({ theme }) => theme.calcVW(50)}; */
     margin: ${({ theme }) => theme.calcVW(18)} 0;
   }
   @media screen and (max-width: 480px) {
-    height: ${({ theme }) => theme.calcVW_M(50)};
+    /* height: ${({ theme }) => theme.calcVW_M(50)}; */
     margin: ${({ theme }) => theme.calcVW_M(8)} 0;
   }
 

@@ -45,7 +45,6 @@ const StMainCont = styled.div`
       @media screen and (min-width: 481px){
         width: ${theme.SW - 20}px;
         height: ${theme.SH - 20}px;
-        
       }
       @media screen and (max-width: 480px){
         width: ${theme.SW - 10}px;
