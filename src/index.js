@@ -7,10 +7,10 @@ import GlobalStyle from "./styles/globalStyles";
 
 ReactDOM.render(
   <StylesProvider injectFirst>
-    <React.StrictMode>
+    {/* <React.StrictMode> */}
       <GlobalStyle />
       <App />
-    </React.StrictMode>
+    {/* </React.StrictMode> */}
   </StylesProvider>,
   document.getElementById("root")
 );
