@@ -31,7 +31,7 @@ const App = () => {
       },
       false
     );
-
+    
     setSW(window.innerWidth);
     setSH(window.innerHeight);
     window.addEventListener("resize", handleSize);

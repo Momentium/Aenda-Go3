@@ -18,37 +18,52 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     let raf;
     const _1st = _div.childNodes[0];
     const _2nd = _div.childNodes[1];
-    _1st.style[dir] = `0px`;
-    _2nd.style[dir] = `${_2nd.clientWidth}px`;
+    // _1st.style[dir] = `${0}px`;
+    // _2nd.style[dir] = `${_1st.offsetWidth}px`;
 
     const run = () => {
-      let _1stX = Number(_1st.style[dir].replace('px', ''));
-      let _2ndX = Number(_2nd.style[dir].replace('px', ''));
-
       let _px;
-
       if(stateRef.current === 'run') {
-        if(window.innerWidth > 480) {
-          _px = 2;
+          if(window.innerWidth > 480) {
+            _px = 3;
+          }
+          else {
+            _px = 1;
+          }
         }
-        else {
+        else if(stateRef.current === 'slow') {
           _px = 1;
         }
-      }
-      else if(stateRef.current === 'slow') {
-        _px = 1;
-      }
-      else if(stateRef.current === 'stop') {
-        _px = 0;
-      }
-  
-      if(_1stX <= -1 * _1st.clientWidth) {
-        _1st.style[dir] = `${-1 * _px}px`;
-        _2nd.style[dir] = `${_2nd.clientWidth - _px}px`;
+        else if(stateRef.current === 'stop') {
+          _px = 0;
+        }
+
+      let _1stX = window.getComputedStyle(_1st).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
+      let _2ndX = window.getComputedStyle(_2nd).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
+
+      console.log(window.getComputedStyle(_1st).transform)
+
+      const _1stXX = Number(_1stX);
+      const _2ndXX = Number(_2ndX);
+      if(dir === 'left') {
+        if(_1stXX <= -1 * _1st.offsetWidth) {
+          _1st.style.transform = `translateX(${-1 * _px}px)`;
+          _2nd.style.transform = `translateX(${-1 * _px}px)`;
+        }
+        else {
+          _1st.style.transform = `translateX(${_1stXX - _px}px)`;
+          _2nd.style.transform = `translateX(${_2ndXX - _px}px)`;
+        }
       }
       else {
-        _1st.style[dir] = `${_1stX - _px}px`;
-        _2nd.style[dir] = `${_2ndX - _px}px`;
+        if(_1stXX >= _1st.offsetWidth) {
+          _2nd.style.transform = `translateX(${_px}px)`;
+          _1st.style.transform = `translateX(${_px}px)`;
+        }
+        else {
+          _2nd.style.transform = `translateX(${_2ndXX + _px}px)`;
+          _1st.style.transform = `translateX(${_1stXX + _px}px)`;
+        }
       }
       raf = requestAnimationFrame(run);
     }
@@ -59,7 +74,7 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     return () => {
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [dir]);
 
   useEffect(() => {
     if (dataIdx === pauseIdx) {
@@ -130,6 +145,7 @@ const StSlideCont = styled.div`
 `;
 
 const StHTCont = styled.span`
-  position: absolute;
+  /* position: absolute; */
   white-space: nowrap;
+  transform: translateX(0px);
 `;
