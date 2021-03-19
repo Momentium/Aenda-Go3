@@ -57,7 +57,9 @@ const StHeaderCont = styled.div`
   position: relative;
   height: 100%;
   @media screen and (min-width: 481px){
-    min-height: ${({theme}) => theme.SW * 0.5}px;
+    ${props => props.popState && css`
+      min-height: ${props.theme.SW * 0.5}px;
+    `}
     padding: ${({theme}) => theme.calcVW(80)} ${({theme}) => theme.calcVW(100)};
     padding-bottom: ${({theme}) => theme.calcVW(56)};
   }

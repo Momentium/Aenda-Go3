@@ -29,8 +29,10 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     let raf;
     const _1st = _div.childNodes[0];
     const _2nd = _div.childNodes[1];
-
+    
     const run = () => {
+      if(!window.getComputedStyle(_1st).transform) return;
+
       let _px = 1;
       if(stateRef.current === 'run') {
         if(window.innerWidth > 480) {
@@ -104,6 +106,7 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
     if (dataIdx === pauseIdx) return;
     stateRef.current = 'run';
   };
+  
 
   return (
     <StSlideCont
