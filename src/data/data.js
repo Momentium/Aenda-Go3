@@ -1528,9 +1528,9 @@ export const galleryData = {
       'imgUrl': '/assets/images/gallery/내자랑노래05.jpg'
     },
     {
-      'instaID': 'zmnhaeae',
-      'instaLink': 'https://www.instagram.com/p/CJ3mFxLFNwr/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/136430382_234245261680896_5491118610817263187_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=1xps7EeuLbsAX_EfEeY&tp=1&oh=06625381ce4d10fe1289c4a3bc404f15&oe=60579B4B'
+      'instaID': 'gimjinsu7172',
+      'instaLink': 'https://www.instagram.com/p/CMt0Rn6F6_P/',
+      'imgUrl': '/assets/images/gallery/내자랑노래06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -1801,9 +1801,9 @@ export const galleryData = {
       'imgUrl': '/assets/images/gallery/어른이된다는것은무엇일까03.jpg'
     },
     {	
-      'instaID': 'minji1318',
-      'instaLink': 'https://www.instagram.com/p/CJ3Hg8SjPnR/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136778360_203481124802559_4915517946570367802_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=T8i05P-oz0YAX8tfWVr&tp=1&oh=d6650706e26bc2d500e64a9c8da7ba00&oe=60583C16'
+      'instaID': 'gimjinsu7172',
+      'instaLink': 'https://www.instagram.com/p/CMt0cOuFS7G/',
+      'imgUrl': '/assets/images/gallery/어른이된다는것은무엇일까04.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
@@ -2074,8 +2074,8 @@ export const galleryData = {
       'imgUrl': '/assets/images/gallery/예비슮삶만화06.jpg'
     },
     {
-      'instaID': 'gimsujin_',
-      'instaLink': 'https://www.instagram.com/p/CJ3KUVGhf3R/',
+      'instaID': 'gimjinsu7172',
+      'instaLink': 'https://www.instagram.com/p/CMt0W6llnYZ/',
       'imgUrl': '/assets/images/gallery/예비슮삶만화07.jpg'
     },
     {
