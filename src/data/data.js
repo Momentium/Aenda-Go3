@@ -1351,12 +1351,12 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBgv4MlOoT/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/146915431_435763891069168_2165169213089913144_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=_zqFM1pW-M8AX_HrC5N&tp=1&oh=f86faaa3b79300168b7d0f275e5978b4&oe=6056F01D'
+      'imgUrl': '/assets/images/gallery/엉뚱한행복07.jpg'
 		},
 		{	
 			'instaID': 'fluffanddust',
 			'instaLink': 'https://www.instagram.com/p/CJlifcvBgRX/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/135501459_1122260268204323_4391064212853915796_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=7hVj1LDlWJYAX9Uhoqz&tp=1&oh=46d7eec6ed54ca72b38d5758fb6c9a3c&oe=6057308A'
+      'imgUrl': '/assets/images/gallery/나는무엇때문에흔들렸나03.jpg'
 		},
 		{	
 			'instaID': 'im_mangae_1',
@@ -1366,17 +1366,17 @@ export const galleryData = {
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBVv2glIIx/?igshid=1hbln1s1l2o0w/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146701888_156160986189944_5791409225039229854_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=lPmIniv0KTcAX8Bv3pI&tp=1&oh=a36d45f5978afcec8355029e1f982f7d&oe=60581DE7'
+      'imgUrl': '/assets/images/gallery/꿈의명함06.jpg'
 		},
 		{	
-			'instaID': 'to_j_from_j',
+			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBM-zQFf43/?igshid=1tvbvu45f4kw9/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146726261_788325991775907_6478688296487195673_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=kV9LyNwYAJIAX-nvAc6&tp=1&oh=59552ac7fa2c153498c1dfabbd9d70ef&oe=605624F6'
+      'imgUrl': '/assets/images/gallery/한문장으로시작하는책03.jpg'
 		},
 		{	
 			'instaID': 'ariadnmia',
 			'instaLink': 'https://www.instagram.com/p/CJ0jPmphXCn/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136393487_708771103133423_6091009443147730890_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=3Lz0GoUo0oQAX_8-8MI&tp=1&oh=4df64e60400c12cc314c63951cea8c8f&oe=6058B1B7'
+      'imgUrl': '/assets/images/gallery/어른이된다는것은무엇일까08.jpg'
 		},
 		{	
 			'instaID': 'syeon_.e',
@@ -1386,7 +1386,7 @@ export const galleryData = {
 		{	
 			'instaID': '2ee_dayun',
 			'instaLink': 'https://www.instagram.com/p/CJk7XSShF8A/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/134573947_437711780738673_855748040452084142_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=skSPS1LjSuMAX8B94HL&tp=1&oh=e630c9873a74c3dbb9e030237cc3fb77&oe=60584F85'
+      'imgUrl': '/assets/images/gallery/나는무엇때문에흔들렸나08.jpg'
 		},
 		{	
 			'instaID': 'im_mangae_1',
@@ -1396,7 +1396,7 @@ export const galleryData = {
 		{	
 			'instaID': 'kbk.art.xx',
 			'instaLink': 'https://www.instagram.com/p/CKky_69gP-I/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/143689281_476842033517492_2886974361927532684_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=n_4w7p42ivoAX8RJHPQ&tp=1&oh=281029d3448bf22e4d2ad12b7640befd&oe=60583155'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화08.jpg'
 		},
 		{	
 			'instaID': 'im_mangae_1',
@@ -1411,12 +1411,12 @@ export const galleryData = {
 		{	
 			'instaID': '20som_20',
 			'instaLink': 'https://www.instagram.com/p/CJ3WklYDSzd/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/136533071_143171157480037_5675309962363286925_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=FMhu-KsOFecAX-U_EYH&tp=1&oh=1afaca7b797958f0fa3bc7b362cc244e&oe=6058C192'
+      'imgUrl': '/assets/images/gallery/어른이된다는것은무엇일까09.jpg'
 		},
 		{	
 			'instaID': 'im_mangae_1',
 			'instaLink': 'https://www.instagram.com/p/CLBVrOGFT7P/?igshid=ntyh4td0sz72/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146925104_1857376654425404_8756688746141792647_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=lgd3ZNBjlGcAX-LvrqM&tp=1&oh=9630fa7bbb3f2f77e1d322f8c0af5e71&oe=6057F124'
+      'imgUrl': '/assets/images/gallery/꿈의명함05.jpg'
 		},
 		{	
 			'instaID': 'wlgn_76616',
@@ -1994,32 +1994,32 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBP4B7lcdU/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/148266181_1049867978856810_41800416528072899_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=WbFiYOwsCdoAX_K-Z5B&tp=1&oh=0d6641b797d1eddd4bc3f496d989922c&oe=6057E7D1'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘01.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBP6dZlIeH/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/146726258_497246981260428_6942244378866319963_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=2Sw-EE3A7eQAX_lqjh2&tp=1&oh=1cfc1de52dbeb40001f9e29d12913f4e&oe=60572EA6'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘02.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBP8LXFCGt/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147453376_420257522371950_8376893839738098570_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=fVXo6WwlR6wAX_EyL9p&tp=1&oh=945fa7dccf5bc00a59065b34b81f4652&oe=60571DAE'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘03.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBP_KQFySj/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147612012_246817000348680_5575419058378592143_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=RYbRJAjnSXoAX-04yn5&tp=1&oh=839388e5eedf210b6b086e1d25e1373f&oe=60586A33'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘04.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQB3elN6Q/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147090281_473197554069725_2221134311134031002_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=1dDVQZCv9vAAX-OksTZ&tp=1&oh=61e19c5fcc9b3b82769a91a15b0194a1&oe=60585A64'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘05.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQEogllLU/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/148266181_428582801920530_1851722331147377933_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=UoSaa7K_v08AX8uh0F3&tp=1&oh=76ad2076d9e4dae2fff56415c2e324ec&oe=6057FFE4'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -2029,69 +2029,69 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQJO1lmRy/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/147468613_443360243646055_1871979309240724512_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=gvDH_AtRJegAX_LS0qY&tp=1&oh=32620b91ed4b9c31db2ae2bccefcf660&oe=60593F87'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘08.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQLYnFsKz/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/146721368_232904235148876_7166425400194881027_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=kIAvtMMHvGIAX-v0xwW&tp=1&oh=a74b38eb8ea631d4e07b013434c8f6d9&oe=60591F77'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘09.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQNBsFz5h/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146752713_331483854831028_7071192453019714537_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=x5vBvI7xJwUAX-ahd5p&tp=1&oh=ec44d19b4572eadd40bd312ad6b22325&oe=6058EC32'
+      'imgUrl': '/assets/images/gallery/열아홉나의오늘10.jpg'
     }
   ],
   '예비슮삶만화': [
     {
       'instaID': 'gimjinsu7172',
       'instaLink': 'https://www.instagram.com/p/CJKgVoJBFjI/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/132333563_803714546851329_1080171392101267897_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=uzpNDddZLj0AX9jma-F&tp=1&oh=e2eb6ecfc93bd021dcf7a18986b08143&oe=6057758A'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화01.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTDtilMyo/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146963074_878323406286661_4299932068656834005_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=jKtE_sYcI3QAX_JdJ2z&tp=1&oh=c8a430c4323bf09c738e3a4cd9c0d13d&oe=6056C706'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화02.jpg'
     },
     {
       'instaID': 'somin1332',
       'instaLink': 'https://www.instagram.com/p/CJ6rUSSH8ia/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/136972426_839407213289423_2968032055936539244_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=Edr4ck_ZcwkAX-m196_&tp=1&oh=28a0cdda4d0c2bbe08a9ca643f4ef2e6&oe=605804F7'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화03.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTIDGlxOV/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/147954998_729493661292867_7976767497366204399_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=sQc1rjreFX8AX-OXkUa&tp=1&oh=636f90e75449bd3e684143bbed2b0415&oe=6058E87C'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화04.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTLjJlHGp/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/146788407_118623860173052_700451017255056375_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=ng4V8-HJb4kAX9wfZ1e&tp=1&oh=c7989ce7170726eaebd0abad1dcabc90&oe=605922C0'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화05.jpg'
     },
     {
       'instaID': 'entertainer0807',
       'instaLink': 'https://www.instagram.com/p/CJif-LCDDJF/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/134726097_249470343209235_214142849045838724_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=Dr47s85Rj3AAX9OROu2&tp=1&oh=071df7d9437092dee580b5016dfb2c8f&oe=60595A57'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화06.jpg'
     },
     {
       'instaID': 'gimsujin_',
       'instaLink': 'https://www.instagram.com/p/CJ3KUVGhf3R/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/136683737_867837457374779_5537211527022599719_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=YObsB_0uiBkAX-PY8sm&tp=1&oh=24e74e728bff29816a97aba8f7945840&oe=6057FFD6'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화07.jpg'
     },
     {
       'instaID': 'kbk.art.xx',
       'instaLink': 'https://www.instagram.com/p/CKky_69gP-I/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/143689281_476842033517492_2886974361927532684_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=n_4w7p42ivoAX8RJHPQ&tp=1&oh=281029d3448bf22e4d2ad12b7640befd&oe=60583155'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화08.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTPk0FuNI/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/148089493_701719697180564_8548808933440761496_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=6MKORxLA5E8AX_X14St&tp=1&oh=d7fe17e918052f56262724e1a0cf5776&oe=60563E6A'
+      'imgUrl': '/assets/images/gallery/예비슮삶만화09.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQbLpFy_R/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147303532_1801129576721721_2700174198549309679_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=RRsQADYlT9kAX_DlmXd&tp=1&oh=ce77886c0d050933483629f773266cb0&oe=6057BC7A'
+      'imgUrl': '/assets/images/gallery/한문장으로시작하는책10.jpg'
     },
   ],
   '기억에남는소리': [
@@ -2103,188 +2103,188 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBR6_SFAU7/?igshid=1515uls88pml8/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147867356_483657109289093_3189074423305181130_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=fWjetssBwsIAX__puy7&tp=1&oh=5803e5c312bc60610fa11f4f51afe9d3&oe=6057551D'
+      'imgUrl': '/assets/images/gallery/기억에남는소리02.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBSAWiFrGu/?igshid=cclbrwpcrz3o/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147365507_176173580580868_5254297967773714375_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=d7uoqv-rdj4AX8-5gLi&tp=1&oh=15444cfa33ba0a9b570f3364407af250&oe=6055EB4E'
+      'imgUrl': '/assets/images/gallery/기억에남는소리03.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBSZPFFoBg/?igshid=e844v2uyystz/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147677253_227268429066855_8261536014057675050_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=VASmmJ2Wp7wAX9yeHF_&tp=1&oh=c0a9b7d8d91317f53f08a454da0bcd69&oe=6057CB4A'
+      'imgUrl': '/assets/images/gallery/기억에남는소리04.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBSeRml0Zm/?igshid=1bfzwa4mvrve0/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146915428_464410914930795_2185810677853053861_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=ghXv5Wgo6KIAX_4DSH0&tp=1&oh=80f0b7b90657122eb42ada1925d60f17&oe=605854C5'
+      'imgUrl': '/assets/images/gallery/기억에남는소리05.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBSlFxF64o/?igshid=xz0qqmy3619w/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146717920_1015013039026896_5598621084610414600_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=BP7LDHhzlzIAX_1LvOG&tp=1&oh=476e0abb9f2fdf97a47fd0047499cba2&oe=6059643B'
+      'imgUrl': '/assets/images/gallery/기억에남는소리06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTPVPFnti/?igshid=h2frl5tuog1q/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147438331_874386873401038_8437658695891439724_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=wUhhtYfLWJkAX8neqYB&tp=1&oh=36d2cf4ce985da6ae03dc4bbe676ad0a&oe=60570DE9'
+      'imgUrl': '/assets/images/gallery/기억에남는소리07.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTbp0l55O/?igshid=1v3rbrqii4hv7/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146786609_129908058923015_3089338937785988207_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=Cj85dVRaFe4AX-juAl8&oh=38ce8c12a68080e68aa4847f0222d4d3&oe=6066D658'
+      'imgUrl': '/assets/images/gallery/기억에남는소리08.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTiebFklZ/?igshid=1pz9t8qtkae12/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147829535_707074306623476_1775731390619737918_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=xZhIUqFVMf8AX-ghR0D&tp=1&oh=83503ce56e8bf6a9e9bf40bc983e9c3f&oe=60587683'
+      'imgUrl': '/assets/images/gallery/기억에남는소리09.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBTuqaF2v0/?igshid=1miy9nqmjglid/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146407612_238103637962155_7154389053576641446_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=FKKVESJ-0ccAX_9X1tJ&tp=1&oh=782ba989e207d716a22fc5ab612b30c8&oe=60585382'
+      'imgUrl': '/assets/images/gallery/기억에남는소리10.jpg'
     }
   ],
   '휘슬과여행하기': [
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBUyboh0YA/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147374748_3778374148898559_6075989963342121248_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=iOVSVaV4DVcAX8V8XNp&tp=1&oh=c7b0d08eba79cfab6d56458f79f0663f&oe=605836ED'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기01.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBU1nFhi19/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147048058_4037384092973011_4064558506677705681_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=rGYMSJkSnDQAX_Q704V&tp=1&oh=c04500e4dfaeb5868df0931635fa7695&oe=6058FEE4'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기02.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBU4BphIZr/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146740513_754504092161020_1757449162286251117_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=fcDt9iEwuOMAX-1mKEv&tp=1&oh=5ec33f0d3427351751feb970c800a3dd&oe=6056EA4F'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기03.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBU6vNBWQJ/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146863735_136222978353248_602286807777046073_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=4B721kS3bkMAX-G5Y0m&tp=1&oh=1b9183b65f18e0149cf61f6e5d1d3e41&oe=605658A6'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기04.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBU-JihQ_o/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147879760_181152446674353_2385331395616300423_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=8XPMltEj3PMAX-bCaPX&tp=1&oh=3a60c9a51e9e6df902996836a6a44b24&oe=60563DE4'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기05.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVMXgBMxA/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146862340_916697662490940_1773087563771595426_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=O-31o83BeOQAX8pgpHP&tp=1&oh=7e933c41844aa1f3b8bc5cd8cb604747&oe=6055F26F'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVQdahvjx/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146737702_167071274975682_902842830159875127_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=2wZO3EqggmEAX-cqPzU&tp=1&oh=6106cf6dbedb47bdc56aac2229e8f3b5&oe=6057EDD5'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기07.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVUYUhYF1/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146907101_100606095375454_4627602888389219635_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=LpKRFF3tRscAX9dYKIg&tp=1&oh=83d35906ac457cf73df1a364ea2977b8&oe=60565637'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기08.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVW0qBg7R/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146861179_337610984132014_6211016472533775251_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=-acFFOFpLJMAX8Zlj-v&tp=1&oh=e721e0dff9fd6d80a36259cdf7251963&oe=60579F0C'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기09.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVZEVhFyq/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146727763_117583276876170_5878095812654968693_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=HLm-QIrATBoAX8kFXin&tp=1&oh=e6f4cbf91578adf2eeb1d4bcf95cccef&oe=605674C0'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기10.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVkN0Br09/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146693297_331494181522755_5465931223738250412_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=m5s8foJMiAAAX_hTCqi&tp=1&oh=d208fbb2e75bfa5bc50c1b0ff84efe67&oe=6056619F'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기11.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVmhuBJ42/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146650095_161251428945933_4445575230312195877_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=M57s7juIs8YAX_S7TuX&tp=1&oh=78baf13d0c96a565b17c802431f99700&oe=6057C6AE'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기12.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVo8yB2qv/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147051032_233427381748562_6579231698488549821_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=rK6uXCFsbVYAX8cyDqI&tp=1&oh=6c563ff945bac2e82fa1f97d125b6796&oe=6055F6A1'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기13.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVq2rBw-t/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147525091_1507006906161125_2483304953829145712_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=etXLt0Ex5VgAX-0DkW8&tp=1&oh=42324ef3e86372b4899f7b20ab49462f&oe=6057ECE4'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기14.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVs69B6pZ/?utm_source=ig_web_copy_link',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146723230_447490709620596_6518276857949175798_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=f64rPZvlEYUAX8Fk92d&tp=1&oh=41f7fd65e051322a3c4b5274dfa6be06&oe=605817E8'
+      'imgUrl': '/assets/images/gallery/휘슬과여행하기15.jpg'
     },
   ],
   '꿈의명함': [
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBUrnwlonI/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147675800_477884766546362_3312069962785542919_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=42kEe8KV064AX9MVbVb&tp=1&oh=837707917a0717af6feeac509969f6e9&oe=60570019'
+      'imgUrl': '/assets/images/gallery/꿈의명함01.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBU3IslQbW/?igshid=12zkas1xy14ke/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147496288_3970224986355043_2820594486298655062_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=0oK0sqAW9cwAX8bYhYK&tp=1&oh=e1888502258d8fed9857ee691b5e21f6&oe=60562645'
+      'imgUrl': '/assets/images/gallery/꿈의명함02.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBU8mUF2Sr/?igshid=1uzvb1l80aasm/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146990444_467437020942292_3203728930816870368_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=O2s1ik-rNiUAX9R0dyk&tp=1&oh=038db80691ae43e5274b8ec4b87acb61&oe=6057C362'
+      'imgUrl': '/assets/images/gallery/꿈의명함03.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVmUKld3u/?igshid=1qqqxrksnri15/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146516299_3691357407618722_3282977419285752208_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=sp6_hTLgEU4AX9WHY6v&tp=1&oh=ef7e9efbab95b617454a7026ac6ad2a3&oe=6056ECF4'
+      'imgUrl': '/assets/images/gallery/꿈의명함04.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVrOGFT7P/?igshid=ntyh4td0sz72/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146925104_1857376654425404_8756688746141792647_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=lgd3ZNBjlGcAX-LvrqM&tp=1&oh=9630fa7bbb3f2f77e1d322f8c0af5e71&oe=6057F124'
+      'imgUrl': '/assets/images/gallery/꿈의명함05.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVv2glIIx/?igshid=1hbln1s1l2o0w/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146701888_156160986189944_5791409225039229854_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=lPmIniv0KTcAX8Bv3pI&tp=1&oh=a36d45f5978afcec8355029e1f982f7d&oe=60581DE7'
+      'imgUrl': '/assets/images/gallery/꿈의명함06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBWHogF0qF/?igshid=5ry45dwn2qp4/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146976364_758023745128684_6071122591393438960_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=kcSKFEWnwE0AX-UfKZm&tp=1&oh=f73725e514fd2d49b8e314db8fafb917&oe=60575C49'
+      'imgUrl': '/assets/images/gallery/꿈의명함07.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBWMc5F39R/?igshid=2geuhb6f3lba/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146778357_459323858538407_8994691691170844224_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=e_8HLs_vHK4AX-H5wAc&tp=1&oh=7a21d662b200a11da695f05261eac99f&oe=60564F3A'
+      'imgUrl': '/assets/images/gallery/꿈의명함08.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBWQfulxgc/?igshid=po0c9thqpyw8/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147289481_425878912082066_6736156230959148044_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=i_Ph69FmcUYAX-o2G39&tp=1&oh=ea65a6edce9db1a4b0e3895d44015eb3&oe=6057D8BB'
+      'imgUrl': '/assets/images/gallery/꿈의명함09.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBWcoGlr8h/?igshid=1e2pren7yw91m/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146769955_252964589555645_7434939504289636227_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=KMIFjSvjwpkAX-9DWgF&tp=1&oh=7d3bc663c8b8b7ec8d389156163112cc&oe=605804F6'
+      'imgUrl': '/assets/images/gallery/꿈의명함10.jpg'
     },
   ],
   '나의12년을정리하는방법': [
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBX9AIFsps/?igshid=1kd6dtqomv1xd/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147079597_187449583164627_3700438680682826206_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=gYqwdTEdaq0AX-hmxbX&tp=1&oh=414fba701fb676a714dbbea9e491100c&oe=60586D63'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법01.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYTjuFGVo/?igshid=15d9tcndfyakw/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/147055528_243854293904994_2056857783608956668_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=LIFWBS0JZmEAX-_p3T0&tp=1&oh=a407c2fccbbf32fb5a6b2f0cdeb80bd3&oe=60562C29'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법02.jpg'
     },
     {
       'instaID': 'im_mangae_1',
@@ -2304,27 +2304,27 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBZ9L8lBvI/?igshid=zz5wp30x4x95/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147288270_191721522701443_1490591432024275452_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=wE-f_UpRXAwAX9bSkeh&tp=1&oh=64f2d77df06b6fca0d39c6056ba79e26&oe=6057038F'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBaH5NFNcI/?igshid=wsg9a381dtkr/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147140936_168790485005172_8268295307888893661_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=v7S87Q9EZBwAX-SLjnY&tp=1&oh=133565d03c77e2e06f075861eaf2d321&oe=6055EF58'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법07.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBaZ1oFGvV/?igshid=5s577ae4ap88/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/146926145_176482307193379_90412411662793941_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=Fbi_ZDPMzUsAX9cZAGs&tp=1&oh=1cdbed011373154fe674e84604cf26c8&oe=605660AB'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법08.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQbLpFy_R/?igshid=98z3382isuby/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147303532_1801129576721721_2700174198549309679_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=RRsQADYlT9kAX_DlmXd&tp=1&oh=ce77886c0d050933483629f773266cb0&oe=6057BC7A'
+      'imgUrl': '/assets/images/gallery/한문장으로시작하는책10.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBar5LlBsa/?igshid=1gbsf2m2cfr9m/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147046616_167065228321896_6099956077293889439_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=gIcRKtlml1sAX8izxiq&tp=1&oh=9f7e6629b017f24c8538b119f1c3ede8&oe=60586A09'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법10.jpg'
     },
     {
       'instaID': 'syeon_.e',
@@ -2334,74 +2334,74 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBbm2flIvI/?igshid=138t9pg2ua3qp/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/147068649_1035529990271220_8593218578056149110_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=s36NyvTSAZcAX86muN3&tp=1&oh=52707960fc17d7fee1ecd672a6b802c6&oe=605627EE'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법12.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBcqXlF7p4/?igshid=hys5rchmst03/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147088849_160773959015537_660555275839239854_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=105&_nc_ohc=2e_2Mrb1XpUAX_8ZwJ7&tp=1&oh=6b5f046e173584c3cacf3be7d3843327&oe=60581230'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법13.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBae3PFjmF/?igshid=1hmk5guv42ztl/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147029550_708864923124486_7144983857333974222_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=wWQrWvbZaPgAX_5HXm7&tp=1&oh=ad6705aff84fe2aef73fe2e4eef9a561&oe=605914A4'
+      'imgUrl': '/assets/images/gallery/나의12년을정리하는방법14.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBQbLpFy_R/?igshid=98z3382isuby/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147303532_1801129576721721_2700174198549309679_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=RRsQADYlT9kAX_DlmXd&tp=1&oh=ce77886c0d050933483629f773266cb0&oe=6057BC7A'
+      'imgUrl': '/assets/images/gallery/한문장으로시작하는책10.jpg'
     }
   ],
   '내마음이고요해지는순간': [
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYM9rFaoO/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147071085_233816545036211_8741212801803517022_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=111&_nc_ohc=U9DelqaF49oAX9cKvM5&tp=1&oh=8ac2e4e22064cf5aa4cd9d7a125c4cb9&oe=60582BB5'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간01.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYPwqFhr2/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147729311_112803640805883_151183929113714774_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=wCh8TZ2XfkIAX-2hvnP&tp=1&oh=18375f59cf605a47cb8954d2d14e7c7b&oe=60592105'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간02.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYcnTl1j2/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147118937_462681451418334_8142707419695289501_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=sY7echPMXvQAX8TOv3R&tp=1&oh=335ae2150c6839eceeae4ef3366f5354&oe=6055EED1'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간03.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYgTWlT_S/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146244225_4179096645455584_2949970109994932802_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=0DHhqwkZ0DwAX_7U3me&tp=1&oh=93ce974627190d0315c694a7da97bd35&oe=6058F5B7'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간04.jpg'
     },
     {	
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYjt0FRbL/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/148008061_465330347810404_3618180413032870943_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=cNzaTg7XpEkAX9KsRkn&tp=1&oh=3e0ec7eea35ce8cb2de5f50dd0c4c490&oe=6058DAF5'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간05.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYmDHl-xW/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147791571_454260019260184_7143917051613208475_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=D5EERvojbsQAX_Ljfou&tp=1&oh=97297ff6890c0473bc9f97fb5cb8beb5&oe=6056C239'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간06.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYov3l6cW/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147468609_443947213468802_605779790274574106_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=059P_Rs4_0sAX-YVooJ&tp=1&oh=917c561e94c29419bc4886ee2ff40e5d&oe=60566D22'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간07.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYq2tFiMi/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/146915430_928471227690025_2411571949456295695_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=LYsUvwGcVi0AX8mcnjr&tp=1&oh=2ce4c3bcb99c79cd5ae28530bdea5337&oe=605697EF'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간08.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBYtQTFGfa/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/147555815_241305787602612_9071572162166258502_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=PBm2Mk4dDTAAX8BKLJP&tp=1&oh=fe50dc88dfe8411d032502854097297d&oe=6055AB19'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간09.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBY073F1g4/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/148187760_239910670934582_5988416843978210640_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=nu-aIMGKR1EAX9jRB7T&tp=1&oh=cb8a9ba1328357663262d24bbf634842&oe=6059738E'
+      'imgUrl': '/assets/images/gallery/내마음이고요해지는순간10.jpg'
     },
   ],
   '빨간양말의춤': [
@@ -2413,12 +2413,12 @@ export const galleryData = {
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVjqVFCYe/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/146764974_237879387880112_7129680361799081262_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=OiOkN0U-7hUAX-JeHGw&tp=1&oh=0faa3398bf8eeaa5d7951a73959bbaf0&oe=6058B110'
+      'imgUrl': '/assets/images/gallery/빨간양말의춤02.jpg'
     },
     {
       'instaID': 'im_mangae_1',
       'instaLink': 'https://www.instagram.com/p/CLBVme5ltIF/',
-      'imgUrl': 'https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/147249702_688484375152551_651004836684386766_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=Rbsip0OFrcQAX8cMDpl&tp=1&oh=2da240438f1af3ce54fdd26b6a17e145&oe=6056F653'
+      'imgUrl': '/assets/images/gallery/빨간양말의춤03.jpg'
     },
     {
       'instaID': 'im_mangae_1',
