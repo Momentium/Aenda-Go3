@@ -1220,7 +1220,7 @@ export const artistData = [
     ]
   },
   {
-    name: "플라스틱방앗간",
+    name: "플라스틱 방앗간",
     aka: "환경활동가",
     vid: 'https://vimeo.com/517022374',
     img: '/assets/images/artist/플라스틱방앗간.jpg',
