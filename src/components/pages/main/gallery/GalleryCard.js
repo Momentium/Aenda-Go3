@@ -8,6 +8,7 @@ const GalleryCard = ({ data }) => {
 
   return (
     <StCardWrap backImg={data.imgUrl}>
+    {/* <StCardWrap style={{'backgroundImage': `url(${data.imgUrl})`}}> */}
       <StHoverWrap onClick={openInsta}>
         <div className="text gallery id">{`@${data.instaID}`}</div>
       </StHoverWrap>

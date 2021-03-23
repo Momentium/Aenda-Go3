@@ -20,8 +20,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync ./build s3://aenda-go3 --profile=momentium-sinbad",
+    "invalidate": "aws cloudfront create-invalidation --profile=momentium-sinbad --distribution-id E1ANCYWKSCP79C --paths / /index.html /service-worker.js /manifest.json /favicon.ico"
   },
   "eslintConfig": {
     "extends": [
