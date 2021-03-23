@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import Hashtag from "./Hashtag";
 import { hashTagData } from "../../../../data/data";
 
@@ -59,10 +59,14 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx, isOpen }) => {
       const _2ndXX = Number(_2ndX);
       if(dir === 'left') {
         if(stateRef.current === 'tab') {
+          _1st.style.transition = `transform 0.3s ease`;
+          _2nd.style.transition = `transform 0.3s ease`;
           _1st.style.transform = `translateX(${0}px)`;
           _2nd.style.transform = `translateX(${0}px)`;
         }
         else {
+          _1st.style.transition = ``;
+          _2nd.style.transition = ``;
           if(_1stXX <= -1 * _1st.offsetWidth) {
             _1st.style.transform = `translateX(${-1 * _px}px)`;
             _2nd.style.transform = `translateX(${-1 * _px}px)`;

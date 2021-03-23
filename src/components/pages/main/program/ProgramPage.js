@@ -10,7 +10,7 @@ const ProgramPage = ({ mbti, title, closePage }) => {
   const _closePage = () => {
     setCurImg(0);
     closePage();
-  }  
+  }
   
   const toLeftPage = () => {
     setCurImg(curImg - 1);
@@ -219,6 +219,13 @@ const StImgCont = styled.div`
   position: relative;
   ${({theme}) => theme.flex('center', 'center')}
   width: 100%;
+
+  transition: opacity 0.4s ease-in;
+  ${({theme}) => theme.popSlide ? 
+    css`opacity: 1;`
+    :
+    css`opacity: 0;`
+  }
 
   .prog_img {
     overflow: hidden;
