@@ -220,7 +220,8 @@ const StImgCont = styled.div`
   ${({theme}) => theme.flex('center', 'center')}
   width: 100%;
 
-  transition: opacity 0.4s ease-in;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
   ${({theme}) => theme.popSlide ? 
     css`opacity: 1;`
     :
