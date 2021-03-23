@@ -34,13 +34,13 @@ const Screen = ({ SW, popState }) => {
 
       <StPlayerCont curPage={curPage}>
         <Player
-          vidUrl={"https://vimeo.com/522681673"}
+          vidUrl={"https://vimeo.com/527216136"}
           SW={SW}
           popState={popState}
           pageState={curPage === 0}
         />
         <Player
-          vidUrl={"https://vimeo.com/522681673"}
+          vidUrl={"https://vimeo.com/527216584"}
           SW={SW}
           popState={popState}
           pageState={curPage === 1}
