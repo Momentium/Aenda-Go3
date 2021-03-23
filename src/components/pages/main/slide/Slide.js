@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Hashtag from "./Hashtag";
 import { hashTagData } from "../../../../data/data";
 
-const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
+const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx, isOpen }) => {
   const contRef = useRef(undefined);
   const stateRef = useRef('run');
   const hashTagList = hashTagData[dataIdx].map((el, idx) => {
@@ -48,6 +48,9 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
       else if(stateRef.current === 'stop') {
         _px = 0;
       }
+      else if(stateRef.current === 'tab') {
+        _px = 0;
+      }
 
       let _1stX = window.getComputedStyle(_1st).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
       let _2ndX = window.getComputedStyle(_2nd).transform.match(/matrix.*\((.+)\)/)[1].split(', ')[4]
@@ -55,13 +58,19 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
       const _1stXX = Number(_1stX);
       const _2ndXX = Number(_2ndX);
       if(dir === 'left') {
-        if(_1stXX <= -1 * _1st.offsetWidth) {
-          _1st.style.transform = `translateX(${-1 * _px}px)`;
-          _2nd.style.transform = `translateX(${-1 * _px}px)`;
+        if(stateRef.current === 'tab') {
+          _1st.style.transform = `translateX(${0}px)`;
+          _2nd.style.transform = `translateX(${0}px)`;
         }
         else {
-          _1st.style.transform = `translateX(${_1stXX - _px}px)`;
-          _2nd.style.transform = `translateX(${_2ndXX - _px}px)`;
+          if(_1stXX <= -1 * _1st.offsetWidth) {
+            _1st.style.transform = `translateX(${-1 * _px}px)`;
+            _2nd.style.transform = `translateX(${-1 * _px}px)`;
+          }
+          else {
+            _1st.style.transform = `translateX(${_1stXX - _px}px)`;
+            _2nd.style.transform = `translateX(${_2ndXX - _px}px)`;
+          }
         }
       }
       else {
@@ -86,15 +95,21 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   }, [dir]);
 
   useEffect(() => {
-    if (dataIdx === pauseIdx) {
-      stateRef.current = 'stop';
-    } else {
-      stateRef.current = 'run';  
+    if (isOpen && dataIdx === 2 && pauseIdx === -1) {
+      stateRef.current = 'tab';
     }
-  }, [pauseIdx, dataIdx]);
+    else {
+      if (dataIdx === pauseIdx) {
+        stateRef.current = 'stop';
+      } else {
+        stateRef.current = 'run';  
+      }
+    }
+  }, [pauseIdx, dataIdx, isOpen]);
 
   const slowSlide = () => {
     if (dataIdx === pauseIdx) return;
+    if (stateRef.current === 'tab') return;
     if (window.innerWidth <= 480) {
       stateRef.current = 'run';
     }
@@ -104,10 +119,10 @@ const Slide = ({ dir, dataIdx, pauseIdx, setPauseIdx }) => {
   };
   const runSlide = () => {
     if (dataIdx === pauseIdx) return;
+    if (stateRef.current === 'tab') return;
     stateRef.current = 'run';
   };
   
-
   return (
     <StSlideCont
       dir={dir}
@@ -134,18 +149,15 @@ const StSlideCont = styled.div`
   background: ${({ theme }) => theme.colors.blue};
 
   @media screen and (min-width: 481px) {
-    /* height: ${({ theme }) => theme.calcVW(50)}; */
     margin: ${({ theme }) => theme.calcVW(18)} 0;
   }
   @media screen and (max-width: 480px) {
-    /* height: ${({ theme }) => theme.calcVW_M(50)}; */
     margin: ${({ theme }) => theme.calcVW_M(8)} 0;
   }
 
 `;
 
 const StHTCont = styled.span`
-  /* position: absolute; */
   white-space: nowrap;
   transform: translateX(0px);
 `;

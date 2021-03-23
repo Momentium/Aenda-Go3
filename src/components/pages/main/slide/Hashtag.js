@@ -50,9 +50,9 @@ const StHashCont = styled.span`
     letter-spacing: -0.5px;
   }
 
-  cursor: pointer;
+  /* cursor: pointer; */
   @media screen and (min-width: 481px) {
-    /* cursor: pointer; */
+    cursor: pointer;
     &:hover {
       background: ${({ theme }) => theme.colors.red};
       color: ${({ theme }) => theme.colors.blue};

@@ -77,6 +77,7 @@ const Drawer = ({ title }) => {
       <Collapse in={isOpen}>
         <Detail menu={title} curTag={curTag} />
       </Collapse>
+      
     </StDrawerCont>
   );
 };
