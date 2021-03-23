@@ -402,6 +402,7 @@ const GlobalStyle = createGlobalStyle`
         }
       }
       &.aenda {
+        white-space: pre;
         color: #999999;
         line-height: 2;
         @media screen and (min-width: 481px) {
